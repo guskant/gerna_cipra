@@ -35,6 +35,9 @@ http://mw.lojban.org/papri/new_voi
 
 kurtyvla
 
+cekitaujau:
+http://mw.lojban.org/papri/ce_ki_tau_jau
+
 drata sitna:
 https://skami2.iocikun.jp/lojban/zasniGernaPeg
 https://skami2.iocikun.jp/lojban/zasniGerna
