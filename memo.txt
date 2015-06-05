@@ -1,6 +1,6 @@
 1.	peg 内の編集した行の上に 以下の形式で注を書く:
 	// [元の行の内容]_[注]_[YYYYMMDD]UTC_
-2.	$ grep -n "UTC_" zasntufa* > farvi.txt
+2.	$ grep -n "UTC_" zantufa* > farvi.txt
 3.	バージョン公開後に次期バージョンに向けて編集するpegファイルを用意
 4.	そのファイル内では前期バージョンの注の "UTC_" を "UTC" に変更しておく
 5.	1.2.3.4. を繰り返す

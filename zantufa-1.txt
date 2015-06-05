@@ -1,0 +1,40 @@
+platu:
+
+http://mw.lojban.org/papri/zasni_gerna_cenba_vreji
+
+Merged and eliminated selma'o
+JOI, JA, A, BIhI, (VUhU,) JOhI -> JOI
+(
+http://mw.lojban.org/papri/mEX_grammar_proposal
+for VUhU
+term JOI / NOI_clause JOI / GOI JOI
+)
+FEhE, MOhI, NAhE -> NAhE
+KI, BAI, PU, ZI, ZEhA, FAhA, VA, VEhA, VIhA, TAhE, ZAhO, CAhA, CUhE -> BAI
+LA, LE -> LE
+FUhE, UI, CAI, NAI, DAhO, FUhO, RAhO, GAhO -> UI
+ME, NUhA -> ME
+LAU, TEI, FOI, BY -> BY
+SA, GUhA, BIhE, CEhE, PEhE, NUhI, NUhU, MAhO, NAhU, PEhO, KUhE, FUhA, MOhE -> /
+
+Merge CMENE with BRIVLA
+
+SU Restricted to full erasure.
+
+syllabic consonants
+Eliminated from fuhivla, except for the hyphen of type-3. A 'y' is also allowed in front of the hyphen, so that they are not even required there. This has the additional advantage that 'l' is never needed as hyphen.
+(
+cause zasntufa/masnPAjednPA die, except masnre, masnrei... 
+-> zantufa, mantipa, mantire, jendipa, jendire (.u'i zo manti zo jendu)
+)
+
+new SOI/XOI/VOI
+http://mw.lojban.org/papri/new_soi
+http://jbovlaste.lojban.org/dict/xoi
+http://mw.lojban.org/papri/new_voi
+
+kurtyvla
+
+drata sitna:
+https://skami2.iocikun.jp/lojban/zasniGernaPeg
+https://skami2.iocikun.jp/lojban/zasniGerna
