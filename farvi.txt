@@ -1,8 +1,8 @@
-zasntufa-0.js.peg:7:// _la guskant cu co'a galfi_20150604UTC_
-zasntufa-0.js.peg:385:// number = expr:(PA_clause (PA_clause / lerfu_word)*) {return _node("number", expr); } _vimcu zoizoi  / lerfu_word zoi_20150604UTC_
-zasntufa-0.js.peg:388:// lerfu_string = expr:(lerfu_word (PA_clause / lerfu_word)*) {return _node("lerfu_string", expr); } _vimcu zoizoi PA_clause /  zoi__20150604UTC_
-zasntufa-0.js.peg:1632:// BAI _+te'i_20150604UTC_
-zasntufa-0.js.peg:1653:// BY _+a'y +e'y +i'y +o'y +u'y +iy +uy_20150604UTC_
-zasntufa-0.js.peg:1764:// MAI _+jo'au_20150604UTC_
-zasntufa-0.js.peg:1799:// PA _-pi'e_20150604UTC_
-zasntufa-0.js.peg:1850:// VUhU _+pi'e_20150604UTC_
+zantufa-0.js.peg:7:// _la guskant cu co'a galfi_20150604UTC_
+zantufa-0.js.peg:385:// number = expr:(PA_clause (PA_clause / lerfu_word)*) {return _node("number", expr); } _vimcu zoizoi  / lerfu_word zoi_20150604UTC_
+zantufa-0.js.peg:388:// lerfu_string = expr:(lerfu_word (PA_clause / lerfu_word)*) {return _node("lerfu_string", expr); } _vimcu zoizoi PA_clause /  zoi__20150604UTC_
+zantufa-0.js.peg:1632:// BAI _+te'i_20150604UTC_
+zantufa-0.js.peg:1653:// BY _+a'y +e'y +i'y +o'y +u'y +iy +uy_20150604UTC_
+zantufa-0.js.peg:1764:// MAI _+jo'au_20150604UTC_
+zantufa-0.js.peg:1799:// PA _-pi'e_20150604UTC_
+zantufa-0.js.peg:1850:// VUhU _+pi'e_20150604UTC_
