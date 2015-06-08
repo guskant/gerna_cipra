@@ -6,3 +6,4 @@ zantufa-0.js.peg:1653:// BY _+a'y +e'y +i'y +o'y +u'y +iy +uy_20150604UTC_
 zantufa-0.js.peg:1764:// MAI _+jo'au_20150604UTC_
 zantufa-0.js.peg:1799:// PA _-pi'e_20150604UTC_
 zantufa-0.js.peg:1850:// VUhU _+pi'e_20150604UTC_
+zantufa-0.js.peg:1873:// ZO _+ma'oi_20150604UTC_
