@@ -1465,7 +1465,9 @@ y_less_rafsi = expr:(!y_rafsi !stressed_y_rafsi !hy_rafsi !stressed_hy_rafsi (CV
 
 hy_rafsi = expr:((long_rafsi vowel / CCV_rafsi / CVV_rafsi) h y h?)
 
-stressed_hy_rafsi = expr:((long_rafsi stressed_vowel / stressed_CCV_rafsi / stressed_CVV_rafsi) h y h?)
+// stressed_hy_rafsi = expr:((long_rafsi stressed_vowel / stressed_CCV_rafsi / stressed_CVV_rafsi) h y h?) _gau jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC_
+stressed_hy_rafsi = expr:((long_rafsi stressed_vowel / stressed_CCV_rafsi / stressed_CVV_rafsi) h y)
+
 
 long_rafsi = expr:(initial_pair unstressed_vowel consonant / consonant unstressed_vowel consonant consonant) { return _join(expr); }
 
@@ -1503,7 +1505,8 @@ any_syllable = expr:(onset nucleus coda? / consonantal_syllable) {return _join(e
 syllable = expr:(onset !y nucleus coda?) {return _join(expr);}
 
 //// FIX: preventing {bla'ypre} from being a valid lujvo
-consonantal_syllable = expr:(consonant syllabic &(consonantal_syllable / !nucleus onset) (consonant &spaces)?) {return _join(expr);}
+// consonantal_syllable = expr:(consonant syllabic &(consonantal_syllable / !nucleus onset) (consonant &spaces)?) {return _join(expr);} _gau jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC_
+consonantal_syllable = expr:(consonant &syllabic coda) {return _join(expr);}
 
 coda = expr:(!any_syllable consonant &any_syllable / syllabic? consonant? &pause) {return _join(expr);}
 
@@ -1513,7 +1516,8 @@ nucleus = expr:(vowel / diphthong / y !nucleus) {return _join(expr);}
 
 //_________________________________________________________________
 
-glide = expr:(i / u) &nucleus !glide {return expr;}
+// glide = expr:(i / u) &nucleus !glide {return expr;} _gau jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC_
+glide = expr:(i / u) &nucleus {return expr;}
 
 diphthong = expr:(a i / a u / e i / o i) !nucleus !glide {return _join(expr);}
 
@@ -1631,7 +1635,8 @@ lujvo = expr:(!gismu !fuhivla brivla)  {return _node("lujvo", expr);}
 A = &cmavo expr:( a / e / j i / o / u ) &post_word {return ["A", _join(expr)];}
 
 // BAI _+te'i_20150604UTC
-BAI = &cmavo expr:( d u h o / s i h u / z a u / k i h i / d u h i / c u h u / t u h i / t i h u / d i h o / j i h u / r i h a / n i h i / m u h i / k i h u / v a h u / k o i / c a h i / t a h i / p u h e / j a h i / k a i / b a i / f i h e / d e h i / c i h o / m a u / m u h u / r i h i / r a h i / k a h a / p a h u / p a h a / l e h a / k u h u / t a i / b a u / m a h i / c i h e / f a u / p o h i / c a u / m a h e / c i h u / r a h a / p u h a / l i h e / l a h u / b a h i / k a h i / s a u / f a h e / b e h i / t i h i / j a h e / g a h a / v a h o / j i h o / m e h a / d o h e / j i h e / p i h o / g a u / z u h e / m e h e / r a i / t e h i ) &post_word {return ["BAI", _join(expr)];}
+// BAI _+be'au +de'i'a +de'i'e +de'i'i +de'i'o +de'i'u +gu'au +ka'ai +li'i'e +ti'u'a +ti'u'e +ti'u'i +xau_20150606UTC_
+BAI = &cmavo expr:( t e h i / b e h a u / d e h i h a / d e h i h e / d e h i h i / d e h i h o / d e h i h u / g u h a u / k a h a i / l i h i h e / t i h u h a / t i h u h e / t i h u h i / x a u / d u h o / s i h u / z a u / k i h i / d u h i / c u h u / t u h i / t i h u / d i h o / j i h u / r i h a / n i h i / m u h i / k i h u / v a h u / k o i / c a h i / t a h i / p u h e / j a h i / k a i / b a i / f i h e / d e h i / c i h o / m a u / m u h u / r i h i / r a h i / k a h a / p a h u / p a h a / l e h a / k u h u / t a i / b a u / m a h i / c i h e / f a u / p o h i / c a u / m a h e / c i h u / r a h a / p u h a / l i h e / l a h u / b a h i / k a h i / s a u / f a h e / b e h i / t i h i / j a h e / g a h a / v a h o / j i h o / m e h a / d o h e / j i h e / p i h o / g a u / z u h e / m e h e / r a i ) &post_word {return ["BAI", _join(expr)];}
 
 BAhE = &cmavo expr:( b a h e / z a h e ) &post_word {return ["BAhE", _join(expr)];}
 
@@ -1652,11 +1657,14 @@ BOI = &cmavo expr:( b o i ) &post_word {return ["BOI", _join(expr)];}
 BU = &cmavo expr:( b u ) &post_word {return ["BU", _join(expr)];}
 
 // BY _+a'y +e'y +i'y +o'y +u'y +iy +uy_20150604UTC
-BY = &cmavo expr:(ybu / j o h o / r u h o / g e h o / j e h o / l o h a / n a h a / s e h e / t o h a / g a h e / y h y / b y / c y / d y / f y / g y / j y / k y / l y / m y / n y / p y / r y / s y / t y / v y / x y / z y / a h y / e h y / i h y / o h y / u h y / i y / u y ) &post_word {return ["BY", _join(expr)];}
+// BY _+ui'y_20150606UTC_
+BY = &cmavo expr:( a h y / e h y / i h y / o h y / u h y / i y / u y / u i h y / ybu / j o h o / r u h o / g e h o / j e h o / l o h a / n a h a / s e h e / t o h a / g a h e / y h y / b y / c y / d y / f y / g y / j y / k y / l y / m y / n y / p y / r y / s y / t y / v y / x y / z y ) &post_word {return ["BY", _join(expr)];}
 
-CAhA = &cmavo expr:( c a h a / p u h i / n u h o / k a h e ) &post_word {return ["CAhA", _join(expr)];}
+// CAhA _+bi'ai_20150608UTC_
+CAhA = &cmavo expr:( b i h a i / c a h a / p u h i / n u h o / k a h e ) &post_word {return ["CAhA", _join(expr)];}
 
-CAI = &cmavo expr:( p e i / c a i / c u h i / s a i / r u h e ) &post_word {return ["CAI", _join(expr)];}
+// CAI _+dai'i +ne'e +ni'au +dau'i +mau'i +me'ai_20150608UTC_
+CAI = &cmavo expr:( d a i h i / n e h e / n i h a u / d a u h i / m a u h i / m e h a i / p e i / c a i / c u h i / s a i / r u h e ) &post_word {return ["CAI", _join(expr)];}
 
 CEI = &cmavo expr:( c e i ) &post_word {return ["CEI", _join(expr)];}
 
@@ -1664,11 +1672,13 @@ CEhE = &cmavo expr:( c e h e ) &post_word {return ["CEhE", _join(expr)];}
 
 CO = &cmavo expr:( c o ) &post_word {return ["CO", _join(expr)];}
 
-COI = &cmavo expr:( j u h i / c o i / f i h i / t a h a / m u h o / f e h o / c o h o / p e h u / k e h o / n u h e / r e h i / b e h e / j e h e / m i h e / k i h e / v i h o ) &post_word {return ["COI", _join(expr)];}
+// COI _+a'oi +bu'oi +co'oi +di'ai +doi'oi +fau'u +fi'i'e +o'ai +sau'ei +ci'oi +ki'ai +sa'ei +tai'i_20150608UTC_
+COI = &cmavo expr:( a h o i / b u h o i / c o h o i / d i h a i / d o i h o i / f a u h u / f i h i h e / o h a i / s a u h e i / c i h o i / k i h a i / s a h e i / t a i h i / j u h i / c o i / f i h i / t a h a / m u h o / f e h o / c o h o / p e h u / k e h o / n u h e / r e h i / b e h e / j e h e / m i h e / k i h e / v i h o ) &post_word {return ["COI", _join(expr)];}
 
 CU = &cmavo expr:( c u ) &post_word {return ["CU", _join(expr)];}
 
-CUhE = &cmavo expr:( c u h e / n a u ) &post_word {return ["CUhE", _join(expr)];}
+// CUhE _+ba'au +pu'au_20150608UTC_
+CUhE = &cmavo expr:( b a h a u / p u h a u / c u h e / n a u ) &post_word {return ["CUhE", _join(expr)];}
 
 DAhO = &cmavo expr:( d a h o ) &post_word {return ["DAhO", _join(expr)];}
 
@@ -1763,7 +1773,7 @@ LUhU = &cmavo expr:( l u h u ) &post_word {return ["LUhU", _join(expr)];}
 MAhO = &cmavo expr:( m a h o ) &post_word {return ["MAhO", _join(expr)];}
 
 // MAI _+jo'au_20150604UTC
-MAI = &cmavo expr:( m o h o / m a i / j o h a u ) &post_word {return ["MAI", _join(expr)];}
+MAI = &cmavo expr:( j o h a u / m o h o / m a i ) &post_word {return ["MAI", _join(expr)];}
 
 ME = &cmavo expr:( m e ) &post_word {return ["ME", _join(expr)];}
 
@@ -1849,7 +1859,7 @@ VEI = &cmavo expr:( v e i ) &post_word {return ["VEI", _join(expr)];}
 VEhO = &cmavo expr:( v e h o ) &post_word {return ["VEhO", _join(expr)];}
 
 // VUhU _+pi'e_20150604UTC
-VUhU = &cmavo expr:( g e h a / f u h u / p i h i / f e h i / v u h u / s u h i / j u h u / g e i / p a h i / f a h i / t e h a / c u h a / v a h a / n e h o / d e h o / f e h a / s a h o / r e h a / r i h o / s a h i / p i h a / s i h i / p i h e ) &post_word {return ["VUhU", _join(expr)];}
+VUhU = &cmavo expr:( p i h e / g e h a / f u h u / p i h i / f e h i / v u h u / s u h i / j u h u / g e i / p a h i / f a h i / t e h a / c u h a / v a h a / n e h o / d e h o / f e h a / s a h o / r e h a / r i h o / s a h i / p i h a / s i h i ) &post_word {return ["VUhU", _join(expr)];}
 
 VEhA = &cmavo expr:( v e h u / v e h a / v e h i / v e h e ) &post_word {return ["VEhA", _join(expr)];}
 
@@ -1871,8 +1881,8 @@ ZI = &cmavo expr:( z u / z a / z i ) &post_word {return ["ZI", _join(expr)];}
 
 ZIhE = &cmavo expr:( z i h e ) &post_word {return ["ZIhE", _join(expr)];}
 
-// +ma'oi
-ZO = &cmavo expr:( z o / m a h o i ) &post_word {return ["ZO", _join(expr)];}
+// ZO _+ma'oi_20150604UTC
+ZO = &cmavo expr:( m a h o i / z o ) &post_word {return ["ZO", _join(expr)];}
 
 ZOI = &cmavo expr:( z o i / l a h o ) &post_word {return ["ZOI", _join(expr)];}
 

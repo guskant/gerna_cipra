@@ -1,6 +1,17 @@
-1.	peg 内の編集した行の上に 以下の形式で注を書く:
+1.	zantufa-0.9999.js.pegファイル内の編集した行の上に 以下の形式で注を書く:
 	// [元の行の内容]_[注]_[YYYYMMDD]UTC_
-2.	$ grep -n "UTC_" zantufa* > farvi.txt
-3.	バージョン公開後に次期バージョンに向けて編集するpegファイルを用意
-4.	そのファイル内では前期バージョンの注の "UTC_" を "UTC" に変更しておく
-5.	1.2.3.4. を繰り返す
+2.	$ cd ../gh-pages
+3.	$ cp ../master/zantufa-0.9999.js.peg zantufa-[0.nnnn].js.peg
+4.	$ grep -n "UTC_" zantufa-*.js.peg > farvi.txt
+5.	$ sed 's/UTC_/UTC/' zantufa-[0.nnnn].js.peg > ../master/zantufa-0.9999.js.peg
+6.	$ cd -
+7.	以上を繰り返す
+
+(2-6:	$ ./farvi.sh [namcu])
+
+綴りが途中まで等しい cmavo を同じ selma'o に入れる場合は、長い方を短い方より前に入れる。
+ex.) ...... d e h i h a / ...... / d e h i ......
+逆の順にすると、長い方が解析されない。
+
+ilmentufa の camxes.js.peg をときどきチェックし、変更点を zantufa に反映させる。
+https://github.com/Ilmen-vodhr/ilmentufa/blob/master/camxes.js.peg

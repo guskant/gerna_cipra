@@ -1,0 +1,10 @@
+zantufa-0.9999.js.peg:1468:// stressed_hy_rafsi = expr:((long_rafsi stressed_vowel / stressed_CCV_rafsi / stressed_CVV_rafsi) h y h?) _gau jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC_
+zantufa-0.9999.js.peg:1508:// consonantal_syllable = expr:(consonant syllabic &(consonantal_syllable / !nucleus onset) (consonant &spaces)?) {return _join(expr);} _gau jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC_
+zantufa-0.9999.js.peg:1519:// glide = expr:(i / u) &nucleus !glide {return expr;} _gau jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC_
+zantufa-0.9999.js.peg:1613:// _mu'i ma_20150605UTC_
+zantufa-0.9999.js.peg:1638:// BAI _+be'au +de'i'a +de'i'e +de'i'i +de'i'o +de'i'u +gu'au +ka'ai +li'i'e +ti'u'a +ti'u'e +ti'u'i +xau_20150606UTC_
+zantufa-0.9999.js.peg:1660:// BY _+ui'y_20150606UTC_
+zantufa-0.9999.js.peg:1663:// CAhA _+bi'ai_20150608UTC_
+zantufa-0.9999.js.peg:1666:// CAI _+dai'i +ne'e +ni'au +dau'i +mau'i +me'ai_20150608UTC_
+zantufa-0.9999.js.peg:1675:// COI _+a'oi +bu'oi +co'oi +di'ai +doi'oi +fau'u +fi'i'e +o'ai +sau'ei +ci'oi +ki'ai +sa'ei +tai'i_20150608UTC_
+zantufa-0.9999.js.peg:1680:// CUhE _+ba'au +pu'au_20150608UTC_
