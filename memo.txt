@@ -1,11 +1,7 @@
 1.	zantufa-0.9999.js.pegファイル内の編集した行の上に 以下の形式で注を書く:
 	// [元の行の内容]_[注]_[YYYYMMDD]UTC_
-2.	$ cd ../gh-pages
-3.	$ cp ../master/zantufa-0.9999.js.peg zantufa-[0.nnnn].js.peg
-4.	$ grep -n "UTC_" zantufa-*.js.peg > farvi.txt
-5.	$ sed 's/UTC_/UTC/' zantufa-[0.nnnn].js.peg > ../master/zantufa-0.9999.js.peg
-6.	$ cd -
-7.	以上を繰り返す
+2.	$ ./farvi.sh [namcu]
+3.	以上を繰り返す
 
 (2-6:	$ ./farvi.sh [namcu])
 
