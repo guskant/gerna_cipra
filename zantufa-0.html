@@ -26,14 +26,24 @@
 <meta name="msapplication-TileImage" content="./icon/mstile-144x144.png">
 <meta name="msapplication-config" content="./icon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
-</head><body style="font: 15px arial, sans-serif;">
+<style>
+	.ciksi {
+	font: 0.9em arial, sans-serif;
+	}
+	.urli {
+	padding-left: 32px;
+	text-align: right;
+	font: 0.9em monospace;
+	}
+</style>
+</head><body>
 <div>
-<span style="font: bold 15px arial, sans-serif;">zantufa bu jo'au_0</span> <span style="font: 15px arial, sans-serif;">ciska .ijo genturfa'i .i:</span>
+<span class="ciksi" style="font-weight: bold;">zantufa bu jo'au_0</span> <span  class="ciksi">ciska .ijo genturfa'i .i:</span>
 </div>
 <div>
 <form id="form1" name="form1" method="post" action="" style="width:100%">
   <textarea id="input_textarea" style="width:100%" rows="8" autofocus></textarea><br/>
-<span style="font: 15px arial, sans-serif;">.i ko cuxna lo jarco tarmi la'e di'e .i: </span>
+<span  class="ciksi">.i ko cuxna lo jarco tarmi la'e di'e .i: </span>
   <select id="optlist" onchange="run_camxes()">
     <option>na'e se stika</option>
     <option>denmi</option>
@@ -44,11 +54,11 @@
     <option>gau melbi -- famyma'o + selma'o</option>
     <option>gau melbi -- famyma'o + selma'o + bripau</option>
   </select>
-  <span style="padding-left: 32px; text-align: right; font-size: 12px;">
-    <a href="https://raw.githubusercontent.com/guskant/gerna_cipra/gh-pages/zantufa-0.js.peg" target="_blank">[ lo gerna datnyvei ]</a>
+  <span class="urli">
+    <a href="https://raw.githubusercontent.com/guskant/gerna_cipra/master/zantufa-0.js.peg" target="_blank">[ lo gerna datnyvei ]</a>
   </span>
-  <span style="padding-left: 24px; text-align: right; font-size: 12px;">
-    <a href="./farvi.txt">[ farvi ]</a>
+  <span class="urli">
+    <a href="https://raw.githubusercontent.com/guskant/gerna_cipra/master/farvi.txt">[ farvi ]</a>
   </span>
 </form>
 </div>
@@ -91,12 +101,12 @@ function run_camxes() {
 }
 </script>
 
-<div style="padding:50px 0px;">
+<div  class="ciksi" style="padding:50px 0px;">
 	<div>
 	.i di'e liste lo ve farvi be fo la zantufa .i tu'e
 	</div>
 	<div>
-	<iframe src="./liste.html" title="zantufa ve farvi" width="100%"></iframe>
+	<iframe src="./liste.html" title="zantufa ve farvi" width="100%" height="200px"></iframe>
 	</div>
 	<div>
 	tu'u
