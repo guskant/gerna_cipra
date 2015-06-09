@@ -10,7 +10,7 @@
 (2-6:	$ ./farvi.sh [namcu])
 
 綴りが途中まで等しい cmavo を同じ selma'o に入れる場合は、長い方を短い方より前に入れる。
-ex.) ...... d e h i h a / ...... / d e h i ......
+ex.) ....../ d e h i h a / ...... / d e h i /......
 逆の順にすると、長い方が解析されない。
 
 ilmentufa の camxes.js.peg をときどきチェックし、変更点を zantufa に反映させる。

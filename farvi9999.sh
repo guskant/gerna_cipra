@@ -1,8 +1,6 @@
 #!/bin/bash
 
-cd ../gh-pages
-cp ../master/zantufa-0.9999.js.peg ./
-cp ../master/js/zantufa-0.9999.js ./js/
-cp ../master/zantufa-0.9999.html ./
-grep -n "UTC_" zantufa-*.js.peg > farvi9999.txt
-cd -
+cp -R js ../gh-pages
+cp zantufa-0.9999.html ../gh-pages
+cp farvi.txt farvi-0.9999.txt
+grep -n "UTC_" zantufa-0.9999.js.peg >> farvi-0.9999.txt

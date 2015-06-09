@@ -4,20 +4,46 @@
   <head>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />   
     <meta name="description" content="lojban parser for experimental grammar">
-    <meta name="keywords" content="lojban parser,zasni gerna">
+    <meta name="keywords" content="lojban parser,zasni gerna,zantufa,zantufa lojban">
     <meta name="author" content="guskant">
 <title>zantufa-0.9999</title>
-<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
-</head><body style="font: 15px arial, sans-serif;">
-
-<span style="font: bold 15px arial, sans-serif;">zantufa bu jo'au_0.9999</span> <span style="font: 15px arial, sans-serif;">ciska .ijo genturfa'i .i:</span>
-<br><br>
-
+<link rel="apple-touch-icon" sizes="57x57" href="./icon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="./icon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="./icon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="./icon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="./icon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="./icon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="./icon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="./icon/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="./icon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="./icon/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="./icon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="./icon/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="./icon/manifest.json">
+<link rel="shortcut icon" href="./icon/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-TileImage" content="./icon/mstile-144x144.png">
+<meta name="msapplication-config" content="./icon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<style>
+	.ciksi {
+	font: 0.9em arial, sans-serif;
+	}
+	.urli {
+	padding-left: 32px;
+	text-align: right;
+	font: 0.9em monospace;
+	}
+</style>
+</head><body>
+<div>
+<span class="ciksi" style="font-weight: bold;">zantufa bu jo'au_0.9999</span> <span  class="ciksi">ciska .ijo genturfa'i .i:</span>
+</div>
+<div>
 <form id="form1" name="form1" method="post" action="" style="width:100%">
-  <textarea id="input_textarea" style="width:100%" rows="8" autofocus=""></textarea>
-  <br>
-  <span style="font: 15px arial, sans-serif;">.i ko cuxna lo jarco tarmi la'e di'e .i: </span>
+  <textarea id="input_textarea" style="width:100%" rows="8" autofocus></textarea><br/>
+<span  class="ciksi">.i ko cuxna lo jarco tarmi la'e di'e .i: </span>
   <select id="optlist" onchange="run_camxes()">
     <option>na'e se stika</option>
     <option>denmi</option>
@@ -28,18 +54,15 @@
     <option>gau melbi -- famyma'o + selma'o</option>
     <option>gau melbi -- famyma'o + selma'o + bripau</option>
   </select>
-  <span style="padding-left: 32px; text-align: right; font-size: 12px;">
-    <a href="http://guskant.github.io/gerna_cipra/zantufa-0.9999.js.peg" target="_blank">[ lo gerna datnyvei ]</a>
+  <span class="urli">
+    <a href="https://raw.githubusercontent.com/guskant/gerna_cipra/master/zantufa-0.9999.js.peg" target="_blank">[ lo gerna datnyvei ]</a>
   </span>
-  <span style="padding-left: 24px; text-align: right; font-size: 12px;">
-    <a href="./farvi9999.txt">[ farvi ]</a>
-  </span>
-  <span style="padding-left: 24px; text-align: right; font-size: 12px;">
-    <a href="http://mw.lojban.org/extensions/ilmentufa/camxes.html">[ lo te farvi be dei ]</a>
+  <span class="urli">
+    <a href="https://raw.githubusercontent.com/guskant/gerna_cipra/master/farvi-0.9999.txt">[ farvi ]</a>
   </span>
 </form>
-
-<div style="display:block; overflow: scroll; max-height:24em; border: solid 1px; padding: 10px; background-color: #DDDDFF;" height="24em">
+</div>
+<div style="display:block; overflow: scroll; max-height:24em; border: solid 1px; padding: 2px 10px 2px 10px; background-color: #DDDDFF;" height="24em">
   <pre style="white-space: pre-wrap;"><code id="parse_result" width="100%" height="100%"> </code></pre>
 </div>
 
@@ -78,7 +101,16 @@ function run_camxes() {
 }
 </script>
 
-
-
-
+<div  class="ciksi" style="padding:50px 0px;">
+	<div>
+	.i di'e liste lo ve farvi be fo la zantufa .i tu'e
+	</div>
+	<div>
+	<iframe src="./liste.html" title="zantufa ve farvi" width="100%" height="200px"></iframe>
+	</div>
+	<div>
+	tu'u
+	</div>
+</div>
 </body></html>
+
