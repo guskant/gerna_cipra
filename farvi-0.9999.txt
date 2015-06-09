@@ -8,13 +8,33 @@ zantufa-0.js.peg:1799:// PA _-pi'e_20150604UTC_
 zantufa-0.js.peg:1850:// VUhU _+pi'e_20150604UTC_
 zantufa-0.js.peg:1873:// ZO _+ma'oi_20150604UTC_
 ------------------ mulno fa la zantufa_0 ------------------
-1468:// stressed_hy_rafsi = expr:((long_rafsi stressed_vowel / stressed_CCV_rafsi / stressed_CVV_rafsi) h y h?) _gau jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC_
-1508:// consonantal_syllable = expr:(consonant syllabic &(consonantal_syllable / !nucleus onset) (consonant &spaces)?) {return _join(expr);} _gau jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC_
-1519:// glide = expr:(i / u) &nucleus !glide {return expr;} _gau jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC_
-1613:// _mu'i ma_20150605UTC_
-1638:// BAI _+be'au +de'i'a +de'i'e +de'i'i +de'i'o +de'i'u +gu'au +ka'ai +li'i'e +ti'u'a +ti'u'e +ti'u'i +xau_20150606UTC_
-1660:// BY _+ui'y_20150606UTC_
-1663:// CAhA _+bi'ai_20150608UTC_
-1666:// CAI _+dai'i +ne'e +ni'au +dau'i +mau'i +me'ai_20150608UTC_
-1675:// COI _+a'oi +bu'oi +co'oi +di'ai +doi'oi +fau'u +fi'i'e +o'ai +sau'ei +ci'oi +ki'ai +sa'ei +tai'i_20150608UTC_
-1680:// CUhE _+ba'au +pu'au_20150608UTC_
+zantufa-0.9999.js.peg:1468:// stressed_hy_rafsi = expr:((long_rafsi stressed_vowel / stressed_CCV_rafsi / stressed_CVV_rafsi) h y h?) _gau jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC_
+zantufa-0.9999.js.peg:1508:// consonantal_syllable = expr:(consonant syllabic &(consonantal_syllable / !nucleus onset) (consonant &spaces)?) {return _join(expr);} _gau jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC_
+zantufa-0.9999.js.peg:1519:// glide = expr:(i / u) &nucleus !glide {return expr;} _gau jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC_
+zantufa-0.9999.js.peg:1613:// _mu'i ma_20150605UTC_
+zantufa-0.9999.js.peg:1638:// BAI _+be'au +de'i'a +de'i'e +de'i'i +de'i'o +de'i'u +gu'au +ka'ai +li'i'e +ti'u'a +ti'u'e +ti'u'i +xau_20150606UTC_
+zantufa-0.9999.js.peg:1660:// BY _+ui'y_20150606UTC_
+zantufa-0.9999.js.peg:1663:// CAhA _+bi'ai_20150608UTC_
+zantufa-0.9999.js.peg:1666:// CAI _+dai'i +ne'e +ni'au +dau'i +mau'i +me'ai_20150608UTC_
+zantufa-0.9999.js.peg:1675:// COI _+a'oi +bu'oi +co'oi +di'ai +doi'oi +fau'u +fi'i'e +o'ai +sau'ei +ci'oi +ki'ai +sa'ei +tai'i_20150608UTC_
+zantufa-0.9999.js.peg:1680:// CUhE _+ba'au +pu'au_20150608UTC_
+zantufa-0.9999.js.peg:1683:// DAhO _+dai'o +do'ai_20150609UTC_
+zantufa-0.9999.js.peg:1686:// DOI _+da'ei +da'oi_20150609UTC_
+zantufa-0.9999.js.peg:1693:// FAhA _+du'oi +zu'au_20150609UTC_
+zantufa-0.9999.js.peg:1708:// FUhE _+fu'ei_20150609UTC_
+zantufa-0.9999.js.peg:1725:// GOhA _+cei'i +gai'o +xe'u_20150609UTC_
+zantufa-0.9999.js.peg:1734:// JAI _+ja'ei_20150609UTC_
+zantufa-0.9999.js.peg:1739:// JOI _+ce'oi +fa'u'ai +jo'ei +jo'ei'i +xoi'u_20150609UTC_
+zantufa-0.9999.js.peg:1742:// KE _+fei'u +pi'ai_20150609UTC_
+zantufa-0.9999.js.peg:1751:// KOhA _+dei'e +dei'o +dei'u +nei'o +zu'i'a +da'au +kau'a +kau'e +kau'i +da'ai +mi'ai +ri'au +xai +di'au +di'ei +di'oi +mai'i +nau'u +zai'o +zu'ai_20150609UTC_
+zantufa-0.9999.js.peg:1760:// LA _+la'ei +zo'au_20150609UTC_
+zantufa-0.9999.js.peg:1765:// LAhE _+du'au +lai'e +lu'au +zo'ei_20150609UTC_
+zantufa-0.9999.js.peg:1768:// LE _+le'ei +lei'i +lo'ei +loi'i +me'ei +mo'oi +ri'oi_20150609UTC_
+zantufa-0.9999.js.peg:1773:// LI _+li'ai_20150609UTC_
+zantufa-0.9999.js.peg:1782:// LU _+la'au_20150609UTC_
+zantufa-0.9999.js.peg:1790:// MAI _+ba'ai_20150609UTC_
+zantufa-0.9999.js.peg:1793:// ME _+me'au_20150609UTC_
+zantufa-0.9999.js.peg:1802:// MOI _+moi'o_20150609UTC_
+zantufa-0.9999.js.peg:1807:// NAI _+ja'ai_20150609UTC_
+zantufa-0.9999.js.peg:1810:// NAhE _+je'ai +na'ei_20150609UTC_
+zantufa-0.9999.js.peg:1821:// NU _+bu'ai +kai'u +poi'i_20150609UTC_

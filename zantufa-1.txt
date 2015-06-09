@@ -39,8 +39,24 @@ cekitaujau:
 http://mw.lojban.org/papri/ce_ki_tau_jau
 
 zo zei noi cmima ma'oi ZEI naje ma'oi SI noi se stika co milxe
-https://groups.google.com/d/topic/bpfk-list/NZCiVzdWZqg/discussion
+https://groups.google.com/d/msg/bpfk-list/NZCiVzdWZqg/B4aM1GLhU2wJ
+pre_zei_bu with something like:
 
+pre_zei_bu: (BRIVLA / !BU !ZEI !SI !SA !SU !FAhO CMAVO) spaces?
+
+(or a list of all si-erasable selmaho, if you want to be able to identify the selmaho of the erased/modifier words).
+ 
+The left recursion occurs because the current pre_zei_bu is calling pre_clause, which now calls pre_zei_bu, which calls pre_clause, which calls pre_zei_bu, which calls pre_clause, and so on...
+
+You also need to remove SA_clause from si_clause for the same reason. I heven't bothered to think what it should be replaced with, since I'd like SA out of the grammar altogether, but it probably should be some sort of sa_clause_no_pre added to erasable_clause.
+
+Actually, it just hast to be replaced with "SA spaces?", but SA needs to be rethought anyway.
+
+Additional changes needed to clean up: 
+
+- remove "intro_si_clause" which is no longer needed because now an initial si_clause gets absorbed by what follows. With intro_si_clause there, the new zei-words won't be able to start a text. 
+
+- add "si_clause?" either before or inside "faho_clause", so that a final word can be deleted without replacing it with anything. If we want "broda zei fa'o" to work as expected though, this will probably require some more tinkering. 
 drata sitna:
 https://skami2.iocikun.jp/lojban/zasniGernaPeg
 https://skami2.iocikun.jp/lojban/zasniGerna
