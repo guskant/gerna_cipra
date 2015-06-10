@@ -1612,7 +1612,7 @@ comma = [,] {return "";}
 
 non_lojban_word = expr:(!lojban_word non_space+)  {return _join(expr);}
 
-// non_space = expr:(!space_char .) {return _join(expr);} _mu'i ma_20150605UTC___
+// non_space = expr:(!space_char .) {return _join(expr);} _mu'i ma_20150605UTC____
 non_space = expr:(!space_char .) {return _join(expr);}
 
 //Unicode_style and escaped chars not compatible with cl_peg
@@ -1676,7 +1676,7 @@ CEhE = &cmavo expr:( c e h e ) &post_word {return ["CEhE", _join(expr)];}
 CO = &cmavo expr:( c o ) &post_word {return ["CO", _join(expr)];}
 
 // COI _+a'oi +bu'oi +co'oi +di'ai +doi'oi +fau'u +fi'i'e +o'ai +sau'ei +ci'oi +ki'ai +sa'ei +tai'i_20150608UTC
-// COI _+jo'au_20150610UTC
+// COI _+jo'au_20150610UTC_
 COI = &cmavo expr:( j o h a u / a h o i / b u h o i / c o h o i / d i h a i / d o i h o i / f a u h u / f i h i h e / o h a i / s a u h e i / c i h o i / k i h a i / s a h e i / t a i h i / j u h i / c o i / f i h i / t a h a / m u h o / f e h o / c o h o / p e h u / k e h o / n u h e / r e h i / b e h e / j e h e / m i h e / k i h e / v i h o ) &post_word {return ["COI", _join(expr)];}
 
 CU = &cmavo expr:( c u ) &post_word {return ["CU", _join(expr)];}
@@ -1792,7 +1792,7 @@ MAhO = &cmavo expr:( m a h o ) &post_word {return ["MAhO", _join(expr)];}
 
 // MAI _+jo'au_20150604UTC
 // MAI _+ba'ai_20150609UTC
-// MAI _-jo'au_20150610UTC
+// MAI _-jo'au_20150610UTC_
 MAI = &cmavo expr:( b a h a i / m o h o / m a i ) &post_word {return ["MAI", _join(expr)];}
 
 // ME _+me'au_20150609UTC

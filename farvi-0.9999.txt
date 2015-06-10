@@ -56,3 +56,5 @@ zantufa-0.1.js.peg:1914:// ZI _+za'ai_20150610UTC_
 zantufa-0.1.js.peg:1924:// ZOhU _+ce'ai_20150610UTC_
 ------------------ mulno fa la zantufa_0.1 ------------------
 zantufa-0.9999.js.peg:1615:// non_space = expr:(!space_char .) {return _join(expr);} _mu'i ma_20150605UTC____
+zantufa-0.9999.js.peg:1679:// COI _+jo'au_20150610UTC_
+zantufa-0.9999.js.peg:1795:// MAI _-jo'au_20150610UTC_
