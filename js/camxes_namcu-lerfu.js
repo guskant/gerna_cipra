@@ -10888,28 +10888,19 @@ var camxes = (function(){
           return cachedResult.result;
         }
         
-        var result0, result1, result2;
-        var pos0, pos1;
+        var result0, result1;
+        var pos0;
         
         pos0 = pos;
-        pos1 = pos;
-        result0 = parse_PA_clause();
-        if (result0 !== null) {
-          result1 = [];
-          result2 = parse_PA_clause();
-          while (result2 !== null) {
-            result1.push(result2);
-            result2 = parse_PA_clause();
-          }
-          if (result1 !== null) {
-            result0 = [result0, result1];
-          } else {
-            result0 = null;
-            pos = pos1;
+        result1 = parse_PA_clause();
+        if (result1 !== null) {
+          result0 = [];
+          while (result1 !== null) {
+            result0.push(result1);
+            result1 = parse_PA_clause();
           }
         } else {
           result0 = null;
-          pos = pos1;
         }
         if (result0 !== null) {
           result0 = (function(offset, expr) {return _node("number", expr); })(pos0, result0);
@@ -10933,28 +10924,19 @@ var camxes = (function(){
           return cachedResult.result;
         }
         
-        var result0, result1, result2;
-        var pos0, pos1;
+        var result0, result1;
+        var pos0;
         
         pos0 = pos;
-        pos1 = pos;
-        result0 = parse_lerfu_word();
-        if (result0 !== null) {
-          result1 = [];
-          result2 = parse_lerfu_word();
-          while (result2 !== null) {
-            result1.push(result2);
-            result2 = parse_lerfu_word();
-          }
-          if (result1 !== null) {
-            result0 = [result0, result1];
-          } else {
-            result0 = null;
-            pos = pos1;
+        result1 = parse_lerfu_word();
+        if (result1 !== null) {
+          result0 = [];
+          while (result1 !== null) {
+            result0.push(result1);
+            result1 = parse_lerfu_word();
           }
         } else {
           result0 = null;
-          pos = pos1;
         }
         if (result0 !== null) {
           result0 = (function(offset, expr) {return _node("lerfu_string", expr); })(pos0, result0);

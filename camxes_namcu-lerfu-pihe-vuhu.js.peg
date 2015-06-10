@@ -382,10 +382,10 @@ operand_2 = expr:(operand_3 (joik_ek stag? BO_clause free* operand_2)?) {return 
 operand_3 = expr:(quantifier / lerfu_string !MOI_clause BOI_elidible free* / NIhE_clause free* selbri TEhU_elidible free* / MOhE_clause free* sumti TEhU_elidible free* / JOhI_clause free* mex_2+ TEhU_elidible free* / gek operand gik operand_3 / (LAhE_clause free* / NAhE_clause BO_clause free*) operand LUhU_elidible free*) {return _node("operand_3", expr); }
 
 // number = expr:(PA_clause (PA_clause / lerfu_word)*) {return _node("number", expr); }
-number = expr:(PA_clause (PA_clause)*) {return _node("number", expr); }
+number = expr:(PA_clause+) {return _node("number", expr); }
 
 // lerfu_string = expr:(lerfu_word (PA_clause / lerfu_word)*) {return _node("lerfu_string", expr); }
-lerfu_string = expr:(lerfu_word (lerfu_word)*) {return _node("lerfu_string", expr); }
+lerfu_string = expr:(lerfu_word+) {return _node("lerfu_string", expr); }
 
 // ** BU clauses are part of BY_clause
 lerfu_word = expr:(BY_clause / LAU_clause lerfu_word / TEI_clause lerfu_string FOI_clause) {return _node("lerfu_word", expr); }
@@ -1844,7 +1844,7 @@ VEI = &cmavo expr:( v e i ) &post_word {return ["VEI", _join(expr)];}
 VEhO = &cmavo expr:( v e h o ) &post_word {return ["VEhO", _join(expr)];}
 
 // +pi'e
-VUhU = &cmavo expr:( g e h a / f u h u / p i h i / f e h i / v u h u / s u h i / j u h u / g e i / p a h i / f a h i / t e h a / c u h a / v a h a / n e h o / d e h o / f e h a / s a h o / r e h a / r i h o / s a h i / p i h a / s i h i / p i h e ) &post_word {return ["VUhU", _join(expr)];}
+VUhU = &cmavo expr:( p i h e / g e h a / f u h u / p i h i / f e h i / v u h u / s u h i / j u h u / g e i / p a h i / f a h i / t e h a / c u h a / v a h a / n e h o / d e h o / f e h a / s a h o / r e h a / r i h o / s a h i / p i h a / s i h i ) &post_word {return ["VUhU", _join(expr)];}
 
 VEhA = &cmavo expr:( v e h u / v e h a / v e h i / v e h e ) &post_word {return ["VEhA", _join(expr)];}
 
