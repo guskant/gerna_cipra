@@ -1612,7 +1612,11 @@ comma = [,] {return "";}
 
 non_lojban_word = expr:(!lojban_word non_space+)  {return _join(expr);}
 
-// _mu'i ma_20150605UTC_____
+// non_space = expr:(!space_char .) {return _join(expr);} _mu'i ma_20150605UTC_____
+// .i la'a .oi tezu'e lo nu curmi zo la'oi cu lidne lo urli_20150610UTC_____
+// .i .o'onai lo camxes zei gerna ji'asai cu se galfi_20150610UTC_____
+// .i .oisai tu'a lo'u zoi zoi zoi.zoi zoi le'u cu se curmi la'o zoi http://mw.lojban.org/extensions/ilmentufa/camxes.html zoi_20150610UTC_____
+// .o'u ra na se curmi la'o zoi http://camxes.lojban.org/ zoi_20150610UTC_____
 non_space = expr:(!space_char .) {return _join(expr);}
 
 //Unicode_style and escaped chars not compatible with cl_peg
