@@ -17,30 +17,33 @@ zantufa-0.9999.js.peg:1615:// non_space = expr:(!space_char .) {return _join(exp
 zantufa-0.9999.js.peg:1616:// .i la'a .oi tezu'e lo nu curmi zo la'oi cu lidne lo urli_20150610UTC_____
 zantufa-0.9999.js.peg:1617:// .i .o'onai lo camxes zei gerna ji'asai cu se galfi_20150610UTC_____
 zantufa-0.9999.js.peg:1618:// .i .oisai tu'a lo'u zoi zoi zoi.zoi zoi le'u cu se curmi la'o zoi http://mw.lojban.org/extensions/ilmentufa/camxes.html zoi_20150610UTC_____
-zantufa-0.9999.js.peg:1619:// .o'u ra na se curmi la'o zoi http://camxes.lojban.org/ zoi_20150610UTC_____
-zantufa-0.9999.js.peg:1644:// BAI _+be'au +de'i'a +de'i'e +de'i'i +de'i'o +de'i'u +gu'au +ka'ai +li'i'e +ti'u'a +ti'u'e +ti'u'i +xau_20150606UTC_
-zantufa-0.9999.js.peg:1666:// BY _+ui'y_20150606UTC_
-zantufa-0.9999.js.peg:1669:// CAhA _+bi'ai_20150608UTC_
-zantufa-0.9999.js.peg:1672:// CAI _+dai'i +ne'e +ni'au +dau'i +mau'i +me'ai_20150608UTC_
-zantufa-0.9999.js.peg:1681:// COI _+a'oi +bu'oi +co'oi +di'ai +doi'oi +fau'u +fi'i'e +o'ai +sau'ei +ci'oi +ki'ai +sa'ei +tai'i_20150608UTC_
-zantufa-0.9999.js.peg:1686:// CUhE _+ba'au +pu'au_20150608UTC_
-zantufa-0.9999.js.peg:1689:// DAhO _+dai'o +do'ai_20150609UTC_
-zantufa-0.9999.js.peg:1692:// DOI _+da'ei +da'oi_20150609UTC_
-zantufa-0.9999.js.peg:1699:// FAhA _+du'oi +zu'au_20150609UTC_
-zantufa-0.9999.js.peg:1714:// FUhE _+fu'ei_20150609UTC_
-zantufa-0.9999.js.peg:1731:// GOhA _+cei'i +gai'o +xe'u_20150609UTC_
-zantufa-0.9999.js.peg:1740:// JAI _+ja'ei_20150609UTC_
-zantufa-0.9999.js.peg:1745:// JOI _+ce'oi +fa'u'ai +jo'ei +jo'ei'i +xoi'u_20150609UTC_
-zantufa-0.9999.js.peg:1748:// KE _+fei'u +pi'ai_20150609UTC_
-zantufa-0.9999.js.peg:1757:// KOhA _+dei'e +dei'o +dei'u +nei'o +zu'i'a +da'au +kau'a +kau'e +kau'i +da'ai +mi'ai +ri'au +xai +di'au +di'ei +di'oi +mai'i +nau'u +zai'o +zu'ai_20150609UTC_
-zantufa-0.9999.js.peg:1766:// LA _+la'ei +zo'au_20150609UTC_
-zantufa-0.9999.js.peg:1771:// LAhE _+du'au +lai'e +lu'au +zo'ei_20150609UTC_
-zantufa-0.9999.js.peg:1774:// LE _+le'ei +lei'i +lo'ei +loi'i +me'ei +mo'oi +ri'oi_20150609UTC_
-zantufa-0.9999.js.peg:1779:// LI _+li'ai_20150609UTC_
-zantufa-0.9999.js.peg:1788:// LU _+la'au_20150609UTC_
-zantufa-0.9999.js.peg:1796:// MAI _+ba'ai_20150609UTC_
-zantufa-0.9999.js.peg:1799:// ME _+me'au_20150609UTC_
-zantufa-0.9999.js.peg:1808:// MOI _+moi'o_20150609UTC_
-zantufa-0.9999.js.peg:1813:// NAI _+ja'ai_20150609UTC_
-zantufa-0.9999.js.peg:1816:// NAhE _+je'ai +na'ei_20150609UTC_
-zantufa-0.9999.js.peg:1827:// NU _+bu'ai +kai'u +poi'i_20150609UTC_
+zantufa-0.9999.js.peg:1619:// .i .o'u ra na se curmi la'o zoi http://camxes.lojban.org/ zoi_20150610UTC_____
+zantufa-0.9999.js.peg:1620:// .i u'u la'a na go'a .i lo masatos zei gerna ku ji'a pagbu de'u .i zoizoi https://github.com/mhagiwara/camxes.js/blob/master/camxes.js.peg zoi_20150610UTC_____
+zantufa-0.9999.js.peg:1621:// .i ku'i ri ji'a .o'u tolcru tu'a lo'u zoi zoi zoi.zoi zoi le'u_20150610UTC_____
+zantufa-0.9999.js.peg:1622:// .i ma rinka lonu lo ilmentufa zei camxes zei gerna cu curmi ri_20150610UTC_____
+zantufa-0.9999.js.peg:1647:// BAI _+be'au +de'i'a +de'i'e +de'i'i +de'i'o +de'i'u +gu'au +ka'ai +li'i'e +ti'u'a +ti'u'e +ti'u'i +xau_20150606UTC_
+zantufa-0.9999.js.peg:1669:// BY _+ui'y_20150606UTC_
+zantufa-0.9999.js.peg:1672:// CAhA _+bi'ai_20150608UTC_
+zantufa-0.9999.js.peg:1675:// CAI _+dai'i +ne'e +ni'au +dau'i +mau'i +me'ai_20150608UTC_
+zantufa-0.9999.js.peg:1684:// COI _+a'oi +bu'oi +co'oi +di'ai +doi'oi +fau'u +fi'i'e +o'ai +sau'ei +ci'oi +ki'ai +sa'ei +tai'i_20150608UTC_
+zantufa-0.9999.js.peg:1689:// CUhE _+ba'au +pu'au_20150608UTC_
+zantufa-0.9999.js.peg:1692:// DAhO _+dai'o +do'ai_20150609UTC_
+zantufa-0.9999.js.peg:1695:// DOI _+da'ei +da'oi_20150609UTC_
+zantufa-0.9999.js.peg:1702:// FAhA _+du'oi +zu'au_20150609UTC_
+zantufa-0.9999.js.peg:1717:// FUhE _+fu'ei_20150609UTC_
+zantufa-0.9999.js.peg:1734:// GOhA _+cei'i +gai'o +xe'u_20150609UTC_
+zantufa-0.9999.js.peg:1743:// JAI _+ja'ei_20150609UTC_
+zantufa-0.9999.js.peg:1748:// JOI _+ce'oi +fa'u'ai +jo'ei +jo'ei'i +xoi'u_20150609UTC_
+zantufa-0.9999.js.peg:1751:// KE _+fei'u +pi'ai_20150609UTC_
+zantufa-0.9999.js.peg:1760:// KOhA _+dei'e +dei'o +dei'u +nei'o +zu'i'a +da'au +kau'a +kau'e +kau'i +da'ai +mi'ai +ri'au +xai +di'au +di'ei +di'oi +mai'i +nau'u +zai'o +zu'ai_20150609UTC_
+zantufa-0.9999.js.peg:1769:// LA _+la'ei +zo'au_20150609UTC_
+zantufa-0.9999.js.peg:1774:// LAhE _+du'au +lai'e +lu'au +zo'ei_20150609UTC_
+zantufa-0.9999.js.peg:1777:// LE _+le'ei +lei'i +lo'ei +loi'i +me'ei +mo'oi +ri'oi_20150609UTC_
+zantufa-0.9999.js.peg:1782:// LI _+li'ai_20150609UTC_
+zantufa-0.9999.js.peg:1791:// LU _+la'au_20150609UTC_
+zantufa-0.9999.js.peg:1799:// MAI _+ba'ai_20150609UTC_
+zantufa-0.9999.js.peg:1802:// ME _+me'au_20150609UTC_
+zantufa-0.9999.js.peg:1811:// MOI _+moi'o_20150609UTC_
+zantufa-0.9999.js.peg:1816:// NAI _+ja'ai_20150609UTC_
+zantufa-0.9999.js.peg:1819:// NAhE _+je'ai +na'ei_20150609UTC_
+zantufa-0.9999.js.peg:1830:// NU _+bu'ai +kai'u +poi'i_20150609UTC_
