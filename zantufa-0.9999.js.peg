@@ -1614,7 +1614,8 @@ non_lojban_word = expr:(!lojban_word non_space+)  {return _join(expr);}
 
 // non_space = expr:(!space_char .) {return _join(expr);} _mu'i ma_20150605UTC______
 // non_space _.uanai ku'i denpa bu gau dunli canlu bu loka gerna sei cipra_20150612UTC_________
-non_space = expr:(!space_char) {return _join(expr);}
+// non_space _fliba .i xruti_20150612UTC_________
+non_space = expr:(!space_char .) {return _join(expr);}
 
 //Unicode_style and escaped chars not compatible with cl_peg
 space_char = [.\t\n\r?!\u0020] {return "";}
