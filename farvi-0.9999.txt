@@ -61,3 +61,4 @@ zantufa-0.11.js.peg:1795:// MAI _-jo'au_20150610UTC_
 ------------------ mulno fa la zantufa_0.11 ------------------
 zantufa-0.9999.js.peg:1615:// non_space = expr:(!space_char .) {return _join(expr);} _mu'i ma_20150605UTC______
 zantufa-0.9999.js.peg:1616:// non_space _.uanai ku'i denpa bu gau dunli canlu bu loka gerna sei cipra_20150612UTC_________
+zantufa-0.9999.js.peg:1617:// non_space _fliba .i xruti_20150612UTC_________
