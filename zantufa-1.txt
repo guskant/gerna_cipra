@@ -38,6 +38,8 @@ kurtyvla
 cekitaujau:
 http://mw.lojban.org/papri/ce_ki_tau_jau
 
+
+#### zo zei cmima ma'oi SI ####
 zo zei noi cmima ma'oi ZEI naje ma'oi SI noi se stika co milxe
 https://groups.google.com/d/msg/bpfk-list/NZCiVzdWZqg/B4aM1GLhU2wJ
 pre_zei_bu with something like:
@@ -57,6 +59,13 @@ Additional changes needed to clean up:
 - remove "intro_si_clause" which is no longer needed because now an initial si_clause gets absorbed by what follows. With intro_si_clause there, the new zei-words won't be able to start a text. 
 
 - add "si_clause?" either before or inside "faho_clause", so that a final word can be deleted without replacing it with anything. If we want "broda zei fa'o" to work as expected though, this will probably require some more tinkering. 
+
+########
+
+
+zo ra'oi zo'u .ei genturfa'i lo se lidne noi rafsi
+
+
 drata sitna:
 https://skami2.iocikun.jp/lojban/zasniGernaPeg
 https://skami2.iocikun.jp/lojban/zasniGerna
