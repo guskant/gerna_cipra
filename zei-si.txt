@@ -1,0 +1,42 @@
+#### zo zei cmima ma'oi SI ####
+zo zei noi cmima ma'oi ZEI naje ma'oi SI noi se stika co milxe
+https://groups.google.com/d/msg/bpfk-list/NZCiVzdWZqg/B4aM1GLhU2wJ
+
+ post_clause = spaces? indicators*
+
+ pre_clause = BAhE_clause? si_clause?
+
+(In fact, I think "spaces?" should be absorbed by "post_word", not by "post_clause", since spaces don't really belong to this level of the grammar, so "post_clause" should only absorb indicators and free.)
+
+(I removed the "!BU_clause !ZEI_clause" too because I don't think they do anything, but perhaps they need to be restored.)
+
+Additionally, we need to eliminate "intro_si_clause", which is no longer needed, but we have to replace it with a final "si_clause" for the case when "si" is not followed by anything. 
+
+Something like this:
+
+ text = intro_null NAI_clause* text_part_2 (!text_1 joik_jek)? text_1? si_clause? faho_clause EOF?
+
+Although this means that a text ending in "word ze'ei" will be grammatical. Perhaps we can force it to mean "word ze'ei fa'o" by reformulating "fa'o" as an elidable terminator, so that it is restored like all the other terminators. Then we can get rid of that additional "si_clause?", since FAhO_clause already has a pre_clause.
+
+
+pre_zei_bu with something like:
+
+pre_zei_bu: (BRIVLA / !BU !ZEI !SI !SA !SU !FAhO CMAVO) spaces?
+
+(or a list of all si-erasable selmaho, if you want to be able to identify the selmaho of the erased/modifier words).
+ 
+The left recursion occurs because the current pre_zei_bu is calling pre_clause, which now calls pre_zei_bu, which calls pre_clause, which calls pre_zei_bu, which calls pre_clause, and so on...
+
+You also need to remove SA_clause from si_clause for the same reason. I heven't bothered to think what it should be replaced with, since I'd like SA out of the grammar altogether, but it probably should be some sort of sa_clause_no_pre added to erasable_clause.
+
+Actually, it just hast to be replaced with "SA spaces?", but SA needs to be rethought anyway.
+
+Additional changes needed to clean up: 
+
+- remove "intro_si_clause" which is no longer needed because now an initial si_clause gets absorbed by what follows. With intro_si_clause there, the new zei-words won't be able to start a text. 
+
+- add "si_clause?" either before or inside "faho_clause", so that a final word can be deleted without replacing it with anything. If we want "broda zei fa'o" to work as expected though, this will probably require some more tinkering. 
+
+######## _ma'oi SI cmima la'o zoi pre_clause zoi_20150618UTC_
+ _zo zei cmima ma'oi SI_20150618UTC_
+
