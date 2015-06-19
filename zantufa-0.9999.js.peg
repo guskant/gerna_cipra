@@ -467,17 +467,27 @@ indicator =  expr:((UI_clause / CAI_clause) NAI_clause? / DAhO_clause / FUhO_cla
 // zei_clause_no_pre = expr:(pre_zei_bu (zei_tail? bu_tail)* zei_tail post_clause) {return _node("zei_clause_no_pre", expr); } _zo zei cmima ma'oi SI_20150618UTC_
 // zei_clause_no_SA = pre_zei_bu_no_SA (zei_tail? bu_tail)* zei_tail
 
+// _jmina la'o zoi zo_clause, zo_clause_no_pre, zo_tail zoi_20150619UTC_
+zo_clause = expr:(pre_clause post:zo_clause_no_pre) {return _node("zo_clause", expr); }
+zo_clause_no_pre = expr:(pre_zei_bu (zo_tail? bu_tail)* zo_tail post_clause) {return _node("zo_clause_no_pre", expr); }
+
 bu_clause = expr:(pre_clause post:bu_clause_no_pre) {return _node("bu_clause", expr); }
 // bu_clause_no_pre = expr:(pre_zei_bu (bu_tail? zei_tail)* bu_tail post_clause) {return _node("bu_clause_no_pre", expr); } _zo zei cmima ma'oi SI_20150618UTC_
-bu_clause_no_pre = expr:(pre_zei_bu bu_tail+ post_clause) {return _node("bu_clause_no_pre", expr); }
+// bu_clause_no_pre = expr:(pre_zei_bu bu_tail+ post_clause) {return _node("bu_clause_no_pre", expr); } _jmina la'o zoi zo_tail zoi_20150619UTC_
+bu_clause_no_pre = expr:(pre_zei_bu (bu_tail? zo_tail)* bu_tail post_clause) {return _node("bu_clause_no_pre", expr); }
 // bu_clause_no_SA = pre_zei_bu_no_SA (bu_tail? zei_tail)* bu_tail
 
 // zei_tail = expr:(ZEI_clause any_word)+ {return _node("zei_tail", expr); } _zo zei cmima ma'oi SI_20150618UTC_
+
+// _jmina la'o zoi zo_clause, zo_clause_no_pre, zo_tail zoi_20150619UTC_
+zo_tail = expr:(ZO_clause any_word)+ {return _node("zo_tail", expr); }
+
 bu_tail = expr:BU_clause+ {return _node("bu_tail", expr); }
 
 // pre_zei_bu = expr:(!BU_clause !ZEI_clause !SI_clause !SA_clause !SU_clause !FAhO_clause any_word_SA_handling si_clause?) {return _node("pre_zei_bu", expr); } _ma'oi SI cmima la'o zoi pre_clause zoi_20150618UTC_
 // pre_zei_bu = expr:(( BRIVLA / !BU !ZEI !SI !SA !SU !FAhO CMAVO) spaces?) {return _node("pre_zei_bu", expr); } _zo zei cmima ma'oi SI_20150618UTC_
-pre_zei_bu = expr:(( BRIVLA / !BU !SI !SA !SU !FAhO CMAVO) spaces?) {return _node("pre_zei_bu", expr); }
+// pre_zei_bu = expr:(( BRIVLA / !BU !SI !SA !SU !FAhO CMAVO) spaces?) {return _node("pre_zei_bu", expr); } _cipra lo ka me la'o zoi !ZO zoi : lu zo si li'u cu .ei sumti_20150619UTC_
+pre_zei_bu = expr:(( BRIVLA / !BU !ZO !SI !SA !SU !FAhO (A / BAI / BAhE / BE / BEI / BEhO / BIhE / BIhI / BO / BOI / BY / CAhA / CAI / CEI / CEhE / CO / COI / CU / CUhE / DAhO / DOI / DOhU / FA / FAhA / FEhE / FEhU / FIhO / FOI / FUhA / FUhE / FUhO / GA / GAhO / GEhU / GI / GIhA / GOI / GOhA / GUhA / I / JA / JAI / JOhI / JOI / KE / KEhE / KEI / KI / KOhA / KU / KUhE / KUhO / LA / LAU / LAhE / LE / LEhU / LI / LIhU / LOhO / LOhU / LU / LUhU / MAhO / MAI / ME / MEhU / MOhE / MOhI / MOI / NA / NAI / NAhE / NAhU / NIhE / NIhO / NOI / NU / NUhA / NUhI / NUhU / PA / PEhE / PEhO / PU / RAhO / ROI / SE / SEI / SEhU / SOI / TAhE / TEhU / TEI / TO / TOI / TUhE / TUhU / UI / VA / VAU / VEI / VEhO / VUhU / VEhA / VIhA / VUhO / XI / ZAhO / ZEhA / ZI / ZIhE / ZOI / ZOhU / cmavo)) spaces?) {return _node("pre_zei_bu", expr); }
 // LOhU_pre / ZO_pre / ZOI_pre / !ZEI_clause !BU_clause !FAhO_clause !SI_clause !SA_clause !SU_clause any_word_SA_handling si_clause?
 // pre_zei_bu_no_SA = LOhU_pre / ZO_pre / ZOI_pre / !ZEI_clause !BU_clause !FAhO_clause !SI_clause !SA_clause !SU_clause any_word si_clause?
 
@@ -516,7 +526,8 @@ su_clause = (erasable_clause / su_word)* SU_clause
 si_clause = ((erasable_clause / si_word / SA spaces?) si_clause? SI_clause)+
 
 // erasable_clause = expr:(bu_clause_no_pre !ZEI_clause !BU_clause / zei_clause_no_pre !ZEI_clause !BU_clause) {return _node("erasable_clause", expr); } _zo zei cmima ma'oi SI_20150618UTC_
-erasable_clause = expr:(bu_clause_no_pre !BU_clause) {return _node("erasable_clause", expr); }
+// erasable_clause = expr:(bu_clause_no_pre !BU_clause) {return _node("erasable_clause", expr); } _la'o zoi zo_clause_no_pre zoi cmima ti_20150619UTC_
+erasable_clause = expr:(bu_clause_no_pre !ZO_clause !BU_clause / zo_clause_no_pre !ZO_clause !BU_clause ) {return _node("erasable_clause", expr); }
 
 sa_word = pre_zei_bu
 
@@ -589,7 +600,8 @@ BAI_post = post_clause
 BAhE_clause = expr:(BAhE_pre BAhE_post)+ {return _node("BAhE_clause", expr); }
 BAhE_pre = BAhE spaces?
 // BAhE_post = si_clause? !ZEI_clause !BU_clause _zo zei cmima ma'oi SI_20150618UTC_
-BAhE_post = si_clause? !BU_clause
+// BAhE_post _!ZO_clause_20150619UTC_
+BAhE_post = si_clause? !ZO_clause !BU_clause
 // BAhE_no_SA_handling = BAhE spaces? BAhE_post
 
 //         sumti link to attach sumti to a selbri 
@@ -778,7 +790,8 @@ FUhA_post = post_clause
 FUhE_clause = pre:FUhE_pre post:FUhE_post {return _node2("FUhE_clause", pre, post); }
 FUhE_pre = pre_clause FUhE spaces?
 // FUhE_post = !BU_clause spaces? !ZEI_clause !BU_clause _zo zei cmima ma'oi SI_20150618UTC_
-FUhE_post = !BU_clause spaces? !BU_clause
+// FUhE_post _!ZO_clause_20150619UTC_
+FUhE_post = !BU_clause spaces? !ZO_clause !BU_clause
 // FUhE_no_SA_handling = pre_clause FUhE post_clause
 
 //         close long scope for indicator 

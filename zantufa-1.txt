@@ -42,9 +42,10 @@ http://mw.lojban.org/papri/ce_ki_tau_jau
 #### zo zei cmima ma'oi SI ####
 zei-si.txt
 
+--- lu zo si li'u na me la'o zoi zo_pre zoi .i la'a .ei stika
 
 
-zo ra'oi zo'u .ei genturfa'i lo se lidne noi rafsi
+zo ra'oi zo'u .ei genturfa'i lo se lidne no'u la'o zoi rafsi_string zoi
 
 
 drata sitna:
