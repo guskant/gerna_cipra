@@ -175,11 +175,8 @@ var camxes = (function(){
         "vocative": parse_vocative,
         "indicators": parse_indicators,
         "indicator": parse_indicator,
-        "zo_clause": parse_zo_clause,
-        "zo_clause_no_pre": parse_zo_clause_no_pre,
         "bu_clause": parse_bu_clause,
         "bu_clause_no_pre": parse_bu_clause_no_pre,
-        "zo_tail": parse_zo_tail,
         "bu_tail": parse_bu_tail,
         "pre_zei_bu": parse_pre_zei_bu,
         "dot_star": parse_dot_star,
@@ -13957,131 +13954,6 @@ var camxes = (function(){
         return result0;
       }
       
-      function parse_zo_clause() {
-        var cacheKey = "zo_clause@" + pos;
-        var cachedResult = cache[cacheKey];
-        if (cachedResult) {
-          pos = cachedResult.nextPos;
-          return cachedResult.result;
-        }
-        
-        var result0, result1;
-        var pos0, pos1;
-        
-        pos0 = pos;
-        pos1 = pos;
-        result0 = parse_pre_clause();
-        if (result0 !== null) {
-          result1 = parse_zo_clause_no_pre();
-          if (result1 !== null) {
-            result0 = [result0, result1];
-          } else {
-            result0 = null;
-            pos = pos1;
-          }
-        } else {
-          result0 = null;
-          pos = pos1;
-        }
-        if (result0 !== null) {
-          result0 = (function(offset, expr) {return _node("zo_clause", expr); })(pos0, result0);
-        }
-        if (result0 === null) {
-          pos = pos0;
-        }
-        
-        cache[cacheKey] = {
-          nextPos: pos,
-          result:  result0
-        };
-        return result0;
-      }
-      
-      function parse_zo_clause_no_pre() {
-        var cacheKey = "zo_clause_no_pre@" + pos;
-        var cachedResult = cache[cacheKey];
-        if (cachedResult) {
-          pos = cachedResult.nextPos;
-          return cachedResult.result;
-        }
-        
-        var result0, result1, result2, result3;
-        var pos0, pos1, pos2;
-        
-        pos0 = pos;
-        pos1 = pos;
-        result0 = parse_pre_zei_bu();
-        if (result0 !== null) {
-          result1 = [];
-          pos2 = pos;
-          result2 = parse_zo_tail();
-          result2 = result2 !== null ? result2 : "";
-          if (result2 !== null) {
-            result3 = parse_bu_tail();
-            if (result3 !== null) {
-              result2 = [result2, result3];
-            } else {
-              result2 = null;
-              pos = pos2;
-            }
-          } else {
-            result2 = null;
-            pos = pos2;
-          }
-          while (result2 !== null) {
-            result1.push(result2);
-            pos2 = pos;
-            result2 = parse_zo_tail();
-            result2 = result2 !== null ? result2 : "";
-            if (result2 !== null) {
-              result3 = parse_bu_tail();
-              if (result3 !== null) {
-                result2 = [result2, result3];
-              } else {
-                result2 = null;
-                pos = pos2;
-              }
-            } else {
-              result2 = null;
-              pos = pos2;
-            }
-          }
-          if (result1 !== null) {
-            result2 = parse_zo_tail();
-            if (result2 !== null) {
-              result3 = parse_post_clause();
-              if (result3 !== null) {
-                result0 = [result0, result1, result2, result3];
-              } else {
-                result0 = null;
-                pos = pos1;
-              }
-            } else {
-              result0 = null;
-              pos = pos1;
-            }
-          } else {
-            result0 = null;
-            pos = pos1;
-          }
-        } else {
-          result0 = null;
-          pos = pos1;
-        }
-        if (result0 !== null) {
-          result0 = (function(offset, expr) {return _node("zo_clause_no_pre", expr); })(pos0, result0);
-        }
-        if (result0 === null) {
-          pos = pos0;
-        }
-        
-        cache[cacheKey] = {
-          nextPos: pos,
-          result:  result0
-        };
-        return result0;
-      }
-      
       function parse_bu_clause() {
         var cacheKey = "bu_clause@" + pos;
         var cachedResult = cache[cacheKey];
@@ -14130,57 +14002,27 @@ var camxes = (function(){
           return cachedResult.result;
         }
         
-        var result0, result1, result2, result3;
-        var pos0, pos1, pos2;
+        var result0, result1, result2;
+        var pos0, pos1;
         
         pos0 = pos;
         pos1 = pos;
         result0 = parse_pre_zei_bu();
         if (result0 !== null) {
-          result1 = [];
-          pos2 = pos;
           result2 = parse_bu_tail();
-          result2 = result2 !== null ? result2 : "";
           if (result2 !== null) {
-            result3 = parse_zo_tail();
-            if (result3 !== null) {
-              result2 = [result2, result3];
-            } else {
-              result2 = null;
-              pos = pos2;
+            result1 = [];
+            while (result2 !== null) {
+              result1.push(result2);
+              result2 = parse_bu_tail();
             }
           } else {
-            result2 = null;
-            pos = pos2;
-          }
-          while (result2 !== null) {
-            result1.push(result2);
-            pos2 = pos;
-            result2 = parse_bu_tail();
-            result2 = result2 !== null ? result2 : "";
-            if (result2 !== null) {
-              result3 = parse_zo_tail();
-              if (result3 !== null) {
-                result2 = [result2, result3];
-              } else {
-                result2 = null;
-                pos = pos2;
-              }
-            } else {
-              result2 = null;
-              pos = pos2;
-            }
+            result1 = null;
           }
           if (result1 !== null) {
-            result2 = parse_bu_tail();
+            result2 = parse_post_clause();
             if (result2 !== null) {
-              result3 = parse_post_clause();
-              if (result3 !== null) {
-                result0 = [result0, result1, result2, result3];
-              } else {
-                result0 = null;
-                pos = pos1;
-              }
+              result0 = [result0, result1, result2];
             } else {
               result0 = null;
               pos = pos1;
@@ -14195,68 +14037,6 @@ var camxes = (function(){
         }
         if (result0 !== null) {
           result0 = (function(offset, expr) {return _node("bu_clause_no_pre", expr); })(pos0, result0);
-        }
-        if (result0 === null) {
-          pos = pos0;
-        }
-        
-        cache[cacheKey] = {
-          nextPos: pos,
-          result:  result0
-        };
-        return result0;
-      }
-      
-      function parse_zo_tail() {
-        var cacheKey = "zo_tail@" + pos;
-        var cachedResult = cache[cacheKey];
-        if (cachedResult) {
-          pos = cachedResult.nextPos;
-          return cachedResult.result;
-        }
-        
-        var result0, result1, result2;
-        var pos0, pos1;
-        
-        pos0 = pos;
-        pos1 = pos;
-        result1 = parse_ZO_clause();
-        if (result1 !== null) {
-          result2 = parse_any_word();
-          if (result2 !== null) {
-            result1 = [result1, result2];
-          } else {
-            result1 = null;
-            pos = pos1;
-          }
-        } else {
-          result1 = null;
-          pos = pos1;
-        }
-        if (result1 !== null) {
-          result0 = [];
-          while (result1 !== null) {
-            result0.push(result1);
-            pos1 = pos;
-            result1 = parse_ZO_clause();
-            if (result1 !== null) {
-              result2 = parse_any_word();
-              if (result2 !== null) {
-                result1 = [result1, result2];
-              } else {
-                result1 = null;
-                pos = pos1;
-              }
-            } else {
-              result1 = null;
-              pos = pos1;
-            }
-          }
-        } else {
-          result0 = null;
-        }
-        if (result0 !== null) {
-          result0 = (function(offset, expr) {return _node("zo_tail", expr); })(pos0, result0);
         }
         if (result0 === null) {
           pos = pos0;
@@ -14321,417 +14101,108 @@ var camxes = (function(){
         result0 = parse_BRIVLA();
         if (result0 === null) {
           pos2 = pos;
-          pos3 = pos;
-          reportFailures++;
-          result0 = parse_BU();
-          reportFailures--;
-          if (result0 === null) {
-            result0 = "";
+          result0 = parse_ZO();
+          if (result0 !== null) {
+            result1 = parse_spaces();
+            result1 = result1 !== null ? result1 : "";
+            if (result1 !== null) {
+              result2 = parse_any_word();
+              if (result2 !== null) {
+                result3 = parse_spaces();
+                result3 = result3 !== null ? result3 : "";
+                if (result3 !== null) {
+                  result0 = [result0, result1, result2, result3];
+                } else {
+                  result0 = null;
+                  pos = pos2;
+                }
+              } else {
+                result0 = null;
+                pos = pos2;
+              }
+            } else {
+              result0 = null;
+              pos = pos2;
+            }
           } else {
             result0 = null;
-            pos = pos3;
+            pos = pos2;
           }
-          if (result0 !== null) {
+          if (result0 === null) {
+            pos2 = pos;
             pos3 = pos;
             reportFailures++;
-            result1 = parse_ZO();
+            result0 = parse_BU();
             reportFailures--;
-            if (result1 === null) {
-              result1 = "";
+            if (result0 === null) {
+              result0 = "";
             } else {
-              result1 = null;
+              result0 = null;
               pos = pos3;
             }
-            if (result1 !== null) {
+            if (result0 !== null) {
               pos3 = pos;
               reportFailures++;
-              result2 = parse_SI();
+              result1 = parse_ZO();
               reportFailures--;
-              if (result2 === null) {
-                result2 = "";
+              if (result1 === null) {
+                result1 = "";
               } else {
-                result2 = null;
+                result1 = null;
                 pos = pos3;
               }
-              if (result2 !== null) {
+              if (result1 !== null) {
                 pos3 = pos;
                 reportFailures++;
-                result3 = parse_SA();
+                result2 = parse_SI();
                 reportFailures--;
-                if (result3 === null) {
-                  result3 = "";
+                if (result2 === null) {
+                  result2 = "";
                 } else {
-                  result3 = null;
+                  result2 = null;
                   pos = pos3;
                 }
-                if (result3 !== null) {
+                if (result2 !== null) {
                   pos3 = pos;
                   reportFailures++;
-                  result4 = parse_SU();
+                  result3 = parse_SA();
                   reportFailures--;
-                  if (result4 === null) {
-                    result4 = "";
+                  if (result3 === null) {
+                    result3 = "";
                   } else {
-                    result4 = null;
+                    result3 = null;
                     pos = pos3;
                   }
-                  if (result4 !== null) {
+                  if (result3 !== null) {
                     pos3 = pos;
                     reportFailures++;
-                    result5 = parse_FAhO();
+                    result4 = parse_SU();
                     reportFailures--;
-                    if (result5 === null) {
-                      result5 = "";
+                    if (result4 === null) {
+                      result4 = "";
                     } else {
-                      result5 = null;
+                      result4 = null;
                       pos = pos3;
                     }
-                    if (result5 !== null) {
-                      result6 = parse_A();
-                      if (result6 === null) {
-                        result6 = parse_BAI();
-                        if (result6 === null) {
-                          result6 = parse_BAhE();
-                          if (result6 === null) {
-                            result6 = parse_BE();
-                            if (result6 === null) {
-                              result6 = parse_BEI();
-                              if (result6 === null) {
-                                result6 = parse_BEhO();
-                                if (result6 === null) {
-                                  result6 = parse_BIhE();
-                                  if (result6 === null) {
-                                    result6 = parse_BIhI();
-                                    if (result6 === null) {
-                                      result6 = parse_BO();
-                                      if (result6 === null) {
-                                        result6 = parse_BOI();
-                                        if (result6 === null) {
-                                          result6 = parse_BY();
-                                          if (result6 === null) {
-                                            result6 = parse_CAhA();
-                                            if (result6 === null) {
-                                              result6 = parse_CAI();
-                                              if (result6 === null) {
-                                                result6 = parse_CEI();
-                                                if (result6 === null) {
-                                                  result6 = parse_CEhE();
-                                                  if (result6 === null) {
-                                                    result6 = parse_CO();
-                                                    if (result6 === null) {
-                                                      result6 = parse_COI();
-                                                      if (result6 === null) {
-                                                        result6 = parse_CU();
-                                                        if (result6 === null) {
-                                                          result6 = parse_CUhE();
-                                                          if (result6 === null) {
-                                                            result6 = parse_DAhO();
-                                                            if (result6 === null) {
-                                                              result6 = parse_DOI();
-                                                              if (result6 === null) {
-                                                                result6 = parse_DOhU();
-                                                                if (result6 === null) {
-                                                                  result6 = parse_FA();
-                                                                  if (result6 === null) {
-                                                                    result6 = parse_FAhA();
-                                                                    if (result6 === null) {
-                                                                      result6 = parse_FEhE();
-                                                                      if (result6 === null) {
-                                                                        result6 = parse_FEhU();
-                                                                        if (result6 === null) {
-                                                                          result6 = parse_FIhO();
-                                                                          if (result6 === null) {
-                                                                            result6 = parse_FOI();
-                                                                            if (result6 === null) {
-                                                                              result6 = parse_FUhA();
-                                                                              if (result6 === null) {
-                                                                                result6 = parse_FUhE();
-                                                                                if (result6 === null) {
-                                                                                  result6 = parse_FUhO();
-                                                                                  if (result6 === null) {
-                                                                                    result6 = parse_GA();
-                                                                                    if (result6 === null) {
-                                                                                      result6 = parse_GAhO();
-                                                                                      if (result6 === null) {
-                                                                                        result6 = parse_GEhU();
-                                                                                        if (result6 === null) {
-                                                                                          result6 = parse_GI();
-                                                                                          if (result6 === null) {
-                                                                                            result6 = parse_GIhA();
-                                                                                            if (result6 === null) {
-                                                                                              result6 = parse_GOI();
-                                                                                              if (result6 === null) {
-                                                                                                result6 = parse_GOhA();
-                                                                                                if (result6 === null) {
-                                                                                                  result6 = parse_GUhA();
-                                                                                                  if (result6 === null) {
-                                                                                                    result6 = parse_I();
-                                                                                                    if (result6 === null) {
-                                                                                                      result6 = parse_JA();
-                                                                                                      if (result6 === null) {
-                                                                                                        result6 = parse_JAI();
-                                                                                                        if (result6 === null) {
-                                                                                                          result6 = parse_JOhI();
-                                                                                                          if (result6 === null) {
-                                                                                                            result6 = parse_JOI();
-                                                                                                            if (result6 === null) {
-                                                                                                              result6 = parse_KE();
-                                                                                                              if (result6 === null) {
-                                                                                                                result6 = parse_KEhE();
-                                                                                                                if (result6 === null) {
-                                                                                                                  result6 = parse_KEI();
-                                                                                                                  if (result6 === null) {
-                                                                                                                    result6 = parse_KI();
-                                                                                                                    if (result6 === null) {
-                                                                                                                      result6 = parse_KOhA();
-                                                                                                                      if (result6 === null) {
-                                                                                                                        result6 = parse_KU();
-                                                                                                                        if (result6 === null) {
-                                                                                                                          result6 = parse_KUhE();
-                                                                                                                          if (result6 === null) {
-                                                                                                                            result6 = parse_KUhO();
-                                                                                                                            if (result6 === null) {
-                                                                                                                              result6 = parse_LA();
-                                                                                                                              if (result6 === null) {
-                                                                                                                                result6 = parse_LAU();
-                                                                                                                                if (result6 === null) {
-                                                                                                                                  result6 = parse_LAhE();
-                                                                                                                                  if (result6 === null) {
-                                                                                                                                    result6 = parse_LE();
-                                                                                                                                    if (result6 === null) {
-                                                                                                                                      result6 = parse_LEhU();
-                                                                                                                                      if (result6 === null) {
-                                                                                                                                        result6 = parse_LI();
-                                                                                                                                        if (result6 === null) {
-                                                                                                                                          result6 = parse_LIhU();
-                                                                                                                                          if (result6 === null) {
-                                                                                                                                            result6 = parse_LOhO();
-                                                                                                                                            if (result6 === null) {
-                                                                                                                                              result6 = parse_LOhU();
-                                                                                                                                              if (result6 === null) {
-                                                                                                                                                result6 = parse_LU();
-                                                                                                                                                if (result6 === null) {
-                                                                                                                                                  result6 = parse_LUhU();
-                                                                                                                                                  if (result6 === null) {
-                                                                                                                                                    result6 = parse_MAhO();
-                                                                                                                                                    if (result6 === null) {
-                                                                                                                                                      result6 = parse_MAI();
-                                                                                                                                                      if (result6 === null) {
-                                                                                                                                                        result6 = parse_ME();
-                                                                                                                                                        if (result6 === null) {
-                                                                                                                                                          result6 = parse_MEhU();
-                                                                                                                                                          if (result6 === null) {
-                                                                                                                                                            result6 = parse_MOhE();
-                                                                                                                                                            if (result6 === null) {
-                                                                                                                                                              result6 = parse_MOhI();
-                                                                                                                                                              if (result6 === null) {
-                                                                                                                                                                result6 = parse_MOI();
-                                                                                                                                                                if (result6 === null) {
-                                                                                                                                                                  result6 = parse_NA();
-                                                                                                                                                                  if (result6 === null) {
-                                                                                                                                                                    result6 = parse_NAI();
-                                                                                                                                                                    if (result6 === null) {
-                                                                                                                                                                      result6 = parse_NAhE();
-                                                                                                                                                                      if (result6 === null) {
-                                                                                                                                                                        result6 = parse_NAhU();
-                                                                                                                                                                        if (result6 === null) {
-                                                                                                                                                                          result6 = parse_NIhE();
-                                                                                                                                                                          if (result6 === null) {
-                                                                                                                                                                            result6 = parse_NIhO();
-                                                                                                                                                                            if (result6 === null) {
-                                                                                                                                                                              result6 = parse_NOI();
-                                                                                                                                                                              if (result6 === null) {
-                                                                                                                                                                                result6 = parse_NU();
-                                                                                                                                                                                if (result6 === null) {
-                                                                                                                                                                                  result6 = parse_NUhA();
-                                                                                                                                                                                  if (result6 === null) {
-                                                                                                                                                                                    result6 = parse_NUhI();
-                                                                                                                                                                                    if (result6 === null) {
-                                                                                                                                                                                      result6 = parse_NUhU();
-                                                                                                                                                                                      if (result6 === null) {
-                                                                                                                                                                                        result6 = parse_PA();
-                                                                                                                                                                                        if (result6 === null) {
-                                                                                                                                                                                          result6 = parse_PEhE();
-                                                                                                                                                                                          if (result6 === null) {
-                                                                                                                                                                                            result6 = parse_PEhO();
-                                                                                                                                                                                            if (result6 === null) {
-                                                                                                                                                                                              result6 = parse_PU();
-                                                                                                                                                                                              if (result6 === null) {
-                                                                                                                                                                                                result6 = parse_RAhO();
-                                                                                                                                                                                                if (result6 === null) {
-                                                                                                                                                                                                  result6 = parse_ROI();
-                                                                                                                                                                                                  if (result6 === null) {
-                                                                                                                                                                                                    result6 = parse_SE();
-                                                                                                                                                                                                    if (result6 === null) {
-                                                                                                                                                                                                      result6 = parse_SEI();
-                                                                                                                                                                                                      if (result6 === null) {
-                                                                                                                                                                                                        result6 = parse_SEhU();
-                                                                                                                                                                                                        if (result6 === null) {
-                                                                                                                                                                                                          result6 = parse_SOI();
-                                                                                                                                                                                                          if (result6 === null) {
-                                                                                                                                                                                                            result6 = parse_TAhE();
-                                                                                                                                                                                                            if (result6 === null) {
-                                                                                                                                                                                                              result6 = parse_TEhU();
-                                                                                                                                                                                                              if (result6 === null) {
-                                                                                                                                                                                                                result6 = parse_TEI();
-                                                                                                                                                                                                                if (result6 === null) {
-                                                                                                                                                                                                                  result6 = parse_TO();
-                                                                                                                                                                                                                  if (result6 === null) {
-                                                                                                                                                                                                                    result6 = parse_TOI();
-                                                                                                                                                                                                                    if (result6 === null) {
-                                                                                                                                                                                                                      result6 = parse_TUhE();
-                                                                                                                                                                                                                      if (result6 === null) {
-                                                                                                                                                                                                                        result6 = parse_TUhU();
-                                                                                                                                                                                                                        if (result6 === null) {
-                                                                                                                                                                                                                          result6 = parse_UI();
-                                                                                                                                                                                                                          if (result6 === null) {
-                                                                                                                                                                                                                            result6 = parse_VA();
-                                                                                                                                                                                                                            if (result6 === null) {
-                                                                                                                                                                                                                              result6 = parse_VAU();
-                                                                                                                                                                                                                              if (result6 === null) {
-                                                                                                                                                                                                                                result6 = parse_VEI();
-                                                                                                                                                                                                                                if (result6 === null) {
-                                                                                                                                                                                                                                  result6 = parse_VEhO();
-                                                                                                                                                                                                                                  if (result6 === null) {
-                                                                                                                                                                                                                                    result6 = parse_VUhU();
-                                                                                                                                                                                                                                    if (result6 === null) {
-                                                                                                                                                                                                                                      result6 = parse_VEhA();
-                                                                                                                                                                                                                                      if (result6 === null) {
-                                                                                                                                                                                                                                        result6 = parse_VIhA();
-                                                                                                                                                                                                                                        if (result6 === null) {
-                                                                                                                                                                                                                                          result6 = parse_VUhO();
-                                                                                                                                                                                                                                          if (result6 === null) {
-                                                                                                                                                                                                                                            result6 = parse_XI();
-                                                                                                                                                                                                                                            if (result6 === null) {
-                                                                                                                                                                                                                                              result6 = parse_ZAhO();
-                                                                                                                                                                                                                                              if (result6 === null) {
-                                                                                                                                                                                                                                                result6 = parse_ZEhA();
-                                                                                                                                                                                                                                                if (result6 === null) {
-                                                                                                                                                                                                                                                  result6 = parse_ZI();
-                                                                                                                                                                                                                                                  if (result6 === null) {
-                                                                                                                                                                                                                                                    result6 = parse_ZIhE();
-                                                                                                                                                                                                                                                    if (result6 === null) {
-                                                                                                                                                                                                                                                      result6 = parse_ZOI();
-                                                                                                                                                                                                                                                      if (result6 === null) {
-                                                                                                                                                                                                                                                        result6 = parse_ZOhU();
-                                                                                                                                                                                                                                                        if (result6 === null) {
-                                                                                                                                                                                                                                                          result6 = parse_cmavo();
-                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                      }
-                                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                                  }
-                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                              }
-                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                          }
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                      }
-                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                  }
-                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                              }
-                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                          }
-                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                      }
-                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                  }
-                                                                                                                                                                                                                }
-                                                                                                                                                                                                              }
-                                                                                                                                                                                                            }
-                                                                                                                                                                                                          }
-                                                                                                                                                                                                        }
-                                                                                                                                                                                                      }
-                                                                                                                                                                                                    }
-                                                                                                                                                                                                  }
-                                                                                                                                                                                                }
-                                                                                                                                                                                              }
-                                                                                                                                                                                            }
-                                                                                                                                                                                          }
-                                                                                                                                                                                        }
-                                                                                                                                                                                      }
-                                                                                                                                                                                    }
-                                                                                                                                                                                  }
-                                                                                                                                                                                }
-                                                                                                                                                                              }
-                                                                                                                                                                            }
-                                                                                                                                                                          }
-                                                                                                                                                                        }
-                                                                                                                                                                      }
-                                                                                                                                                                    }
-                                                                                                                                                                  }
-                                                                                                                                                                }
-                                                                                                                                                              }
-                                                                                                                                                            }
-                                                                                                                                                          }
-                                                                                                                                                        }
-                                                                                                                                                      }
-                                                                                                                                                    }
-                                                                                                                                                  }
-                                                                                                                                                }
-                                                                                                                                              }
-                                                                                                                                            }
-                                                                                                                                          }
-                                                                                                                                        }
-                                                                                                                                      }
-                                                                                                                                    }
-                                                                                                                                  }
-                                                                                                                                }
-                                                                                                                              }
-                                                                                                                            }
-                                                                                                                          }
-                                                                                                                        }
-                                                                                                                      }
-                                                                                                                    }
-                                                                                                                  }
-                                                                                                                }
-                                                                                                              }
-                                                                                                            }
-                                                                                                          }
-                                                                                                        }
-                                                                                                      }
-                                                                                                    }
-                                                                                                  }
-                                                                                                }
-                                                                                              }
-                                                                                            }
-                                                                                          }
-                                                                                        }
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
+                    if (result4 !== null) {
+                      pos3 = pos;
+                      reportFailures++;
+                      result5 = parse_FAhO();
+                      reportFailures--;
+                      if (result5 === null) {
+                        result5 = "";
+                      } else {
+                        result5 = null;
+                        pos = pos3;
                       }
-                      if (result6 !== null) {
-                        result0 = [result0, result1, result2, result3, result4, result5, result6];
+                      if (result5 !== null) {
+                        result6 = parse_CMAVO();
+                        if (result6 !== null) {
+                          result0 = [result0, result1, result2, result3, result4, result5, result6];
+                        } else {
+                          result0 = null;
+                          pos = pos2;
+                        }
                       } else {
                         result0 = null;
                         pos = pos2;
@@ -14756,9 +14227,6 @@ var camxes = (function(){
               result0 = null;
               pos = pos2;
             }
-          } else {
-            result0 = null;
-            pos = pos2;
           }
         }
         if (result0 !== null) {
@@ -15473,7 +14941,7 @@ var camxes = (function(){
           return cachedResult.result;
         }
         
-        var result0, result1, result2;
+        var result0, result1;
         var pos0, pos1, pos2;
         
         pos0 = pos;
@@ -15482,7 +14950,7 @@ var camxes = (function(){
         if (result0 !== null) {
           pos2 = pos;
           reportFailures++;
-          result1 = parse_ZO_clause();
+          result1 = parse_BU_clause();
           reportFailures--;
           if (result1 === null) {
             result1 = "";
@@ -15491,22 +14959,7 @@ var camxes = (function(){
             pos = pos2;
           }
           if (result1 !== null) {
-            pos2 = pos;
-            reportFailures++;
-            result2 = parse_BU_clause();
-            reportFailures--;
-            if (result2 === null) {
-              result2 = "";
-            } else {
-              result2 = null;
-              pos = pos2;
-            }
-            if (result2 !== null) {
-              result0 = [result0, result1, result2];
-            } else {
-              result0 = null;
-              pos = pos1;
-            }
+            result0 = [result0, result1];
           } else {
             result0 = null;
             pos = pos1;
@@ -15514,46 +14967,6 @@ var camxes = (function(){
         } else {
           result0 = null;
           pos = pos1;
-        }
-        if (result0 === null) {
-          pos1 = pos;
-          result0 = parse_zo_clause_no_pre();
-          if (result0 !== null) {
-            pos2 = pos;
-            reportFailures++;
-            result1 = parse_ZO_clause();
-            reportFailures--;
-            if (result1 === null) {
-              result1 = "";
-            } else {
-              result1 = null;
-              pos = pos2;
-            }
-            if (result1 !== null) {
-              pos2 = pos;
-              reportFailures++;
-              result2 = parse_BU_clause();
-              reportFailures--;
-              if (result2 === null) {
-                result2 = "";
-              } else {
-                result2 = null;
-                pos = pos2;
-              }
-              if (result2 !== null) {
-                result0 = [result0, result1, result2];
-              } else {
-                result0 = null;
-                pos = pos1;
-              }
-            } else {
-              result0 = null;
-              pos = pos1;
-            }
-          } else {
-            result0 = null;
-            pos = pos1;
-          }
         }
         if (result0 !== null) {
           result0 = (function(offset, expr) {return _node("erasable_clause", expr); })(pos0, result0);
@@ -16806,7 +16219,7 @@ var camxes = (function(){
           return cachedResult.result;
         }
         
-        var result0, result1, result2;
+        var result0, result1;
         var pos0, pos1;
         
         pos0 = pos;
@@ -16815,7 +16228,7 @@ var camxes = (function(){
         if (result0 !== null) {
           pos1 = pos;
           reportFailures++;
-          result1 = parse_ZO_clause();
+          result1 = parse_BU_clause();
           reportFailures--;
           if (result1 === null) {
             result1 = "";
@@ -16824,22 +16237,7 @@ var camxes = (function(){
             pos = pos1;
           }
           if (result1 !== null) {
-            pos1 = pos;
-            reportFailures++;
-            result2 = parse_BU_clause();
-            reportFailures--;
-            if (result2 === null) {
-              result2 = "";
-            } else {
-              result2 = null;
-              pos = pos1;
-            }
-            if (result2 !== null) {
-              result0 = [result0, result1, result2];
-            } else {
-              result0 = null;
-              pos = pos0;
-            }
+            result0 = [result0, result1];
           } else {
             result0 = null;
             pos = pos0;
@@ -19174,7 +18572,7 @@ var camxes = (function(){
           return cachedResult.result;
         }
         
-        var result0, result1, result2, result3;
+        var result0, result1, result2;
         var pos0, pos1;
         
         pos0 = pos;
@@ -19194,7 +18592,7 @@ var camxes = (function(){
           if (result1 !== null) {
             pos1 = pos;
             reportFailures++;
-            result2 = parse_ZO_clause();
+            result2 = parse_BU_clause();
             reportFailures--;
             if (result2 === null) {
               result2 = "";
@@ -19203,22 +18601,7 @@ var camxes = (function(){
               pos = pos1;
             }
             if (result2 !== null) {
-              pos1 = pos;
-              reportFailures++;
-              result3 = parse_BU_clause();
-              reportFailures--;
-              if (result3 === null) {
-                result3 = "";
-              } else {
-                result3 = null;
-                pos = pos1;
-              }
-              if (result3 !== null) {
-                result0 = [result0, result1, result2, result3];
-              } else {
-                result0 = null;
-                pos = pos0;
-              }
+              result0 = [result0, result1, result2];
             } else {
               result0 = null;
               pos = pos0;
