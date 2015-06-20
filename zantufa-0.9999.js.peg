@@ -479,7 +479,8 @@ bu_tail = expr:BU_clause+ {return _node("bu_tail", expr); }
 // pre_zei_bu = expr:(( BRIVLA / !BU !ZEI !SI !SA !SU !FAhO CMAVO) spaces?) {return _node("pre_zei_bu", expr); } _zo zei cmima ma'oi SI_20150618UTC
 // pre_zei_bu _jmina zoizoi ZO spaces? any_word spaces? zoi e zoizoi !ZO zoi_20150620UTC
 // pre_zei_bu _jmina zoizoi !LOhU zoi_20150620UTC
-pre_zei_bu = expr:(( BRIVLA / ZO spaces? any_word spaces? / !BU !LOhU !ZO !SI !SA !SU !FAhO CMAVO) spaces?) {return _node("pre_zei_bu", expr); }
+// pre_zei_bu _jmina zoizoi CMEVLA zoi_20150620UTC_
+pre_zei_bu = expr:(( CMEVLA / BRIVLA / ZO spaces? any_word spaces? / !BU !LOhU !ZO !SI !SA !SU !FAhO CMAVO) spaces?) {return _node("pre_zei_bu", expr); }
 // LOhU_pre / ZO_pre / ZOI_pre / !ZEI_clause !BU_clause !FAhO_clause !SI_clause !SA_clause !SU_clause any_word_SA_handling si_clause?
 // pre_zei_bu_no_SA = LOhU_pre / ZO_pre / ZOI_pre / !ZEI_clause !BU_clause !FAhO_clause !SI_clause !SA_clause !SU_clause any_word si_clause?
 
