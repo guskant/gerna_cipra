@@ -38,3 +38,12 @@ Additional changes needed to clean up:
 - add "si_clause?" either before or inside "faho_clause", so that a final word can be deleted without replacing it with anything. If we want "broda zei fa'o" to work as expected though, this will probably require some more tinkering. 
 
 
+
+
+ma'oi SI cmima la'o zoi pre_clause zoi .ije
+zo zei cmima ma'oi SI (to zo ze'ei ji'a co'e .i ku'i ca co'u sarcu ki'u lo nu zo zei ka'e basti zo ze'ei toi) .ije
+lu zo SI li'u cu pu je ca ji'a sumti .ije
+pi ro lu zo valsi SI li'u cu pu je ca ji'a se turni zo SI .ije
+lo du'e mei be zo SI cu na gendra (to dunli la camxes gi'e frica la ilmentufa zei camxes toi) .ije
+lo'u SI bu le'u cu pu je ca ji'a na gendra .ije
+lu lo'u SI le'u li'u cu se turni zo lo'u
