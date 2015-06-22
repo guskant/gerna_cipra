@@ -94,7 +94,7 @@ zantufa-0.9999.js.peg:466:// zei_clause = expr:(pre_clause post:zei_clause_no_pr
 zantufa-0.9999.js.peg:467:// zei_clause_no_pre = expr:(pre_zei_bu (zei_tail? bu_tail)* zei_tail post_clause) {return _node("zei_clause_no_pre", expr); } _vimcu_20150622UTC_
 zantufa-0.9999.js.peg:471:// bu_clause_no_pre = expr:(pre_zei_bu (bu_tail? zei_tail)* bu_tail post_clause) {return _node("bu_clause_no_pre", expr); } _vimcu zoizoi zei_tail zoi_20150622UTC_
 zantufa-0.9999.js.peg:475:// zei_tail = expr:(ZEI_clause any_word)+ {return _node("zei_tail", expr); } _vimcu_20150622UTC_
-zantufa-0.9999.js.peg:478:// pre_zei_bu = expr:(!BU_clause !ZEI_clause !SI_clause !SA_clause !SU_clause !FAhO_clause any_word_SA_handling si_clause?) {return _node("pre_zei_bu", expr); } _basti fa zoizoi (CMEVLA / BRIVLA / ZO spaces? any_word / LOhU spaces? (!LEhU any_word)* LEhU_clause / ZOI spaces? zoi_open spaces? zoi_word* zoi_close / !BU !SI !SA !SU !FAhO CMAVO) spaces? zoi_20150622UTC_
+zantufa-0.9999.js.peg:478:// pre_zei_bu = expr:(!BU_clause !ZEI_clause !SI_clause !SA_clause !SU_clause !FAhO_clause any_word_SA_handling si_clause?) {return _node("pre_zei_bu", expr); } _basti fa zoizoi (CMEVLA / BRIVLA / ZO spaces? any_word / LOhU spaces? (!LEhU any_word)* LEhU / ZOI spaces? zoi_open spaces? zoi_word* zoi_close / !BU !SI !SA !SU !FAhO CMAVO) spaces? zoi_20150622UTC_
 zantufa-0.9999.js.peg:492:// post_clause = expr:(spaces? si_clause? !ZEI_clause !BU_clause indicators*) {return _node_nonempty("post_clause", expr); } vimcu zoizoi si_clause? !ZEI_clause zoi_20150622UTC_
 zantufa-0.9999.js.peg:495:// pre_clause = BAhE_clause? _jmina zoizoi si_clause? zoi_20150622UTC_
 zantufa-0.9999.js.peg:501:// known_cmavo_SA _vimcu zoizoi ZEI_pre zoi_20150622UTC_
