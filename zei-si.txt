@@ -53,8 +53,10 @@ camxes:
 zoi si bhtighqae si : e'a
 coi zoi si broda : e'anai
 coi lo'u si broda : e'anai
+zoizoi W zoi si broda : e'a
 
 ilmentufa camxes:
 zoi si bhtighqae si : e'a
 coi zoi si broda : ([COI:coi {ZOI:zoi SI:si}] G:broda DOhU) 
 coi lo'u si broda : ([COI:coi {LOhU:lo'u SI:si}] G:broda DOhU) 
+zoizoi W zoi si broda : ([{ZOI:zoi ZOI:zoi ZOI:zoi} SI:si] [BT{G:broda VAU}])

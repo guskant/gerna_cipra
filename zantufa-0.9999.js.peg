@@ -527,7 +527,8 @@ sa_word = si_word
 
 // si_word _piro la'o zoi pre_zei_bu zoi cu cmima la'o zoi si_word zoi_20150622UTC_
 // si_word _jmina zoi zoi LOhU spaces? (!LEhU any_word)* LEhU spaces? zoi .i vimcu zoi zoi !LOhU zoi_20150622UTC_
-si_word = ( CMEVLA / BRIVLA / LOhU spaces? (!LEhU any_word)* LEhU spaces? / ZO spaces? any_word spaces? / !BU !ZO !SI !SA !SU !FAhO CMAVO) spaces?
+// si_word _jmina zoi peg ZOI spaces? zoi_open spaces? zoi_word* zoi_close spaces? peg_20150622UTC_
+si_word = ( CMEVLA / BRIVLA / ZOI spaces? zoi_open spaces? zoi_word* zoi_close spaces? / LOhU spaces? (!LEhU any_word)* LEhU spaces? / ZO spaces? any_word spaces? / !BU !ZO !SI !SA !SU !FAhO CMAVO) spaces?
 
 su_word = !NIhO_clause !LU_clause !TUhE_clause !TO_clause !SU_clause !FAhO_clause any_word_SA_handling
 
