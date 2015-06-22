@@ -60,3 +60,13 @@ zoi si bhtighqae si : e'a
 coi zoi si broda : ([COI:coi {ZOI:zoi SI:si}] G:broda DOhU) 
 coi lo'u si broda : ([COI:coi {LOhU:lo'u SI:si}] G:broda DOhU) 
 zoizoi W zoi si broda : ([{ZOI:zoi ZOI:zoi ZOI:zoi} SI:si] [BT{G:broda VAU}])
+
+
+bu_clause = expr:(pre_clause post:bu_clause_no_pre) {return _node("bu_clause", expr); }
+bu_clause_no_pre = expr:(si_word bu_tail+ post_clause) {return _node("bu_clause_no_pre", expr); }
+bu_tail = expr:BU_clause+ {return _node("bu_tail", expr); }
+
+su_clause = (erasable_clause / su_word)* SU_clause 
+si_clause = ((erasable_clause / si_word / SA spaces?) si_clause? SI_clause)+
+erasable_clause = expr:(bu_clause_no_pre !BU_clause) {return _node("erasable_clause", expr); }
+
