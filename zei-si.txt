@@ -47,3 +47,14 @@ pi ro lu zo valsi SI li'u cu pu je ca ji'a se turni zo SI .ije
 lo du'e mei be zo SI cu na gendra (to dunli la camxes gi'e frica la ilmentufa zei camxes toi) .ije
 lo'u SI bu le'u cu pu je ca ji'a na gendra .ije
 lu lo'u SI le'u li'u cu se turni zo lo'u
+
+
+camxes:
+zoi si bhtighqae si : e'a
+coi zoi si broda : e'anai
+coi lo'u si broda : e'anai
+
+ilmentufa camxes:
+zoi si bhtighqae si : e'a
+coi zoi si broda : ([COI:coi {ZOI:zoi SI:si}] G:broda DOhU) 
+coi lo'u si broda : ([COI:coi {LOhU:lo'u SI:si}] G:broda DOhU) 

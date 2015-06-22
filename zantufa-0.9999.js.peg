@@ -469,7 +469,8 @@ indicator =  expr:((UI_clause / CAI_clause) NAI_clause? / DAhO_clause / FUhO_cla
 
 bu_clause = expr:(pre_clause post:bu_clause_no_pre) {return _node("bu_clause", expr); }
 // bu_clause_no_pre = expr:(pre_zei_bu (bu_tail? zei_tail)* bu_tail post_clause) {return _node("bu_clause_no_pre", expr); } _zo zei cmima ma'oi SI_20150618UTC
-bu_clause_no_pre = expr:(pre_zei_bu bu_tail+ post_clause) {return _node("bu_clause_no_pre", expr); }
+// bu_clause_no_pre _piro la'o zoi pre_zei_bu zoi cu cmima la'o zoi si_word zoi_20150622UTC_
+bu_clause_no_pre = expr:(si_word bu_tail+ post_clause) {return _node("bu_clause_no_pre", expr); }
 // bu_clause_no_SA = pre_zei_bu_no_SA (bu_tail? zei_tail)* bu_tail
 
 // zei_tail = expr:(ZEI_clause any_word)+ {return _node("zei_tail", expr); } _zo zei cmima ma'oi SI_20150618UTC
@@ -480,7 +481,7 @@ bu_tail = expr:BU_clause+ {return _node("bu_tail", expr); }
 // pre_zei_bu _jmina zoizoi ZO spaces? any_word spaces? zoi e zoizoi !ZO zoi_20150620UTC
 // pre_zei_bu _jmina zoizoi !LOhU zoi_20150620UTC
 // pre_zei_bu _jmina zoizoi CMEVLA zoi_20150620UTC_
-pre_zei_bu = expr:(( CMEVLA / BRIVLA / ZO spaces? any_word spaces? / !BU !LOhU !ZO !SI !SA !SU !FAhO CMAVO) spaces?) {return _node("pre_zei_bu", expr); }
+// pre_zei_bu = expr:(( CMEVLA / BRIVLA / ZO spaces? any_word spaces? / !BU !LOhU !ZO !SI !SA !SU !FAhO CMAVO) spaces?) {return _node("pre_zei_bu", expr); } _piro la'o zoi pre_zei_bu zoi cu cmima la'o zoi si_word zoi_20150622UTC_
 // LOhU_pre / ZO_pre / ZOI_pre / !ZEI_clause !BU_clause !FAhO_clause !SI_clause !SA_clause !SU_clause any_word_SA_handling si_clause?
 // pre_zei_bu_no_SA = LOhU_pre / ZO_pre / ZOI_pre / !ZEI_clause !BU_clause !FAhO_clause !SI_clause !SA_clause !SU_clause any_word si_clause?
 
@@ -521,9 +522,12 @@ si_clause = ((erasable_clause / si_word / SA spaces?) si_clause? SI_clause)+
 // erasable_clause = expr:(bu_clause_no_pre !ZEI_clause !BU_clause / zei_clause_no_pre !ZEI_clause !BU_clause) {return _node("erasable_clause", expr); } _zo zei cmima ma'oi SI_20150618UTC
 erasable_clause = expr:(bu_clause_no_pre !BU_clause) {return _node("erasable_clause", expr); }
 
-sa_word = pre_zei_bu
+// sa_word _piro la'o zoi pre_zei_bu zoi cu cmima la'o zoi si_word zoi_20150622UTC_
+sa_word = si_word
 
-si_word = pre_zei_bu
+// si_word _piro la'o zoi pre_zei_bu zoi cu cmima la'o zoi si_word zoi_20150622UTC_
+// si_word _jmina zoi zoi LOhU spaces? (!LEhU any_word)* LEhU spaces? zoi .i vimcu zoi zoi !LOhU zoi_20150622UTC_
+si_word = ( CMEVLA / BRIVLA / LOhU spaces? (!LEhU any_word)* LEhU spaces? / ZO spaces? any_word spaces? / !BU !ZO !SI !SA !SU !FAhO CMAVO) spaces?
 
 su_word = !NIhO_clause !LU_clause !TUhE_clause !TO_clause !SU_clause !FAhO_clause any_word_SA_handling
 

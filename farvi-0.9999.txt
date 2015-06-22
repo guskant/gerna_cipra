@@ -87,5 +87,10 @@ zantufa-0.12.js.peg:1633:// non_space = expr:(!space_char .) {return _join(expr)
 zantufa-0.12.js.peg:1880:// SI _+zei +ze'ei_20150618UTC_
 zantufa-0.12.js.peg:1933:// ZEI = &cmavo expr:( z e i ) &post_word {return ["ZEI", _join(expr)];} _zo zei cmima ma'oi SI_20150618UTC_
 ------------------ mulno fa la zantufa_0.12 ------------------
-zantufa-0.9999.js.peg:482:// pre_zei_bu _jmina zoizoi CMEVLA zoi_20150620UTC_
-zantufa-0.9999.js.peg:1634:// non_space = expr:(!space_char .) {return _join(expr);} _mu'i ma_20150605UTC_____
+zantufa-0.9999.js.peg:472:// bu_clause_no_pre _piro la'o zoi pre_zei_bu zoi cu cmima la'o zoi si_word zoi_20150622UTC_
+zantufa-0.9999.js.peg:483:// pre_zei_bu _jmina zoizoi CMEVLA zoi_20150620UTC_
+zantufa-0.9999.js.peg:484:// pre_zei_bu = expr:(( CMEVLA / BRIVLA / ZO spaces? any_word spaces? / !BU !LOhU !ZO !SI !SA !SU !FAhO CMAVO) spaces?) {return _node("pre_zei_bu", expr); } _piro la'o zoi pre_zei_bu zoi cu cmima la'o zoi si_word zoi_20150622UTC_
+zantufa-0.9999.js.peg:525:// sa_word _piro la'o zoi pre_zei_bu zoi cu cmima la'o zoi si_word zoi_20150622UTC_
+zantufa-0.9999.js.peg:528:// si_word _piro la'o zoi pre_zei_bu zoi cu cmima la'o zoi si_word zoi_20150622UTC_
+zantufa-0.9999.js.peg:529:// si_word _jmina zoi zoi LOhU spaces? (!LEhU any_word)* LEhU spaces? zoi .i vimcu zoi zoi !LOhU zoi_20150622UTC_
+zantufa-0.9999.js.peg:1638:// non_space = expr:(!space_char .) {return _join(expr);} _mu'i ma_20150605UTC_____
