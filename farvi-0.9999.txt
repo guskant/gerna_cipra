@@ -93,4 +93,5 @@ zantufa-0.9999.js.peg:484:// pre_zei_bu = expr:(( CMEVLA / BRIVLA / ZO spaces? a
 zantufa-0.9999.js.peg:525:// sa_word _piro la'o zoi pre_zei_bu zoi cu cmima la'o zoi si_word zoi_20150622UTC_
 zantufa-0.9999.js.peg:528:// si_word _piro la'o zoi pre_zei_bu zoi cu cmima la'o zoi si_word zoi_20150622UTC_
 zantufa-0.9999.js.peg:529:// si_word _jmina zoi zoi LOhU spaces? (!LEhU any_word)* LEhU spaces? zoi .i vimcu zoi zoi !LOhU zoi_20150622UTC_
-zantufa-0.9999.js.peg:1638:// non_space = expr:(!space_char .) {return _join(expr);} _mu'i ma_20150605UTC_____
+zantufa-0.9999.js.peg:530:// si_word _jmina zoi peg ZOI spaces? zoi_open spaces? zoi_word* zoi_close spaces? peg_20150622UTC_
+zantufa-0.9999.js.peg:1639:// non_space = expr:(!space_char .) {return _join(expr);} _mu'i ma_20150605UTC_____
