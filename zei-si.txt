@@ -62,11 +62,21 @@ coi lo'u si broda : ([COI:coi {LOhU:lo'u SI:si}] G:broda DOhU)
 zoizoi W zoi si broda : ([{ZOI:zoi ZOI:zoi ZOI:zoi} SI:si] [BT{G:broda VAU}])
 
 
-bu_clause = expr:(pre_clause post:bu_clause_no_pre) {return _node("bu_clause", expr); }
-bu_clause_no_pre = expr:(si_word bu_tail+ post_clause) {return _node("bu_clause_no_pre", expr); }
-bu_tail = expr:BU_clause+ {return _node("bu_tail", expr); }
 
-su_clause = (erasable_clause / su_word)* SU_clause 
-si_clause = ((erasable_clause / si_word / SA spaces?) si_clause? SI_clause)+
-erasable_clause = expr:(bu_clause_no_pre !BU_clause) {return _node("erasable_clause", expr); }
+
+pre_zei_bu : cmene galfi
+lo'u broda zei brode sisi le'u .eipei gendra
+iku'i lu coi cax zei broda sisi li'u ca'a gendra ila'a zo coi cu se vimcu zo
+si
+
+ lu pa bu li'u .e lu zo da bu li'u .e lu lo'u da de di le'u zei da li'u
+
+
+bu_clause = expr:(pre_clause post:bu_clause_no_pre) {return _node("bu_clause", expr); }
+bu_clause_no_pre = expr:(pre_zei_bu bu_tail+ post_clause) {return _node("bu_clause_no_pre", expr); }
+bu_tail = expr:BU_clause+ {return _node("bu_tail", expr); }
+pre_zei_bu = expr:( (CMEVLA / BRIVLA / ZO spaces? any_word / LOhU spaces? (!LEhU any_word)* LEhU / ZOI spaces? zoi_open spaces? zoi_word* zoi_close / !BU !SI !SA !SU !FAhO CMAVO) spaces?) {return _node("pre_zei_bu", expr); }
+sa_word = pre_zei_bu
+
+si_word = pre_zei_bu
 
