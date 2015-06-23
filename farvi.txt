@@ -112,6 +112,6 @@ zantufa-0.13.js.peg:1307:// ZEI_pre = pre_clause ZEI spaces? _vimcu_20150622UTC_
 zantufa-0.13.js.peg:1309:// ZEI_post = spaces? _vimcu_20150622UTC_
 zantufa-0.13.js.peg:1348:// CMAVO _vimcu zoizoi ZEI zoi_20150622UTC_
 zantufa-0.13.js.peg:1631:// non_space = expr:(!space_char .) {return _join(expr);} _mu'i ma_20150605UTC____
-zantufa-0.13.js.peg:1878:// SI _+zei _ze'ei_20150622UTC_
+zantufa-0.13.js.peg:1878:// SI _+zei +ze'ei_20150622UTC_
 zantufa-0.13.js.peg:1931:// ZEI = &cmavo expr:( z e i ) &post_word {return ["ZEI", _join(expr)];} _vimcu_20150622UTC_
 ------------------ mulno fa la zantufa_0.13 ------------------

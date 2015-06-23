@@ -1875,7 +1875,7 @@ SEI = &cmavo expr:( l e h a u / s e i / t i h o ) &post_word {return ["SEI", _jo
 SEhU = &cmavo expr:( s e h u ) &post_word {return ["SEhU", _join(expr)];}
 
 // SI _+si'u'i_20150610UTC
-// SI _+zei _ze'ei_20150622UTC_
+// SI _+zei +ze'ei_20150622UTC_
 SI = &cmavo expr:( z e h e i / z e i / s i h u h i / s i ) &post_word {return ["SI", _join(expr)];}
 
 SOI = &cmavo expr:( s o i ) &post_word {return ["SOI", _join(expr)];}
