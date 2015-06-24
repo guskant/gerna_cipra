@@ -1,5 +1,7 @@
 #!/bin/bash
 
+./minajimpe.sh js/zantufa-0.9999.js
+mv temp.js js/zantufa-0.9999.js
 cp -R js ../gh-pages
 cp zantufa-0.9999.html ../gh-pages
 cp farvi.txt farvi-0.9999.txt

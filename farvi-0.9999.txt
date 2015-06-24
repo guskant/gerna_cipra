@@ -115,10 +115,16 @@ zantufa-0.13.js.peg:1631:// non_space = expr:(!space_char .) {return _join(expr)
 zantufa-0.13.js.peg:1878:// SI _+zei +ze'ei_20150622UTC_
 zantufa-0.13.js.peg:1931:// ZEI = &cmavo expr:( z e i ) &post_word {return ["ZEI", _join(expr)];} _vimcu_20150622UTC_
 ------------------ mulno fa la zantufa_0.13 ------------------
-zantufa-0.9999.js.peg:451:// free _jmina zoizoi / LOhAI_clause zoi_20150623UTC_
-zantufa-0.9999.js.peg:525:// si_word _jmina zoizoi / (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? LEhAI zoi_20150623UTC_
-zantufa-0.9999.js.peg:969:// _jmina la'o zoi LOhAI_clause, LOhAI_pre, LOhAI_post zoi_20150623UTC_
-zantufa-0.9999.js.peg:1356:// CMAVO _jmina zoizoi LEhAI / LOhAI / zoi_20150623UTC_
-zantufa-0.9999.js.peg:1639:// non_space = expr:(!space_char .) {return _join(expr);} _mu'i ma_20150605UTC___
-zantufa-0.9999.js.peg:1799:// LEhAI _jmina ma'oi LEhAI_20150623UTC_
-zantufa-0.9999.js.peg:1809:// LOhAI _jmina ma'oi LOhAI_20150623UTC_ 
+zantufa-0.9999.js.peg:262:// sumti_6 _jmina zoizoi RAhOI_clause free* / zoi_20150624UTC_
+zantufa-0.9999.js.peg:452:// free _jmina zoizoi / LOhAI_clause zoi_20150623UTC_
+zantufa-0.9999.js.peg:505:// known_cmavo_SA _jmina zoizoi / RAhOI_pre zoi_20150624UTC_
+zantufa-0.9999.js.peg:527:// si_word _jmina zoizoi / (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? LEhAI zoi_20150623UTC_
+zantufa-0.9999.js.peg:528:// si_word _jmina zoizoi / RAhOI spaces? (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi ki'u lo nu ma'oi SI na turni lo rafsi pamei_20150624UTC_
+zantufa-0.9999.js.peg:972:// _jmina la'o zoi LOhAI_clause, LOhAI_pre, LOhAI_post zoi_20150623UTC_
+zantufa-0.9999.js.peg:1136:// _jmina la'o zoi RAhOI_clause, RAhOI_pre, RAhOI_post zoi_20150624UTC_
+zantufa-0.9999.js.peg:1363:// CMAVO _jmina zoizoi LEhAI / LOhAI / zoi_20150623UTC_
+zantufa-0.9999.js.peg:1364:// CMAVO _jmina zoizoi / RAhOI zoi_20150624UTC_
+zantufa-0.9999.js.peg:1647:// non_space = expr:(!space_char .) {return _join(expr);} _mu'i ma_20150605UTC___
+zantufa-0.9999.js.peg:1807:// LEhAI _jmina ma'oi LEhAI_20150623UTC_
+zantufa-0.9999.js.peg:1817:// LOhAI _jmina ma'oi LOhAI_20150623UTC_ 
+zantufa-0.9999.js.peg:1884:// RAhOI _jmina ma'oi RAhOI_20150624UTC_
