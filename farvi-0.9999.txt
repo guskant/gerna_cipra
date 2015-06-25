@@ -115,16 +115,32 @@ zantufa-0.13.js.peg:1631:// non_space = expr:(!space_char .) {return _join(expr)
 zantufa-0.13.js.peg:1878:// SI _+zei +ze'ei_20150622UTC_
 zantufa-0.13.js.peg:1931:// ZEI = &cmavo expr:( z e i ) &post_word {return ["ZEI", _join(expr)];} _vimcu_20150622UTC_
 ------------------ mulno fa la zantufa_0.13 ------------------
-zantufa-0.9999.js.peg:262:// sumti_6 _jmina zoizoi RAhOI_clause free* / zoi_20150624UTC_
-zantufa-0.9999.js.peg:452:// free _jmina zoizoi / LOhAI_clause zoi_20150623UTC_
-zantufa-0.9999.js.peg:505:// known_cmavo_SA _jmina zoizoi / RAhOI_pre zoi_20150624UTC_
-zantufa-0.9999.js.peg:527:// si_word _jmina zoizoi / (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? LEhAI zoi_20150623UTC_
-zantufa-0.9999.js.peg:528:// si_word _jmina zoizoi / RAhOI spaces? (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi ki'u lo nu ma'oi SI na turni lo rafsi pamei_20150624UTC_
-zantufa-0.9999.js.peg:972:// _jmina la'o zoi LOhAI_clause, LOhAI_pre, LOhAI_post zoi_20150623UTC_
-zantufa-0.9999.js.peg:1136:// _jmina la'o zoi RAhOI_clause, RAhOI_pre, RAhOI_post zoi_20150624UTC_
-zantufa-0.9999.js.peg:1363:// CMAVO _jmina zoizoi LEhAI / LOhAI / zoi_20150623UTC_
-zantufa-0.9999.js.peg:1364:// CMAVO _jmina zoizoi / RAhOI zoi_20150624UTC_
-zantufa-0.9999.js.peg:1647:// non_space = expr:(!space_char .) {return _join(expr);} _mu'i ma_20150605UTC___
-zantufa-0.9999.js.peg:1807:// LEhAI _jmina ma'oi LEhAI_20150623UTC_
-zantufa-0.9999.js.peg:1817:// LOhAI _jmina ma'oi LOhAI_20150623UTC_ 
-zantufa-0.9999.js.peg:1884:// RAhOI _jmina ma'oi RAhOI_20150624UTC_
+zantufa-0.14.js.peg:262:// sumti_6 _jmina zoizoi RAhOI_clause free* / zoi_20150624UTC_
+zantufa-0.14.js.peg:452:// free _jmina zoizoi / LOhAI_clause zoi_20150623UTC_
+zantufa-0.14.js.peg:505:// known_cmavo_SA _jmina zoizoi / RAhOI_pre zoi_20150624UTC_
+zantufa-0.14.js.peg:527:// si_word _jmina zoizoi / (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? LEhAI zoi_20150623UTC_
+zantufa-0.14.js.peg:528:// si_word _jmina zoizoi / RAhOI spaces? (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi ki'u lo nu ma'oi SI na turni lo rafsi pamei_20150624UTC_
+zantufa-0.14.js.peg:972:// _jmina la'o zoi LOhAI_clause, LOhAI_pre, LOhAI_post zoi_20150623UTC_
+zantufa-0.14.js.peg:1136:// _jmina la'o zoi RAhOI_clause, RAhOI_pre, RAhOI_post zoi_20150624UTC_
+zantufa-0.14.js.peg:1363:// CMAVO _jmina zoizoi LEhAI / LOhAI / zoi_20150623UTC_
+zantufa-0.14.js.peg:1364:// CMAVO _jmina zoizoi / RAhOI zoi_20150624UTC_
+zantufa-0.14.js.peg:1647:// non_space = expr:(!space_char .) {return _join(expr);} _mu'i ma_20150605UTC___
+zantufa-0.14.js.peg:1807:// LEhAI _jmina ma'oi LEhAI_20150623UTC_
+zantufa-0.14.js.peg:1817:// LOhAI _jmina ma'oi LOhAI_20150623UTC_ 
+zantufa-0.14.js.peg:1884:// RAhOI _jmina ma'oi RAhOI_20150624UTC_
+------------------ mulno fa la zantufa_0.14 ------------------
+zantufa-0.9999.js.peg:138:// text _vimcu zoizoi text_part_2 (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.9999.js.peg:144:// text_part_2 = expr:((CMEVLA_clause+ / indicators?) free*) {return _node_nonempty("text_part_2", expr); } _vimcu (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.9999.js.peg:235:// term_start _vimcu zoizoi / LA_clause zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.9999.js.peg:265:// sumti_6 _vimcu zoizoi / LA_clause free* relative_clauses? CMEVLA_clause+ free* zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.9999.js.peg:266:// sumti_6 _galfi zoizoi (LA_clause / LE_clause) zoi zoizoi LE_clause zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.9999.js.peg:305:// ** zei is part of BRIVLA_clause //na'i zo zei cmavo ma'oi SI _20150625UTC_
+zantufa-0.9999.js.peg:306:// tanru_unit_2 _jmina zoizoi CMEVLA_clause free* / zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.9999.js.peg:458:// free _vimcu zoizoi / vocative relative_clauses? CMEVLA_clause+ free* relative_clauses? DOhU_elidible zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.9999.js.peg:512:// known_cmavo_SA _vimcu zoizoi / LA_pre zoi_20150625UTC_
+zantufa-0.9999.js.peg:935:// LA_clause = pre:LA_pre post:LA_post {return _node2("LA_clause", pre, post); } _vimcu (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.9999.js.peg:936:// LA_pre = pre_clause LA spaces? _vimcu (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.9999.js.peg:937:// LA_post = post_clause _vimcu (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.9999.js.peg:1372:// CMAVO _vimcu zoizoi  / LA zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.9999.js.peg:1804:// LA = &cmavo expr:( l a h e i / z o h a u / l a i / l a h i / l a ) &post_word { return ["LA", _join(expr)]; } _muvdu lo cmavo ma'oi LE (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.9999.js.peg:1812:// LE _+la'ei +zo'au +lai +la'i +la (to lo cmevla cu selbrisle gau toi)_20150625UTC_ 
