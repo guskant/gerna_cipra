@@ -136,7 +136,8 @@
 
 // text = expr:(intro_null NAI_clause* text_part_2 (!text_1 joik_jek)? text_1? faho_clause EOF?) {return _node_nonempty("text", expr);} _jmina zoizoi si_clause? zoi_20150622UTC
 // text _vimcu zoizoi text_part_2 (to lo cmevla cu selbrisle gau toi)_20150625UTC_
-text = expr:(intro_null NAI_clause* (!text_1 joik_jek)? text_1? si_clause? faho_clause EOF?) {return _node_nonempty("text", expr);}
+// text _jmina zoizoi indicators? free* zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+text = expr:(intro_null NAI_clause* indicators? free* (!text_1 joik_jek)? text_1? si_clause? faho_clause EOF?) {return _node_nonempty("text", expr);}
 
 // intro_null = expr:(spaces? su_clause* intro_si_clause) {return _node_nonempty("intro_null", expr); } _vimcu zoizoi intro_si_clause zoi_20150622UTC
 intro_null = expr:(spaces? su_clause*) {return _node_nonempty("intro_null", expr); }
