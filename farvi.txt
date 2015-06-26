@@ -129,3 +129,20 @@ zantufa-0.14.js.peg:1807:// LEhAI _jmina ma'oi LEhAI_20150623UTC_
 zantufa-0.14.js.peg:1817:// LOhAI _jmina ma'oi LOhAI_20150623UTC_ 
 zantufa-0.14.js.peg:1884:// RAhOI _jmina ma'oi RAhOI_20150624UTC_
 ------------------ mulno fa la zantufa_0.14 ------------------
+zantufa-0.15.js.peg:138:// text _vimcu zoizoi text_part_2 (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.15.js.peg:139:// text _jmina zoizoi indicators? free* zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.15.js.peg:145:// text_part_2 = expr:((CMEVLA_clause+ / indicators?) free*) {return _node_nonempty("text_part_2", expr); } _vimcu (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.15.js.peg:236:// term_start _vimcu zoizoi / LA_clause zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.15.js.peg:266:// sumti_6 _vimcu zoizoi / LA_clause free* relative_clauses? CMEVLA_clause+ free* zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.15.js.peg:267:// sumti_6 _galfi zoizoi (LA_clause / LE_clause) zoi zoizoi LE_clause zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.15.js.peg:306:// ** zei is part of BRIVLA_clause //na'i zo zei cmavo ma'oi SI _20150625UTC_
+zantufa-0.15.js.peg:307:// tanru_unit_2 _jmina zoizoi CMEVLA_clause free* / zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.15.js.peg:459:// free _vimcu zoizoi / vocative relative_clauses? CMEVLA_clause+ free* relative_clauses? DOhU_elidible zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.15.js.peg:513:// known_cmavo_SA _vimcu zoizoi / LA_pre zoi_20150625UTC_
+zantufa-0.15.js.peg:936:// LA_clause = pre:LA_pre post:LA_post {return _node2("LA_clause", pre, post); } _vimcu (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.15.js.peg:937:// LA_pre = pre_clause LA spaces? _vimcu (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.15.js.peg:938:// LA_post = post_clause _vimcu (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.15.js.peg:1373:// CMAVO _vimcu zoizoi  / LA zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.15.js.peg:1805:// LA = &cmavo expr:( l a h e i / z o h a u / l a i / l a h i / l a ) &post_word { return ["LA", _join(expr)]; } _muvdu lo cmavo ma'oi LE (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+zantufa-0.15.js.peg:1813:// LE _+la'ei +zo'au +lai +la'i +la (to lo cmevla cu selbrisle gau toi)_20150625UTC_ 
+------------------ mulno fa la zantufa_0.15 ------------------

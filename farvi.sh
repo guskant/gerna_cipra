@@ -14,7 +14,7 @@ awk --assign awk_var="$1" '{gsub(/farvi-0.9999.txt/, "farvi.txt"); gsub(/0.9999/
 # cp -R js ../gh-pages
 # cp zantufa-$1.html ../gh-pages
 # sed 's/UTC_/UTC/' $PEG > zantufa-0.9999.js.peg
-# git rm farvi-$1.txt zantufa-$1.html js/zantufa-$1.js
+# rm farvi-$1.txt zantufa-$1.html js/zantufa-$1.js
 #
 # uncomment to remove the version:
 # rm farvi-$1.txt zantufa-$1.html zantufa-$1.js.peg js/zantufa-$1.js

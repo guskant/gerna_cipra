@@ -1,5 +1,6 @@
 #!/bin/bash
 
+node zantufa-pegjs.js
 ./minajimpe.sh js/zantufa-0.9999.js
 mv temp.js js/zantufa-0.9999.js
 cp -R js ../gh-pages
