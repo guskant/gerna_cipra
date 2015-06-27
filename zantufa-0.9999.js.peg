@@ -252,9 +252,11 @@ nonabs_terms_gik_terms = expr:(term (gik / nonabs_terms_gik_terms) term) {return
 
 sumti = expr:(sumti_1 (VUhO_clause free* relative_clauses)?) {return _node("sumti", expr);}
 
-sumti_1 = expr:(sumti_2 (joik_ek stag? KE_clause free* sumti KEhE_elidible free*)?) {return _node("sumti_1", expr);}
+// sumti_1 = expr:(sumti_2 (joik_ek stag? KE_clause free* sumti KEhE_elidible free*)?) {return _node("sumti_1", expr);} _galfi fi zoizoi sumti_2 (joik_ek stag? sumti_2)* zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug .e lo si'o curmi tu'a lu ke da ke'e li'u_20150627UTC_
+sumti_1 = expr:(sumti_2 (joik_ek stag? sumti_2)*) {return _node("sumti_1", expr);}
 
-sumti_2 = expr:(sumti_3 (joik_ek sumti_3)*) {return _node("sumti_2", expr);}
+// sumti_2 = expr:(sumti_3 (joik_ek sumti_3)*) {return _node("sumti_2", expr);} _galfi fi zoizoi sumti_3 / KE_clause free* sumti KEhE_elidible free* zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug .e lo si'o curmi tu'a lu ke da ke'e li'u_20150627UTC_
+sumti_2 = expr:(sumti_3 / KE_clause free* sumti KEhE_elidible free*) {return _node("sumti_2", expr);}
 
 sumti_3 = expr:(sumti_4 (joik_ek stag? BO_clause free* sumti_3)?) {return _node("sumti_3", expr);}
 
@@ -291,6 +293,7 @@ selbri_1 = expr:(selbri_2 / NA_clause free* selbri) {return _node("selbri_1", ex
 
 selbri_2 = expr:(selbri_3 (CO_clause free* selbri_2)?) {return _node("selbri_2", expr); }
 
+// selbri_3 _aicu'i nu'o jmina zoizoi (CO_clause free* selbri_3)? zoi (to cipra ma'i lo si'o tarmi simsa la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug toi)_20150627UTC_
 selbri_3 = expr:(selbri_4+) {return _node("selbri_3", expr); }
 
 selbri_4 = expr:(selbri_5 (joik_jek selbri_5 / joik stag? KE_clause free* selbri_3 KEhE_elidible free*)*) {return _node("selbri_4", expr); }

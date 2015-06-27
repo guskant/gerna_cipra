@@ -17,8 +17,6 @@ ME, NUhA -> ME
 LAU, TEI, FOI, BY -> BY
 SA, GUhA, BIhE, CEhE, PEhE, NUhI, NUhU, MAhO, NAhU, PEhO, KUhE, FUhA, MOhE -> /
 
-Merge CMENE with BRIVLA
-
 SU Restricted to full erasure.
 
 syllabic consonants
@@ -39,15 +37,48 @@ cekitaujau:
 http://mw.lojban.org/papri/ce_ki_tau_jau
 
 
-#### zo zei cmima ma'oi SI ####
-zei-si.txt
+https://twitter.com/oka_iu_tcan/status/614416499105624064
+New usage proposal of {me}:
+as fi'o SELBRI = tag,
+me TAG = SELBRI.
+eg. mi me pi'o ti = mi pilno ti
 
---- lu zo si li'u na me la'o zoi zo_pre zoi .i la'a .ei stika
-
-
-zo ra'oi zo'u .ei genturfa'i lo se lidne no'u la'o zoi rafsi_string zoi
-
+FA as SE / FA in BAI? x : ei simsa ma'oi SE tezu'e lo nu srana lo selbrisle
+.enai lo selbri .iki'ubo zo FA srana ro selbri
+jbofi'e:
+[1(2[klama3 (origin(s)) :] ko'a he/she/it)2 [is, does] «3te se klama being origin(s)»3 (4[klama1 (go-er(s)) :] ko'e he/she/it)4 (5[klama2 (destination(s)) :] ko'i he/she/it)5 (6[klama4 (route(s)) :] ko'o he/she/it)6 (7[klama5 (vehicle(s)) :] ko'u he/she/it)7]1
+ex.) 
+1 broda 2345
+2 fe broda 1345 = 2 se broda 1345
+3 fi broda 1245 = 3 tese broda 1245
+4 fo broda 1235 = 4 vetese broda 1235
+5 fu broda 1234 = 5 xevetese broda 1234
+mukti fa lo nu lo terbri be lo pa selbrisle cu porsi lo ka vajni gi'e no'e cenba lo ka vajni ca ji'a lo nu vajgau pa lo su'ocimoi be lo cmima be lo terbri 
 
 drata sitna:
 https://skami2.iocikun.jp/lojban/zasniGernaPeg
 https://skami2.iocikun.jp/lojban/zasniGerna
+
+stika:
+https://github.com/Ilmen-vodhr/ilmentufa/issues/118
+{ke ko'a ce ko'e ke'e ce ko'i} doesnt parse. #118
+That's inherited from the LALR(1) limitations of YACC. The same applies to
+"ke broda gi'e brode ke'e gi'a brodi". It shouldn't be hard to fix with PEG.
+
+
+mu'o
+#### zo zei cmima ma'oi SI ####
+# zei-si.txt
+
+# --- lu zo si li'u na me la'o zoi zo_pre zoi .i la'a .ei stika
+
+# zo ra'oi zo'u .ei genturfa'i lo se lidne no'u la'o zoi rafsi_string zoi
+
+# Merge CMENE with BRIVLA
+
+% ma'oi BY cu ka'e lidne ma'oi BE ?
+% ma'i lo si'o tordu galfi lu LE selbri li'u ma'oi BY
+% na'i zo BE cu pagbu lo selbrisle i BY na go'i
+% ei lo te tamgau cu gau xauzma
+
+
