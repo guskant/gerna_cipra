@@ -2875,29 +2875,54 @@ var camxes = (function(){
         
         pos0 = pos;
         pos1 = pos;
-        result0 = parse_KE_clause();
+        result0 = parse_selbri();
         if (result0 !== null) {
-          result1 = [];
-          result2 = parse_free();
-          while (result2 !== null) {
-            result1.push(result2);
-            result2 = parse_free();
-          }
+          result1 = parse_tail_terms();
           if (result1 !== null) {
-            result2 = parse_bridi_tail();
-            if (result2 !== null) {
-              result3 = parse_KEhE_elidible();
-              if (result3 !== null) {
-                result4 = [];
-                result5 = parse_free();
-                while (result5 !== null) {
-                  result4.push(result5);
-                  result5 = parse_free();
-                }
-                if (result4 !== null) {
-                  result5 = parse_tail_terms();
-                  if (result5 !== null) {
-                    result0 = [result0, result1, result2, result3, result4, result5];
+            result0 = [result0, result1];
+          } else {
+            result0 = null;
+            pos = pos1;
+          }
+        } else {
+          result0 = null;
+          pos = pos1;
+        }
+        if (result0 === null) {
+          result0 = parse_gek_sentence();
+          if (result0 === null) {
+            pos1 = pos;
+            result0 = parse_KE_clause();
+            if (result0 !== null) {
+              result1 = [];
+              result2 = parse_free();
+              while (result2 !== null) {
+                result1.push(result2);
+                result2 = parse_free();
+              }
+              if (result1 !== null) {
+                result2 = parse_bridi_tail();
+                if (result2 !== null) {
+                  result3 = parse_KEhE_elidible();
+                  if (result3 !== null) {
+                    result4 = [];
+                    result5 = parse_free();
+                    while (result5 !== null) {
+                      result4.push(result5);
+                      result5 = parse_free();
+                    }
+                    if (result4 !== null) {
+                      result5 = parse_tail_terms();
+                      if (result5 !== null) {
+                        result0 = [result0, result1, result2, result3, result4, result5];
+                      } else {
+                        result0 = null;
+                        pos = pos1;
+                      }
+                    } else {
+                      result0 = null;
+                      pos = pos1;
+                    }
                   } else {
                     result0 = null;
                     pos = pos1;
@@ -2914,31 +2939,6 @@ var camxes = (function(){
               result0 = null;
               pos = pos1;
             }
-          } else {
-            result0 = null;
-            pos = pos1;
-          }
-        } else {
-          result0 = null;
-          pos = pos1;
-        }
-        if (result0 === null) {
-          pos1 = pos;
-          result0 = parse_selbri();
-          if (result0 !== null) {
-            result1 = parse_tail_terms();
-            if (result1 !== null) {
-              result0 = [result0, result1];
-            } else {
-              result0 = null;
-              pos = pos1;
-            }
-          } else {
-            result0 = null;
-            pos = pos1;
-          }
-          if (result0 === null) {
-            result0 = parse_gek_sentence();
           }
         }
         if (result0 !== null) {

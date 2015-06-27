@@ -191,7 +191,8 @@ bridi_tail_1 = expr:(bridi_tail_2 (gihek !(stag? BO_clause) !(stag? KE_clause) f
 bridi_tail_2 = expr:(bridi_tail_3 (gihek stag? BO_clause free* bridi_tail_2 tail_terms)?) {return _node("bridi_tail_2", expr);}
 
 // bridi_tail_3 = expr:(selbri tail_terms / gek_sentence) {return _node("bridi_tail_3", expr);} _galfi fi zoizoi KE_clause free* bridi_tail KEhE_elidible free* tail_terms / selbri tail_terms / gek_sentence zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug_20150627UTC_
-bridi_tail_3 = expr:(KE_clause free* bridi_tail KEhE_elidible free* tail_terms / selbri tail_terms / gek_sentence) {return _node("bridi_tail_3", expr);}
+// bridi_tail_3 _muvdu zoizoi KE_clause free* bridi_tail KEhE_elidible free* tail_terms zoi lo romoi_20150627UTC_
+bridi_tail_3 = expr:(selbri tail_terms / gek_sentence / KE_clause free* bridi_tail KEhE_elidible free* tail_terms) {return _node("bridi_tail_3", expr);}
 
 //// EXP-FIX: tag? KE --> tag* KE
 gek_sentence = expr:(gek subsentence gik subsentence tail_terms / tag* KE_clause free* gek_sentence KEhE_elidible free* / NA_clause free* gek_sentence) {return _node("gek_sentence", expr);}
@@ -308,7 +309,7 @@ tanru_unit = expr:(tanru_unit_1 (CEI_clause free* tanru_unit_1)*) {return _node(
 tanru_unit_1 = expr:(tanru_unit_2 linkargs?) {return _node("tanru_unit_1", expr); }
 
 // ** zei is part of BRIVLA_clause //na'i zo zei cmavo ma'oi SI _20150625UTC_
-// tanru_unit_2 _jmina zoizoi CMEVLA_clause free* / zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC_
+// tanru_unit_2 _jmina zoizoi CMEVLA_clause free* / zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC
 tanru_unit_2 = expr:(CMEVLA_clause free* / BRIVLA_clause free* / GOhA_clause RAhO_clause? free* / KE_clause free* selbri_3 KEhE_elidible free* / ME_clause free* (sumti / lerfu_string) MEhU_elidible free* MOI_clause? free* / (number / lerfu_string) MOI_clause free* / NUhA_clause free* mex_operator / SE_clause free* tanru_unit_2 / JAI_clause free* tag? tanru_unit_2 / NAhE_clause free* tanru_unit_2 / NU_clause NAI_clause? free* (joik_jek NU_clause NAI_clause? free*)* subsentence KEI_elidible free*) {return _node("tanru_unit_2", expr); }
 
 //; linkargs = BE_clause free* term links? BEhO_clause? free*
