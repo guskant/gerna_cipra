@@ -289,12 +289,13 @@ relative_clause_start = expr:(GOI_clause / NOI_clause) {return _node("relative_c
 
 selbri = expr:(tag? selbri_1) {return _node("selbri", expr); }
 
-selbri_1 = expr:(selbri_2 / NA_clause free* selbri) {return _node("selbri_1", expr); }
+// selbri_1 = expr:(selbri_2 / NA_clause free* selbri) {return _node("selbri_1", expr); } _galfi zo 2 zo 3 (to cipra ma'i lo si'o tarmi simsa la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug toi)_20150627UTC_
+selbri_1 = expr:(selbri_3 / NA_clause free* selbri) {return _node("selbri_1", expr); }
 
-selbri_2 = expr:(selbri_3 (CO_clause free* selbri_2)?) {return _node("selbri_2", expr); }
+// selbri_2 = expr:(selbri_3 (CO_clause free* selbri_2)?) {return _node("selbri_2", expr); } _vimcu (to cipra ma'i lo si'o tarmi simsa la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug toi)_20150627UTC_
 
-// selbri_3 _aicu'i nu'o jmina zoizoi (CO_clause free* selbri_3)? zoi (to cipra ma'i lo si'o tarmi simsa la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug toi)_20150627UTC_
-selbri_3 = expr:(selbri_4+) {return _node("selbri_3", expr); }
+// selbri_3 _jmina zoizoi (CO_clause free* selbri_3)? zoi (to cipra ma'i lo si'o tarmi simsa la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug toi)_20150627UTC_
+selbri_3 = expr:(selbri_4+ (CO_clause free* selbri_3)?) {return _node("selbri_3", expr); }
 
 selbri_4 = expr:(selbri_5 (joik_jek selbri_5 / joik stag? KE_clause free* selbri_3 KEhE_elidible free*)*) {return _node("selbri_4", expr); }
 
