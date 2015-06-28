@@ -2870,8 +2870,8 @@ var camxes = (function(){
           return cachedResult.result;
         }
         
-        var result0, result1, result2, result3, result4, result5;
-        var pos0, pos1;
+        var result0, result1, result2, result3, result4, result5, result6;
+        var pos0, pos1, pos2, pos3;
         
         pos0 = pos;
         pos1 = pos;
@@ -2884,20 +2884,48 @@ var camxes = (function(){
             result2 = parse_free();
           }
           if (result1 !== null) {
-            result2 = parse_bridi_tail();
+            pos2 = pos;
+            reportFailures++;
+            pos3 = pos;
+            result2 = parse_selbri_2();
             if (result2 !== null) {
-              result3 = parse_KEhE_elidible();
+              result3 = parse_KEhE();
               if (result3 !== null) {
-                result4 = [];
-                result5 = parse_free();
-                while (result5 !== null) {
-                  result4.push(result5);
-                  result5 = parse_free();
-                }
+                result2 = [result2, result3];
+              } else {
+                result2 = null;
+                pos = pos3;
+              }
+            } else {
+              result2 = null;
+              pos = pos3;
+            }
+            reportFailures--;
+            if (result2 === null) {
+              result2 = "";
+            } else {
+              result2 = null;
+              pos = pos2;
+            }
+            if (result2 !== null) {
+              result3 = parse_bridi_tail();
+              if (result3 !== null) {
+                result4 = parse_KEhE_elidible();
                 if (result4 !== null) {
-                  result5 = parse_tail_terms();
+                  result5 = [];
+                  result6 = parse_free();
+                  while (result6 !== null) {
+                    result5.push(result6);
+                    result6 = parse_free();
+                  }
                   if (result5 !== null) {
-                    result0 = [result0, result1, result2, result3, result4, result5];
+                    result6 = parse_tail_terms();
+                    if (result6 !== null) {
+                      result0 = [result0, result1, result2, result3, result4, result5, result6];
+                    } else {
+                      result0 = null;
+                      pos = pos1;
+                    }
                   } else {
                     result0 = null;
                     pos = pos1;
