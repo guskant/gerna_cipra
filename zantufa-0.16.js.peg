@@ -179,7 +179,7 @@ sentence_start = expr:(I_pre / NIhO_pre) {return _node("sentence_start", expr);}
 
 subsentence = expr:(sentence / prenex subsentence) {return _node("subsentence", expr);}
 
-// bridi_tail = expr:(bridi_tail_1 (gihek stag? KE_clause free* bridi_tail KEhE_elidible free* tail_terms)?) {return _node("bridi_tail", expr);} //////// _galfi fi zoizoi bridi_tail_1 (gihek stag? bridi_tail_1)* zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug_20150627UTC
+// bridi_tail = expr:(bridi_tail_1 (gihek stag? KE_clause free* bridi_tail KEhE_elidible free* tail_terms)?) {return _node("bridi_tail", expr);} //////// _galfi fi zoizoi bridi_tail_1 (gihek stag? bridi_tail_1)* zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug_20150627UTC_
 bridi_tail = expr:(bridi_tail_1 (gihek stag? bridi_tail_1)*) {return _node("bridi_tail", expr);}
 
 bridi_tail_sa = expr:(bridi_tail_start (term / !bridi_tail_start (sa_word / SA_clause !bridi_tail_start ) )* SA_clause &bridi_tail) {return _node("bridi_tail_sa", expr);}
@@ -190,7 +190,7 @@ bridi_tail_1 = expr:(bridi_tail_2 (gihek !(stag? BO_clause) !(stag? KE_clause) f
 
 bridi_tail_2 = expr:(bridi_tail_3 (gihek stag? BO_clause free* bridi_tail_2 tail_terms)?) {return _node("bridi_tail_2", expr);}
 
-// bridi_tail_3 = expr:(selbri tail_terms / gek_sentence) {return _node("bridi_tail_3", expr);} //////// _galfi fi zoizoi KE_clause free* !(selbri_3 KEhE) bridi_tail KEhE_elidible free* tail_terms / selbri tail_terms / gek_sentence zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug_20150627UTC
+// bridi_tail_3 = expr:(selbri tail_terms / gek_sentence) {return _node("bridi_tail_3", expr);} //////// _galfi fi zoizoi KE_clause free* !(selbri_3 KEhE) bridi_tail KEhE_elidible free* tail_terms / selbri tail_terms / gek_sentence zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug_20150627UTC_
 bridi_tail_3 = expr:(KE_clause free* !(selbri_3 KEhE) bridi_tail KEhE_elidible free* tail_terms / selbri tail_terms / gek_sentence) {return _node("bridi_tail_3", expr);}
 
 //// EXP-FIX: tag? KE --> tag* KE
@@ -254,10 +254,10 @@ nonabs_terms_gik_terms = expr:(term (gik / nonabs_terms_gik_terms) term) {return
 
 sumti = expr:(sumti_1 (VUhO_clause free* relative_clauses)?) {return _node("sumti", expr);}
 
-// sumti_1 = expr:(sumti_2 (joik_ek stag? KE_clause free* sumti KEhE_elidible free*)?) {return _node("sumti_1", expr);} //////// _galfi fi zoizoi sumti_2 (joik_ek stag? sumti_2)* zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug .e lo si'o curmi tu'a lu ke da ke'e li'u_20150627UTC
+// sumti_1 = expr:(sumti_2 (joik_ek stag? KE_clause free* sumti KEhE_elidible free*)?) {return _node("sumti_1", expr);} //////// _galfi fi zoizoi sumti_2 (joik_ek stag? sumti_2)* zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug .e lo si'o curmi tu'a lu ke da ke'e li'u_20150627UTC_
 sumti_1 = expr:(sumti_2 (joik_ek stag? sumti_2)*) {return _node("sumti_1", expr);}
 
-// sumti_2 = expr:(sumti_3 (joik_ek sumti_3)*) {return _node("sumti_2", expr);} //////// _galfi fi zoizoi sumti_3 / KE_clause free* sumti KEhE_elidible free* zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug .e lo si'o curmi tu'a lu ke da ke'e li'u_20150627UTC
+// sumti_2 = expr:(sumti_3 (joik_ek sumti_3)*) {return _node("sumti_2", expr);} //////// _galfi fi zoizoi sumti_3 / KE_clause free* sumti KEhE_elidible free* zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug .e lo si'o curmi tu'a lu ke da ke'e li'u_20150627UTC_
 sumti_2 = expr:(sumti_3 / KE_clause free* sumti KEhE_elidible free*) {return _node("sumti_2", expr);}
 
 sumti_3 = expr:(sumti_4 (joik_ek stag? BO_clause free* sumti_3)?) {return _node("sumti_3", expr);}
@@ -307,7 +307,7 @@ tanru_unit = expr:(tanru_unit_1 (CEI_clause free* tanru_unit_1)*) {return _node(
 
 tanru_unit_1 = expr:(tanru_unit_2 linkargs?) {return _node("tanru_unit_1", expr); }
 
-// ** zei is part of BRIVLA_clause //////// _na'i zo zei cmavo ma'oi SI_20150625UTC
+// ** zei is part of BRIVLA_clause //////// _na'i zo zei cmavo ma'oi SI_20150625UTC_
 // tanru_unit_2 //////// _jmina zoizoi CMEVLA_clause free* / zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC
 tanru_unit_2 = expr:(CMEVLA_clause free* / BRIVLA_clause free* / GOhA_clause RAhO_clause? free* / KE_clause free* selbri_3 KEhE_elidible free* / ME_clause free* (sumti / lerfu_string) MEhU_elidible free* MOI_clause? free* / (number / lerfu_string) MOI_clause free* / NUhA_clause free* mex_operator / SE_clause free* tanru_unit_2 / JAI_clause free* tag? tanru_unit_2 / NAhE_clause free* tanru_unit_2 / NU_clause NAI_clause? free* (joik_jek NU_clause NAI_clause? free*)* subsentence KEI_elidible free*) {return _node("tanru_unit_2", expr); }
 
@@ -367,7 +367,7 @@ rp_expression_tail = expr:(rp_expression operator rp_expression_tail / ()) {retu
 
 operator = expr:(operator_sa* operator_0) {return _node("operator", expr); }
 
-// operator_0 = expr:(operator_1 (joik_jek operator_1 / joik stag? KE_clause free* operator KEhE_elidible free*)*) {return _node("operator_0", expr); } //////// _galfi fi zoizoi operator_1 (joik_jek stag? operator_1)* zoi ma'i lo si'o sampu_20150627UTC
+// operator_0 = expr:(operator_1 (joik_jek operator_1 / joik stag? KE_clause free* operator KEhE_elidible free*)*) {return _node("operator_0", expr); } //////// _galfi fi zoizoi operator_1 (joik_jek stag? operator_1)* zoi ma'i lo si'o sampu_20150627UTC_
 operator_0 = expr:(operator_1 (joik_jek stag? operator_1)*) {return _node("operator_0", expr); }
 
 
@@ -385,7 +385,7 @@ mex_operator = expr:(SE_clause free* mex_operator / NAhE_clause free* mex_operat
 
 operand = expr:(operand_sa* operand_0) {return _node("operand", expr); }
 
-// operand_0 = expr:(operand_1 (joik_ek stag? KE_clause free* operand KEhE_elidible free*)?) {return _node("operand_0", expr); } //////// _galfi fi zoizoi operand_1 (joik_ek stag? operand_1)* zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug_20150627UTC
+// operand_0 = expr:(operand_1 (joik_ek stag? KE_clause free* operand KEhE_elidible free*)?) {return _node("operand_0", expr); } //////// _galfi fi zoizoi operand_1 (joik_ek stag? operand_1)* zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug_20150627UTC_
 operand_0 = expr:(operand_1 (joik_ek stag? operand_1)*) {return _node("operand_0", expr); }
 
 operand_sa = expr:(operand_start (!operand_start (sa_word / SA_clause !operand_start) )* SA_clause &operand_0) {return _node("operand_sa", expr); }
@@ -396,7 +396,7 @@ operand_1 = expr:(operand_2 (joik_ek operand_2)*) {return _node("operand_1", exp
 
 operand_2 = expr:(operand_3 (joik_ek stag? BO_clause free* operand_2)?) {return _node("operand_2", expr); }
 
-// operand_3 = expr:(quantifier / lerfu_string !MOI_clause BOI_elidible free* / NIhE_clause free* selbri TEhU_elidible free* / MOhE_clause free* sumti TEhU_elidible free* / JOhI_clause free* mex_2+ TEhU_elidible free* / gek operand gik operand_3 / (LAhE_clause free* / NAhE_clause BO_clause free*) operand LUhU_elidible free*) {return _node("operand_3", expr); } //////// _jmina zoizoi KE_clause free* operand KEhE_elidible free* / zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug_20150627UTC
+// operand_3 = expr:(quantifier / lerfu_string !MOI_clause BOI_elidible free* / NIhE_clause free* selbri TEhU_elidible free* / MOhE_clause free* sumti TEhU_elidible free* / JOhI_clause free* mex_2+ TEhU_elidible free* / gek operand gik operand_3 / (LAhE_clause free* / NAhE_clause BO_clause free*) operand LUhU_elidible free*) {return _node("operand_3", expr); } //////// _jmina zoizoi KE_clause free* operand KEhE_elidible free* / zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug_20150627UTC_
 operand_3 = expr:(KE_clause free* operand KEhE_elidible free* / quantifier / lerfu_string !MOI_clause BOI_elidible free* / NIhE_clause free* selbri TEhU_elidible free* / MOhE_clause free* sumti TEhU_elidible free* / JOhI_clause free* mex_2+ TEhU_elidible free* / gek operand gik operand_3 / (LAhE_clause free* / NAhE_clause BO_clause free*) operand LUhU_elidible free*) {return _node("operand_3", expr); }
 
 // number = expr:(PA_clause (PA_clause / lerfu_word)*) {return _node("number", expr); } //////// _vimcu zoizoi  / lerfu_word zoi_20150604UTC
