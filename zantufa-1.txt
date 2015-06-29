@@ -31,6 +31,14 @@ http://mw.lojban.org/papri/new_soi
 http://jbovlaste.lojban.org/dict/xoi
 http://mw.lojban.org/papri/new_voi
 
+http://mw.lojban.org/papri/ce_ki_tau_jau
+PO = {lo NU} ; terminator POhE ----- LU LIhU ka'e basti .i finti zo po'a .i
+ma'oi POhE na se nitcu .i zo LIhU banzu ; {po'a ... li'u} = {tu'a la'e lu ...
+li'u lu'u lu'u}
+lau = la'e di'u ----- finti zo lau'u noi cmavo ma'oi KOhA .i ce'o lo'u (lau
+lau'u) le'u basti simxu ma'i lo tcekitaujau
+
+
 kurtyvla
 
 cekitaujau:
