@@ -48,14 +48,18 @@
 // ___ GRAMMAR ___
 
 {
+// ret = ""; //////// _jmina zoizoi var _g_zoi_delim; zoi .i sa'unai jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_  
+  var _g_zoi_delim;
   function _join(arg)
   {
     if (typeof(arg) == "string")
       return arg;
     else
     {
-      ret = "";
-      for (v in arg) { ret += _join(arg[v]); }
+// ret = ""; //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_      
+      var ret = "";
+// for (v in arg) //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_      
+      for (var v in arg) { ret += _join(arg[v]); }
       return ret;
     }
   }
@@ -78,7 +82,8 @@
       return arg;
     var ret = [];
     if (label != undefined) ret.push( label );
-    for (v in arg)
+// for (v in arg) //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_    
+    for (var v in arg)
     {
       if (arg[v].length != 0)
         ret.push( _node_int( undefined, arg[v] ) );
@@ -106,13 +111,14 @@
 	return word;
   }
 
+// function _zoi_check_quote(word) //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_  
   function _zoi_check_quote(word) {
 	if (typeof(word) == "object") word = word.toString();
     if (!is_string(word)) {
 	  alert("ZOI word is not a string");
 	  return false;
 	} else {
-      return (word.replace(/,/gm,"") === _g_zoi_delim);
+      return (word.toLowerCase().replace(/,/gm,"").replace(/h/g, "'") === _g_zoi_delim);
 	}
   }
   
@@ -153,7 +159,8 @@ faho_clause = expr:((FAhO_clause dot_star)?) {return _node("faho_clause", expr);
 // here was made to match grammar.300
 text_1 = expr:(I_clause (jek / joik)? (stag? BO_clause)? free* text_1? / NIhO_clause+ free* su_clause* paragraphs? / paragraphs) {return _node("text_1", expr);}
 
-paragraphs = expr:(paragraph (NIhO_clause+ free* su_clause* paragraphs)?) {return _node("paragraphs", expr);}
+// paragraphs //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_
+paragraphs = expr:(paragraph? (NIhO_clause+ free* su_clause* paragraphs)?) {return _node_nonempty("paragraphs", expr);}
 
 paragraph = expr:((statement / fragment) (I_clause !jek !joik !joik_jek free* (statement / fragment)?)*) {return _node("paragraph", expr);}
 
@@ -1461,7 +1468,8 @@ any_word = expr:lojban_word spaces? { return expr; }
 
 zoi_open = w:lojban_word { return _zoi_assign_delim(w); }
 zoi_word = expr:( w:(non_space+) spaces &{ return (! _zoi_check_quote(w)); } ) {return "";}
-zoi_close = w:lojban_word &{ return (_zoi_check_delim(w)); }
+// zoi_close //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_
+zoi_close = w:any_word &{ return (_zoi_check_delim(w)); }
 
 //___________________________________________________________________
 
@@ -1547,7 +1555,7 @@ y_less_rafsi = expr:(!y_rafsi !stressed_y_rafsi !hy_rafsi !stressed_hy_rafsi (CV
 
 hy_rafsi = expr:((long_rafsi vowel / CCV_rafsi / CVV_rafsi) h y h?)
 
-// stressed_hy_rafsi = expr:((long_rafsi stressed_vowel / stressed_CCV_rafsi / stressed_CVV_rafsi) h y h?) //////// _gau jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC
+// stressed_hy_rafsi = expr:((long_rafsi stressed_vowel / stressed_CCV_rafsi / stressed_CVV_rafsi) h y h?) //////// _jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC
 stressed_hy_rafsi = expr:((long_rafsi stressed_vowel / stressed_CCV_rafsi / stressed_CVV_rafsi) h y)
 
 
@@ -1587,7 +1595,7 @@ any_syllable = expr:(onset nucleus coda? / consonantal_syllable) {return _join(e
 syllable = expr:(onset !y nucleus coda?) {return _join(expr);}
 
 //// FIX: preventing {bla'ypre} from being a valid lujvo
-// consonantal_syllable = expr:(consonant syllabic &(consonantal_syllable / !nucleus onset) (consonant &spaces)?) {return _join(expr);} //////// _gau jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC
+// consonantal_syllable = expr:(consonant syllabic &(consonantal_syllable / !nucleus onset) (consonant &spaces)?) {return _join(expr);} //////// _jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC
 consonantal_syllable = expr:(consonant &syllabic coda) {return _join(expr);}
 
 coda = expr:(!any_syllable consonant &any_syllable / syllabic? consonant? &pause) {return _join(expr);}
@@ -1598,7 +1606,7 @@ nucleus = expr:(vowel / diphthong / y !nucleus) {return _join(expr);}
 
 //_________________________________________________________________
 
-// glide = expr:(i / u) &nucleus !glide {return expr;} //////// _gau jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC
+// glide = expr:(i / u) &nucleus !glide {return expr;} //////// _jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC
 glide = expr:(i / u) &nucleus {return expr;}
 
 diphthong = expr:(a i / a u / e i / o i) !nucleus !glide {return _join(expr);}
@@ -1615,7 +1623,8 @@ o = comma* [oO] {return "o";}
 
 u = comma* [uU] {return "u";}
 
-y = comma* [yY] {return "y";}
+// y //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_
+y = comma* [yY] !nucleus {return "y";}
 
 
 //___________________________________________________________________
