@@ -166,6 +166,23 @@ zantufa-0.9999.js.peg:937://         famyma'o be ma'oi LOhOI //////// _jmina zoi
 zantufa-0.9999.js.peg:1012:// //////// _jmina zoizoi POhA_clause, POhA_pre, POhA_post zoi_20160629UTC_
 zantufa-0.9999.js.peg:1013:// //////// _ma'oi LOhOI ma'oi POhA basti_20150629UTC_
 zantufa-0.9999.js.peg:1403:// CMAVO //////// _ma'oi LOhOI ma'oi POhA basti .i jmina ma'oi KUhAU noi famyma'o_20150629UTC_
-zantufa-0.9999.js.peg:1830:// //////// _jmina ma'oi KUhAU_20150629UTC_
-zantufa-0.9999.js.peg:1864:// //////// _jmina zo po'a noi cmavo ma'oi POhA_20150629UTC_
-zantufa-0.9999.js.peg:1865:// POhA = &cmavo expr:( p o h a ) &post_word {return ["POhA", _join(expr)];} //////// _vimcu .i ma'oi LOhOI basti ma'oi POhA_20150629UTC_ 
+zantufa-0.9999.js.peg:1711:// BAI //////// _+be'ei +ko'au_20150630UTC_
+zantufa-0.9999.js.peg:1714:// BAhE //////// _+zai'e_20150630UTC_
+zantufa-0.9999.js.peg:1736:// BY //////// _+bu'o'e_20150630UTC_
+zantufa-0.9999.js.peg:1737:// BY //////// _+no'ai'y +no'e'u'y_20150630UTC_
+zantufa-0.9999.js.peg:1744:// CAI //////// _+na'oi +pei'a +pei'o_20150630UTC_
+zantufa-0.9999.js.peg:1831:// KOhA //////// _+lau'u +dei'ei +lau'e +mi'oi +do'ei_20150630UTC_
+zantufa-0.9999.js.peg:1836:// //////// _jmina ma'oi KUhAU_20150629UTC_
+zantufa-0.9999.js.peg:1853:// LE //////// _+moi'oi_20150630UTC_
+zantufa-0.9999.js.peg:1871:// //////// _jmina zo po'a noi cmavo ma'oi POhA_20150629UTC_
+zantufa-0.9999.js.peg:1872:// POhA = &cmavo expr:( p o h a ) &post_word {return ["POhA", _join(expr)];} //////// _vimcu .i ma'oi LOhOI basti ma'oi POhA_20150629UTC_ 
+zantufa-0.9999.js.peg:1875:// LOhU //////// _+la'ai_20150630UTC_
+zantufa-0.9999.js.peg:1879:// LU //////// _+tu'ai_20150630UTC_
+zantufa-0.9999.js.peg:1903:// NA //////// _+xu'o'e_20150630UTC_
+zantufa-0.9999.js.peg:1910:// NAhE //////// _+cai'e +cau'o'e +noi'e +pai'e +rei'e +sai'e_20150630UTC_
+zantufa-0.9999.js.peg:1919:// NOI //////// _+voi'i_20150630UTC_
+zantufa-0.9999.js.peg:1933:// PA //////// _+no'ai +no'e'u_20150630UTC_
+zantufa-0.9999.js.peg:1949:// ROI //////// _+va'ei_20150630UTC_
+zantufa-0.9999.js.peg:1986:// UI //////// _+oi'a +ia'u +ie'i +uau +ue'i +jei'u +ju'oi +kai'a +kai'e +lai'i +moi'i +sei'i +vei'i +zi'ai +xe'e +bo'oi_20150630UTC_
+zantufa-0.9999.js.peg:1999:// VUhU //////// _+xo'ei +tai'e'i +pau'oi_20150630UTC_
+zantufa-0.9999.js.peg:2009:// XI //////// _+xi'e_20150630UTC_
