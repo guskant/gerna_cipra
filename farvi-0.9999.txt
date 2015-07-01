@@ -155,52 +155,53 @@ zantufa-0.16.js.peg:370:// operator_0 = expr:(operator_1 (joik_jek operator_1 / 
 zantufa-0.16.js.peg:388:// operand_0 = expr:(operand_1 (joik_ek stag? KE_clause free* operand KEhE_elidible free*)?) {return _node("operand_0", expr); } //////// _galfi fi zoizoi operand_1 (joik_ek stag? operand_1)* zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug_20150627UTC_
 zantufa-0.16.js.peg:399:// operand_3 = expr:(quantifier / lerfu_string !MOI_clause BOI_elidible free* / NIhE_clause free* selbri TEhU_elidible free* / MOhE_clause free* sumti TEhU_elidible free* / JOhI_clause free* mex_2+ TEhU_elidible free* / gek operand gik operand_3 / (LAhE_clause free* / NAhE_clause BO_clause free*) operand LUhU_elidible free*) {return _node("operand_3", expr); } //////// _jmina zoizoi KE_clause free* operand KEhE_elidible free* / zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug_20150627UTC_
 ------------------ mulno fa la zantufa_0.16 ------------------
-zantufa-0.9999.js.peg:51:// ret = ""; //////// _jmina zoi jy var _g_zoi_delim; jy .i sa'unai jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_  
-zantufa-0.9999.js.peg:59:// ret = ""; //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_      
-zantufa-0.9999.js.peg:61:// for (v in arg) //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_      
-zantufa-0.9999.js.peg:85:// for (v in arg) //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_    
-zantufa-0.9999.js.peg:114:// function _zoi_check_quote(word) //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_  
-zantufa-0.9999.js.peg:163:// paragraphs = expr:(paragraph (NIhO_clause+ free* su_clause* paragraphs)?) {return _node("paragraphs", expr);} //////// _galfi fi zoizoi paragraphs = expr:(paragraph? (NIhO_clause+ free* su_clause* paragraphs)?) {return _node_nonempty("paragraphs", expr);} zoi .i sa'unai jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_
-zantufa-0.9999.js.peg:164:// paragraphs //////// _galfi fi zoizoi paragraphs = expr:((NIhO_clause+ free* su_clause* paragraph?)+ / paragraph (NIhO_clause+ free* su_clause* paragraph?)*) {return _node("paragraphs", expr);} zoi tezu'e lonu zoizoi free zoi .e zoizoi si_clause zoi cu di'a se genturfa'i_20150701UTC_
-zantufa-0.9999.js.peg:167:// paragraph = expr:((statement / fragment) (I_clause !jek !joik !joik_jek free* (statement / fragment)?)*) {return _node("paragraph", expr);} //////// _galfi fi zoizoi paragraph = expr:((I_clause !jek !joik !joik_jek free* (statement / fragment)?)+ / (statement / fragment) (I_clause !jek !joik !joik_jek free* (statement / fragment)?)*) {return _node("paragraph", expr);} zoi tezu'e lo nu lu ni'o .i li'u cu se genturfa'i_20150701UTC_
-zantufa-0.9999.js.peg:249:// term_start //////// _jmina zoizoi / POhA_clause zoi_20150629UTC_
-zantufa-0.9999.js.peg:250:// term_start //////// _ma'oi LOhOI ma'oi POhA basti_20150629UTC_
-zantufa-0.9999.js.peg:284:// sumti_6 //////// _jmina zoizoi / POhA_clause NAI_clause? free* (joik_jek POhA_clause NAI_clause? free*)* subsentence KU_elidible free* / LE_clause free* sumti_tail KU_elidible free* zoi_20150629UTC_
-zantufa-0.9999.js.peg:285:// sumti_6 //////// _ma'oi LOhOI ma'oi POhA basti .i zo KUhAU noi famyma'o_20150629UTC_
-zantufa-0.9999.js.peg:326:// tanru_unit_2 //////// _jmina zoizoi  / GOhOI_clause free* zoi_20150630UTC_
-zantufa-0.9999.js.peg:491:// indicator //////// _jmina zoizoi () zoi_20150701UTC_
-zantufa-0.9999.js.peg:538:// known_cmavo_SA //////// _jmina zoizoi  POhA_pre / zoi_20150629UTC_
-zantufa-0.9999.js.peg:539:// known_cmavo_SA //////// _ma'oi LOhOI ma'oi POhA basti .i jmina zoizoi KUhAU_pre / zoi noi famyma'o_20150629UTC_
-zantufa-0.9999.js.peg:540:// known_cmavo_SA //////// _jmina zoizoi  / GOhOI_pre zoi_20150630UTC_
-zantufa-0.9999.js.peg:564:// si_word //////// _jmina zoizoi  / GOhOI spaces? any_word zoi_20150630UTC_
-zantufa-0.9999.js.peg:581:// ELIDIBLE TERMINATORS //////// _jmina zoizoi KUhAU_elidible zoi_20150629UTC_
-zantufa-0.9999.js.peg:876://         galfi lo pa valsi lo selbrisle //////// _jmina zoizoi GOhOI_clause, GOhOI_pre, GOhOI_post zoi_20150630UTC_
-zantufa-0.9999.js.peg:956://         famyma'o be ma'oi LOhOI //////// _jmina zoizoi KUhAU_clause, KUhAU_pre, KUhAU_post zoi_20150629UTC_
-zantufa-0.9999.js.peg:1031:// //////// _jmina zoizoi POhA_clause, POhA_pre, POhA_post zoi_20160629UTC_
-zantufa-0.9999.js.peg:1032:// //////// _ma'oi LOhOI ma'oi POhA basti_20150629UTC_
-zantufa-0.9999.js.peg:1422:// CMAVO //////// _ma'oi LOhOI ma'oi POhA basti .i jmina ma'oi KUhAU noi famyma'o_20150629UTC_
-zantufa-0.9999.js.peg:1423:// CMAVO //////// _jmina zoizoi  / GOhOI zoi_20150630UTC_
-zantufa-0.9999.js.peg:1475:// zoi_close //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_
-zantufa-0.9999.js.peg:1630:// y //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_
-zantufa-0.9999.js.peg:1733:// BAI //////// _+be'ei +ko'au_20150630UTC_
-zantufa-0.9999.js.peg:1736:// BAhE //////// _+zai'e_20150630UTC_
-zantufa-0.9999.js.peg:1758:// BY //////// _+bu'o'e_20150630UTC_
-zantufa-0.9999.js.peg:1759:// BY //////// _+no'ai'y +no'e'u'y_20150630UTC_
-zantufa-0.9999.js.peg:1766:// CAI //////// _+na'oi +pei'a +pei'o_20150630UTC_
-zantufa-0.9999.js.peg:1829:// GOhOI //////// _jmina ma'oi GOhOI; +ze'oi +ta'ai +go'oi_20150630UTC_
-zantufa-0.9999.js.peg:1856:// KOhA //////// _+lau'u +dei'ei +lau'e +mi'oi +do'ei_20150630UTC_
-zantufa-0.9999.js.peg:1861:// //////// _jmina ma'oi KUhAU_20150629UTC_
-zantufa-0.9999.js.peg:1878:// LE //////// _+moi'oi_20150630UTC_
-zantufa-0.9999.js.peg:1896:// //////// _jmina zo po'a noi cmavo ma'oi POhA_20150629UTC_
-zantufa-0.9999.js.peg:1897:// POhA = &cmavo expr:( p o h a ) &post_word {return ["POhA", _join(expr)];} //////// _vimcu .i ma'oi LOhOI basti ma'oi POhA_20150629UTC_ 
-zantufa-0.9999.js.peg:1900:// LOhU //////// _+la'ai_20150630UTC_
-zantufa-0.9999.js.peg:1904:// LU //////// _+tu'ai_20150630UTC_
-zantufa-0.9999.js.peg:1928:// NA //////// _+xu'o'e_20150630UTC_
-zantufa-0.9999.js.peg:1935:// NAhE //////// _+cai'e +cau'o'e +noi'e +pai'e +rei'e +sai'e_20150630UTC_
-zantufa-0.9999.js.peg:1944:// NOI //////// _+voi'i_20150630UTC_
-zantufa-0.9999.js.peg:1958:// PA //////// _+no'ai +no'e'u_20150630UTC_
-zantufa-0.9999.js.peg:1974:// ROI //////// _+va'ei_20150630UTC_
-zantufa-0.9999.js.peg:2011:// UI //////// _+oi'a +ia'u +ie'i +uau +ue'i +jei'u +ju'oi +kai'a +kai'e +lai'i +moi'i +sei'i +vei'i +zi'ai +xe'e +bo'oi_20150630UTC_
-zantufa-0.9999.js.peg:2024:// VUhU //////// _+xo'ei +tai'e'i +pau'oi_20150630UTC_
-zantufa-0.9999.js.peg:2034:// XI //////// _+xi'e_20150630UTC_
-zantufa-0.9999.js.peg:2052:// ZO //////// _+ra'ai_20150701UTC_
+zantufa-0.17.js.peg:51:// ret = ""; //////// _jmina zoi jy var _g_zoi_delim; jy .i sa'unai jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_  
+zantufa-0.17.js.peg:59:// ret = ""; //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_      
+zantufa-0.17.js.peg:61:// for (v in arg) //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_      
+zantufa-0.17.js.peg:85:// for (v in arg) //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_    
+zantufa-0.17.js.peg:114:// function _zoi_check_quote(word) //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_  
+zantufa-0.17.js.peg:163:// paragraphs = expr:(paragraph (NIhO_clause+ free* su_clause* paragraphs)?) {return _node("paragraphs", expr);} //////// _galfi fi zoizoi paragraphs = expr:(paragraph? (NIhO_clause+ free* su_clause* paragraphs)?) {return _node_nonempty("paragraphs", expr);} zoi .i sa'unai jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_
+zantufa-0.17.js.peg:164:// paragraphs //////// _galfi fi zoizoi paragraphs = expr:((NIhO_clause+ free* su_clause* paragraph?)+ / paragraph (NIhO_clause+ free* su_clause* paragraph?)*) {return _node("paragraphs", expr);} zoi tezu'e lonu zoizoi free zoi .e zoizoi si_clause zoi cu di'a se genturfa'i_20150701UTC_
+zantufa-0.17.js.peg:167:// paragraph = expr:((statement / fragment) (I_clause !jek !joik !joik_jek free* (statement / fragment)?)*) {return _node("paragraph", expr);} //////// _galfi fi zoizoi paragraph = expr:((I_clause !jek !joik !joik_jek free* (statement / fragment)?)+ / (statement / fragment) (I_clause !jek !joik !joik_jek free* (statement / fragment)?)*) {return _node("paragraph", expr);} zoi tezu'e lo nu lu ni'o .i li'u cu se genturfa'i_20150701UTC_
+zantufa-0.17.js.peg:249:// term_start //////// _jmina zoizoi / POhA_clause zoi_20150629UTC_
+zantufa-0.17.js.peg:250:// term_start //////// _ma'oi LOhOI ma'oi POhA basti_20150629UTC_
+zantufa-0.17.js.peg:284:// sumti_6 //////// _jmina zoizoi / POhA_clause NAI_clause? free* (joik_jek POhA_clause NAI_clause? free*)* subsentence KU_elidible free* / LE_clause free* sumti_tail KU_elidible free* zoi_20150629UTC_
+zantufa-0.17.js.peg:285:// sumti_6 //////// _ma'oi LOhOI ma'oi POhA basti .i zo KUhAU noi famyma'o_20150629UTC_
+zantufa-0.17.js.peg:326:// tanru_unit_2 //////// _jmina zoizoi  / GOhOI_clause free* zoi_20150630UTC_
+zantufa-0.17.js.peg:491:// indicator //////// _jmina zoizoi () zoi_20150701UTC_
+zantufa-0.17.js.peg:538:// known_cmavo_SA //////// _jmina zoizoi  POhA_pre / zoi_20150629UTC_
+zantufa-0.17.js.peg:539:// known_cmavo_SA //////// _ma'oi LOhOI ma'oi POhA basti .i jmina zoizoi KUhAU_pre / zoi noi famyma'o_20150629UTC_
+zantufa-0.17.js.peg:540:// known_cmavo_SA //////// _jmina zoizoi  / GOhOI_pre zoi_20150630UTC_
+zantufa-0.17.js.peg:564:// si_word //////// _jmina zoizoi  / GOhOI spaces? any_word zoi_20150630UTC_
+zantufa-0.17.js.peg:581:// ELIDIBLE TERMINATORS //////// _jmina zoizoi KUhAU_elidible zoi_20150629UTC_
+zantufa-0.17.js.peg:876://         galfi lo pa valsi lo selbrisle //////// _jmina zoizoi GOhOI_clause, GOhOI_pre, GOhOI_post zoi_20150630UTC_
+zantufa-0.17.js.peg:956://         famyma'o be ma'oi LOhOI //////// _jmina zoizoi KUhAU_clause, KUhAU_pre, KUhAU_post zoi_20150629UTC_
+zantufa-0.17.js.peg:1031:// //////// _jmina zoizoi POhA_clause, POhA_pre, POhA_post zoi_20160629UTC_
+zantufa-0.17.js.peg:1032:// //////// _ma'oi LOhOI ma'oi POhA basti_20150629UTC_
+zantufa-0.17.js.peg:1422:// CMAVO //////// _ma'oi LOhOI ma'oi POhA basti .i jmina ma'oi KUhAU noi famyma'o_20150629UTC_
+zantufa-0.17.js.peg:1423:// CMAVO //////// _jmina zoizoi  / GOhOI zoi_20150630UTC_
+zantufa-0.17.js.peg:1475:// zoi_close //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_
+zantufa-0.17.js.peg:1630:// y //////// _jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_
+zantufa-0.17.js.peg:1733:// BAI //////// _+be'ei +ko'au_20150630UTC_
+zantufa-0.17.js.peg:1736:// BAhE //////// _+zai'e_20150630UTC_
+zantufa-0.17.js.peg:1758:// BY //////// _+bu'o'e_20150630UTC_
+zantufa-0.17.js.peg:1759:// BY //////// _+no'ai'y +no'e'u'y_20150630UTC_
+zantufa-0.17.js.peg:1766:// CAI //////// _+na'oi +pei'a +pei'o_20150630UTC_
+zantufa-0.17.js.peg:1829:// GOhOI //////// _jmina ma'oi GOhOI; +ze'oi +ta'ai +go'oi_20150630UTC_
+zantufa-0.17.js.peg:1856:// KOhA //////// _+lau'u +dei'ei +lau'e +mi'oi +do'ei_20150630UTC_
+zantufa-0.17.js.peg:1861:// //////// _jmina ma'oi KUhAU_20150629UTC_
+zantufa-0.17.js.peg:1878:// LE //////// _+moi'oi_20150630UTC_
+zantufa-0.17.js.peg:1896:// //////// _jmina zo po'a noi cmavo ma'oi POhA_20150629UTC_
+zantufa-0.17.js.peg:1897:// POhA = &cmavo expr:( p o h a ) &post_word {return ["POhA", _join(expr)];} //////// _vimcu .i ma'oi LOhOI basti ma'oi POhA_20150629UTC_ 
+zantufa-0.17.js.peg:1900:// LOhU //////// _+la'ai_20150630UTC_
+zantufa-0.17.js.peg:1904:// LU //////// _+tu'ai_20150630UTC_
+zantufa-0.17.js.peg:1928:// NA //////// _+xu'o'e_20150630UTC_
+zantufa-0.17.js.peg:1935:// NAhE //////// _+cai'e +cau'o'e +noi'e +pai'e +rei'e +sai'e_20150630UTC_
+zantufa-0.17.js.peg:1944:// NOI //////// _+voi'i_20150630UTC_
+zantufa-0.17.js.peg:1958:// PA //////// _+no'ai +no'e'u_20150630UTC_
+zantufa-0.17.js.peg:1974:// ROI //////// _+va'ei_20150630UTC_
+zantufa-0.17.js.peg:2011:// UI //////// _+oi'a +ia'u +ie'i +uau +ue'i +jei'u +ju'oi +kai'a +kai'e +lai'i +moi'i +sei'i +vei'i +zi'ai +xe'e +bo'oi_20150630UTC_
+zantufa-0.17.js.peg:2024:// VUhU //////// _+xo'ei +tai'e'i +pau'oi_20150630UTC_
+zantufa-0.17.js.peg:2034:// XI //////// _+xi'e_20150630UTC_
+zantufa-0.17.js.peg:2052:// ZO //////// _+ra'ai_20150701UTC_
+------------------ mulno fa la zantufa_0.17 ------------------
