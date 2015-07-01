@@ -48,7 +48,7 @@
 // ___ GRAMMAR ___
 
 {
-// ret = ""; //////// _jmina zoizoi var _g_zoi_delim; zoi .i sa'unai jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_  
+// ret = ""; //////// _jmina zoi jy var _g_zoi_delim; jy .i sa'unai jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_  
   var _g_zoi_delim;
   function _join(arg)
   {
@@ -144,7 +144,8 @@
 // text = expr:(intro_null NAI_clause* text_part_2 (!text_1 joik_jek)? text_1? faho_clause EOF?) {return _node_nonempty("text", expr);} //////// _jmina zoizoi si_clause? zoi_20150622UTC
 // text //////// _vimcu zoizoi text_part_2 (to lo cmevla cu selbrisle gau toi)_20150625UTC
 // text //////// _jmina zoizoi indicators? free* zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC
-text = expr:(intro_null NAI_clause* indicators? free* (!text_1 joik_jek)? text_1? si_clause? faho_clause EOF?) {return _node_nonempty("text", expr);}
+// text //////// _muvdu zoizoi si_clause? zoi lo se diklo be zoizoi paragraphs zoi_20150701UTC_
+text = expr:(intro_null NAI_clause* indicators? free* (!text_1 joik_jek)? text_1? faho_clause EOF?) {return _node_nonempty("text", expr);}
 
 // intro_null = expr:(spaces? su_clause* intro_si_clause) {return _node_nonempty("intro_null", expr); } //////// _vimcu zoizoi intro_si_clause zoi_20150622UTC
 intro_null = expr:(spaces? su_clause*) {return _node_nonempty("intro_null", expr); }
@@ -2047,7 +2048,8 @@ ZI = &cmavo expr:( z a h a i / z u / z a / z i ) &post_word {return ["ZI", _join
 ZIhE = &cmavo expr:( z i h e ) &post_word {return ["ZIhE", _join(expr)];}
 
 // ZO //////// _+ma'oi_20150604UTC
-ZO = &cmavo expr:( m a h o i / z o ) &post_word {return ["ZO", _join(expr)];}
+// ZO //////// _+ra'ai_20150701UTC_
+ZO = &cmavo expr:( z o / r a h a i / m a h o i ) &post_word {return ["ZO", _join(expr)];}
 
 ZOI = &cmavo expr:( z o i / l a h o ) &post_word {return ["ZOI", _join(expr)];}
 
