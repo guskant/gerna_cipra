@@ -144,8 +144,7 @@
 // text = expr:(intro_null NAI_clause* text_part_2 (!text_1 joik_jek)? text_1? faho_clause EOF?) {return _node_nonempty("text", expr);} //////// _jmina zoizoi si_clause? zoi_20150622UTC
 // text //////// _vimcu zoizoi text_part_2 (to lo cmevla cu selbrisle gau toi)_20150625UTC
 // text //////// _jmina zoizoi indicators? free* zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC
-// text //////// _muvdu zoizoi si_clause? zoi lo se diklo be zoizoi paragraphs zoi_20150701UTC_
-text = expr:(intro_null NAI_clause* indicators? free* (!text_1 joik_jek)? text_1? faho_clause EOF?) {return _node_nonempty("text", expr);}
+text = expr:(intro_null NAI_clause* indicators? free* (!text_1 joik_jek)? text_1? si_clause? faho_clause EOF?) {return _node_nonempty("text", expr);}
 
 // intro_null = expr:(spaces? su_clause* intro_si_clause) {return _node_nonempty("intro_null", expr); } //////// _vimcu zoizoi intro_si_clause zoi_20150622UTC
 intro_null = expr:(spaces? su_clause*) {return _node_nonempty("intro_null", expr); }
@@ -162,8 +161,8 @@ faho_clause = expr:((FAhO_clause dot_star)?) {return _node("faho_clause", expr);
 text_1 = expr:(I_clause (jek / joik)? (stag? BO_clause)? free* text_1? / NIhO_clause+ free* su_clause* paragraphs? / paragraphs) {return _node("text_1", expr);}
 
 // paragraphs = expr:(paragraph (NIhO_clause+ free* su_clause* paragraphs)?) {return _node("paragraphs", expr);} //////// _galfi fi zoizoi paragraphs = expr:(paragraph? (NIhO_clause+ free* su_clause* paragraphs)?) {return _node_nonempty("paragraphs", expr);} zoi .i sa'unai jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC_
-// paragraphs //////// _jmina zoizoi si_clause? zoi tezu'e lo nu va'o tu'a zoizoi _node_nonempty zoi ji'a lu valsi si li'u cu se genturfa'i_20150701UTC_
-paragraphs = expr:(paragraph? si_clause? (NIhO_clause+ free* su_clause* paragraphs)?) {return _node_nonempty("paragraphs", expr);}
+// paragraphs //////// _zasni vimcu zoizoi _nonempty zoi tezu'e lonu zoizoi free zoi .e zoizoi si_clause zoi cu di'a se genturfa'i_20150701UTC_
+paragraphs = expr:(paragraph? (NIhO_clause+ free* su_clause* paragraphs)?) {return _node("paragraphs", expr);}
 
 paragraph = expr:((statement / fragment) (I_clause !jek !joik !joik_jek free* (statement / fragment)?)*) {return _node("paragraph", expr);}
 
@@ -488,7 +487,8 @@ vocative = expr:((COI_clause NAI_clause?)+ DOI_clause / (COI_clause NAI_clause?)
 
 indicators = expr:(FUhE_clause? indicator+) {return _node("indicators", expr); }
 
-indicator =  expr:((UI_clause / CAI_clause) NAI_clause? / DAhO_clause / FUhO_clause) !BU_clause {return _node("indicator", expr); }
+// indicator //////// _jmina zoizoi () zoi_20150701UTC_
+indicator =  expr:(((UI_clause / CAI_clause) NAI_clause? / DAhO_clause / FUhO_clause) !BU_clause) {return _node("indicator", expr); }
 
 
 // ****************
