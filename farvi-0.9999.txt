@@ -205,7 +205,7 @@ zantufa-0.17.js.peg:2024:// VUhU //////// _+xo'ei +tai'e'i +pau'oi_20150630UTC_
 zantufa-0.17.js.peg:2034:// XI //////// _+xi'e_20150630UTC_
 zantufa-0.17.js.peg:2052:// ZO //////// _+ra'ai_20150701UTC_
 ------------------ mulno fa la zantufa_0.17 ------------------
-zantufa-0.9999.js.peg:150:// intro_null //////// _jmina zoizoi intro_si_clause zoi ki'u lo nu tu'a lo du'e sy.u'y ji'a cu se curmi_20150702UTC_
+zantufa-0.9999.js.peg:150:// intro_null //////// _jmina zoizoi intro_si_clause zoi ki'u lo nu tu'a lo du'e zo su ji'a cu se curmi_20150702UTC_
 zantufa-0.9999.js.peg:157:// intro_si_clause //////// _di'a jmive .iku'i zoizoi si_clause? SI* zoi_20150702UTC_
 zantufa-0.9999.js.peg:165:// text_1 //////// _vimcu zoizoi su_clause* zoi_20150702UTC_
 zantufa-0.9999.js.peg:170:// paragraphs //////// _vimcu zoizoi su_clause* zoi_20150702UTC_

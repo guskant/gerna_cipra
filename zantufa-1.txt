@@ -17,8 +17,6 @@ ME, NUhA -> ME
 LAU, TEI, FOI, BY -> BY
 SA, GUhA, BIhE, CEhE, PEhE, NUhI, NUhU, MAhO, NAhU, PEhO, KUhE, FUhA, MOhE -> /
 
-SU Restricted to full erasure.
-
 syllabic consonants
 Eliminated from fuhivla, except for the hyphen of type-3. A 'y' is also allowed in front of the hyphen, so that they are not even required there. This has the additional advantage that 'l' is never needed as hyphen.
 (
@@ -62,6 +60,8 @@ ex.)
 4 fo broda 1235 = 4 vetese broda 1235
 5 fu broda 1234 = 5 xevetese broda 1234
 mukti fa lo nu lo terbri be lo pa selbrisle cu porsi lo ka vajni gi'e no'e cenba lo ka vajni ca ji'a lo nu vajgau pa lo su'ocimoi be lo cmima be lo terbri 
+ei lu ni'o joi li'u gendra
+
 
 drata sitna:
 https://skami2.iocikun.jp/lojban/zasniGernaPeg
@@ -89,3 +89,5 @@ mulno:
 # That's inherited from the LALR(1) limitations of YACC. The same applies to
 # "ke broda gi'e brode ke'e gi'a brodi". It shouldn't be hard to fix with PEG.
 
+# SU Restricted to full erasure.
+# vimcu ma'oi SA

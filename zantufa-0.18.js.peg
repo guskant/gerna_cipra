@@ -147,14 +147,14 @@
 text = expr:(intro_null NAI_clause* indicators? free* (!text_1 joik_jek)? text_1? si_clause? faho_clause EOF?) {return _node_nonempty("text", expr);}
 
 // intro_null = expr:(spaces? su_clause* intro_si_clause) {return _node_nonempty("intro_null", expr); } //////// _vimcu zoizoi intro_si_clause zoi_20150622UTC
-// intro_null //////// _jmina zoizoi intro_si_clause zoi ki'u lo nu tu'a lo du'e zo su ji'a cu se curmi_20150702UTC
+// intro_null //////// _jmina zoizoi intro_si_clause zoi ki'u lo nu tu'a lo du'e zo su ji'a cu se curmi_20150702UTC_
 intro_null = expr:(spaces? su_clause* intro_si_clause) {return _node_nonempty("intro_null", expr); }
 
 // text_part_2 = expr:((CMEVLA_clause+ / indicators?) free*) {return _node_nonempty("text_part_2", expr); } //////// _vimcu (to lo cmevla cu selbrisle gau toi)_20150625UTC
 
 //; intro_sa_clause = SA_clause+ / any_word_SA_handling !(ZEI_clause SA_clause) intro_sa_clause
 // intro_si_clause = expr:(si_clause? SI_clause*)  {return _node_nonempty("intro_si_clause", expr); } //////// _vimcu_20150622UTC
-// intro_si_clause //////// _di'a jmive .iku'i zoizoi si_clause? SI* zoi_20150702UTC
+// intro_si_clause //////// _di'a jmive .iku'i zoizoi si_clause? SI* zoi_20150702UTC_
 intro_si_clause = expr:(si_clause? SI*)  {return _node_nonempty("intro_si_clause", expr); }
 
 faho_clause = expr:((FAhO_clause dot_star)?) {return _node("faho_clause", expr);}
@@ -162,12 +162,12 @@ faho_clause = expr:((FAhO_clause dot_star)?) {return _node("faho_clause", expr);
 // Please note that the "text_1" item in the text_1 production does
 // *not* match the BNF. This is due to a bug in the BNF.  The change
 // here was made to match grammar.300
-// text_1 //////// _vimcu zoizoi su_clause* zoi_20150702UTC
+// text_1 //////// _vimcu zoizoi su_clause* zoi_20150702UTC_
 text_1 = expr:(I_clause (jek / joik)? (stag? BO_clause)? free* text_1? / NIhO_clause+ free* paragraphs? / paragraphs) {return _node("text_1", expr);}
 
 // paragraphs = expr:(paragraph (NIhO_clause+ free* su_clause* paragraphs)?) {return _node("paragraphs", expr);} //////// _galfi fi zoizoi paragraphs = expr:(paragraph? (NIhO_clause+ free* su_clause* paragraphs)?) {return _node_nonempty("paragraphs", expr);} zoi .i sa'unai jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC
 // paragraphs //////// _galfi fi zoizoi paragraphs = expr:((NIhO_clause+ free* su_clause* paragraph?)+ / paragraph (NIhO_clause+ free* su_clause* paragraph?)*) {return _node("paragraphs", expr);} zoi tezu'e lonu zoizoi free zoi .e zoizoi si_clause zoi cu di'a se genturfa'i_20150701UTC
-// paragraphs //////// _vimcu zoizoi su_clause* zoi_20150702UTC
+// paragraphs //////// _vimcu zoizoi su_clause* zoi_20150702UTC_
 paragraphs = expr:((NIhO_clause+ free* paragraph?)+ / paragraph (NIhO_clause+ free* paragraph?)*) {return _node("paragraphs", expr);}
 
 // paragraph = expr:((statement / fragment) (I_clause !jek !joik !joik_jek free* (statement / fragment)?)*) {return _node("paragraph", expr);} //////// _galfi fi zoizoi paragraph = expr:((I_clause !jek !joik !joik_jek free* (statement / fragment)?)+ / (statement / fragment) (I_clause !jek !joik !joik_jek free* (statement / fragment)?)*) {return _node("paragraph", expr);} zoi tezu'e lo nu lu ni'o .i li'u cu se genturfa'i_20150701UTC
@@ -187,21 +187,21 @@ prenex = expr:(terms ZOhU_clause free*) {return _node("prenex", expr);}
 
 //; sentence = (terms CU_clause? free*)? bridi_tail / bridi_tail
 
-// sentence //////// _vimcu zoizoi bridi_tail_sa* zoi_20150701UTC
+// sentence //////// _vimcu zoizoi bridi_tail_sa* zoi_20150701UTC_
 sentence = expr:((terms CU_elidible free*)? bridi_tail) {return _node("sentence", expr);}
 
-// sentence_sa = expr:(sentence_start (!sentence_start (sa_word / SA_clause !sentence_start ) )* SA_clause &text_1) {return _node("sentence_sa", expr);} //////// _vimcu_20150701UTC
+// sentence_sa = expr:(sentence_start (!sentence_start (sa_word / SA_clause !sentence_start ) )* SA_clause &text_1) {return _node("sentence_sa", expr);} //////// _vimcu_20150701UTC_
 
-// sentence_start = expr:(I_pre / NIhO_pre) {return _node("sentence_start", expr);} //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC
+// sentence_start = expr:(I_pre / NIhO_pre) {return _node("sentence_start", expr);} //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC_
 
 subsentence = expr:(sentence / prenex subsentence) {return _node("subsentence", expr);}
 
 // bridi_tail = expr:(bridi_tail_1 (gihek stag? KE_clause free* bridi_tail KEhE_elidible free* tail_terms)?) {return _node("bridi_tail", expr);} //////// _galfi fi zoizoi bridi_tail_1 (gihek stag? bridi_tail_1)* zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug_20150627UTC
 bridi_tail = expr:(bridi_tail_1 (gihek stag? bridi_tail_1)*) {return _node("bridi_tail", expr);}
 
-// bridi_tail_sa = expr:(bridi_tail_start (term / !bridi_tail_start (sa_word / SA_clause !bridi_tail_start ) )* SA_clause &bridi_tail) {return _node("bridi_tail_sa", expr);} //////// _vimcu_20150701UTC
+// bridi_tail_sa = expr:(bridi_tail_start (term / !bridi_tail_start (sa_word / SA_clause !bridi_tail_start ) )* SA_clause &bridi_tail) {return _node("bridi_tail_sa", expr);} //////// _vimcu_20150701UTC_
 
-// bridi_tail_start = expr:(ME_clause / NUhA_clause / NU_clause / NA_clause !KU_clause / NAhE_clause !BO_clause / selbri / tag bridi_tail_start / KE_clause bridi_tail_start / bridi_tail) {return _node("bridi_tail_start", expr);} //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC
+// bridi_tail_start = expr:(ME_clause / NUhA_clause / NU_clause / NA_clause !KU_clause / NAhE_clause !BO_clause / selbri / tag bridi_tail_start / KE_clause bridi_tail_start / bridi_tail) {return _node("bridi_tail_start", expr);} //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC_
 
 bridi_tail_1 = expr:(bridi_tail_2 (gihek !(stag? BO_clause) !(stag? KE_clause) free* bridi_tail_2 tail_terms)*) {return _node("bridi_tail_1", expr);}
 
@@ -223,48 +223,48 @@ terms = expr:(terms_1+) {return _node("terms", expr);}
 //; terms_2 = term (CEhE_clause free* term)*
 
 /*** EXP-SELBRITCITA-FIX ***/
-// terms_1 //////// _vimcu zoizoi pehe_sa* zoi_20150701UTC
+// terms_1 //////// _vimcu zoizoi pehe_sa* zoi_20150701UTC_
 terms_1 = expr:(terms_2 (PEhE_clause free* joik_jek terms_2)*) {return _node("terms_1", expr);}
 
-// terms_2 //////// _vimcu zoizoi cehe_sa* zoi_20150701UTC
+// terms_2 //////// _vimcu zoizoi cehe_sa* zoi_20150701UTC_
 terms_2 = expr:(abs_term (CEhE_clause free* abs_term)*) {return _node("terms_2", expr);}
 
 nonabs_terms = expr:(nonabs_terms_1+) {return _node("nonabs_terms", expr);}
 
-// nonabs_terms_1 //////// _vimcu zoizoi pehe_sa* zoi_20150701UTC
+// nonabs_terms_1 //////// _vimcu zoizoi pehe_sa* zoi_20150701UTC_
 nonabs_terms_1 = expr:(nonabs_terms_2 (PEhE_clause free* joik_jek nonabs_terms_2)*) {return _node("nonabs_terms_1", expr);}
 
-// nonabs_terms_2 //////// _vimcu zoizoi cehe_sa* zoi_20150701UTC
+// nonabs_terms_2 //////// _vimcu zoizoi cehe_sa* zoi_20150701UTC_
 nonabs_terms_2 = expr:(term (CEhE_clause free* term)*) {return _node("nonabs_terms_2", expr);}
 
-// pehe_sa = expr:(PEhE_clause (!PEhE_clause (sa_word / SA_clause !PEhE_clause))* SA_clause) {return _node("pehe_sa", expr);} //////// _vimcu_20150701UTC
+// pehe_sa = expr:(PEhE_clause (!PEhE_clause (sa_word / SA_clause !PEhE_clause))* SA_clause) {return _node("pehe_sa", expr);} //////// _vimcu_20150701UTC_
 
-// cehe_sa = expr:(CEhE_clause (!CEhE_clause (sa_word / SA_clause !CEhE_clause))* SA_clause) {return _node("cehe_sa", expr);} _vimcu_20150701UTC
+// cehe_sa = expr:(CEhE_clause (!CEhE_clause (sa_word / SA_clause !CEhE_clause))* SA_clause) {return _node("cehe_sa", expr);} _vimcu_20150701UTC_
 
 //;term = sumti / ( !gek (tag / FA_clause free*) (sumti / KU_elidible free*) ) / termset / NA_clause KU_clause free*
 
-// term //////// _vimcu zoizoi term_sa* zoi_20150701UTC
-// term //////// _la'o zoi term_1 zoi muvdu ti_20150701UTC
+// term //////// _vimcu zoizoi term_sa* zoi_20150701UTC_
+// term //////// _la'o zoi term_1 zoi muvdu ti_20150701UTC_
 term = expr:(sumti / ( !gek (tag / FA_clause free*) (sumti / KU_elidible free*) ) / nonabs_termset / NA_clause KU_clause free*) {return _node("term", expr);}
 
-// term_1 = expr:(sumti / ( !gek (tag / FA_clause free*) (sumti / KU_elidible free*) ) / nonabs_termset / NA_clause KU_clause free*) {return _node("term_1", expr);} //////// _ti muvdu la'o zoi term zoi ki'u lo nu co'a dunli_20150701UTC
+// term_1 = expr:(sumti / ( !gek (tag / FA_clause free*) (sumti / KU_elidible free*) ) / nonabs_termset / NA_clause KU_clause free*) {return _node("term_1", expr);} //////// _ti muvdu la'o zoi term zoi ki'u lo nu co'a dunli_20150701UTC_
 
-// abs_term //////// _vimcu zoizoi term_sa* zoi_20150701UTC
-// abs_term //////// _la'o zoi abs_term_1 zoi muvdu ti ki'u lo nu co'a dunli_20150701UTC
+// abs_term //////// _vimcu zoizoi term_sa* zoi_20150701UTC_
+// abs_term //////// _la'o zoi abs_term_1 zoi muvdu ti ki'u lo nu co'a dunli_20150701UTC_
 abs_term = expr:(sumti / abs_tag_term / termset / NA_clause KU_clause free*) {return _node("abs_term", expr);}
 
-// abs_term_1 = expr:(sumti / abs_tag_term / termset / NA_clause KU_clause free*) {return _node("abs_term_1", expr);} //////// _ti muvdu la'o zoi abs_term zoi ki'u lo nu co'a dunli_20150701UTC
+// abs_term_1 = expr:(sumti / abs_tag_term / termset / NA_clause KU_clause free*) {return _node("abs_term_1", expr);} //////// _ti muvdu la'o zoi abs_term zoi ki'u lo nu co'a dunli_20150701UTC_
 
 abs_tag_term = expr:( !gek (tag !(!tag selbri) !gek_sentence / FA_clause free*) (sumti / KU_elidible free*) ) {return _node("abs_tag_term", expr);}
 /*** END EXP-SELBRITCITA-FIX ***/
 
-// term_sa = expr:(term_start (!term_start (sa_word / SA_clause !term_start ) )* SA_clause &term_1) {return _node("term_sa", expr);} //////// _vimcu_20150701UTC
+// term_sa = expr:(term_start (!term_start (sa_word / SA_clause !term_start ) )* SA_clause &term_1) {return _node("term_sa", expr);} //////// _vimcu_20150701UTC_
 
 // term_start //////// _vimcu zoizoi / LA_clause zoi (to lo cmevla cu selbrisle gau toi)_20150625UTC
 // term_start //////// _jmina zoizoi / POhA_clause zoi_20150629UTC
 // term_start //////// _ma'oi LOhOI ma'oi POhA basti_20150629UTC
-// term_start //////// _zoizoi term_1 zoi binxo zoizoi term zoi_20150701UTC
-// term_start = expr:(term / LE_clause / LI_clause / LU_clause / LAhE_clause / LOhOI_clause / quantifier term_start / gek sumti gik / FA_clause / tag term_start) {return _node("term_start", expr);} //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC
+// term_start //////// _zoizoi term_1 zoi binxo zoizoi term zoi_20150701UTC_
+// term_start = expr:(term / LE_clause / LI_clause / LU_clause / LAhE_clause / LOhOI_clause / quantifier term_start / gek sumti gik / FA_clause / tag term_start) {return _node("term_start", expr);} //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC_
 
 termset = expr:(gek_termset / NUhI_clause free* gek terms NUhU_elidible free* gik terms NUhU_elidible free* / NUhI_clause free* terms NUhU_elidible free*) {return _node("termset", expr);}
 
@@ -311,15 +311,15 @@ relative_clauses = expr:(relative_clause (ZIhE_clause free* relative_clause)*) {
 
 //; relative_clause = GOI_clause free* term GEhU_clause? free* / NOI_clause free* subsentence KUhO_clause? free*
 
-// relative_clause //////// _vimcu zoizoi relative_clause_sa* zoi_20150701UTC
-// relative_clause //////// _la'o zoi relative_clause_1 zoi muvdu ti ki'u lo nu co'a dunli_20150701UTC
+// relative_clause //////// _vimcu zoizoi relative_clause_sa* zoi_20150701UTC_
+// relative_clause //////// _la'o zoi relative_clause_1 zoi muvdu ti ki'u lo nu co'a dunli_20150701UTC_
 relative_clause = expr:(GOI_clause free* term GEhU_elidible free* / NOI_clause free* subsentence KUhO_elidible free*) {return _node("relative_clause", expr); }
 
-// relative_clause_sa = expr:(relative_clause_start (!relative_clause_start (sa_word / SA_clause !relative_clause_start ) )* SA_clause &relative_clause_1) {return _node("relative_clause_sa", expr); } //////// _vimcu_20150701UTC
+// relative_clause_sa = expr:(relative_clause_start (!relative_clause_start (sa_word / SA_clause !relative_clause_start ) )* SA_clause &relative_clause_1) {return _node("relative_clause_sa", expr); } //////// _vimcu_20150701UTC_
 
-// relative_clause_1 = expr:(GOI_clause free* term GEhU_elidible free* / NOI_clause free* subsentence KUhO_elidible free* ) {return _node("relative_clause_1", expr); } //////// _ti muvdu la'o zoi relative_clause zoi ki'u lo nu co'a dunli_20150701UTC
+// relative_clause_1 = expr:(GOI_clause free* term GEhU_elidible free* / NOI_clause free* subsentence KUhO_elidible free* ) {return _node("relative_clause_1", expr); } //////// _ti muvdu la'o zoi relative_clause zoi ki'u lo nu co'a dunli_20150701UTC_
 
-// relative_clause_start = expr:(GOI_clause / NOI_clause) {return _node("relative_clause_start", expr); } //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC
+// relative_clause_start = expr:(GOI_clause / NOI_clause) {return _node("relative_clause_start", expr); } //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC_
 
 selbri = expr:(tag? selbri_1) {return _node("selbri", expr); }
 
@@ -346,41 +346,41 @@ tanru_unit_2 = expr:(CMEVLA_clause free* / BRIVLA_clause free* / GOhA_clause RAh
 
 //; linkargs = BE_clause free* term links? BEhO_clause? free*
 
-// linkargs //////// _vimcu zoizoi linkargs_sa* zoi_20150701UTC
-// linkargs //////// _la'o zoi linkargs_1 zoi muvdu ti ki'u lo nu co'a dunli_20150701UTC
+// linkargs //////// _vimcu zoizoi linkargs_sa* zoi_20150701UTC_
+// linkargs //////// _la'o zoi linkargs_1 zoi muvdu ti ki'u lo nu co'a dunli_20150701UTC_
 linkargs = expr:(BE_clause free* term links? BEhO_elidible free*)  {return _node("linkargs", expr);}
 
-// linkargs_1 = expr:(BE_clause free* term links? BEhO_elidible free*)  {return _node("linkargs_1", expr);} //////// _ti muvdu la'o zoi linkargs zoi ki'u lo nu co'a dunli_20150701UTC
+// linkargs_1 = expr:(BE_clause free* term links? BEhO_elidible free*)  {return _node("linkargs_1", expr);} //////// _ti muvdu la'o zoi linkargs zoi ki'u lo nu co'a dunli_20150701UTC_
 
-// linkargs_sa = expr:(linkargs_start (!linkargs_start (sa_word / SA_clause !linkargs_start ) )* SA_clause &linkargs_1) {return _node("linkargs_sa", expr);} //////// _vimcu_20150701UTC
+// linkargs_sa = expr:(linkargs_start (!linkargs_start (sa_word / SA_clause !linkargs_start ) )* SA_clause &linkargs_1) {return _node("linkargs_sa", expr);} //////// _vimcu_20150701UTC_
 
-// linkargs_start = expr:BE_clause {return ["linkargs_start", expr];} //////// _za'a co'aku noda refsku .i vimcu_20150701UTC
+// linkargs_start = expr:BE_clause {return ["linkargs_start", expr];} //////// _za'a co'aku noda refsku .i vimcu_20150701UTC_
 
 //; links = BEI_clause free* term links?
 
-// links //////// _vimcu zoizoi links_sa* zoi_20150701UTC
-// links //////// _la'o zoi links_1 zoi muvdu ti ki'u lo nu co'a dunli_20150701UTC
+// links //////// _vimcu zoizoi links_sa* zoi_20150701UTC_
+// links //////// _la'o zoi links_1 zoi muvdu ti ki'u lo nu co'a dunli_20150701UTC_
 links = expr:(BEI_clause free* term links?) {return _node("links", expr);}
 
-// links_1 = expr:(BEI_clause free* term links?) {return _node("links_1", expr);} //////// _ti muvdu la'o zoi links zoi ki'u lo nu co'a dunli_20150701UTC
+// links_1 = expr:(BEI_clause free* term links?) {return _node("links_1", expr);} //////// _ti muvdu la'o zoi links zoi ki'u lo nu co'a dunli_20150701UTC_
 
-// links_sa = expr:(links_start (!links_start (sa_word / SA_clause !links_start ) )* SA_clause &links_1) {return _node("links_sa", expr);} //////// _vimcu_20150701UTC
+// links_sa = expr:(links_start (!links_start (sa_word / SA_clause !links_start ) )* SA_clause &links_1) {return _node("links_sa", expr);} //////// _vimcu_20150701UTC_
 
-// links_start = expr:(BEI_clause) {return ["links_start", expr];} //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC
+// links_start = expr:(BEI_clause) {return ["links_start", expr];} //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC_
 
 quantifier = expr:(number !MOI_clause BOI_elidible free* / VEI_clause free* mex VEhO_elidible free*) {return _node("quantifier", expr); }
 
 //;mex = mex_1 (operator mex_1)* / rp_clause
 
-// mex //////// _vimcu zoizoi mex_sa* zoi_20150701UTC
-// mex //////// _la'o zoi mex_0 zoi muvdu ti ki'u lo nu co'a dunli_20150701UTC
+// mex //////// _vimcu zoizoi mex_sa* zoi_20150701UTC_
+// mex //////// _la'o zoi mex_0 zoi muvdu ti ki'u lo nu co'a dunli_20150701UTC_
 mex = expr:(mex_1 (operator mex_1)* / rp_clause) {return _node("mex", expr); }
 
-// mex_0 = expr:(mex_1 (operator mex_1)* / rp_clause) {return _node("mex_0", expr); } //////// _ti muvdu la'o zoi mex zoi ki'u lo nu co'a dunli_20150701UTC
+// mex_0 = expr:(mex_1 (operator mex_1)* / rp_clause) {return _node("mex_0", expr); } //////// _ti muvdu la'o zoi mex zoi ki'u lo nu co'a dunli_20150701UTC_
 
-// mex_sa = expr:(mex_start (!mex_start (sa_word / SA_clause !mex_start) )* SA_clause &mex_0) {return _node("mex_sa", expr); } //////// _vimcu_20150701UTC
+// mex_sa = expr:(mex_start (!mex_start (sa_word / SA_clause !mex_start) )* SA_clause &mex_0) {return _node("mex_sa", expr); } //////// _vimcu_20150701UTC_
 
-// mex_start = expr:(FUhA_clause / PEhO_clause / operand_start) {return _node("mex_start", expr); } //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC
+// mex_start = expr:(FUhA_clause / PEhO_clause / operand_start) {return _node("mex_start", expr); } //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC_
 
 rp_clause = expr:(FUhA_clause free* rp_expression) {return _node("rp_clause", expr); }
 
@@ -404,17 +404,17 @@ rp_expression_tail = expr:(rp_expression operator rp_expression_tail / ()) {retu
 
 //; operator = operator_1 (joik_jek operator_1 / joik stag? KE_clause free* operator KEhE_clause? free*)*
 
-// operator //////// _vimcu zoizoi operator_sa* zoi_20150701UTC
-// operator //////// _la'o zoi operator_0 zoi muvdu ti ki'u lo nu co'a dunli_20150701UTC
+// operator //////// _vimcu zoizoi operator_sa* zoi_20150701UTC_
+// operator //////// _la'o zoi operator_0 zoi muvdu ti ki'u lo nu co'a dunli_20150701UTC_
 operator = expr:(operator_1 (joik_jek stag? operator_1)*) {return _node("operator", expr); }
 
 // operator_0 = expr:(operator_1 (joik_jek operator_1 / joik stag? KE_clause free* operator KEhE_elidible free*)*) {return _node("operator_0", expr); } //////// _galfi fi zoizoi operator_1 (joik_jek stag? operator_1)* zoi ma'i lo si'o sampu_20150627UTC
-// operator_0 = expr:(operator_1 (joik_jek stag? operator_1)*) {return _node("operator_0", expr); } //////// _ti muvdu la'o zoi operator zoi ki'u lo nu co'a dunli_20150701UTC
+// operator_0 = expr:(operator_1 (joik_jek stag? operator_1)*) {return _node("operator_0", expr); } //////// _ti muvdu la'o zoi operator zoi ki'u lo nu co'a dunli_20150701UTC_
 
 
-// operator_sa = expr:(operator_start (!operator_start (sa_word / SA_clause !operator_start) )* SA_clause &operator_0) {return _node("operator_sa", expr); } //////// _vimcu_20150701UTC
+// operator_sa = expr:(operator_start (!operator_start (sa_word / SA_clause !operator_start) )* SA_clause &operator_0) {return _node("operator_sa", expr); } //////// _vimcu_20150701UTC_
 
-// operator_start = expr:(guhek / KE_clause / SE_clause? NAhE_clause / SE_clause? MAhO_clause / SE_clause? VUhU_clause) {return _node("operator_start", expr); } //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC
+// operator_start = expr:(guhek / KE_clause / SE_clause? NAhE_clause / SE_clause? MAhO_clause / SE_clause? VUhU_clause) {return _node("operator_start", expr); } //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC_
 
 operator_1 = expr:(operator_2 / guhek operator_1 gik operator_2 / operator_2 (jek / joik) stag? BO_clause free* operator_1) {return _node("operator_1", expr); }
 
@@ -424,16 +424,16 @@ mex_operator = expr:(SE_clause free* mex_operator / NAhE_clause free* mex_operat
 
 //; operand = operand_1 (joik_ek stag? KE_clause free* operand KEhE_clause? free*)?
 
-// operand //////// _vimcu zoizoi operand_sa* zoi_20150701UTC
-// operand //////// _la'o zoi operand_0 zoi muvdu ti ki'u lo nu co'a dunli_20150701UTC
+// operand //////// _vimcu zoizoi operand_sa* zoi_20150701UTC_
+// operand //////// _la'o zoi operand_0 zoi muvdu ti ki'u lo nu co'a dunli_20150701UTC_
 operand = expr:(operand_1 (joik_ek stag? operand_1)*) {return _node("operand", expr); }
 
 // operand_0 = expr:(operand_1 (joik_ek stag? KE_clause free* operand KEhE_elidible free*)?) {return _node("operand_0", expr); } //////// _galfi fi zoizoi operand_1 (joik_ek stag? operand_1)* zoi ma'i la'o bug https://github.com/Ilmen-vodhr/ilmentufa/issues/118 bug_20150627UTC
-// operand_0 = expr:(operand_1 (joik_ek stag? operand_1)*) {return _node("operand_0", expr); } //////// _ti muvdu la'o zoi operand zoi ki'u lo nu co'a dunli_20150701UTC
+// operand_0 = expr:(operand_1 (joik_ek stag? operand_1)*) {return _node("operand_0", expr); } //////// _ti muvdu la'o zoi operand zoi ki'u lo nu co'a dunli_20150701UTC_
 
-// operand_sa = expr:(operand_start (!operand_start (sa_word / SA_clause !operand_start) )* SA_clause &operand_0) {return _node("operand_sa", expr); } //////// _vimcu_20150701UTC
+// operand_sa = expr:(operand_start (!operand_start (sa_word / SA_clause !operand_start) )* SA_clause &operand_0) {return _node("operand_sa", expr); } //////// _vimcu_20150701UTC_
 
-// operand_start = expr:(quantifier / lerfu_word / NIhE_clause / MOhE_clause / JOhI_clause / gek / LAhE_clause / NAhE_clause) {return _node("operand_start", expr); } //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC
+// operand_start = expr:(quantifier / lerfu_word / NIhE_clause / MOhE_clause / JOhI_clause / gek / LAhE_clause / NAhE_clause) {return _node("operand_start", expr); } //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC_
 
 operand_1 = expr:(operand_2 (joik_ek operand_2)*) {return _node("operand_1", expr); }
 
@@ -456,13 +456,13 @@ lerfu_word = expr:(BY_clause / LAU_clause lerfu_word / TEI_clause lerfu_string F
 ek = expr:(NA_clause? SE_clause? A_clause NAI_clause?) {return _node("ek", expr); }
 
 //; gihek = NA_clause? SE_clause? GIhA_clause NAI_clause?
-// gihek //////// _vimcu zoizoi gihek_sa* zoi_20150701UTC
-// gihek //////// _la'o zoi gihek_1 zoi muvdu ti ki'u lo nu co'a dunli_20150701UTC
+// gihek //////// _vimcu zoizoi gihek_sa* zoi_20150701UTC_
+// gihek //////// _la'o zoi gihek_1 zoi muvdu ti ki'u lo nu co'a dunli_20150701UTC_
 gihek = expr:(NA_clause? SE_clause? GIhA_clause NAI_clause?) {return _node("gihek", expr); }
 
-// gihek_1 = expr:(NA_clause? SE_clause? GIhA_clause NAI_clause?) {return _node("gihek_1", expr); } //////// _ti muvdu la'o zoi gihek zoi ki'u lo nu co'a dunli_20150701UTC
+// gihek_1 = expr:(NA_clause? SE_clause? GIhA_clause NAI_clause?) {return _node("gihek_1", expr); } //////// _ti muvdu la'o zoi gihek zoi ki'u lo nu co'a dunli_20150701UTC_
 
-// gihek_sa = expr:(gihek_1 (!gihek_1 (sa_word / SA_clause !gihek_1 ) )* SA_clause &gihek) {return _node("gihek_sa", expr); } //////// _vimcu_20150701UTC
+// gihek_sa = expr:(gihek_1 (!gihek_1 (sa_word / SA_clause !gihek_1 ) )* SA_clause &gihek) {return _node("gihek_sa", expr); } //////// _vimcu_20150701UTC_
 
 jek = expr:(NA_clause? SE_clause? JA_clause NAI_clause?) {return _node("jek", expr); }
 
@@ -471,13 +471,13 @@ joik = expr:(SE_clause? JOI_clause NAI_clause? / interval / GAhO_clause interval
 interval = expr:(SE_clause? BIhI_clause NAI_clause?) {return _node("interval", expr); }
 
 //; joik_ek = joik free* / ek free*
-// joik_ek //////// _vimcu zoizoi joik_ek_sa* zoi_20150701UTC
-// joik_ek //////// _la'o zoi joik_ek_1 zoi muvdu ti ki'u lo nu co'a dunli_20150701UTC
+// joik_ek //////// _vimcu zoizoi joik_ek_sa* zoi_20150701UTC_
+// joik_ek //////// _la'o zoi joik_ek_1 zoi muvdu ti ki'u lo nu co'a dunli_20150701UTC_
 joik_ek = expr:(joik free* / ek free*) {return _node("joik_ek", expr); }
 
-// joik_ek_1 = expr:((joik free* / ek free*)) {return _node("joik_ek_1", expr); } //////// _ti muvdu la'o zoi joik_ek zoi ki'u lo nu co'a dunli_20150701UTC
+// joik_ek_1 = expr:((joik free* / ek free*)) {return _node("joik_ek_1", expr); } //////// _ti muvdu la'o zoi joik_ek zoi ki'u lo nu co'a dunli_20150701UTC_
 
-// joik_ek_sa = expr:(joik_ek_1 (!joik_ek_1 (sa_word / SA_clause !joik_ek_1 ) )* SA_clause &joik_ek) {return _node("joik_ek_sa", expr); } //////// _vimcu_20150701UTC
+// joik_ek_sa = expr:(joik_ek_1 (!joik_ek_1 (sa_word / SA_clause !joik_ek_1 ) )* SA_clause &joik_ek) {return _node("joik_ek_sa", expr); } //////// _vimcu_20150701UTC_
 
 joik_jek = expr:(joik free* / jek free*) {return _node("joik_jek", expr); }
 
@@ -527,14 +527,14 @@ indicator =  expr:(((UI_clause / CAI_clause) NAI_clause? / DAhO_clause / FUhO_cl
 // ****************
 // Magic Words
 // ****************
-// *_no_SA* //////// _vimcu ro zoizoi *_no_SA* zoi notci_20150701UTC
+// *_no_SA* //////// _vimcu ro zoizoi *_no_SA* zoi notci_20150701UTC_
 // zei_clause = expr:(pre_clause post:zei_clause_no_pre) {return _node("zei_clause", expr); } //////// _vimcu_20150622UTC
 // zei_clause_no_pre = expr:(pre_zei_bu (zei_tail? bu_tail)* zei_tail post_clause) {return _node("zei_clause_no_pre", expr); } //////// _vimcu_20150622UTC
 
 bu_clause = expr:(pre_clause post:bu_clause_no_pre) {return _node("bu_clause", expr); }
 // bu_clause_no_pre = expr:(pre_zei_bu (bu_tail? zei_tail)* bu_tail post_clause) {return _node("bu_clause_no_pre", expr); } //////// _vimcu zoizoi zei_tail zoi_20150622UTC
 // bu_clause_no_pre //////// _-pre_zei_bu +si_word_20150622UTC
-// bu_clause_no_pre //////// _galfi fi zoizoi (si_word / SU spaces?) bu_tail+ post_clause zoi tezu'e lo nu sarxe la camxes sei lu subu li'u lerfu_20150702UTC
+// bu_clause_no_pre //////// _galfi fi zoizoi (si_word / SU spaces?) bu_tail+ post_clause zoi tezu'e lo nu sarxe la camxes sei lu subu li'u lerfu_20150702UTC_
 bu_clause_no_pre = expr:((si_word / SU spaces?) bu_tail+ post_clause) {return _node("bu_clause_no_pre", expr); }
 
 // zei_tail = expr:(ZEI_clause any_word)+ {return _node("zei_tail", expr); } //////// _vimcu_20150622UTC
@@ -565,46 +565,46 @@ pre_clause = BAhE_clause? si_clause?
 // known_cmavo_SA //////// _jmina zoizoi  POhA_pre / zoi_20150629UTC
 // known_cmavo_SA //////// _ma'oi LOhOI ma'oi POhA basti .i jmina zoizoi KUhAU_pre / zoi noi famyma'o_20150629UTC
 // known_cmavo_SA //////// _jmina zoizoi  / GOhOI_pre zoi_20150630UTC
-// known_cmavo_SA //////// _galfi lo cmene zoizoi SU_cmavo zoi_20150701UTC
-// SU_cmavo //////// _vimcu zoizoi / SA_pre zoi_20150701UTC
-// SU_cmavo = A_pre / BAI_pre / BAhE_pre / BE_pre / BEI_pre / BEhO_pre / BIhE_pre / BIhI_pre / BO_pre / BOI_pre / BU_pre / BY_pre / CAI_pre / CAhA_pre / CEI_pre / CEhE_pre / CO_pre / COI_pre / CU_pre / CUhE_pre / DAhO_pre / DOI_pre / DOhU_pre / FA_pre / FAhA_pre / FEhE_pre / FEhU_pre / FIhO_pre / FOI_pre / FUhA_pre / FUhE_pre / FUhO_pre / GA_pre / GAhO_pre / GEhU_pre / GI_pre / GIhA_pre / GOI_pre / GOhA_pre / GOhOI_pre / GUhA_pre / I_pre / JA_pre / JAI_pre / JOI_pre / JOhI_pre / KE_pre / KEI_pre / KEhE_pre / KI_pre / KOhA_pre / KU_pre / KUhAU_pre / KUhE_pre / KUhO_pre / LAU_pre / LAhE_pre / LE_pre / LEhU_pre / LI_pre / LIhU_pre / LOhO_pre / LOhOI_pre / LOhU_pre / LU_pre / LUhU_pre / MAI_pre / MAhO_pre / ME_pre / MEhU_pre / MOI_pre / MOhE_pre / MOhI_pre / NA_pre / NAI_pre / NAhE_pre / NAhU_pre / NIhE_pre / NIhO_pre / NOI_pre / NU_pre / NUhA_pre / NUhI_pre / NUhU_pre / PA_pre / PEhE_pre / PEhO_pre / PU_pre / RAhOI_pre / RAhO_pre / ROI_pre / SE_pre / SEI_pre / SEhU_pre / SI_clause / SOI_pre / SU_pre / TAhE_pre / TEI_pre / TEhU_pre / TO_pre / TOI_pre / TUhE_pre / TUhU_pre / UI_pre / VA_pre / VAU_pre / VEI_pre / VEhA_pre / VEhO_pre / VIhA_pre / VUhO_pre / VUhU_pre / XI_pre / ZAhO_pre / ZEhA_pre / ZI_pre / ZIhE_pre / ZO_pre / ZOI_pre / ZOhU_pre //////// _vimcu_20150702UTC
+// known_cmavo_SA //////// _galfi lo cmene zoizoi SU_cmavo zoi_20150701UTC_
+// SU_cmavo //////// _vimcu zoizoi / SA_pre zoi_20150701UTC_
+// SU_cmavo = A_pre / BAI_pre / BAhE_pre / BE_pre / BEI_pre / BEhO_pre / BIhE_pre / BIhI_pre / BO_pre / BOI_pre / BU_pre / BY_pre / CAI_pre / CAhA_pre / CEI_pre / CEhE_pre / CO_pre / COI_pre / CU_pre / CUhE_pre / DAhO_pre / DOI_pre / DOhU_pre / FA_pre / FAhA_pre / FEhE_pre / FEhU_pre / FIhO_pre / FOI_pre / FUhA_pre / FUhE_pre / FUhO_pre / GA_pre / GAhO_pre / GEhU_pre / GI_pre / GIhA_pre / GOI_pre / GOhA_pre / GOhOI_pre / GUhA_pre / I_pre / JA_pre / JAI_pre / JOI_pre / JOhI_pre / KE_pre / KEI_pre / KEhE_pre / KI_pre / KOhA_pre / KU_pre / KUhAU_pre / KUhE_pre / KUhO_pre / LAU_pre / LAhE_pre / LE_pre / LEhU_pre / LI_pre / LIhU_pre / LOhO_pre / LOhOI_pre / LOhU_pre / LU_pre / LUhU_pre / MAI_pre / MAhO_pre / ME_pre / MEhU_pre / MOI_pre / MOhE_pre / MOhI_pre / NA_pre / NAI_pre / NAhE_pre / NAhU_pre / NIhE_pre / NIhO_pre / NOI_pre / NU_pre / NUhA_pre / NUhI_pre / NUhU_pre / PA_pre / PEhE_pre / PEhO_pre / PU_pre / RAhOI_pre / RAhO_pre / ROI_pre / SE_pre / SEI_pre / SEhU_pre / SI_clause / SOI_pre / SU_pre / TAhE_pre / TEI_pre / TEhU_pre / TO_pre / TOI_pre / TUhE_pre / TUhU_pre / UI_pre / VA_pre / VAU_pre / VEI_pre / VEhA_pre / VEhO_pre / VIhA_pre / VUhO_pre / VUhU_pre / XI_pre / ZAhO_pre / ZEhA_pre / ZI_pre / ZIhE_pre / ZO_pre / ZOI_pre / ZOhU_pre //////// _vimcu_20150702UTC_
 
 // Handling of spaces and things like spaces.
 // ___ SPACE ___
 // Do *NOT* delete the line above!
 
 // SU clauses
-// su_clause //////// zoizoi su_valsi zoi basti zoizoi su_word zoi_20150702UTC
+// su_clause //////// zoizoi su_valsi zoi basti zoizoi su_word zoi_20150702UTC_
 su_clause = expr:((erasable_clause / su_valsi)* SU_clause) {return _node("su_clause", expr); }
 
 // Handling of SI and interactions with zo and lo'u...le'u
 
 // si_clause = ((erasable_clause / si_word / SA_clause) si_clause? SI_clause)+ //////// _zoizoi SA_clause zoi se basti zoizoi SA spaces? zoi_20150622UTC
-// si_clause //////// _vimcu zoizoi / SA spaces? zoi_20150701UTC
+// si_clause //////// _vimcu zoizoi / SA spaces? zoi_20150701UTC_
 si_clause = ((erasable_clause / si_word) si_clause? SI_clause)+
 
 // erasable_clause = expr:(bu_clause_no_pre !ZEI_clause !BU_clause / zei_clause_no_pre !ZEI_clause !BU_clause) {return _node("erasable_clause", expr); } //////// _vimcu lo srana be zo zei_20150622UTC
 erasable_clause = expr:(bu_clause_no_pre !BU_clause) {return _node("erasable_clause", expr); }
 
 //any_word_SA_handling = BRIVLA_pre / known_cmavo_SA / !known_cmavo_pre CMAVO_pre / CMEVLA_pre
-// any_word_SA_handling = expr:(BRIVLA_pre / known_cmavo_SA / CMAVO_pre / CMEVLA_pre) {return _node("any_word_SA_handling", expr); } //////// galfi lo cmene zoizoi su_valsi zoi_20150701UTC
-// su_valsi //////// galfi zoizoi known_cmavo_SA zoi zoizoi SU_cmavo zoi_20150701UTC
-// su_valsi //////// _vimcu zoizoi SU_cmavo zoi_20150702UTC
-// su_valsi //////// _ti basti la'o zoi su_word zoi .ije galfi fi zoizoi si_word / !SU_clause !FAhO_clause any_word spaces? zoi_20150702UTC
+// any_word_SA_handling = expr:(BRIVLA_pre / known_cmavo_SA / CMAVO_pre / CMEVLA_pre) {return _node("any_word_SA_handling", expr); } //////// galfi lo cmene zoizoi su_valsi zoi_20150701UTC_
+// su_valsi //////// galfi zoizoi known_cmavo_SA zoi zoizoi SU_cmavo zoi_20150701UTC_
+// su_valsi //////// _vimcu zoizoi SU_cmavo zoi_20150702UTC_
+// su_valsi //////// _ti basti la'o zoi su_word zoi .ije galfi fi zoizoi si_word / !SU_clause !FAhO_clause any_word spaces? zoi_20150702UTC_
 su_valsi = expr:(si_word / !SU_clause !FAhO_clause any_word spaces?) {return _node("su_valsi", expr); }
 
 // sa_word //////// _-pre_zei_bu +si_word_20150622UTC
-// sa_word = si_word //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC
+// sa_word = si_word //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC_
 
 // si_word //////// _la'o zoi pre_zei_bu zoi muvdu ti_20150622UTC
 // si_word //////// _jmina zoizoi / (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? LEhAI zoi_20150623UTC
 // si_word //////// _jmina zoizoi / RAhOI spaces? (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi ki'u lo nu ma'oi SI na turni lo rafsi pamei_20150624UTC
 // si_word //////// _jmina zoizoi  / GOhOI spaces? any_word zoi_20150630UTC
-// si_word //////// _vimcu zoizoi !SA zoi_20150701UTC
+// si_word //////// _vimcu zoizoi !SA zoi_20150701UTC_
 si_word = (CMEVLA / BRIVLA / RAhOI spaces? (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) / GOhOI spaces? any_word / ZO spaces? any_word / (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? LEhAI / LOhU spaces? (!LEhU any_word)* LEhU / ZOI spaces? zoi_open spaces? zoi_word* zoi_close / !BU !SI !SU !FAhO CMAVO) spaces?
 
-// su_word //////// _galfi zoizoi any_word_SA_handling zoi zoizoi su_valsi zoi_20150701UTC
-// su_word = !NIhO_clause !LU_clause !TUhE_clause !TO_clause !SU_clause !FAhO_clause su_valsi //////// _vimcu zoizoi  !NIhO_clause !LU_clause !TUhE_clause !TO_clause zoi .ije la'o zoi su_valsi zoi basti la'o zoi su_word zoi_20150702UTC
+// su_word //////// _galfi zoizoi any_word_SA_handling zoi zoizoi su_valsi zoi_20150701UTC_
+// su_word = !NIhO_clause !LU_clause !TUhE_clause !TO_clause !SU_clause !FAhO_clause su_valsi //////// _vimcu zoizoi  !NIhO_clause !LU_clause !TUhE_clause !TO_clause zoi .ije la'o zoi su_valsi zoi basti la'o zoi su_word zoi_20150702UTC_
 
 // ___ ELIDIBLE TERMINATORS ___
 BEhO_elidible = expr:(BEhO_clause?) {return (expr == "") ? ["BEhO"] : _node("BEhO", expr);}
@@ -880,7 +880,7 @@ GUhA_post = post_clause
 
 
 //         sentence link
-// I_clause //////// _vimcu zoizoi sentence_sa* zoi_20150701UTC
+// I_clause //////// _vimcu zoizoi sentence_sa* zoi_20150701UTC_
 I_clause = expr:(I_pre I_post) {return _node("I_clause", expr); }
 I_pre = pre_clause I spaces?
 I_post = post_clause
@@ -1084,10 +1084,10 @@ NIhE_pre = pre_clause NIhE spaces?
 NIhE_post = post_clause
 
 //         new paragraph; change of subject 
-// NIhO_clause //////// _vimcu zoizoi sentence_sa* zoi_20150701UTC
+// NIhO_clause //////// _vimcu zoizoi sentence_sa* zoi_20150701UTC_
 NIhO_clause = expr:(NIhO_pre NIhO_post) {return _node("NIhO_clause", expr); }
 NIhO_pre = pre_clause NIhO spaces?
-// NIhO_post //////// _vimcu zoizoi su_clause* zoi_20150702UTC
+// NIhO_post //////// _vimcu zoizoi su_clause* zoi_20150702UTC_
 NIhO_post = post_clause
 
 //         attaches a subordinate clause to a sumti 
@@ -1151,9 +1151,9 @@ ROI_clause = pre:ROI_pre post:ROI_post {return _node2("ROI_clause", pre, post); 
 ROI_pre = pre_clause ROI spaces?
 ROI_post = post_clause
 
-// SA_clause = pre:SA_pre post:SA_post {return _node2("SA_clause", pre, post); } //////// _vimcu_20150701UTC
-// SA_pre = pre_clause SA spaces? //////// _vimcu_20150701UTC
-// SA_post = spaces? //////// _vimcu_20150701UTC
+// SA_clause = pre:SA_pre post:SA_post {return _node2("SA_clause", pre, post); } //////// _vimcu_20150701UTC_
+// SA_pre = pre_clause SA spaces? //////// _vimcu_20150701UTC_
+// SA_post = spaces? //////// _vimcu_20150701UTC_
 
 //         metalinguistic eraser to the beginning of
 
@@ -1216,7 +1216,7 @@ TOI_post = post_clause
 //         multiple utterance scope mark 
 TUhE_clause = pre:TUhE_pre post:TUhE_post {return _node2("TUhE_clause", pre, post); }
 TUhE_pre = pre_clause TUhE spaces?
-// TUhE_post //////// _vimcu zoizoi su_clause* zoi_20150702UTC
+// TUhE_post //////// _vimcu zoizoi su_clause* zoi_20150702UTC_
 TUhE_post = post_clause
 
 //         multiple utterance end scope mark 
@@ -1337,7 +1337,7 @@ gismu_2 = expr:(gismu) {return ["gismu", expr];}
 // CMAVO //////// _jmina zoizoi / POhA zoi_20150624UTC
 // CMAVO //////// _ma'oi LOhOI ma'oi POhA basti .i jmina ma'oi KUhAU noi famyma'o_20150629UTC
 // CMAVO //////// _jmina zoizoi  / GOhOI zoi_20150630UTC
-// CMAVO //////// _vimcu zoizoi / SA zoi_20150701UTC
+// CMAVO //////// _vimcu zoizoi / SA zoi_20150701UTC_
 CMAVO = expr:(A / BAI / BAhE / BE / BEI / BEhO / BIhE / BIhI / BO / BOI / BU / BY / CAhA / CAI / CEI / CEhE / CO / COI / CU / CUhE / DAhO / DOI / DOhU / FA / FAhA / FAhO / FEhE / FEhU / FIhO / FOI / FUhA / FUhE / FUhO / GA / GAhO / GEhU / GI / GIhA / GOI / GOhA / GOhOI / GUhA / I / JA / JAI / JOhI / JOI / KE / KEhE / KEI / KI / KOhA / KU / KUhAU / KUhE / KUhO / LAU / LAhE / LEhAI / LE / LEhU / LI / LIhU / LOhAI / LOhO / LOhOI / LOhU / LU / LUhU / MAhO / MAI / ME / MEhU / MOhE / MOhI / MOI / NA / NAI / NAhE / NAhU / NIhE / NIhO / NOI / NU / NUhA / NUhI / NUhU / PA / PEhE / PEhO / PU / RAhOI / RAhO / ROI / SE / SEI / SEhU / SI / SOI / SU / TAhE / TEhU / TEI / TO / TOI / TUhE / TUhU / UI / VA / VAU / VEI / VEhO / VUhU / VEhA / VIhA / VUhO / XI / ZAhO / ZEhA / ZI / ZIhE / ZO / ZOI / ZOhU / cmavo) {return ["CMAVO", expr];}
 
 // This is a Parsing Expression Grammar for the morphology of Lojban.
@@ -1891,7 +1891,7 @@ RAhO = &cmavo expr:( r a h o ) &post_word {return ["RAhO", _join(expr)];}
 // ROI //////// _+va'ei_20150630UTC
 ROI = &cmavo expr:( v a h e i / b a h o i / d e h e i / m u h e i / r e h u / r o i ) &post_word {return ["ROI", _join(expr)];}
 
-// SA = &cmavo expr:( s a ) &post_word {return ["SA", _join(expr)];} //////// _vimcu_20150701UTC
+// SA = &cmavo expr:( s a ) &post_word {return ["SA", _join(expr)];} //////// _vimcu_20150701UTC_
 
 // SE //////// _+re'au'e +se'o'e +se'u'o +su'ai +su'ei +to'ai +vo'ai +xo'ai_20150610UTC
 SE = &cmavo expr:( r e h a u h e  / s e h o h e  / s e h u h o  / s u h a i  / s u h e i  / t o h a i  / v o h a i  / x o h a i / s e / t e / v e / x e ) &post_word {return ["SE", _join(expr)];}
