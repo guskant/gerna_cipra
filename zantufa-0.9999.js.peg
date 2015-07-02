@@ -147,22 +147,28 @@
 text = expr:(intro_null NAI_clause* indicators? free* (!text_1 joik_jek)? text_1? si_clause? faho_clause EOF?) {return _node_nonempty("text", expr);}
 
 // intro_null = expr:(spaces? su_clause* intro_si_clause) {return _node_nonempty("intro_null", expr); } //////// _vimcu zoizoi intro_si_clause zoi_20150622UTC
-intro_null = expr:(spaces? su_clause*) {return _node_nonempty("intro_null", expr); }
+// intro_null //////// _jmina zoizoi intro_si_clause zoi ki'u lo nu tu'a lo du'e sy.u'y ji'a cu se curmi_20150702UTC_
+intro_null = expr:(spaces? su_clause* intro_si_clause) {return _node_nonempty("intro_null", expr); }
 
 // text_part_2 = expr:((CMEVLA_clause+ / indicators?) free*) {return _node_nonempty("text_part_2", expr); } //////// _vimcu (to lo cmevla cu selbrisle gau toi)_20150625UTC
 
 //; intro_sa_clause = SA_clause+ / any_word_SA_handling !(ZEI_clause SA_clause) intro_sa_clause
 // intro_si_clause = expr:(si_clause? SI_clause*)  {return _node_nonempty("intro_si_clause", expr); } //////// _vimcu_20150622UTC
+// intro_si_clause //////// _di'a jmive .iku'i zoizoi si_clause? SI* zoi_20150702UTC_
+intro_si_clause = expr:(si_clause? SI*)  {return _node_nonempty("intro_si_clause", expr); }
+
 faho_clause = expr:((FAhO_clause dot_star)?) {return _node("faho_clause", expr);}
 
 // Please note that the "text_1" item in the text_1 production does
 // *not* match the BNF. This is due to a bug in the BNF.  The change
 // here was made to match grammar.300
-text_1 = expr:(I_clause (jek / joik)? (stag? BO_clause)? free* text_1? / NIhO_clause+ free* su_clause* paragraphs? / paragraphs) {return _node("text_1", expr);}
+// text_1 //////// _vimcu zoizoi su_clause* zoi_20150702UTC_
+text_1 = expr:(I_clause (jek / joik)? (stag? BO_clause)? free* text_1? / NIhO_clause+ free* paragraphs? / paragraphs) {return _node("text_1", expr);}
 
 // paragraphs = expr:(paragraph (NIhO_clause+ free* su_clause* paragraphs)?) {return _node("paragraphs", expr);} //////// _galfi fi zoizoi paragraphs = expr:(paragraph? (NIhO_clause+ free* su_clause* paragraphs)?) {return _node_nonempty("paragraphs", expr);} zoi .i sa'unai jmina lo jalge be lo nu la mezohe cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/121 urli toi_20150630UTC
 // paragraphs //////// _galfi fi zoizoi paragraphs = expr:((NIhO_clause+ free* su_clause* paragraph?)+ / paragraph (NIhO_clause+ free* su_clause* paragraph?)*) {return _node("paragraphs", expr);} zoi tezu'e lonu zoizoi free zoi .e zoizoi si_clause zoi cu di'a se genturfa'i_20150701UTC
-paragraphs = expr:((NIhO_clause+ free* su_clause* paragraph?)+ / paragraph (NIhO_clause+ free* su_clause* paragraph?)*) {return _node("paragraphs", expr);}
+// paragraphs //////// _vimcu zoizoi su_clause* zoi_20150702UTC_
+paragraphs = expr:((NIhO_clause+ free* paragraph?)+ / paragraph (NIhO_clause+ free* paragraph?)*) {return _node("paragraphs", expr);}
 
 // paragraph = expr:((statement / fragment) (I_clause !jek !joik !joik_jek free* (statement / fragment)?)*) {return _node("paragraph", expr);} //////// _galfi fi zoizoi paragraph = expr:((I_clause !jek !joik !joik_jek free* (statement / fragment)?)+ / (statement / fragment) (I_clause !jek !joik !joik_jek free* (statement / fragment)?)*) {return _node("paragraph", expr);} zoi tezu'e lo nu lu ni'o .i li'u cu se genturfa'i_20150701UTC
 paragraph = expr:((I_clause !jek !joik !joik_jek free* (statement / fragment)?)+ / (statement / fragment) (I_clause !jek !joik !joik_jek free* (statement / fragment)?)*) {return _node("paragraph", expr);}
@@ -528,7 +534,8 @@ indicator =  expr:(((UI_clause / CAI_clause) NAI_clause? / DAhO_clause / FUhO_cl
 bu_clause = expr:(pre_clause post:bu_clause_no_pre) {return _node("bu_clause", expr); }
 // bu_clause_no_pre = expr:(pre_zei_bu (bu_tail? zei_tail)* bu_tail post_clause) {return _node("bu_clause_no_pre", expr); } //////// _vimcu zoizoi zei_tail zoi_20150622UTC
 // bu_clause_no_pre //////// _-pre_zei_bu +si_word_20150622UTC
-bu_clause_no_pre = expr:(si_word bu_tail+ post_clause) {return _node("bu_clause_no_pre", expr); }
+// bu_clause_no_pre //////// _galfi fi zoizoi (si_word / SU spaces?) bu_tail+ post_clause zoi tezu'e lo nu sarxe la camxes sei lu subu li'u lerfu_20150702UTC_
+bu_clause_no_pre = expr:((si_word / SU spaces?) bu_tail+ post_clause) {return _node("bu_clause_no_pre", expr); }
 
 // zei_tail = expr:(ZEI_clause any_word)+ {return _node("zei_tail", expr); } //////// _vimcu_20150622UTC
 bu_tail = expr:BU_clause+ {return _node("bu_tail", expr); }
@@ -552,11 +559,6 @@ post_clause = expr:(spaces? !BU_clause indicators*) {return _node_nonempty("post
 // pre_clause = BAhE_clause? //////// _jmina zoizoi si_clause? zoi_20150622UTC
 pre_clause = BAhE_clause? si_clause?
 
-//any_word_SA_handling = BRIVLA_pre / known_cmavo_SA / !known_cmavo_pre CMAVO_pre / CMEVLA_pre
-// any_word_SA_handling //////// galfi lo cmene zoizoi SU_valsi zoi_20150701UTC_
-// SU_valsi //////// galfi zoizoi known_cmavo_SA zoi zoizoi SU_cmavo zoi_20150701UTC_
-SU_valsi = expr:(BRIVLA_pre / SU_cmavo / CMAVO_pre / CMEVLA_pre) {return _node("SU_valsi", expr); }
-
 // known_cmavo_SA //////// _vimcu zoizoi ZEI_pre zoi_20150622UTC
 // known_cmavo_SA //////// _jmina zoizoi / RAhOI_pre zoi_20150624UTC
 // known_cmavo_SA //////// _vimcu zoizoi / LA_pre zoi_20150625UTC
@@ -565,14 +567,15 @@ SU_valsi = expr:(BRIVLA_pre / SU_cmavo / CMAVO_pre / CMEVLA_pre) {return _node("
 // known_cmavo_SA //////// _jmina zoizoi  / GOhOI_pre zoi_20150630UTC
 // known_cmavo_SA //////// _galfi lo cmene zoizoi SU_cmavo zoi_20150701UTC_
 // SU_cmavo //////// _vimcu zoizoi / SA_pre zoi_20150701UTC_
-SU_cmavo = A_pre / BAI_pre / BAhE_pre / BE_pre / BEI_pre / BEhO_pre / BIhE_pre / BIhI_pre / BO_pre / BOI_pre / BU_pre / BY_pre / CAI_pre / CAhA_pre / CEI_pre / CEhE_pre / CO_pre / COI_pre / CU_pre / CUhE_pre / DAhO_pre / DOI_pre / DOhU_pre / FA_pre / FAhA_pre / FEhE_pre / FEhU_pre / FIhO_pre / FOI_pre / FUhA_pre / FUhE_pre / FUhO_pre / GA_pre / GAhO_pre / GEhU_pre / GI_pre / GIhA_pre / GOI_pre / GOhA_pre / GOhOI_pre / GUhA_pre / I_pre / JA_pre / JAI_pre / JOI_pre / JOhI_pre / KE_pre / KEI_pre / KEhE_pre / KI_pre / KOhA_pre / KU_pre / KUhAU_pre / KUhE_pre / KUhO_pre / LAU_pre / LAhE_pre / LE_pre / LEhU_pre / LI_pre / LIhU_pre / LOhO_pre / LOhOI_pre / LOhU_pre / LU_pre / LUhU_pre / MAI_pre / MAhO_pre / ME_pre / MEhU_pre / MOI_pre / MOhE_pre / MOhI_pre / NA_pre / NAI_pre / NAhE_pre / NAhU_pre / NIhE_pre / NIhO_pre / NOI_pre / NU_pre / NUhA_pre / NUhI_pre / NUhU_pre / PA_pre / PEhE_pre / PEhO_pre / PU_pre / RAhOI_pre / RAhO_pre / ROI_pre / SE_pre / SEI_pre / SEhU_pre / SI_clause / SOI_pre / SU_pre / TAhE_pre / TEI_pre / TEhU_pre / TO_pre / TOI_pre / TUhE_pre / TUhU_pre / UI_pre / VA_pre / VAU_pre / VEI_pre / VEhA_pre / VEhO_pre / VIhA_pre / VUhO_pre / VUhU_pre / XI_pre / ZAhO_pre / ZEhA_pre / ZI_pre / ZIhE_pre / ZO_pre / ZOI_pre / ZOhU_pre
+// SU_cmavo = A_pre / BAI_pre / BAhE_pre / BE_pre / BEI_pre / BEhO_pre / BIhE_pre / BIhI_pre / BO_pre / BOI_pre / BU_pre / BY_pre / CAI_pre / CAhA_pre / CEI_pre / CEhE_pre / CO_pre / COI_pre / CU_pre / CUhE_pre / DAhO_pre / DOI_pre / DOhU_pre / FA_pre / FAhA_pre / FEhE_pre / FEhU_pre / FIhO_pre / FOI_pre / FUhA_pre / FUhE_pre / FUhO_pre / GA_pre / GAhO_pre / GEhU_pre / GI_pre / GIhA_pre / GOI_pre / GOhA_pre / GOhOI_pre / GUhA_pre / I_pre / JA_pre / JAI_pre / JOI_pre / JOhI_pre / KE_pre / KEI_pre / KEhE_pre / KI_pre / KOhA_pre / KU_pre / KUhAU_pre / KUhE_pre / KUhO_pre / LAU_pre / LAhE_pre / LE_pre / LEhU_pre / LI_pre / LIhU_pre / LOhO_pre / LOhOI_pre / LOhU_pre / LU_pre / LUhU_pre / MAI_pre / MAhO_pre / ME_pre / MEhU_pre / MOI_pre / MOhE_pre / MOhI_pre / NA_pre / NAI_pre / NAhE_pre / NAhU_pre / NIhE_pre / NIhO_pre / NOI_pre / NU_pre / NUhA_pre / NUhI_pre / NUhU_pre / PA_pre / PEhE_pre / PEhO_pre / PU_pre / RAhOI_pre / RAhO_pre / ROI_pre / SE_pre / SEI_pre / SEhU_pre / SI_clause / SOI_pre / SU_pre / TAhE_pre / TEI_pre / TEhU_pre / TO_pre / TOI_pre / TUhE_pre / TUhU_pre / UI_pre / VA_pre / VAU_pre / VEI_pre / VEhA_pre / VEhO_pre / VIhA_pre / VUhO_pre / VUhU_pre / XI_pre / ZAhO_pre / ZEhA_pre / ZI_pre / ZIhE_pre / ZO_pre / ZOI_pre / ZOhU_pre //////// _vimcu_20150702UTC_
 
 // Handling of spaces and things like spaces.
 // ___ SPACE ___
 // Do *NOT* delete the line above!
 
 // SU clauses
-su_clause = (erasable_clause / su_word)* SU_clause 
+// su_clause //////// zoizoi su_valsi zoi basti zoizoi su_word zoi_20150702UTC_
+su_clause = expr:((erasable_clause / su_valsi)* SU_clause) {return _node("su_clause", expr); }
 
 // Handling of SI and interactions with zo and lo'u...le'u
 
@@ -582,6 +585,13 @@ si_clause = ((erasable_clause / si_word) si_clause? SI_clause)+
 
 // erasable_clause = expr:(bu_clause_no_pre !ZEI_clause !BU_clause / zei_clause_no_pre !ZEI_clause !BU_clause) {return _node("erasable_clause", expr); } //////// _vimcu lo srana be zo zei_20150622UTC
 erasable_clause = expr:(bu_clause_no_pre !BU_clause) {return _node("erasable_clause", expr); }
+
+//any_word_SA_handling = BRIVLA_pre / known_cmavo_SA / !known_cmavo_pre CMAVO_pre / CMEVLA_pre
+// any_word_SA_handling = expr:(BRIVLA_pre / known_cmavo_SA / CMAVO_pre / CMEVLA_pre) {return _node("any_word_SA_handling", expr); } //////// galfi lo cmene zoizoi su_valsi zoi_20150701UTC_
+// su_valsi //////// galfi zoizoi known_cmavo_SA zoi zoizoi SU_cmavo zoi_20150701UTC_
+// su_valsi //////// _vimcu zoizoi SU_cmavo zoi_20150702UTC_
+// su_valsi //////// _ti basti la'o zoi su_word zoi .ije galfi fi zoizoi si_word / !SU_clause !FAhO_clause any_word spaces? zoi_20150702UTC_
+su_valsi = expr:(si_word / !SU_clause !FAhO_clause any_word spaces?) {return _node("su_valsi", expr); }
 
 // sa_word //////// _-pre_zei_bu +si_word_20150622UTC
 // sa_word = si_word //////// _za'a co'aku noda refsku ti .i vimcu_20150701UTC_
@@ -593,9 +603,8 @@ erasable_clause = expr:(bu_clause_no_pre !BU_clause) {return _node("erasable_cla
 // si_word //////// _vimcu zoizoi !SA zoi_20150701UTC_
 si_word = (CMEVLA / BRIVLA / RAhOI spaces? (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) / GOhOI spaces? any_word / ZO spaces? any_word / (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? LEhAI / LOhU spaces? (!LEhU any_word)* LEhU / ZOI spaces? zoi_open spaces? zoi_word* zoi_close / !BU !SI !SU !FAhO CMAVO) spaces?
 
-// su_word //////// _galfi zoizoi any_word_SA_handling zoi zoizoi SU_valsi zoi_20150701UTC_
-su_word = !NIhO_clause !LU_clause !TUhE_clause !TO_clause !SU_clause !FAhO_clause SU_valsi
-
+// su_word //////// _galfi zoizoi any_word_SA_handling zoi zoizoi su_valsi zoi_20150701UTC_
+// su_word = !NIhO_clause !LU_clause !TUhE_clause !TO_clause !SU_clause !FAhO_clause su_valsi //////// _vimcu zoizoi  !NIhO_clause !LU_clause !TUhE_clause !TO_clause zoi .ije la'o zoi su_valsi zoi basti la'o zoi su_word zoi_20150702UTC_
 
 // ___ ELIDIBLE TERMINATORS ___
 BEhO_elidible = expr:(BEhO_clause?) {return (expr == "") ? ["BEhO"] : _node("BEhO", expr);}
@@ -1078,7 +1087,8 @@ NIhE_post = post_clause
 // NIhO_clause //////// _vimcu zoizoi sentence_sa* zoi_20150701UTC_
 NIhO_clause = expr:(NIhO_pre NIhO_post) {return _node("NIhO_clause", expr); }
 NIhO_pre = pre_clause NIhO spaces?
-NIhO_post = su_clause* post_clause
+// NIhO_post //////// _vimcu zoizoi su_clause* zoi_20150702UTC_
+NIhO_post = post_clause
 
 //         attaches a subordinate clause to a sumti 
 NOI_clause = pre:NOI_pre post:NOI_post {return _node2("NOI_clause", pre, post); }
@@ -1206,7 +1216,8 @@ TOI_post = post_clause
 //         multiple utterance scope mark 
 TUhE_clause = pre:TUhE_pre post:TUhE_post {return _node2("TUhE_clause", pre, post); }
 TUhE_pre = pre_clause TUhE spaces?
-TUhE_post = su_clause* post_clause
+// TUhE_post //////// _vimcu zoizoi su_clause* zoi_20150702UTC_
+TUhE_post = post_clause
 
 //         multiple utterance end scope mark 
 TUhU_clause = pre:TUhU_pre post:TUhU_post {return _node2("TUhU_clause", pre, post); }
