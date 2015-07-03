@@ -3,19 +3,17 @@ platu:
 http://mw.lojban.org/papri/zasni_gerna_cenba_vreji
 
 Merged and eliminated selma'o
-JOI, JA, A, BIhI, (VUhU,) JOhI -> JOI
+JOI, A, BIhI, (VUhU,) JOhI -> JOI
 (
 http://mw.lojban.org/papri/mEX_grammar_proposal
 for VUhU
-term JOI / NOI_clause JOI / GOI JOI
 )
 FEhE, MOhI, NAhE -> NAhE
 KI, BAI, PU, ZI, ZEhA, FAhA, VA, VEhA, VIhA, TAhE, ZAhO, CAhA, CUhE -> BAI
-LA, LE -> LE
 FUhE, UI, CAI, NAI, DAhO, FUhO, RAhO, GAhO -> UI
 ME, NUhA -> ME
 LAU, TEI, FOI, BY -> BY
-SA, GUhA, BIhE, CEhE, PEhE, NUhI, NUhU, MAhO, NAhU, PEhO, KUhE, FUhA, MOhE -> /
+BIhE,  MAhO, NAhU, PEhO, KUhE, FUhA, MOhE -> /
 
 syllabic consonants
 Eliminated from fuhivla, except for the hyphen of type-3. A 'y' is also allowed in front of the hyphen, so that they are not even required there. This has the additional advantage that 'l' is never needed as hyphen.
@@ -62,6 +60,7 @@ ex.)
 mukti fa lo nu lo terbri be lo pa selbrisle cu porsi lo ka vajni gi'e no'e cenba lo ka vajni ca ji'a lo nu vajgau pa lo su'ocimoi be lo cmima be lo terbri 
 ei lu ni'o joi li'u gendra
 
+(to zo bo xi pa noi purci zo bo xi re cu zmadu zo bo xi re lo ka tordu co kuspe te jorne i zoi url <a href="http://mw.lojban.org/papri/zasni_gerna_cenba_vreji">http://mw.lojban.org/papri/zasni_gerna_cenba_vreji</a> url toi)
 
 drata sitna:
 https://skami2.iocikun.jp/lojban/zasniGernaPeg
@@ -77,6 +76,7 @@ mulno:
 # zo ra'oi zo'u .ei genturfa'i lo se lidne no'u la'o zoi rafsi_string zoi
 
 # Merge CMENE with BRIVLA
+# LA, LE -> LE
 
 % ma'oi BY cu ka'e lidne ma'oi BE ?
 % ma'i lo si'o tordu galfi lu LE selbri li'u ma'oi BY
@@ -90,4 +90,10 @@ mulno:
 # "ke broda gi'e brode ke'e gi'a brodi". It shouldn't be hard to fix with PEG.
 
 # SU Restricted to full erasure.
-# vimcu ma'oi SA
+# vimcu ma'oi SA -> UI
+
+# CEhE, -> BO 
+# PEhE, NUhI, NUhU, -> BAhE 
+# term JOI / NOI_clause JOI / GOI JOI
+# JA, -> JOI
+# GUhA, -> GA
