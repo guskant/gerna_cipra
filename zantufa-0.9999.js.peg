@@ -166,6 +166,7 @@ statement_2 = expr:(statement_3 (I_clause joik? stag? BO_clause free* statement_
 statement_3 = expr:(sentence / tag? TUhE_clause free* text_1 TUhU_elidible free*) {return _node("statement_3", expr);}
 
 // fragment //////// _galfi zoizoi !JA_clause zoi zoizoi !JOI_clause zoi_20150703UTC_
+
 fragment = expr:(prenex / terms VAU_elidible free* / ek free* / gihek free* / quantifier / NA_clause !JOI_clause free* / relative_clauses / links / linkargs) {return _node("fragment", expr);}
 
 prenex = expr:(terms ZOhU_clause free*) {return _node("prenex", expr);}
@@ -174,11 +175,14 @@ sentence = expr:((terms CU_elidible free*)? bridi_tail) {return _node("sentence"
 
 subsentence = expr:(sentence / prenex subsentence) {return _node("subsentence", expr);}
 
-bridi_tail = expr:(bridi_tail_1 (gihek stag? bridi_tail_1)*) {return _node("bridi_tail", expr);}
+// bridi_tail //////// _jmina zoizoi joik CU_clause zoi_20150704UTC_
+bridi_tail = expr:(bridi_tail_1 ((joik CU_clause / gihek) stag? bridi_tail_1)*) {return _node("bridi_tail", expr);}
 
-bridi_tail_1 = expr:(bridi_tail_2 (gihek !(stag? BO_clause) !(stag? KE_clause) free* bridi_tail_2 tail_terms)*) {return _node("bridi_tail_1", expr);}
+// bridi_tail_1 //////// _jmina zoizoi joik CU_clause zoi_20150704UTC_
+bridi_tail_1 = expr:(bridi_tail_2 ((joik CU_clause / gihek) !(stag? BO_clause) !(stag? KE_clause) free* bridi_tail_2 tail_terms)*) {return _node("bridi_tail_1", expr);}
 
-bridi_tail_2 = expr:(bridi_tail_3 (gihek stag? BO_clause free* bridi_tail_2 tail_terms)?) {return _node("bridi_tail_2", expr);}
+// bridi_tail_2 //////// _jmina zoizoi (joik BO_clause CU_clause stag? / zoi_20150704UTC_
+bridi_tail_2 = expr:(bridi_tail_3 ((joik BO_clause CU_clause stag? / gihek stag? BO_clause) free* bridi_tail_2 tail_terms)?) {return _node("bridi_tail_2", expr);}
 
 bridi_tail_3 = expr:(KE_clause free* !(selbri_3 KEhE) bridi_tail KEhE_elidible free* tail_terms / selbri tail_terms / gek_sentence) {return _node("bridi_tail_3", expr);}
 
@@ -347,8 +351,7 @@ lerfu_word = expr:(BY_clause / LAU_clause lerfu_word / TEI_clause lerfu_string F
 
 ek = expr:(NA_clause? SE_clause? A_clause NAI_clause?) {return _node("ek", expr); }
 
-// // //
-gihek = expr:(joik CU_clause / NA_clause? SE_clause? GIhA_clause NAI_clause?) {return _node("gihek", expr); }
+gihek = expr:(NA_clause? SE_clause? GIhA_clause NAI_clause?) {return _node("gihek", expr); }
 
 // jek = expr:(NA_clause? SE_clause? JA_clause NAI_clause?) {return _node("jek", expr); } //////// _vimcu_20150703UTC_
 

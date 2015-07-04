@@ -97,3 +97,4 @@ mulno:
 # term JOI / NOI_clause JOI / GOI JOI
 # JA, -> JOI
 # GUhA, -> GA
+# JOI CU
