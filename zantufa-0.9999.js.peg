@@ -347,7 +347,8 @@ lerfu_word = expr:(BY_clause / LAU_clause lerfu_word / TEI_clause lerfu_string F
 
 ek = expr:(NA_clause? SE_clause? A_clause NAI_clause?) {return _node("ek", expr); }
 
-gihek = expr:(NA_clause? SE_clause? GIhA_clause NAI_clause?) {return _node("gihek", expr); }
+// // //
+gihek = expr:(joik CU_clause / NA_clause? SE_clause? GIhA_clause NAI_clause?) {return _node("gihek", expr); }
 
 // jek = expr:(NA_clause? SE_clause? JA_clause NAI_clause?) {return _node("jek", expr); } //////// _vimcu_20150703UTC_
 
