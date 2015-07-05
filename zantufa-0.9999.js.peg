@@ -157,17 +157,19 @@ paragraphs = expr:((NIhO_clause+ free* paragraph?)+ / paragraph (NIhO_clause+ fr
 
 // paragraph //////// _vimcu zo jek_20150703UTC_
 // paragraph //////// _galfi zoizoi !joik free* (statement / fragment)? zoi zoizoi (!joik free* statement / free* fragment)? zoi tezu'e lo nu la joik cu fragment_20150704UTC_
-paragraph = expr:((I_clause (!joik free* statement / free* fragment)?)+ / (statement / fragment) (I_clause (!joik free* statement / free* fragment)?)*) {return _node("paragraph", expr);}
+// // //
+paragraph = expr:((I_clause free* (statement / fragment)?)+ / (statement / fragment) (I_clause free* (statement / fragment)?)*) {return _node("paragraph", expr);}
 
+// // //
 statement = expr:(statement_1 / prenex statement) {return _node("statement", expr);}
 
 // statement_1 //////// _vimcu zo jek_20150703UTC_
-// statement_1 //////// _galfi zoizoi joik statement_2? zoi zoizoi (joik? statement_2)? zoi tezu'e lo nu la joik ji'a cu fragment_20150704UTC_
+// statement_1 //////// _galfi zoizoi joik statement_2? zoi zoizoi (joik? free* statement_2)? zoi tezu'e lo nu la joik ji'a cu fragment_20150704UTC_
 // // //
-statement_1 = expr:(statement_2 (I_clause (joik? free* statement_2)?)*) {return _node("statement_1", expr);}
+statement_1 = expr:(statement_2 (I_clause free* joik free* statement_2)*) {return _node("statement_1", expr);}
 
 // statement_2 //////// _vimcu zo jek_20150703UTC_
-statement_2 = expr:(statement_3 (I_clause joik? stag? BO_clause free* statement_2?)?) {return _node("statement_2", expr);}
+statement_2 = expr:(statement_3 (I_clause joik? stag? BO_clause free* statement_3)*) {return _node("statement_2", expr);}
 
 // statement_3 //////// _galfi zoizoi text_1 zoi zoizoi paragraphs zoi_20150704UTC_
 statement_3 = expr:(sentence / tag? TUhE_clause free* paragraphs TUhU_elidible free*) {return _node("statement_3", expr);}
