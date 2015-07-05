@@ -13,7 +13,6 @@ zantufa-0.1.js.peg:390:// lerfu_string //////// _gau melbi_20150610UTC_
 zantufa-0.1.js.peg:1470:// stressed_hy_rafsi = expr:((long_rafsi stressed_vowel / stressed_CCV_rafsi / stressed_CVV_rafsi) h y h?) //////// _gau jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC_
 zantufa-0.1.js.peg:1510:// consonantal_syllable = expr:(consonant syllabic &(consonantal_syllable / !nucleus onset) (consonant &spaces)?) {return _join(expr);} //////// _gau jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC_
 zantufa-0.1.js.peg:1521:// glide = expr:(i / u) &nucleus !glide {return expr;} //////// _gau jmina lo jalge be lo nu la mukti cu stika to zoi urli https://github.com/Ilmen-vodhr/ilmentufa/pull/109 urli toi_20150608UTC_
-zantufa-0.1.js.peg:1615:// non_space = expr:(!space_char .) {return _join(expr);} //////// _mu'i ma_20150605UTC_____
 zantufa-0.1.js.peg:1640:// BAI //////// _+be'au +de'i'a +de'i'e +de'i'i +de'i'o +de'i'u +gu'au +ka'ai +li'i'e +ti'u'a +ti'u'e +ti'u'i +xau_20150606UTC_
 zantufa-0.1.js.peg:1662:// BY //////// _+ui'y_20150606UTC_
 zantufa-0.1.js.peg:1663:// BY //////// _+PA'y_20150610UTC_
@@ -55,7 +54,6 @@ zantufa-0.1.js.peg:1907:// ZAhO //////// _+xa'o_20150610UTC_
 zantufa-0.1.js.peg:1914:// ZI //////// _+za'ai_20150610UTC_
 zantufa-0.1.js.peg:1924:// ZOhU //////// _+ce'ai_20150610UTC_
 ------------------ mulno fa la zantufa_0.1 ------------------
-zantufa-0.11.js.peg:1615:// non_space = expr:(!space_char .) {return _join(expr);} //////// _mu'i ma_20150605UTC____
 zantufa-0.11.js.peg:1679:// COI //////// _+jo'au_20150610UTC_
 zantufa-0.11.js.peg:1795:// MAI //////// _-jo'au_20150610UTC_
 ------------------ mulno fa la zantufa_0.11 ------------------
@@ -83,7 +81,6 @@ zantufa-0.12.js.peg:1308:// ZEI_pre = pre_clause ZEI spaces? //////// _zo zei cm
 zantufa-0.12.js.peg:1310:// ZEI_post = spaces? //////// _zo zei cmima ma'oi SI_20150618UTC_
 zantufa-0.12.js.peg:1349:// CMAVO //////// _zo zei cmima ma'oi SI_20150618UTC_
 zantufa-0.12.js.peg:1622:// post_word = expr:(pause / !nucleus lojban_word)  {return _join(expr);} //////// _ma'oi SI cmima la'o zoi pre_clause zoi_20150618UTC_
-zantufa-0.12.js.peg:1633:// non_space = expr:(!space_char .) {return _join(expr);} //////// _mu'i ma_20150605UTC______
 zantufa-0.12.js.peg:1880:// SI //////// _+zei +ze'ei_20150618UTC_
 zantufa-0.12.js.peg:1933:// ZEI = &cmavo expr:( z e i ) &post_word {return ["ZEI", _join(expr)];} //////// _zo zei cmima ma'oi SI_20150618UTC_
 ------------------ mulno fa la zantufa_0.12 ------------------
@@ -111,7 +108,6 @@ zantufa-0.13.js.peg:1305:// ZEI_clause = pre:ZEI_pre post:ZEI_post {return _node
 zantufa-0.13.js.peg:1307:// ZEI_pre = pre_clause ZEI spaces? //////// _vimcu_20150622UTC_
 zantufa-0.13.js.peg:1309:// ZEI_post = spaces? //////// _vimcu_20150622UTC_
 zantufa-0.13.js.peg:1348:// CMAVO //////// _vimcu zoizoi ZEI zoi_20150622UTC_
-zantufa-0.13.js.peg:1631:// non_space = expr:(!space_char .) {return _join(expr);} //////// _mu'i ma_20150605UTC____
 zantufa-0.13.js.peg:1878:// SI //////// _+zei +ze'ei_20150622UTC_
 zantufa-0.13.js.peg:1931:// ZEI = &cmavo expr:( z e i ) &post_word {return ["ZEI", _join(expr)];} //////// _vimcu_20150622UTC_
 ------------------ mulno fa la zantufa_0.13 ------------------
@@ -124,7 +120,6 @@ zantufa-0.14.js.peg:972:// //////// _jmina la'o zoi LOhAI_clause, LOhAI_pre, LOh
 zantufa-0.14.js.peg:1136:// //////// _jmina la'o zoi RAhOI_clause, RAhOI_pre, RAhOI_post zoi_20150624UTC_
 zantufa-0.14.js.peg:1363:// CMAVO //////// _jmina zoizoi LEhAI / LOhAI / zoi_20150623UTC_
 zantufa-0.14.js.peg:1364:// CMAVO //////// _jmina zoizoi / RAhOI zoi_20150624UTC_
-zantufa-0.14.js.peg:1647:// non_space = expr:(!space_char .) {return _join(expr);} //////// _mu'i ma_20150605UTC___
 zantufa-0.14.js.peg:1807:// LEhAI //////// _jmina ma'oi LEhAI_20150623UTC_
 zantufa-0.14.js.peg:1817:// LOhAI //////// _jmina ma'oi LOhAI_20150623UTC_ 
 zantufa-0.14.js.peg:1884:// RAhOI //////// _jmina ma'oi RAhOI_20150624UTC_
