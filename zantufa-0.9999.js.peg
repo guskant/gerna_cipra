@@ -163,7 +163,8 @@ statement = expr:(statement_1 / prenex statement) {return _node("statement", exp
 
 // statement_1 //////// _vimcu zo jek_20150703UTC_
 // statement_1 //////// _galfi zoizoi joik statement_2? zoi zoizoi (joik? statement_2)? zoi tezu'e lo nu la joik ji'a cu fragment_20150704UTC_
-statement_1 = expr:(statement_2 (I_clause (joik? statement_2)?)*) {return _node("statement_1", expr);}
+// // //
+statement_1 = expr:(statement_2 (I_clause (joik? free* statement_2)?)*) {return _node("statement_1", expr);}
 
 // statement_2 //////// _vimcu zo jek_20150703UTC_
 statement_2 = expr:(statement_3 (I_clause joik? stag? BO_clause free* statement_2?)?) {return _node("statement_2", expr);}

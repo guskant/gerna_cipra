@@ -1499,7 +1499,7 @@ var camxes = (function(){
           return cachedResult.result;
         }
         
-        var result0, result1, result2, result3, result4;
+        var result0, result1, result2, result3, result4, result5;
         var pos0, pos1, pos2, pos3;
         
         pos0 = pos;
@@ -1514,9 +1514,20 @@ var camxes = (function(){
             result3 = parse_joik();
             result3 = result3 !== null ? result3 : "";
             if (result3 !== null) {
-              result4 = parse_statement_2();
+              result4 = [];
+              result5 = parse_free();
+              while (result5 !== null) {
+                result4.push(result5);
+                result5 = parse_free();
+              }
               if (result4 !== null) {
-                result3 = [result3, result4];
+                result5 = parse_statement_2();
+                if (result5 !== null) {
+                  result3 = [result3, result4, result5];
+                } else {
+                  result3 = null;
+                  pos = pos3;
+                }
               } else {
                 result3 = null;
                 pos = pos3;
@@ -1545,9 +1556,20 @@ var camxes = (function(){
               result3 = parse_joik();
               result3 = result3 !== null ? result3 : "";
               if (result3 !== null) {
-                result4 = parse_statement_2();
+                result4 = [];
+                result5 = parse_free();
+                while (result5 !== null) {
+                  result4.push(result5);
+                  result5 = parse_free();
+                }
                 if (result4 !== null) {
-                  result3 = [result3, result4];
+                  result5 = parse_statement_2();
+                  if (result5 !== null) {
+                    result3 = [result3, result4, result5];
+                  } else {
+                    result3 = null;
+                    pos = pos3;
+                  }
                 } else {
                   result3 = null;
                   pos = pos3;
