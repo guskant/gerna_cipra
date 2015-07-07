@@ -255,7 +255,8 @@ term_2 = expr:(KE_clause free* term KEhE_elidible free* / tag_term / !tag sumti 
 
 // abs_tag_term //////// _galfi lo cmene zoizoi tag_term zoi_20150703UTC_
 // tag_term //////// _zoizoi !gek_bridi_tail zoi basti zoizoi !gek_sentence zoi_20150706UTC_
-tag_term = expr:(!gek (tag !(!tag selbri) !gek_bridi_tail / FA_clause free*) (sumti / KU_elidible free*)) {return _node("tag_term", expr);}
+// tag_term //////// _galfi zoizoi FA_clause free* zoi zoizoi FA_clause (joik FA_clause)* free* zoi_20150707UTC_
+tag_term = expr:(!gek (tag !(!tag selbri) !gek_bridi_tail / FA_clause (joik FA_clause)* free*) (sumti / KU_elidible free*)) {return _node("tag_term", expr);}
 /*** END EXP-SELBRITCITA-FIX ***/
 
 // termset //////// _vimcu zoizoi / NUhI_clause free* gek terms NUhU_elidible free* gik terms NUhU_elidible free* / NUhI_clause free* terms NUhU_elidible free* zoi_20150703UTC_

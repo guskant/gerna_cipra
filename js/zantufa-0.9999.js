@@ -3428,13 +3428,50 @@ var camxes = (function(){
             result1 = parse_FA_clause();
             if (result1 !== null) {
               result2 = [];
-              result3 = parse_free();
+              pos3 = pos;
+              result3 = parse_joik();
+              if (result3 !== null) {
+                result4 = parse_FA_clause();
+                if (result4 !== null) {
+                  result3 = [result3, result4];
+                } else {
+                  result3 = null;
+                  pos = pos3;
+                }
+              } else {
+                result3 = null;
+                pos = pos3;
+              }
               while (result3 !== null) {
                 result2.push(result3);
-                result3 = parse_free();
+                pos3 = pos;
+                result3 = parse_joik();
+                if (result3 !== null) {
+                  result4 = parse_FA_clause();
+                  if (result4 !== null) {
+                    result3 = [result3, result4];
+                  } else {
+                    result3 = null;
+                    pos = pos3;
+                  }
+                } else {
+                  result3 = null;
+                  pos = pos3;
+                }
               }
               if (result2 !== null) {
-                result1 = [result1, result2];
+                result3 = [];
+                result4 = parse_free();
+                while (result4 !== null) {
+                  result3.push(result4);
+                  result4 = parse_free();
+                }
+                if (result3 !== null) {
+                  result1 = [result1, result2, result3];
+                } else {
+                  result1 = null;
+                  pos = pos2;
+                }
               } else {
                 result1 = null;
                 pos = pos2;
