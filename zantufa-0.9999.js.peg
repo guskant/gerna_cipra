@@ -315,7 +315,8 @@ sumti_tail_1 = expr:(selbri relative_clauses? / quantifier selbri relative_claus
 
 // relative_clauses //////// _jmina zoizoi joik zoi_20150703UTC_
 // relative_clauses //////// _vimcu zoizoi ZIhE_clause zoi_20150703UTC_
-relative_clauses = expr:(relative_clause (joik free* relative_clause)*) {return _node("relative_clauses", expr); }
+// relative_clauses //////// _galfi zoizoi joik zoi zoizoi joik? zoi_20150707UTC_
+relative_clauses = expr:(relative_clause (joik? free* relative_clause)*) {return _node("relative_clauses", expr); }
 
 // relative_clause //////// _galfi zoizoi subsentence zoi zoizoi statement zoi_20150706UTC_
 relative_clause = expr:(GOI_clause free* term GEhU_elidible free* / NOI_clause free* statement KUhO_elidible free*) {return _node("relative_clause", expr); }

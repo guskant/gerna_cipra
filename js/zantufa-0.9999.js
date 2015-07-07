@@ -4795,6 +4795,7 @@ var camxes = (function(){
           result1 = [];
           pos2 = pos;
           result2 = parse_joik();
+          result2 = result2 !== null ? result2 : "";
           if (result2 !== null) {
             result3 = [];
             result4 = parse_free();
@@ -4822,6 +4823,7 @@ var camxes = (function(){
             result1.push(result2);
             pos2 = pos;
             result2 = parse_joik();
+            result2 = result2 !== null ? result2 : "";
             if (result2 !== null) {
               result3 = [];
               result4 = parse_free();
