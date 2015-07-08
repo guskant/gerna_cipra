@@ -8654,14 +8654,21 @@ var camxes = (function(){
             if (result0 !== null) {
               result1 = parse_GI_clause();
               if (result1 !== null) {
-                result2 = [];
-                result3 = parse_free();
-                while (result3 !== null) {
-                  result2.push(result3);
-                  result3 = parse_free();
-                }
+                result2 = parse_BO_clause();
+                result2 = result2 !== null ? result2 : "";
                 if (result2 !== null) {
-                  result0 = [result0, result1, result2];
+                  result3 = [];
+                  result4 = parse_free();
+                  while (result4 !== null) {
+                    result3.push(result4);
+                    result4 = parse_free();
+                  }
+                  if (result3 !== null) {
+                    result0 = [result0, result1, result2, result3];
+                  } else {
+                    result0 = null;
+                    pos = pos1;
+                  }
                 } else {
                   result0 = null;
                   pos = pos1;

@@ -399,7 +399,7 @@ zantufa-0.9999.js.peg:419:// jek = expr:(NA_clause? SE_clause? JA_clause NAI_cla
 zantufa-0.9999.js.peg:421:// joik //////// _jmina zoizoi NA_clause? zoi_20150703UTC_
 zantufa-0.9999.js.peg:428:// //////// _jmina la'o zoi joik_gihek zoi_20150704UTC_
 zantufa-0.9999.js.peg:431:// joik_jek = expr:(joik free* / jek free*) {return _node("joik_jek", expr); } //////// _vimcu_20150703UTC_
-zantufa-0.9999.js.peg:433:// gek //////// _galfi zoizoi SE_clause? GA_clause NAI_clause? free* / joik GI_clause free* / stag gik zoi zoizoi SE_clause? GA_clause NAI_clause? free* / GI_clause (joik / stag) (BO_clause)? free* / (joik / stag) GI_clause free* zoi_20150706UTC_
+zantufa-0.9999.js.peg:433:// gek //////// _galfi zoizoi SE_clause? GA_clause NAI_clause? free* / joik GI_clause free* / stag gik zoi zoizoi SE_clause? GA_clause NAI_clause? free* / GI_clause (joik / stag) (BO_clause)? free* / (joik / stag) GI_clause (BO_clause)? free* zoi_20150707UTC_
 zantufa-0.9999.js.peg:447:// guhek = expr:(SE_clause? GUhA_clause NAI_clause? free*) {return _node("guhek", expr); } //////// _zoizoi gek zoi basti zoizoi guhek zoi_20150703UTC_
 zantufa-0.9999.js.peg:451:// tag //////// _vimcu zo jek_20150703UTC_
 zantufa-0.9999.js.peg:454:// stag //////// _vimcu zo jek_20150703UTC_
@@ -442,6 +442,7 @@ zantufa-0.9999.js.peg:1556:// CEhE = &cmavo expr:( c e h e ) &post_word {return 
 zantufa-0.9999.js.peg:1592:// GA //////// _lo cmavo be ma'oi GUhA muvdu ti ma'i lo si'o sarxe la camxes_20150703UTC_
 zantufa-0.9999.js.peg:1601:// GIhA //////// _zo gi'i cu muvdu ma'oi GIhI_20150706UTC_
 zantufa-0.9999.js.peg:1604:// //////// _jmina ma'oi GIhI_20150706UTC_
+zantufa-0.9999.js.peg:1613:// GUhA = &cmavo expr:( g u h e / g u h i / g u h o / g u h a / g u h u ) &post_word {return ["GUhA", _join(expr)];} //////// _ma'oi GA basti .i ma'i lo si'o sarxe la camxes kei lo cmavo be ma'oi GUhA muvdu ma'oi GA_20150703UTC_
 zantufa-0.9999.js.peg:1617:// JA = &cmavo expr:( j e h i / j e / j o / j a / j u ) &post_word { return ["JA", _join(expr)];} //////// _muvdu ma'oi JOI_20150703UTC_
 zantufa-0.9999.js.peg:1623:// JOI //////// _lo cmavo be ma'oi JA cu muvdu ti_20150703UTC_
 zantufa-0.9999.js.peg:1624:// JOI //////// _lo cmavo be ma'oi ZIhE cu muvdu ti ma'i lo si'o sarxe la camxes_20150703UTC_
