@@ -455,7 +455,21 @@ zantufa-0.2.js.peg:1718:// PEhE = &cmavo expr:( p e h e ) &post_word {return ["P
 zantufa-0.2.js.peg:1757:// UI //////// _lo cmavo be ma'oi SA di'a jmive bu'u ti ma'i lo si'o sarxe la camxes_20150703UTC_
 zantufa-0.2.js.peg:1787:// ZIhE = &cmavo expr:( z i h e ) &post_word {return ["ZIhE", _join(expr)];} //////// _vimcu .i lo cmavo be ma'oi ZIhE cu muvdu ma'oi JOI ma'i lo si'o sarxe la camxes_20150703UTC_
 ------------------ mulno fa la zantufa_0.2 ------------------
-zantufa-0.9999.js.peg:307:// sumti_5 //////// _cipra curmi lo'u na'e da li'u i galfi zoizoi BO_clause zoi zoizoi BO_clause? zoi_20150709UTC_
-zantufa-0.9999.js.peg:308:// sumti_5 //////// _lo'u na'e bo le'u zo na'e cu frica .ei tezu'e lo nu lu na'e bo (da je de) li'u lu (na'e da) je de li'u frica i xruti tu'a la'o zoi BO_clause zoi i jmina zoizoi / NAhE sumti_5 free* zoi_20150709UTC_
-zantufa-0.9999.js.peg:407:// operand_3 //////// _cipra curmi lo'u na'e pa li'u i galfi zoizoi BO_clause zoi zoizoi BO_clause? zoi_20150709UTC_
-zantufa-0.9999.js.peg:408:// operand_3 //////// _lo'u na'e bo le'u zo na'e cu frica .ei tezu'e lo nu lu na'e bo (pa je re) li'u lu (na'e pa) je re li'u frica i xruti tu'a la'o zoi BO_clause zoi i jmina zoizoi / NAhE operand_3 free* zoi_20150709UTC_
+zantufa-0.9999.js.peg:182:// fragment //////// _stika la'o zoi quantifier zoi isemu'ibo gau basti zoizoi quantifier zoi fa zoizoi mex zoi_20150709UTC_
+zantufa-0.9999.js.peg:183:// fragment //////// _cipra fa zoizoi mex+ zoi tezu'e lo nu kancu secu'u lu paboi reboi ciboi... nysu'ipa nysu'ire... li'u_20150709UTC_
+zantufa-0.9999.js.peg:313:// sumti_5 //////// _cipra curmi lo'u na'e da li'u i galfi zoizoi BO_clause zoi zoizoi BO_clause? zoi_20150709UTC_
+zantufa-0.9999.js.peg:314:// sumti_5 //////// _lo'u na'e bo le'u zo na'e cu frica .ei tezu'e lo nu lu na'e bo (da je de) li'u lu (na'e da) je de li'u frica i xruti tu'a la'o zoi BO_clause zoi i jmina zoizoi / NAhE sumti_5 free* zoi_20150709UTC_
+zantufa-0.9999.js.peg:315:// sumti_5 //////// _galfi zoizoi NAhE sumti_5 free* zoi zoizoi NAhE sumti_3 free* zoi ija'ebo lu na'e ke da ke'e li'u gendra_20150709UTC_
+zantufa-0.9999.js.peg:316:// sumti_5 //////// _galfi zoizoi lerfu_string !MOI_clause BOI_elidible free zoi zoizoi lerfu_string BOI_elidible free zoi_20150709UTC_
+zantufa-0.9999.js.peg:317:// sumti_5 //////// _galfi zoizoi NAhE sumti_3 free* zoi zoizoi NAhE sumti_3 !(!operand mex) free* zoi ija'ebo lu na'ebysu'ire li'u gendra_20150709UTC_
+zantufa-0.9999.js.peg:318:// sumti_5 //////// _simsa fa zoizoi lerfu_string BOI_elidible free* zoi i galfi zoizoi lerfu_string BOI_elidible free* zoi zoizoi lerfu_string !(!operand mex) BOI_elidible free* zoi ija'ebo lu bysu'ire li'u je lu bypaby li'u gendra_20150709UTC_
+zantufa-0.9999.js.peg:369:// tanru_unit_2 //////// galfi zoizoi (number / lerfu_string) MOI_clause free* zoi zoizoi mex MOI_clause free* zoi_20150709UTC_
+zantufa-0.9999.js.peg:370:// tanru_unit_2 //////// _la'o zoi lerfu_string zoi cu pagbu la sumti i galfi zoizoi ME_clause free* (sumti / lerfu_string) MEhU_elidible free* MOI_clause? free* zoi zoizoi ME_clause free* sumti MEhU_elidible free* MOI_clause? free* zoi_20150709UTC_
+zantufa-0.9999.js.peg:378:// quantifier //////// _galfi zoizoi number !MOI_clause zoi zoizoi number zoi_20150709UTC_
+zantufa-0.9999.js.peg:379:// quantifier //////// _jmina zoizoi / !sumti_5 !selbri mex relative_clauses? zoi_20150709UTC_
+zantufa-0.9999.js.peg:380:// quantifier //////// _muvdu zoizoi number BOI_elidible free* / VEI_clause free* mex VEhO_elidible free* zoi la'o zoi operand_3 zoi_20150709UTC_
+zantufa-0.9999.js.peg:424:// operand_3 //////// _cipra curmi lo'u na'e pa li'u i galfi zoizoi BO_clause zoi zoizoi BO_clause? zoi_20150709UTC_
+zantufa-0.9999.js.peg:425:// operand_3 //////// _lo'u na'e bo le'u zo na'e cu frica .ei tezu'e lo nu lu na'e bo (pa je re) li'u lu (na'e pa) je re li'u frica i xruti tu'a la'o zoi BO_clause zoi i jmina zoizoi / NAhE operand_3 free* zoi_20150709UTC_
+zantufa-0.9999.js.peg:426:// operand_3 //////// _galfi zoizoi lerfu_string !MOI_clause zoi zoizoi lerfu_string zoi_20150709UTC_
+zantufa-0.9999.js.peg:427:// operand_3 //////// _galfi zoizoi quantifier zoi zoizoi  / number BOI_elidible free* / VEI_clause free* mex VEhO_elidible free* zoi_20150709UTC_
+zantufa-0.9999.js.peg:428:// operand_3 //////// _stika lo se porsi i jalge fa tu'a zoizoi  / number BOI_elidible free* / lerfu_string BOI_elidible free* / VEI_clause free* mex VEhO_elidible free* zoi_20150709UTC_

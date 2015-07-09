@@ -28,11 +28,6 @@ http://jbovlaste.lojban.org/dict/xoi
 http://mw.lojban.org/papri/new_voi
 
 http://mw.lojban.org/papri/ce_ki_tau_jau
-PO = {lo NU} ; terminator POhE ----- LU LIhU ka'e basti .i finti zo po'a .i
-ma'oi POhE na se nitcu .i zo LIhU banzu ; {po'a ... li'u} = {tu'a la'e lu ...
-li'u lu'u lu'u}
-lau = la'e di'u ----- finti zo lau'u noi cmavo ma'oi KOhA .i ce'o lo'u (lau
-lau'u) le'u basti simxu ma'i lo tcekitaujau
 
 aipei curmi:
 lo SUMSMI* PA* SUMTI
@@ -65,12 +60,11 @@ ex.)
 mukti fa lo nu lo terbri be lo pa selbrisle cu porsi lo ka vajni gi'e no'e cenba lo ka vajni ca ji'a lo nu vajgau pa lo su'ocimoi be lo cmima be lo terbri 
 ei lu ni'o joi li'u gendra
 
-(to zo bo xi pa noi purci zo bo xi re cu zmadu zo bo xi re lo ka tordu co kuspe te jorne i zoi url <a href="http://mw.lojban.org/papri/zasni_gerna_cenba_vreji">http://mw.lojban.org/papri/zasni_gerna_cenba_vreji</a> url toi)
-
 drata sitna:
 https://skami2.iocikun.jp/lojban/zasniGernaPeg
 https://skami2.iocikun.jp/lojban/zasniGerna
 
+au lu BY be da li'u gendra ki'u lo nu zo by ka'e basti lu lo broda li'u
 
 mulno:
 #### zo zei cmima ma'oi SI ####
@@ -103,3 +97,13 @@ mulno:
 # JA, -> JOI
 # GUhA, -> GA
 # JOI CU
+
+# (to zo bo xi pa noi purci zo bo xi re cu zmadu zo bo xi re lo ka tordu co kuspe te jorne i zoi url <a href="http://mw.lojban.org/papri/zasni_gerna_cenba_vreji">http://mw.lojban.org/papri/zasni_gerna_cenba_vreji</a> url toi)
+
+######### zo lo'oi basti
+# PO = {lo NU} ; terminator POhE ----- LU LIhU ka'e basti .i finti zo po'a .i
+# ma'oi POhE na se nitcu .i zo LIhU banzu ; {po'a ... li'u} = {tu'a la'e lu ...
+# li'u lu'u lu'u}
+#lau = la'e di'u ----- finti zo lau'u noi cmavo ma'oi KOhA .i ce'o lo'u (lau
+# lau'u) le'u basti simxu ma'i lo tcekitaujau
+

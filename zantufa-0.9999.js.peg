@@ -174,11 +174,14 @@ statement_2 = expr:(statement_3 (I_clause joik? stag? BO_clause free* statement_
 statement_3 = expr:(sentence / tag? TUhE_clause free* paragraphs TUhU_elidible free* / gek_statement) {return _node("statement_3", expr);}
 
 // //////// _jmina la'o zoi gek_statement zoi_20150706UTC
+// // // xu curmi lo nu la gek lidne no gik
 gek_statement = expr:(gek statement (gik statement)+ GIhI_elidible) {return _node("gek_statement", expr);}
 
 // fragment //////// _galfi zoizoi !JA_clause zoi zoizoi !JOI_clause zoi_20150703UTC
 // fragment //////// _jmina zoizoi / joik free* zoi_20150704UTC 
-fragment = expr:(prenex / terms VAU_elidible free* / joik free* / ek free* / gihek free* / quantifier / NA_clause !JOI_clause free* / relative_clauses / links / linkargs) {return _node("fragment", expr);}
+// fragment //////// _stika la'o zoi quantifier zoi isemu'ibo gau basti zoizoi quantifier zoi fa zoizoi mex zoi_20150709UTC_
+// fragment //////// _cipra fa zoizoi mex+ zoi tezu'e lo nu kancu secu'u lu paboi reboi ciboi... nysu'ipa nysu'ire... li'u_20150709UTC_
+fragment = expr:(prenex / terms VAU_elidible free* / joik free* / ek free* / gihek free* / mex+ / NA_clause !JOI_clause free* / relative_clauses / links / linkargs) {return _node("fragment", expr);}
 
 prenex = expr:(terms ZOhU_clause free*) {return _node("prenex", expr);}
 
@@ -201,6 +204,7 @@ bridi_tail_2 = expr:(bridi_tail_3 (joik_gihek stag? BO_clause CU_elidible free* 
 bridi_tail_3 = expr:(KE_clause free* !(selbri_2 KEhE) bridi_tail KEhE_elidible free* tail_terms / selbri tail_terms / gek_bridi_tail) {return _node("bridi_tail_3", expr);}
 
 // // // za'a nitcu fa zoizoi  / tag* KE_clause free* gek_bridi_tail KEhE_elidible free* / NA_clause free* gek_bridi_tail zoi
+// // // xu curmi lo nu la gek lidne no gik
 gek_bridi_tail = expr:(gek bridi_tail (gik bridi_tail)+ GIhI_elidible tail_terms / tag* KE_clause free* gek_bridi_tail KEhE_elidible free* / NA_clause free* gek_bridi_tail) {return _node("gek_bridi_tail", expr);}
 
 //// EXP-FIX: tag? KE --> tag* KE
@@ -265,6 +269,7 @@ tag_term = expr:(!gek (tag !(!tag selbri) !gek_bridi_tail / FA_clause (joik FA_c
 
 // gek_termset //////// _galfi zoizoi terms_gik_terms zoi zoizoi term (gik term)+ GIhI_elidible zoi_20150706UTC
 // gek_termset //////// _galfi lo cmene zoizoi gek_term zoi_20150706UTC
+// // // xu curmi lo nu la gek lidne no gik
 gek_term = expr:(gek term (gik term)+ GIhI_elidible) {return _node("gek_term", expr);}
 
 /*** EXP-SELBRITCITA-FIX ***/
@@ -296,6 +301,7 @@ sumti_2 = expr:(sumti_3 (joik_ek? stag? BO_clause free* sumti_3)*) {return _node
 // sumti_4 //////// _galfi zoizoi gek sumti gik sumti_4 zoi zoizoi gek sumti (gik sumti)+ GIhI_elidible zoi_20150706UTC
 // sumti_4 //////// _zoizoi KE_clause free* sumti KEhE_elidible free* zoi muvdu ti la'o zoi sumti_2 zoi_20150706UTC
 // sumti_4 //////// _galfi lo cmene zoizoi sumti_3 zoi i galfi zoizoi sumti_5 zoi zoizoi sumti_4 zoi_20150706UTC
+// // // xu curmi lo nu la gek lidne no gik
 sumti_3 = expr:(KE_clause free* sumti KEhE_elidible free* / sumti_4 / gek sumti (gik sumti)+ GIhI_elidible) {return _node("sumti_3", expr);}
 
 // sumti_5 //////// _galfi lo cmene zoizoi sumti_4 zoi i galfi zoizoi sumti_6 zoi zoizoi sumti_5 zoi_20150706UTC
@@ -306,7 +312,11 @@ sumti_4 = expr:(quantifier? sumti_5 relative_clauses? / quantifier selbri KU_eli
 // sumti_6 //////// _galfi lo cmene zoizoi sumti_5 zoi_20150706UTC
 // sumti_5 //////// _cipra curmi lo'u na'e da li'u i galfi zoizoi BO_clause zoi zoizoi BO_clause? zoi_20150709UTC_
 // sumti_5 //////// _lo'u na'e bo le'u zo na'e cu frica .ei tezu'e lo nu lu na'e bo (da je de) li'u lu (na'e da) je de li'u frica i xruti tu'a la'o zoi BO_clause zoi i jmina zoizoi / NAhE sumti_5 free* zoi_20150709UTC_
-sumti_5 = expr:(RAhOI_clause free* / ZO_clause free* / ZOI_clause free* / LOhU_clause free* / lerfu_string !MOI_clause BOI_elidible free* / LU_clause text LIhU_elidible free* / (LAhE_clause free* / NAhE_clause BO_clause free*) relative_clauses? sumti LUhU_elidible free* / KOhA_clause free* / LOhOI_clause NAI_clause? free* (joik LOhOI_clause NAI_clause? free*)* statement KUhAU_elidible free* / LE_clause free* sumti_tail KU_elidible free* / li_clause / NAhE sumti_5 free*) {return _node("sumti_5", expr);}
+// sumti_5 //////// _galfi zoizoi NAhE sumti_5 free* zoi zoizoi NAhE sumti_3 free* zoi ija'ebo lu na'e ke da ke'e li'u gendra_20150709UTC_
+// sumti_5 //////// _galfi zoizoi lerfu_string !MOI_clause BOI_elidible free zoi zoizoi lerfu_string BOI_elidible free zoi_20150709UTC_
+// sumti_5 //////// _galfi zoizoi NAhE sumti_3 free* zoi zoizoi NAhE sumti_3 !(!operand mex) free* zoi ija'ebo lu na'ebysu'ire li'u gendra_20150709UTC_
+// sumti_5 //////// _simsa fa zoizoi lerfu_string BOI_elidible free* zoi i galfi zoizoi lerfu_string BOI_elidible free* zoi zoizoi lerfu_string !(!operand mex) BOI_elidible free* zoi ija'ebo lu bysu'ire li'u je lu bypaby li'u gendra_20150709UTC_
+sumti_5 = expr:(RAhOI_clause free* / ZO_clause free* / ZOI_clause free* / LOhU_clause free* / lerfu_string !(!operand mex) BOI_elidible free* / LU_clause text LIhU_elidible free* / (LAhE_clause free* / NAhE_clause BO_clause free*) relative_clauses? sumti LUhU_elidible free* / KOhA_clause free* / LOhOI_clause NAI_clause? free* (joik LOhOI_clause NAI_clause? free*)* statement KUhAU_elidible free* / LE_clause free* sumti_tail KU_elidible free* / li_clause / NAhE sumti_3 !(!operand mex) free*) {return _node("sumti_5", expr);}
 
 li_clause = expr:(LI_clause free* mex LOhO_elidible free*) {return _node("li_clause", expr); }
 
@@ -356,13 +366,19 @@ tanru_unit_1 = expr:(tanru_unit_2 linkargs?) {return _node("tanru_unit_1", expr)
 // tanru_unit_2 //////// _zoizoi  / NAhE_clause? free* gek selbri (gik selbri)+ GIhI_elidible zoi muvdu ti la'o zoi selbri_6 zoi_20150706UTC
 // tanru_unit_2 //////// _galfi zoizoi selbri zoi zoizoi selbri_2 zoi_20150706UTC
 // tanru_unit_2 //////// _galfi zoizoi selbri_3 zoi zoizoi selbri_2 zoi_20150706UTC
-tanru_unit_2 = expr:(CMEVLA_clause free* / BRIVLA_clause free* / GOhA_clause RAhO_clause? free* / KE_clause free* selbri_2 KEhE_elidible free* / NAhE_clause? free* gek selbri_2 (gik selbri_2)+ GIhI_elidible / GOhOI_clause free* / ME_clause free* (sumti / lerfu_string) MEhU_elidible free* MOI_clause? free* / (number / lerfu_string) MOI_clause free* / NUhA_clause free* mex_operator / SE_clause free* tanru_unit_2 / JAI_clause free* tag? tanru_unit_2 / NAhE_clause free* tanru_unit_2 / NU_clause NAI_clause? free* (joik NU_clause NAI_clause? free*)* statement KEI_elidible free*) {return _node("tanru_unit_2", expr); }
+// tanru_unit_2 //////// galfi zoizoi (number / lerfu_string) MOI_clause free* zoi zoizoi mex MOI_clause free* zoi_20150709UTC_
+// tanru_unit_2 //////// _la'o zoi lerfu_string zoi cu pagbu la sumti i galfi zoizoi ME_clause free* (sumti / lerfu_string) MEhU_elidible free* MOI_clause? free* zoi zoizoi ME_clause free* sumti MEhU_elidible free* MOI_clause? free* zoi_20150709UTC_
+// // // xu curmi lo nu la gek lidne no gik
+tanru_unit_2 = expr:(CMEVLA_clause free* / BRIVLA_clause free* / GOhA_clause RAhO_clause? free* / KE_clause free* selbri_2 KEhE_elidible free* / NAhE_clause? free* gek selbri_2 (gik selbri_2)+ GIhI_elidible / GOhOI_clause free* / ME_clause free* sumti MEhU_elidible free* MOI_clause? free* / mex MOI_clause free* / NUhA_clause free* mex_operator / SE_clause free* tanru_unit_2 / JAI_clause free* tag? tanru_unit_2 / NAhE_clause free* tanru_unit_2 / NU_clause NAI_clause? free* (joik NU_clause NAI_clause? free*)* statement KEI_elidible free*) {return _node("tanru_unit_2", expr); }
 
 linkargs = expr:(BE_clause free* term links? BEhO_elidible free*)  {return _node("linkargs", expr);}
 
 links = expr:(BEI_clause free* term links?) {return _node("links", expr);}
 
-quantifier = expr:(number !MOI_clause BOI_elidible free* / VEI_clause free* mex VEhO_elidible free*) {return _node("quantifier", expr); }
+// quantifier //////// _galfi zoizoi number !MOI_clause zoi zoizoi number zoi_20150709UTC_
+// quantifier //////// _jmina zoizoi / !sumti_5 !selbri mex relative_clauses? zoi_20150709UTC_
+// quantifier //////// _muvdu zoizoi number BOI_elidible free* / VEI_clause free* mex VEhO_elidible free* zoi la'o zoi operand_3 zoi_20150709UTC_
+quantifier = expr:(!sumti_5 !selbri mex relative_clauses?) {return _node("quantifier", expr); }
 
 mex = expr:(mex_1 (operator mex_1)* / rp_clause) {return _node("mex", expr); }
 
@@ -392,6 +408,7 @@ operator_1 = expr:(operator_2 (joik stag? BO_clause free* operator_2)*) {return 
 // operator_2 //////// _zoizoi / gek operator_1 gik operator_2 zoi muvdu ti_20150705UTC
 // operator_2 //////// _galfi zoizoi gek operator_1 gik operator_2 zoi zoizoi  gek operator gik operator zoi tezu'e lo nu la gek cu tsamau la joik_20150705UTC
 // operator_2 //////// _galfi zoizoi gek operator gik operator zoi zoizoi gek operator (gik operator)+ GIhI_elidible zoi_20150706UTC
+// // // xu curmi lo nu la gek lidne no gik
 operator_2 = expr:(mex_operator / KE_clause free* operator KEhE_elidible free* / gek operator (gik operator)+ GIhI_elidible) {return _node("operator_2", expr); }
 
 mex_operator = expr:(SE_clause free* mex_operator / NAhE_clause free* mex_operator / MAhO_clause free* mex TEhU_elidible free* / NAhU_clause free* selbri TEhU_elidible free* / VUhU_clause free*) {return _node("mex_operator", expr); }
@@ -406,7 +423,11 @@ operand_2 = expr:(operand_3 (joik_ek stag? BO_clause free* operand_3)*) {return 
 // operand_3 //////// _galfi zoizoi gek operand gik operand_3 zoi zoizoi gek operand (gik operand)+ GIhI_elidible zoi_20150706UTC
 // operand_3 //////// _cipra curmi lo'u na'e pa li'u i galfi zoizoi BO_clause zoi zoizoi BO_clause? zoi_20150709UTC_
 // operand_3 //////// _lo'u na'e bo le'u zo na'e cu frica .ei tezu'e lo nu lu na'e bo (pa je re) li'u lu (na'e pa) je re li'u frica i xruti tu'a la'o zoi BO_clause zoi i jmina zoizoi / NAhE operand_3 free* zoi_20150709UTC_
-operand_3 = expr:(KE_clause free* operand KEhE_elidible free* / quantifier / lerfu_string !MOI_clause BOI_elidible free* / NIhE_clause free* selbri TEhU_elidible free* / MOhE_clause free* sumti TEhU_elidible free* / JOhI_clause free* mex_2+ TEhU_elidible free* / gek operand (gik operand)+ GIhI_elidible / (LAhE_clause free* / NAhE_clause BO_clause free*) operand LUhU_elidible free* / NAhE operand_3 free*) {return _node("operand_3", expr); }
+// operand_3 //////// _galfi zoizoi lerfu_string !MOI_clause zoi zoizoi lerfu_string zoi_20150709UTC_
+// operand_3 //////// _galfi zoizoi quantifier zoi zoizoi  / number BOI_elidible free* / VEI_clause free* mex VEhO_elidible free* zoi_20150709UTC_
+// operand_3 //////// _stika lo se porsi i jalge fa tu'a zoizoi  / number BOI_elidible free* / lerfu_string BOI_elidible free* / VEI_clause free* mex VEhO_elidible free* zoi_20150709UTC_
+// // // xu curmi lo nu la gek lidne no gik
+operand_3 = expr:(KE_clause free* operand KEhE_elidible free* / number BOI_elidible free* / lerfu_string BOI_elidible free* / VEI_clause free* mex VEhO_elidible free* / NIhE_clause free* selbri TEhU_elidible free* / MOhE_clause free* sumti TEhU_elidible free* / JOhI_clause free* mex_2+ TEhU_elidible free* / gek operand (gik operand)+ GIhI_elidible / (LAhE_clause free* / NAhE_clause BO_clause free*) operand LUhU_elidible free* / NAhE operand_3 free*) {return _node("operand_3", expr); }
 
 number = expr:(PA_clause+) {return _node("number", expr); }
 
