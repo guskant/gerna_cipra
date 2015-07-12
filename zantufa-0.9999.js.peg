@@ -224,7 +224,7 @@ tail_terms = expr:(term* VAU_elidible free*) {return _node_nonempty("tail_terms"
 
 // terms //////// _galfi zoizoi terms_1 zoi zoizoi term zoi_20150703UTC
 // terms //////// _jmina zoizoi / KE_clause free* terms KEhE_elidible free* zoi tezu'e lo nu zo nu'i fa'u zo nu'u co'a cmavo ma'oi KE fa'u ma'oi KEhE_20150706UTC
-// terms //////// _ galfi fi zoizoi (KE_clause free* term term+ KEhE_elidible free* / term)+ zoi_20150706UTC
+// terms //////// _galfi fi zoizoi (KE_clause free* term term+ KEhE_elidible free* / term)+ zoi_20150706UTC
 // // // aunai curmi lo'u terms joi terms le'u ki'u lo nu na'e sarcu fa lo nu jimpe fi lo'u ke gauku naku ke'e je ke faku caku ke'e le'u i ei la joik cu pagbu la term jenai la terms iji'a ganai da'i tezu'e lo nu sampu kei la term cu curmi tu'a zoizoi joik_ek? zoi gi lo drata ke gerna pagbu cu co'u plixau mu'u ra'ai goi
 terms = expr:((KE_clause free* term term+ KEhE_elidible free* / term)+) {return _node("terms", expr);}
 
@@ -380,8 +380,10 @@ tanru_unit_1 = expr:(tanru_unit_2 linkargs?) {return _node("tanru_unit_1", expr)
 // tanru_unit_2 //////// galfi zoizoi (number / lerfu_string) MOI_clause free* zoi zoizoi mex MOI_clause free* zoi_20150709UTC_
 // tanru_unit_2 //////// _la'o zoi lerfu_string zoi cu pagbu la sumti i galfi zoizoi ME_clause free* (sumti / lerfu_string) MEhU_elidible free* MOI_clause? free* zoi zoizoi ME_clause free* sumti MEhU_elidible free* MOI_clause? free* zoi_20150709UTC_
 // tanru_unit_2 //////// _vimcu ma'oi NUhA i ji'a galfi fi zoizoi ME_clause free* (sumti/operator) zoi_20150710UTC_
+// tanru_unit_2 //////// _galfi zoi zoi operator zoi zoizoi operator+ zoi_20150712UTC_
 // // // xu curmi lo nu la gek lidne no gik
-tanru_unit_2 = expr:(CMEVLA_clause free* / BRIVLA_clause free* / GOhA_clause RAhO_clause? free* / KE_clause free* selbri_2 KEhE_elidible free* / NAhE_clause? free* gek selbri_2 (gik selbri_2)+ GIhI_elidible / GOhOI_clause free* / ME_clause free* (sumti/operator) MEhU_elidible free* MOI_clause? free* / mex MOI_clause free* / SE_clause free* tanru_unit_2 / JAI_clause free* tag? tanru_unit_2 / NAhE_clause free* tanru_unit_2 / NU_clause NAI_clause? free* (joik NU_clause NAI_clause? free*)* statement KEI_elidible free*) {return _node("tanru_unit_2", expr); }
+// // // xu zo ME ka'e se lidne la'o zoi /mex/tag zoi
+tanru_unit_2 = expr:(CMEVLA_clause free* / BRIVLA_clause free* / GOhA_clause RAhO_clause? free* / KE_clause free* selbri_2 KEhE_elidible free* / NAhE_clause? free* gek selbri_2 (gik selbri_2)+ GIhI_elidible / GOhOI_clause free* / ME_clause free* (sumti/operator+) MEhU_elidible free* MOI_clause? free* / mex MOI_clause free* / SE_clause free* tanru_unit_2 / JAI_clause free* tag? tanru_unit_2 / NAhE_clause free* tanru_unit_2 / NU_clause NAI_clause? free* (joik NU_clause NAI_clause? free*)* statement KEI_elidible free*) {return _node("tanru_unit_2", expr); }
 
 linkargs = expr:(BE_clause free* term links? BEhO_elidible free*)  {return _node("linkargs", expr);}
 
@@ -392,23 +394,26 @@ links = expr:(BEI_clause free* term links?) {return _node("links", expr);}
 // quantifier //////// _muvdu zoizoi number BOI_elidible free* / VEI_clause free* mex VEhO_elidible free* zoi la'o zoi operand_3 zoi_20150709UTC_
 quantifier = expr:(!sumti_5 !selbri mex relative_clauses?) {return _node("quantifier", expr); }
 
-mex = expr:(mex_1 (operator mex_1)* / rp_clause) {return _node("mex", expr); }
+// mex //////// _galfi zoizoi mex_1 (operator mex_1)* / rp_clause zoi zoizoi FUhA_clause operand+ operator (operand* operator)* / mex_1 (operator+ mex_1)* zoi tezu'e lo nu curmi tu'a lo pa po'o operand pe zo fu'a lu'u je lo nu krefu fa tu'a fu'a zei mexpau_20150712UTC_
+mex = expr:(FUhA_clause operand+ operator (operand* operator)* / mex_1 (operator+ mex_1)*) {return _node("mex", expr); }
 
-rp_clause = expr:(FUhA_clause free* rp_expression) {return _node("rp_clause", expr); }
+// rp_clause = expr:(FUhA_clause free* rp_expression) {return _node("rp_clause", expr); } //////// _tu'a di'u co'u sarcu ki'u lo nu stika tu'a la mex_20150712UTC_
 
-mex_1 = expr:(mex_2 (BIhE_clause free* operator mex_1)?) {return _node("mex_1", expr); }
+// mex_1 //////// _galfi fi zoizoi mex_2 (BIhE_clause free* operator+ mex_2)* zoi_20150712UTC_
+mex_1 = expr:(mex_2 (BIhE_clause free* operator+ mex_2)*) {return _node("mex_1", expr); }
 
 mex_2 = expr:(operand / mex_forethought) {return _node("mex_2", expr); }
 
 // This is just to make for clearer parse trees
 // mex_forethought //////// galfi fi zoizoi !(lerfu_string BOI_elidible free*) operator mex_2+ KUhE_elidible free* !MAI / PEhO_clause free* operator mex_2+ KUhE_elidible free* zoi_20150710UTC_ 
-mex_forethought = !(lerfu_string BOI_elidible free*) operator mex_2+ KUhE_elidible free* !MAI / PEhO_clause free* operator mex_2+ KUhE_elidible free*
+// mex_forethought //////// jmina zoizoi mex_forethought? zoi tezu'e lo nu lo operator porsi cu simsa la'o zoi f∘g∘h(x) zoi_20150712UTC_
+mex_forethought = !(lerfu_string BOI_elidible free*) operator mex_2+ KUhE_elidible free* mex_forethought? !MAI / PEhO_clause free* operator mex_2+ KUhE_elidible free* mex_forethought?
 
 // fore_operands = expr:(mex_2+ ) {return _node("fore_operands", expr); } //////// _vimcu_20150710UTC_
 
 // Right recursive version.
 // rp_expression //////// _galfi fi zoizoi mex (rp_expression operator)* zoi_20150710UTC_
-rp_expression = expr:(mex (rp_expression operator)*) {return _node("rp_expression", expr); }
+// rp_expression = expr:(mex (rp_expression operator)*) {return _node("rp_expression", expr); } //////// _tu'a di'u co'u sarcu ki'u lo nu stika tu'a la mex_20150712UTC_ 
 
 // rp_expression_tail = expr:(rp_expression operator rp_expression_tail / ()) {return _node("rp_expression_tail", expr); } //////// _vimcu_20150710UTC_
 
@@ -416,9 +421,7 @@ rp_expression = expr:(mex (rp_expression operator)*) {return _node("rp_expressio
 // operator = expr:(operator_1 (joik stag? operator_1)*) {return _node("operator", expr); } //////// _la joik cu cmima la operator .i galfi fi zoizoi operator_1 (BO_clause? operator_1)* zoi_20150710UTC_
 // operator = expr:(operator_1 (BO_clause? operator_1)*) {return _node("operator", expr); } //////// _cipra vimcu zo bo la operator ma'i lo si'o melbi i tu'a zo ke banzu_20150711UTC_
 // operator //////// _xruti operator i ku'i galfi fi zoizoi operator_1+ zoi tezu'e tu'a zoizoi ([pa BOI] [vu'u {vu'u vu'u vu'u}] [pa BOI]) zoi naje zoizoi ([pa BOI] [vu'u vu'u vu'u vu'u] [pa BOI]) zoi_20150712UTC_
-operator = expr:(operator_1+) {return _node("operator", expr); }
-
-
+// operator = expr:(operator_1+) {return _node("operator", expr); } //////// _vimcu ki'u lo nu la'o zoi operator_1 zoi cu di'a se cmene la'o zoi operator zoi i lo ka operator krefu cu se vrici tu'a zo pe'o ce zo fu'a ce lo jbini_20150712UTC_
 
 // operator_1 //////// _vimcu zo jek_20150703UTC
 // operator_1 //////// _zoizoi gek zoi basti zoizoi guhek zoi_20150703UTC
@@ -436,7 +439,8 @@ operator = expr:(operator_1+) {return _node("operator", expr); }
 // operator_1 //////// _vimcu zoizoi gek operator (gik operator)+ GIhI_elidible zoi tezu'e lo nu la mex lidne ma'oi ROI i ji'a to'e sarcu ne'i la mex_20150710UTC_ 
 // operator_1 //////// _galfi lo cmene zo operator iseja'e bo tu'e cipra vimcu zo bo la operator ma'i lo si'o melbi i tu'a zo ke banzu tu'u_20150711UTC_
 // operator_1 //////// _cipra mulno i xruti tu'a lo cmene_20150711UTC_
-operator_1 = expr:(KE_clause free* operator KEhE_elidible free* / SE_clause free* operator / NAhE_clause free* operator / MAhO_clause free* mex TEhU_elidible free* / NAhU_clause free* selbri TEhU_elidible free* / VUhU_clause free* / joik_ek) {return _node("operator_1", expr); }
+// operator_1 /////// di'a se cmene zo operator i lo ka operator krefu cu se vrici tu'a zo pe'o ce zo fu'a ce lo jbini_20150712UTC_
+operator = expr:(KE_clause free* operator KEhE_elidible free* / SE_clause free* operator / NAhE_clause free* operator / MAhO_clause free* mex TEhU_elidible free* / NAhU_clause free* selbri TEhU_elidible free* / VUhU_clause free* / joik_ek) {return _node("operator", expr); }
 
 // operand = expr:(operand_1 (joik_ek stag? operand_1)*) {return _node("operand", expr); } //////// _vimcu .i la joik cu cmima la operator_20150710UTC_
 
