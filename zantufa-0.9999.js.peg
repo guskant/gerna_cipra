@@ -395,19 +395,29 @@ links = expr:(BEI_clause free* term links?) {return _node("links", expr);}
 quantifier = expr:(!sumti_5 !selbri mex relative_clauses?) {return _node("quantifier", expr); }
 
 // mex //////// _galfi zoizoi mex_1 (operator mex_1)* / rp_clause zoi zoizoi FUhA_clause operand+ operator (operand* operator)* / mex_1 (operator+ mex_1)* zoi tezu'e lo nu curmi tu'a lo pa po'o operand pe zo fu'a lu'u je lo nu krefu fa tu'a fu'a zei mexpau_20150712UTC_
-mex = expr:(FUhA_clause operand+ operator (operand* operator)* / mex_1 (operator+ mex_1)*) {return _node("mex", expr); }
+// mex //////// _gasnu tu'a lo'u FUhA ... KUhE le'u noi gau cmima la'o zoi mex_2 zoi_20150712UTC_
+// mex //////// _galfi zoizoi operator+ zoi zoizoi operator zoi_20150712UTC_
+mex = expr:(mex_1 (operator mex_1)*) {return _node("mex", expr); }
 
 // rp_clause = expr:(FUhA_clause free* rp_expression) {return _node("rp_clause", expr); } //////// _tu'a di'u co'u sarcu ki'u lo nu stika tu'a la mex_20150712UTC_
 
 // mex_1 //////// _galfi fi zoizoi mex_2 (BIhE_clause free* operator+ mex_2)* zoi_20150712UTC_
-mex_1 = expr:(mex_2 (BIhE_clause free* operator+ mex_2)*) {return _node("mex_1", expr); }
+// mex_1 //////// _galfi zoizoi operator+ zoi zoizoi operator zoi_20150712UTC_
+// mex_1 //////// _tu'a zo BO dunli tu'a zo BIhE i xai no'e sarcu tu'a lo mekso ije ku'i na'e vimcu tezu'e lo nu sarxe la camxes_20150712UTC_
+mex_1 = expr:(mex_2 ((BIhE_clause free* operator / operator BO_clause free*) mex_2)*) {return _node("mex_1", expr); }
 
-mex_2 = expr:(operand / mex_forethought) {return _node("mex_2", expr); }
+// mex_2 //////// _la mex zo'u gasnu tu'a lo'u FUhA ... KUhE le'u noi gau cmima la'o zoi mex_2 zoi_20150712UTC_
+mex_2 = expr:(operand / mex_rp / mex_forethought) {return _node("mex_2", expr); }
+
+// //////// _jmina la'o zoi mex_rp zoi i la mex zo'u gasnu tu'a lo'u FUhA ... KUhE le'u noi gau cmima la'o zoi mex_2 zoi_20150712UTC_
+// // // cuxna zoizoi operand zoi jenai zoizoi mex_2 zoi iki'u bo au tu'a zo pe'o na nenri lo fu'a zei mexpau
+mex_rp = FUhA_clause free* operand+ operator (operand* operator)* KUhE_elidible free*
 
 // This is just to make for clearer parse trees
-// mex_forethought //////// galfi fi zoizoi !(lerfu_string BOI_elidible free*) operator mex_2+ KUhE_elidible free* !MAI / PEhO_clause free* operator mex_2+ KUhE_elidible free* zoi_20150710UTC_ 
-// mex_forethought //////// jmina zoizoi mex_forethought? zoi tezu'e lo nu lo operator porsi cu simsa la'o zoi f∘g∘h(x) zoi_20150712UTC_
-mex_forethought = !(lerfu_string BOI_elidible free*) operator mex_2+ KUhE_elidible free* mex_forethought? !MAI / PEhO_clause free* operator mex_2+ KUhE_elidible free* mex_forethought?
+// mex_forethought //////// _galfi fi zoizoi !(lerfu_string BOI_elidible free*) operator mex_2+ KUhE_elidible free* !MAI / PEhO_clause free* operator mex_2+ KUhE_elidible free* zoi_20150710UTC_ 
+// mex_forethought //////// _jmina zoizoi mex_forethought? zoi tezu'e lo nu lo operator porsi cu simsa la'o zoi f∘g∘h(x) zoi_20150712UTC_
+// mex_forethought //////// _galfi zoizoi mex_2+ zoi zoizoi (operand / mex_forethought)+ zoi iki'u bo au tu'a zo fu'a na nenri lo pe'o zei mexpau
+mex_forethought = !(lerfu_string BOI_elidible free*) operator (operand / mex_forethought)+ mex_forethought? KUhE_elidible free* !MAI / PEhO_clause free* operator (operand / mex_forethought)+ mex_forethought? KUhE_elidible free* 
 
 // fore_operands = expr:(mex_2+ ) {return _node("fore_operands", expr); } //////// _vimcu_20150710UTC_
 
@@ -460,7 +470,10 @@ operator = expr:(KE_clause free* operator KEhE_elidible free* / SE_clause free* 
 // operand //////// _vimcu zoizoi KE_clause free* operand KEhE_elidible free* zoi ki'u lo nu lu vei pa ve'o li'u basti_20150710UTC_
 // operand //////// _vimcu zoizoi gek operand (gik operand)+ GIhI_elidible li'u ki'u lo nu lu (pe'o) joi paboi pa li'u basti i ji'a ai la mex cu lidne ma'oi ROI_20150710UTC_
 // operand //////// _galfi so'o zoi zoi operand zoi zoizoi mex_2 zoi i ku'i ma'oi NAhE cu lidne la operand po'o ki'u lo nu la operator ji'a cu ka'e se lidne ma'oi NAhE_20150710UTC_
-operand = expr:(number BOI_elidible free* / lerfu_string BOI_elidible free* / VEI_clause free* mex VEhO_elidible free* / NIhE_clause free* selbri TEhU_elidible free* / MOhE_clause free* sumti TEhU_elidible free* / JOhI_clause free* mex_2+ TEhU_elidible free* / (LAhE_clause free* / NAhE_clause BO_clause free*) mex_2 LUhU_elidible free* / NAhE_clause free* operand free*) {return _node("operand", expr); }
+// operand //////// zo jo'i gau cmavo ma'oi VUhU i lu (pe'o) jo'i paboi reboi ci (kuhe) li'u mu'a basti i vimcu ma'oi JOhI_20150712UTC_
+// operand //////// lo LAhE zei mexpau cu se pagbu zo mex jenai lo'u mex_2 le'u_20150712UTC_
+// // // (na'e (pa da)) , (vei (na'e pa)) da
+operand = expr:(number BOI_elidible free* / lerfu_string BOI_elidible free* / VEI_clause free* mex VEhO_elidible free* / NIhE_clause free* selbri TEhU_elidible free* / MOhE_clause free* sumti TEhU_elidible free* / (LAhE_clause free* / NAhE_clause BO_clause free*) mex LUhU_elidible free* / NAhE_clause free* operand free*) {return _node("operand", expr); }
 
 number = expr:(PA_clause+) {return _node("number", expr); }
 
@@ -860,9 +873,9 @@ JAI_pre = pre_clause JAI spaces?
 JAI_post = post_clause
 
 //         flags an array operand 
-JOhI_clause = pre:JOhI_pre post:JOhI_post {return _node2("JOhI_clause", pre, post); }
-JOhI_pre = pre_clause JOhI spaces?
-JOhI_post = post_clause
+// JOhI_clause = pre:JOhI_pre post:JOhI_post {return _node2("JOhI_clause", pre, post); }_20150712UTC_zo jo'i gau cmavo ma'oi VUhU i vimcu ma'oi JOhI_20150712UTC_
+// JOhI_pre = pre_clause JOhI spaces?_20150712UTC_
+// JOhI_post = post_clause_20150712UTC_
 
 //         non_logical connectives 
 JOI_clause = pre:JOI_pre post:JOI_post {return _node2("JOI_clause", pre, post); }
@@ -1280,7 +1293,8 @@ gismu_2 = expr:(gismu) {return ["gismu", expr];}
 // CMAVO //////// _vimcu zoizoi NUhI / NUhU / zoi_20150703UTC
 // CMAVO //////// _jmina zoizoi / GIhI zoi_20150706UTC
 // CMAVO //////// _vimcu zo NUhA .i ma'oi ME basti_20150710UTC_
-CMAVO = expr:(A / BAI / BAhE / BE / BEI / BEhO / BIhE / BIhI / BO / BOI / BU / BY / CAhA / CAI / CEI / CO / COI / CU / CUhE / DAhO / DOI / DOhU / FA / FAhA / FAhO / FEhE / FEhU / FIhO / FOI / FUhA / FUhE / FUhO / GA / GAhO / GEhU / GI / GIhA / GIhI / GOI / GOhA / GOhOI / I / JAI / JOhI / JOI / KE / KEhE / KEI / KI / KOhA / KU / KUhAU / KUhE / KUhO / LAU / LAhE / LEhAI / LE / LEhU / LI / LIhU / LOhAI / LOhO / LOhOI / LOhU / LU / LUhU / MAhO / MAI / ME / MEhU / MOhE / MOhI / MOI / NA / NAI / NAhE / NAhU / NIhE / NIhO / NOI / NU / PA / PEhO / PU / RAhOI / RAhO / ROI / SE / SEI / SEhU / SI / SOI / SU / TAhE / TEhU / TEI / TO / TOI / TUhE / TUhU / UI / VA / VAU / VEI / VEhO / VUhU / VEhA / VIhA / VUhO / XI / ZAhO / ZEhA / ZI / ZO / ZOI / ZOhU / cmavo) {return ["CMAVO", expr];}
+// CMAVO //////// _zo jo'i gau cmavo ma'oi VUhU i vimcu ma'oi JOhI_20150712UTC_
+CMAVO = expr:(A / BAI / BAhE / BE / BEI / BEhO / BIhE / BIhI / BO / BOI / BU / BY / CAhA / CAI / CEI / CO / COI / CU / CUhE / DAhO / DOI / DOhU / FA / FAhA / FAhO / FEhE / FEhU / FIhO / FOI / FUhA / FUhE / FUhO / GA / GAhO / GEhU / GI / GIhA / GIhI / GOI / GOhA / GOhOI / I / JAI / JOI / KE / KEhE / KEI / KI / KOhA / KU / KUhAU / KUhE / KUhO / LAU / LAhE / LEhAI / LE / LEhU / LI / LIhU / LOhAI / LOhO / LOhOI / LOhU / LU / LUhU / MAhO / MAI / ME / MEhU / MOhE / MOhI / MOI / NA / NAI / NAhE / NAhU / NIhE / NIhO / NOI / NU / PA / PEhO / PU / RAhOI / RAhO / ROI / SE / SEI / SEhU / SI / SOI / SU / TAhE / TEhU / TEI / TO / TOI / TUhE / TUhU / UI / VA / VAU / VEI / VEhO / VUhU / VEhA / VIhA / VUhO / XI / ZAhO / ZEhA / ZI / ZO / ZOI / ZOhU / cmavo) {return ["CMAVO", expr];}
 
 // This is a Parsing Expression Grammar for the morphology of Lojban.
 // See http://www.pdos.lcs.mit.edu/~baford/packrat/
@@ -1668,7 +1682,7 @@ I = &cmavo expr:( i ) &post_word {return ["I", _join(expr)];}
 
 JAI = &cmavo expr:( j a h e i / j a i ) &post_word {return ["JAI", _join(expr)];}
 
-JOhI = &cmavo expr:( j o h i ) &post_word {return ["JOhI", _join(expr)];}
+//JOhI = &cmavo expr:( j o h i ) &post_word {return ["JOhI", _join(expr)];} //////// _20150712UTC_
 
 // JOI //////// _lo cmavo be ma'oi JA cu muvdu ti_20150703UTC
 // JOI //////// _lo cmavo be ma'oi ZIhE cu muvdu ti ma'i lo si'o sarxe la camxes_20150703UTC
@@ -1811,7 +1825,8 @@ VEI = &cmavo expr:( v e i ) &post_word {return ["VEI", _join(expr)];}
 
 VEhO = &cmavo expr:( v e h o ) &post_word {return ["VEhO", _join(expr)];}
 
-VUhU = &cmavo expr:( z i h a h o / z a h e i / x o h e i / v u h u / v o h a u h u / v a h a / t o h e i h a u / t e h a u h u / t e h a / t a i h i h e / t a i h e h i / s u h i / s i h i / s e h i h a h o / s a h o / s a h i / r i h o / r e h a / p i h i / p i h e i h o i / p i h e i h a u / p i h e / p i h a / p a u h o i / p a u h e i / p a u h a h u / p a h i / n e h o i / n e h o / m e h e i h o / m a h o h e / k u h a u h a / k a h a u / j u h u / j o i h i / j a u h a u / g u h a u h i / g u h a i / g e i / g e h a / f u h u / f e h i / f e h a / f a h i / f a h a u / f a h a i / d u h e i / d i h e i h o h a u / d e i h a u h o / d e h o / d a h a h a u / c u h a u h e i / c u h a i / c u h a / c i h a i h u / b e h e i h o i / b a i h i / b a i h e i ) &post_word {return ["VUhU", _join(expr)];}
+// VUhU //////// _+jo'i_20150712UTC_
+VUhU = &cmavo expr:( z i h a h o / z a h e i / x o h e i / v u h u / v o h a u h u / v a h a / t o h e i h a u / t e h a u h u / t e h a / t a i h i h e / t a i h e h i / s u h i / s i h i / s e h i h a h o / s a h o / s a h i / r i h o / r e h a / p i h i / p i h e i h o i / p i h e i h a u / p i h e / p i h a / p a u h o i / p a u h e i / p a u h a h u / p a h i / n e h o i / n e h o / m e h e i h o / m a h o h e / k u h a u h a / k a h a u / j u h u / j o i h i / j o h i / j a u h a u / g u h a u h i / g u h a i / g e i / g e h a / f u h u / f e h i / f e h a / f a h i / f a h a u / f a h a i / d u h e i / d i h e i h o h a u / d e i h a u h o / d e h o / d a h a h a u / c u h a u h e i / c u h a i / c u h a / c i h a i h u / b e h e i h o i / b a i h i / b a i h e i ) &post_word {return ["VUhU", _join(expr)];}
 
 VEhA = &cmavo expr:( v e h u / v e h a / v e h i / v e h e ) &post_word {return ["VEhA", _join(expr)];}
 
