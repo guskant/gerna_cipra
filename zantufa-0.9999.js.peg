@@ -414,7 +414,10 @@ rp_expression = expr:(mex (rp_expression operator)*) {return _node("rp_expressio
 
 // operator //////// _vimcu zo jek_20150703UTC
 // operator = expr:(operator_1 (joik stag? operator_1)*) {return _node("operator", expr); } //////// _la joik cu cmima la operator .i galfi fi zoizoi operator_1 (BO_clause? operator_1)* zoi_20150710UTC_
-operator = expr:(operator_1 (BO_clause? operator_1)*) {return _node("operator", expr); }
+// operator = expr:(operator_1 (BO_clause? operator_1)*) {return _node("operator", expr); } //////// _cipra vimcu zo bo la operator ma'i lo si'o melbi i tu'a zo ke banzu_20150711UTC_
+// operator //////// _xruti operator i ku'i galfi fi zoizoi operator_1+ zoi tezu'e tu'a zoizoi ([pa BOI] [vu'u {vu'u vu'u vu'u}] [pa BOI]) zoi naje zoizoi ([pa BOI] [vu'u vu'u vu'u vu'u] [pa BOI]) zoi_20150712UTC_
+operator = expr:(operator_1+) {return _node("operator", expr); }
+
 
 
 // operator_1 //////// _vimcu zo jek_20150703UTC
@@ -431,6 +434,8 @@ operator = expr:(operator_1 (BO_clause? operator_1)*) {return _node("operator", 
 
 // mex_operator //////// galfi lo cmene zoizoi operator_1 zoi .i la joik cu cmima la operator_20150710UTC_
 // operator_1 //////// _vimcu zoizoi gek operator (gik operator)+ GIhI_elidible zoi tezu'e lo nu la mex lidne ma'oi ROI i ji'a to'e sarcu ne'i la mex_20150710UTC_ 
+// operator_1 //////// _galfi lo cmene zo operator iseja'e bo tu'e cipra vimcu zo bo la operator ma'i lo si'o melbi i tu'a zo ke banzu tu'u_20150711UTC_
+// operator_1 //////// _cipra mulno i xruti tu'a lo cmene_20150711UTC_
 operator_1 = expr:(KE_clause free* operator KEhE_elidible free* / SE_clause free* operator / NAhE_clause free* operator / MAhO_clause free* mex TEhU_elidible free* / NAhU_clause free* selbri TEhU_elidible free* / VUhU_clause free* / joik_ek) {return _node("operator_1", expr); }
 
 // operand = expr:(operand_1 (joik_ek stag? operand_1)*) {return _node("operand", expr); } //////// _vimcu .i la joik cu cmima la operator_20150710UTC_
@@ -446,7 +451,6 @@ operator_1 = expr:(KE_clause free* operator KEhE_elidible free* / SE_clause free
 // operand_3 //////// _galfi zoizoi lerfu_string !MOI_clause zoi zoizoi lerfu_string zoi_20150709UTC_
 // operand_3 //////// _galfi zoizoi quantifier zoi zoizoi  / number BOI_elidible free* / VEI_clause free* mex VEhO_elidible free* zoi_20150709UTC_
 // operand_3 //////// _stika lo se porsi i jalge fa tu'a zoizoi  / number BOI_elidible free* / lerfu_string BOI_elidible free* / VEI_clause free* mex VEhO_elidible free* zoi_20150709UTC_
-// // // xu curmi lo nu la gek lidne no gik
 // operand_3 //////// _pu tolmo'i tu'a zoizoi _clause zoi i jmina ri ja'e lo nu lu nahe pa li'u gendra (to la'o zoi spaces? zoi toi) i ji'a jmina zoizoi free* zoi_20150709UTC_
 // operand_3 //////// _galfi lo cmene zoizoi operand zoi .i la joik cu cmima la operator_20150710UTC_
 // operand //////// _vimcu zoizoi KE_clause free* operand KEhE_elidible free* zoi ki'u lo nu lu vei pa ve'o li'u basti_20150710UTC_
