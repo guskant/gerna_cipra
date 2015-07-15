@@ -59,6 +59,9 @@ ex.)
 5 fu broda 1234 = 5 xevetese broda 1234
 mukti fa lo nu lo terbri be lo pa selbrisle cu porsi lo ka vajni gi'e no'e cenba lo ka vajni ca ji'a lo nu vajgau pa lo su'ocimoi be lo cmima be lo terbri 
 ei lu ni'o joi li'u gendra
+i ma'oi SE ma'oi FA frica lo ka srana la joik ja la tag 
+i sa'unai ma'oi SE ka'e kuspe la joik ja la tag i ku'i ma'oi FA na go'i
+
 
 drata sitna:
 https://skami2.iocikun.jp/lojban/zasniGernaPeg

@@ -269,7 +269,8 @@ term_2 = expr:(KE_clause free* term KEhE_elidible free* / tag_term / !tag sumti 
 // abs_tag_term //////// _galfi lo cmene zoizoi tag_term zoi_20150703UTC
 // tag_term //////// _zoizoi !gek_bridi_tail zoi basti zoizoi !gek_sentence zoi_20150706UTC
 // tag_term //////// _galfi zoizoi FA_clause free* zoi zoizoi FA_clause (joik FA_clause)* free* zoi_20150707UTC
-tag_term = expr:(!gek (tag !(!tag selbri) !gek_bridi_tail / FA_clause (joik FA_clause)* free*) (sumti / KU_elidible free*)) {return _node("tag_term", expr);}
+// tag_term //////// _galfi zoizoi FA_clause (joik FA_clause)* free* zoi zoizoi FA_clause free* (joik FA_clause free*)* !tanru_unit_2 zoi_20150715UTC_
+tag_term = expr:(!gek (tag !(!tag selbri) !gek_bridi_tail / FA_clause free* (joik FA_clause free*)* !tanru_unit_2) (sumti / KU_elidible free*)) {return _node("tag_term", expr);}
 /*** END EXP-SELBRITCITA-FIX ***/
 
 // termset //////// _vimcu zoizoi / NUhI_clause free* gek terms NUhU_elidible free* gik terms NUhU_elidible free* / NUhI_clause free* terms NUhU_elidible free* zoi_20150703UTC
@@ -384,7 +385,8 @@ tanru_unit_1 = expr:(tanru_unit_2 linkargs?) {return _node("tanru_unit_1", expr)
 // tanru_unit_2 //////// _galfi zoi zoi operator zoi zoizoi operator+ zoi_20150712UTC_
 // tanru_unit_2 //////// _cipra curmi lo nu la gek lidne no gik_20150713UTC_
 // tanru_unit_2 //////// _cipra curmi lo nu ma'oi ME lidne la mex jonai la tag_20150713UTC_
-tanru_unit_2 = expr:(CMEVLA_clause free* / BRIVLA_clause free* / GOhA_clause RAhO_clause? free* / KE_clause free* selbri_2 KEhE_elidible free* / NAhE_clause? free* gek selbri_2 (gik selbri_2)* GIhI_elidible / GOhOI_clause free* / ME_clause free* (sumti / operator+ / mex / tag) MEhU_elidible free* MOI_clause? free* / mex MOI_clause free* / SE_clause free* tanru_unit_2 / JAI_clause free* tag? tanru_unit_2 / NAhE_clause free* tanru_unit_2 / NU_clause NAI_clause? free* (joik NU_clause NAI_clause? free*)* statement KEI_elidible free*) {return _node("tanru_unit_2", expr); }
+// tanru_unit_2 //////// _galfi zoizoi SE_clause free* zoi zoizoi (FA_clause free* (joik FA_clause free*)* / SE_clause free*) zoi_20150715UTC_
+tanru_unit_2 = expr:(CMEVLA_clause free* / BRIVLA_clause free* / GOhA_clause RAhO_clause? free* / KE_clause free* selbri_2 KEhE_elidible free* / NAhE_clause? free* gek selbri_2 (gik selbri_2)* GIhI_elidible / GOhOI_clause free* / ME_clause free* (sumti / operator+ / mex / tag) MEhU_elidible free* MOI_clause? free* / mex MOI_clause free* / (FA_clause free* (joik FA_clause free*)* / SE_clause free*) tanru_unit_2 / JAI_clause free* tag? tanru_unit_2 / NAhE_clause free* tanru_unit_2 / NU_clause NAI_clause? free* (joik NU_clause NAI_clause? free*)* statement KEI_elidible free*) {return _node("tanru_unit_2", expr); }
 
 linkargs = expr:(BE_clause free* term links? BEhO_elidible free*)  {return _node("linkargs", expr);}
 
