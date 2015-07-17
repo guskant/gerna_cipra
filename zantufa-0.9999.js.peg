@@ -328,8 +328,9 @@ sumti_4 = expr:(quantifier? sumti_5 relative_clauses? / quantifier selbri KU_eli
 // sumti_5 //////// _pu tolmo'i tu'a zoizoi _clause zoi i jmina ri ja'e lo nu lu nahe da li'u gendra (to la'o zoi spaces? zoi toi) i ji'a jmina zoizoi free* zoi .ije zoizoi !(!operand mex) zoi cu ei se lidne zoizoi BOI_elidible free* zoi_20150709UTC_
 // sumti_5 //////// _stika tu'a la'o zoi mex_forethought zoi ira'abo galfi zoizoi !(!operand mex) zoi zoizoi !operator zoi_20150710UTC_
 // sumti_5 //////// _galfi zoizoi !operator zoi zoizoi !(!joik_ek operator) zoi_20150710UTC_
+// sumti_5 //////// _galfi zoizoi !(!joik_ek operator) zoi zoizoi !(BO_clause* free* operand* !joik_ek operator) zoi tezu'e tu'a lu by bo cy ri'o dy li'u_20150717UTC_
 // // // !(!joik_ek operator) : tu'a zoizoi !joik_ek zoi cu sarcu lo nu lu by joi (vei) pa (ve'o) by li'u cu sumti
-sumti_5 = expr:(RAhOI_clause free* / ZO_clause free* / ZOI_clause free* / LOhU_clause free* / lerfu_string BOI_elidible free* !(!joik_ek operator) / LU_clause text LIhU_elidible free* / (LAhE_clause free* / NAhE_clause BO_clause free*) relative_clauses? sumti LUhU_elidible free* / KOhA_clause free* / LOhOI_clause NAI_clause? free* (joik LOhOI_clause NAI_clause? free*)* statement KUhAU_elidible free* / LE_clause free* sumti_tail KU_elidible free* / li_clause / NAhE_clause free* sumti_3 free* !(!joik_ek operator)) {return _node("sumti_5", expr);}
+sumti_5 = expr:(RAhOI_clause free* / ZO_clause free* / ZOI_clause free* / LOhU_clause free* / lerfu_string BOI_elidible free* !(BO_clause* free* operand* !joik_ek operator) / LU_clause text LIhU_elidible free* / (LAhE_clause free* / NAhE_clause BO_clause free*) relative_clauses? sumti LUhU_elidible free* / KOhA_clause free* / LOhOI_clause NAI_clause? free* (joik LOhOI_clause NAI_clause? free*)* statement KUhAU_elidible free* / LE_clause free* sumti_tail KU_elidible free* / li_clause / NAhE_clause free* sumti_3 free* !(BO_clause* free* operand* !joik_ek operator)) {return _node("sumti_5", expr);}
 
 li_clause = expr:(LI_clause free* mex LOhO_elidible free*) {return _node("li_clause", expr); }
 

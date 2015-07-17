@@ -41,28 +41,6 @@ cekitaujau:
 http://mw.lojban.org/papri/ce_ki_tau_jau
 
 
-https://twitter.com/oka_iu_tcan/status/614416499105624064
-New usage proposal of {me}:
-as fi'o SELBRI = tag,
-me TAG = SELBRI.
-eg. mi me pi'o ti = mi pilno ti
-
-FA as SE / FA in BAI? x : ei simsa ma'oi SE tezu'e lo nu srana lo selbrisle
-.enai lo selbri .iki'ubo zo FA srana ro selbri
-jbofi'e:
-[1(2[klama3 (origin(s)) :] ko'a he/she/it)2 [is, does] «3te se klama being origin(s)»3 (4[klama1 (go-er(s)) :] ko'e he/she/it)4 (5[klama2 (destination(s)) :] ko'i he/she/it)5 (6[klama4 (route(s)) :] ko'o he/she/it)6 (7[klama5 (vehicle(s)) :] ko'u he/she/it)7]1
-ex.) 
-1 broda 2345
-2 fe broda 1345 = 2 se broda 1345
-3 fi broda 1245 = 3 tese broda 1245
-4 fo broda 1235 = 4 vetese broda 1235
-5 fu broda 1234 = 5 xevetese broda 1234
-mukti fa lo nu lo terbri be lo pa selbrisle cu porsi lo ka vajni gi'e no'e cenba lo ka vajni ca ji'a lo nu vajgau pa lo su'ocimoi be lo cmima be lo terbri 
-ei lu ni'o joi li'u gendra
-i ma'oi SE ma'oi FA frica lo ka srana la joik ja la tag 
-i sa'unai ma'oi SE ka'e kuspe la joik ja la tag i ku'i ma'oi FA na go'i
-
-
 drata sitna:
 https://skami2.iocikun.jp/lojban/zasniGernaPeg
 https://skami2.iocikun.jp/lojban/zasniGerna
@@ -109,4 +87,27 @@ mulno:
 # li'u lu'u lu'u}
 #lau = la'e di'u ----- finti zo lau'u noi cmavo ma'oi KOhA .i ce'o lo'u (lau
 # lau'u) le'u basti simxu ma'i lo tcekitaujau
+
+
+# FA as SE / FA in BAI? x : ei simsa ma'oi SE tezu'e lo nu srana lo selbrisle
+# .enai lo selbri .iki'ubo zo FA srana ro selbri
+# jbofi'e:
+# [1(2[klama3 (origin(s)) :] ko'a he/she/it)2 [is, does] «3te se klama being origin(s)»3 (4[klama1 (go-er(s)) :] ko'e he/she/it)4 (5[klama2 (destination(s)) :] ko'i he/she/it)5 (6[klama4 (route(s)) :] ko'o he/she/it)6 (7[klama5 (vehicle(s)) :] ko'u he/she/it)7]1
+# ex.) 
+# 1 broda 2345
+# 2 fe broda 1345 = 2 se broda 1345
+# 3 fi broda 1245 = 3 tese broda 1245
+# 4 fo broda 1235 = 4 vetese broda 1235
+# 5 fu broda 1234 = 5 xevetese broda 1234
+# mukti fa lo nu lo terbri be lo pa selbrisle cu porsi lo ka vajni gi'e no'e cenba lo ka vajni ca ji'a lo nu vajgau pa lo su'ocimoi be lo cmima be lo terbri 
+# ei lu ni'o joi li'u gendra
+# i ma'oi SE ma'oi FA frica lo ka srana la joik ja la tag 
+# i sa'unai ma'oi SE ka'e kuspe la joik ja la tag i ku'i ma'oi FA na go'i
+
+# https://twitter.com/oka_iu_tcan/status/614416499105624064
+# New usage proposal of {me}:
+# as fi'o SELBRI = tag,
+# me TAG = SELBRI.
+# eg. mi me pi'o ti = mi pilno ti
+
 
