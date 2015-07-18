@@ -539,7 +539,7 @@ zantufa-0.3.js.peg:491:// operand //////// lo LAhE zei mexpau cu se pagbu zo mex
 zantufa-0.3.js.peg:549:// interval_property //////// _galfi zoizoi number ROI_clause NAI_clause? zoi zoizoi mex ROI_clause NAI_clause? zoi_20150710UTC_
 zantufa-0.3.js.peg:553:// free //////// _galfi zoizoi (number / lerfu_string) MAI_clause zoi zoizoi mex_2 MAI_clause zoi_20150710UTC_
 zantufa-0.3.js.peg:556:// xi_clause //////// _galfi zoizoi (number / lerfu_string) zoi zoizoi mex_2 zoi_20150710UTC_
-zantufa-0.3.js.peg:893:// JOhI_clause = pre:JOhI_pre post:JOhI_post {return _node2("JOhI_clause", pre, post); }_20150712UTC_zo jo'i gau cmavo ma'oi VUhU i vimcu ma'oi JOhI_20150712UTC_
+zantufa-0.3.js.peg:893:// JOhI_clause = pre:JOhI_pre post:JOhI_post {return _node2("JOhI_clause", pre, post); }_zo jo'i gau cmavo ma'oi VUhU i vimcu ma'oi JOhI_20150712UTC_
 zantufa-0.3.js.peg:894:// JOhI_pre = pre_clause JOhI spaces?_20150712UTC_
 zantufa-0.3.js.peg:895:// JOhI_post = post_clause_20150712UTC_
 zantufa-0.3.js.peg:1088:// NUhA_clause = pre:NUhA_pre post:NUhA_post {return _node2("NUhA_clause", pre, post); } //////// _vimcu .i ma'oi ME basti_20150710UTC_
@@ -551,4 +551,9 @@ zantufa-0.3.js.peg:1702://JOhI = &cmavo expr:( j o h i ) &post_word {return ["JO
 zantufa-0.3.js.peg:1760:// ME //////// _+nu'a ki'u lo nu vimcu ma'oi NUhA_20150710UTC_
 zantufa-0.3.js.peg:1787:// NUhA = &cmavo expr:( n u h a ) &post_word {return ["NUhA", _join(expr)];} //////// _vimcu .i ma'oi ME basti i zo nu'a gau cmavo ma'oi ME_20150710UTC_
 zantufa-0.3.js.peg:1845:// VUhU //////// _+jo'i_20150712UTC_
+zantufa-0.3.js.peg:178:// gek_statement //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC_
+zantufa-0.3.js.peg:217:// gek_bridi_tail //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC_
+zantufa-0.3.js.peg:284:// gek_term //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC_
+zantufa-0.3.js.peg:317:// sumti_3 //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC_
+zantufa-0.3.js.peg:397:// tanru_unit_2 //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC_
 ------------------ mulno fa la zantufa_0.3 ------------------

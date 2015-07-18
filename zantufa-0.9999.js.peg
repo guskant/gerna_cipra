@@ -175,7 +175,8 @@ statement_3 = expr:(sentence / tag? TUhE_clause free* paragraphs TUhU_elidible f
 
 // //////// _jmina la'o zoi gek_statement zoi_20150706UTC
 // gek_statement //////// _cipra curmi lo nu la gek lidne no gik_20150713UTC
-gek_statement = expr:(gek statement (gik statement)* GIhI_elidible) {return _node("gek_statement", expr);}
+// gek_statement //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC
+gek_statement = expr:(gek statement (gik statement)+ GIhI_elidible) {return _node("gek_statement", expr);}
 
 // fragment //////// _galfi zoizoi !JA_clause zoi zoizoi !JOI_clause zoi_20150703UTC
 // fragment //////// _jmina zoizoi / joik free* zoi_20150704UTC 
@@ -213,7 +214,8 @@ bridi_tail_3 = expr:(KE_clause free* !(selbri_2 KEhE) bridi_tail KEhE_elidible f
 
 // // // za'a nitcu fa zoizoi  / tag* KE_clause free* gek_bridi_tail KEhE_elidible free* / NA_clause free* gek_bridi_tail zoi
 // gek_bridi_tail //////// _cipra curmi lo nu la gek lidne no gik_20150713UTC
-gek_bridi_tail = expr:(gek bridi_tail (gik bridi_tail)* GIhI_elidible tail_terms / tag* KE_clause free* gek_bridi_tail KEhE_elidible free* / NA_clause free* gek_bridi_tail) {return _node("gek_bridi_tail", expr);}
+// gek_bridi_tail //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC
+gek_bridi_tail = expr:(gek bridi_tail (gik bridi_tail)+ GIhI_elidible tail_terms / tag* KE_clause free* gek_bridi_tail KEhE_elidible free* / NA_clause free* gek_bridi_tail) {return _node("gek_bridi_tail", expr);}
 
 //// EXP-FIX: tag? KE --> tag* KE
 // gek_sentence = expr:(gek subsentence gik subsentence tail_terms / tag* KE_clause free* gek_sentence KEhE_elidible free* / NA_clause free* gek_sentence) {return _node("gek_sentence", expr);} //////// _la'o zoi gek_bridi_tail zoi basti ti_20150706UTC
@@ -279,7 +281,8 @@ tag_term = expr:(!gek (tag !(!tag selbri) !gek_bridi_tail / FA_clause free* (joi
 // gek_termset //////// _galfi zoizoi terms_gik_terms zoi zoizoi term (gik term)+ GIhI_elidible zoi_20150706UTC
 // gek_termset //////// _galfi lo cmene zoizoi gek_term zoi_20150706UTC
 // gek_term //////// _cipra curmi lo nu la gek lidne no gik_20150713UTC
-gek_term = expr:(gek term (gik term)* GIhI_elidible) {return _node("gek_term", expr);}
+// gek_term //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC
+gek_term = expr:(gek term (gik term)+ GIhI_elidible) {return _node("gek_term", expr);}
 
 /*** EXP-SELBRITCITA-FIX ***/
 // terms_gik_terms = expr:(abs_term (gik / terms_gik_terms) abs_term) {return _node("terms_gik_terms", expr);} _la'o zoi nonabs_terms_gik_terms zoi cu binxo ti_20150703UTC
@@ -311,7 +314,8 @@ sumti_2 = expr:(sumti_3 (joik_ek? stag? BO_clause free* sumti_3)*) {return _node
 // sumti_4 //////// _zoizoi KE_clause free* sumti KEhE_elidible free* zoi muvdu ti la'o zoi sumti_2 zoi_20150706UTC
 // sumti_4 //////// _galfi lo cmene zoizoi sumti_3 zoi i galfi zoizoi sumti_5 zoi zoizoi sumti_4 zoi_20150706UTC
 // sumti_3 //////// _cipra curmi lo nu la gek lidne no gik_20150713UTC
-sumti_3 = expr:(KE_clause free* sumti KEhE_elidible free* / sumti_4 / gek sumti (gik sumti)* GIhI_elidible) {return _node("sumti_3", expr);}
+// sumti_3 //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC
+sumti_3 = expr:(KE_clause free* sumti KEhE_elidible free* / sumti_4 / gek sumti (gik sumti)+ GIhI_elidible) {return _node("sumti_3", expr);}
 
 // sumti_5 //////// _galfi lo cmene zoizoi sumti_4 zoi i galfi zoizoi sumti_6 zoi zoizoi sumti_5 zoi_20150706UTC
 sumti_4 = expr:(quantifier? sumti_5 relative_clauses? / quantifier selbri KU_elidible free* relative_clauses?) {return _node("sumti_4", expr);}
@@ -390,7 +394,8 @@ tanru_unit_1 = expr:(tanru_unit_2 linkargs?) {return _node("tanru_unit_1", expr)
 // tanru_unit_2 //////// _cipra curmi lo nu ma'oi ME lidne la mex jonai la tag_20150713UTC
 // tanru_unit_2 //////// _galfi zoizoi SE_clause free* zoi zoizoi (FA_clause free* (joik FA_clause free*)* / SE_clause free*) zoi_20150715UTC
 // tanru_unit_2 //////// _galfi zoizoi (gik selbri_2)* GIhI_elidible zoi zoizoi (gik selbri_2)* !term GIhI_elidible zoi tezu'e tu'a lu (CU [ge {broda VAU} {<gi (¹brode [ra VAU]¹)> <gi (¹brodi VAU¹)>} GIhI VAU]) li'u je ku'i lu (CU [ge broda {<gi brode> <gi brodi>} GIhI] VAU) li'u_20150718UTC 
-tanru_unit_2 = expr:(CMEVLA_clause free* / BRIVLA_clause free* / GOhA_clause RAhO_clause? free* / KE_clause free* selbri_2 KEhE_elidible free* / NAhE_clause? free* gek selbri_2 (gik selbri_2)* !term GIhI_elidible / GOhOI_clause free* / ME_clause free* (sumti / operator+ / mex / tag) MEhU_elidible free* MOI_clause? free* / mex MOI_clause free* / (FA_clause free* (joik FA_clause free*)* / SE_clause free*) tanru_unit_2 / JAI_clause free* tag? tanru_unit_2 / NAhE_clause free* tanru_unit_2 / NU_clause NAI_clause? free* (joik NU_clause NAI_clause? free*)* statement KEI_elidible free*) {return _node("tanru_unit_2", expr); }
+// tanru_unit_2 //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC
+tanru_unit_2 = expr:(CMEVLA_clause free* / BRIVLA_clause free* / GOhA_clause RAhO_clause? free* / KE_clause free* selbri_2 KEhE_elidible free* / NAhE_clause? free* gek selbri_2 (gik selbri_2)+ !term GIhI_elidible / GOhOI_clause free* / ME_clause free* (sumti / operator+ / mex / tag) MEhU_elidible free* MOI_clause? free* / mex MOI_clause free* / (FA_clause free* (joik FA_clause free*)* / SE_clause free*) tanru_unit_2 / JAI_clause free* tag? tanru_unit_2 / NAhE_clause free* tanru_unit_2 / NU_clause NAI_clause? free* (joik NU_clause NAI_clause? free*)* statement KEI_elidible free*) {return _node("tanru_unit_2", expr); }
 
 linkargs = expr:(BE_clause free* term links? BEhO_elidible free*)  {return _node("linkargs", expr);}
 
@@ -890,7 +895,7 @@ JAI_pre = pre_clause JAI spaces?
 JAI_post = post_clause
 
 //         flags an array operand 
-// JOhI_clause = pre:JOhI_pre post:JOhI_post {return _node2("JOhI_clause", pre, post); }_20150712UTCzo jo'i gau cmavo ma'oi VUhU i vimcu ma'oi JOhI_20150712UTC_
+// JOhI_clause = pre:JOhI_pre post:JOhI_post {return _node2("JOhI_clause", pre, post); }_zo jo'i gau cmavo ma'oi VUhU i vimcu ma'oi JOhI_20150712UTC
 // JOhI_pre = pre_clause JOhI spaces?_20150712UTC
 // JOhI_post = post_clause_20150712UTC
 
