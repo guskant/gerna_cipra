@@ -551,8 +551,10 @@ zantufa-0.3.js.peg:1702://JOhI = &cmavo expr:( j o h i ) &post_word {return ["JO
 zantufa-0.3.js.peg:1760:// ME //////// _+nu'a ki'u lo nu vimcu ma'oi NUhA_20150710UTC_
 zantufa-0.3.js.peg:1787:// NUhA = &cmavo expr:( n u h a ) &post_word {return ["NUhA", _join(expr)];} //////// _vimcu .i ma'oi ME basti i zo nu'a gau cmavo ma'oi ME_20150710UTC_
 zantufa-0.3.js.peg:1845:// VUhU //////// _+jo'i_20150712UTC_
-zantufa-0.9999.js.peg:178:// gek_statement //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC_
-zantufa-0.9999.js.peg:217:// gek_bridi_tail //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC_
-zantufa-0.9999.js.peg:284:// gek_term //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC_
-zantufa-0.9999.js.peg:317:// sumti_3 //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC_
-zantufa-0.9999.js.peg:397:// tanru_unit_2 //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC_
+zantufa-0.3.js.peg:178:// gek_statement //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC_
+zantufa-0.3.js.peg:217:// gek_bridi_tail //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC_
+zantufa-0.3.js.peg:284:// gek_term //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC_
+zantufa-0.3.js.peg:317:// sumti_3 //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC_
+zantufa-0.3.js.peg:397:// tanru_unit_2 //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC_
+------------------ mulno fa la zantufa_0.3 ------------------
+zantufa-0.9999.js.peg:360:// relative_clause //////// _galfi zoizoi statement zoi zoizoi sentence zoi mu'i lo nu na'e sarcu fa tu'a zo zo'u_20150720UTC_
