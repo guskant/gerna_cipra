@@ -557,20 +557,38 @@ zantufa-0.3.js.peg:284:// gek_term //////// _co'u cipra curmi lo nu la gek lidne
 zantufa-0.3.js.peg:317:// sumti_3 //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC_
 zantufa-0.3.js.peg:397:// tanru_unit_2 //////// _co'u cipra curmi lo nu la gek lidne no gik_20150718UTC_
 ------------------ mulno fa la zantufa_0.3 ------------------
-zantufa-0.9999.js.peg:233:// terms //////// _ki'u lo nu cipra tu'a zoizoi ke term+ ke'e zoi je zoizoi ga term+ gi term+ zoi vu'o pe la term kei cipra galfi fi term+ iva'i vimcu zoizoi KE_clause free* term term+ KEhE_elidible free* zoi_20150723UTC_
-zantufa-0.9999.js.peg:272:// term_2 //////// _cipra curmi tu'a zoizoi term+ zoi_20150723UTC_
-zantufa-0.9999.js.peg:273:// term_2 //////// _jmina zoizoi XOI_clause free* statement SEhU_elidible free* / zoi_20150723UTC_
-zantufa-0.9999.js.peg:290:// gek_term //////// _cipra curmi tu'a zoizoi term+ zoi_20150723UTC_
-zantufa-0.9999.js.peg:360:// relative_clause //////// _galfi zoizoi statement zoi zoizoi sentence zoi mu'i lo nu na'e sarcu fa tu'a zo zo'u_20150720UTC_
-zantufa-0.9999.js.peg:361:// relative_clause //////// _cipra xruti seva'u tu'a zo noi_20150723UTC_
-zantufa-0.9999.js.peg:567:// free //////// _galfi zoizoi SEI_clause free* terms? CU_elidible free* selbri SEhU_elidible zoi zoizoi SEI_clause free* statement SEhU_elidible zoi_20150723UTC_
-zantufa-0.9999.js.peg:568:// free //////// _vimcu zoizoi SOI_clause free* sumti sumti? SEhU_elidible / zoi_20150723UTC_
-zantufa-0.9999.js.peg:1176:// SOI_clause = pre:SOI_pre post:SOI_post {return _node2("SOI_clause", pre, post); } //////// _vimcu_20150723UTC_
-zantufa-0.9999.js.peg:1177:// SOI_pre = pre_clause SOI spaces? //////// _vimcu_20150723UTC_
-zantufa-0.9999.js.peg:1178:// SOI_post = post_clause //////// _vimcu_20150723UTC_
-zantufa-0.9999.js.peg:1274:// //////// _jmina la bridi ra'abri tcita: XOI_clause, XOI_pre, XOI_post_20150723UTC_
-zantufa-0.9999.js.peg:1334:// CMAVO //////// _+XOI -SOI_20150723UTC_
-zantufa-0.9999.js.peg:1802:// NIhO //////// _cipra jmina: +iau +i'au_20150723UTC_
-zantufa-0.9999.js.peg:1832:// SEI //////// _+soi_20150723UTC_
-zantufa-0.9999.js.peg:1839:// SOI = &cmavo expr:( s o i ) &post_word {return ["SOI", _join(expr)];} //////// _vimcu_20150723UTC_
-zantufa-0.9999.js.peg:1879:// //////// _jmina la bridi ra'abri: XOI_20150723UTC_
+zantufa-0.4.js.peg:233:// terms //////// _ki'u lo nu cipra tu'a zoizoi ke term+ ke'e zoi je zoizoi ga term+ gi term+ zoi vu'o pe la term kei cipra galfi fi term+ iva'i vimcu zoizoi KE_clause free* term term+ KEhE_elidible free* zoi_20150723UTC_
+zantufa-0.4.js.peg:272:// term_2 //////// _cipra curmi tu'a zoizoi term+ zoi_20150723UTC_
+zantufa-0.4.js.peg:273:// term_2 //////// _jmina zoizoi XOI_clause free* statement SEhU_elidible free* / zoi_20150723UTC_
+zantufa-0.4.js.peg:290:// gek_term //////// _cipra curmi tu'a zoizoi term+ zoi_20150723UTC_
+zantufa-0.4.js.peg:360:// relative_clause //////// _galfi zoizoi statement zoi zoizoi sentence zoi mu'i lo nu na'e sarcu fa tu'a zo zo'u_20150720UTC_
+zantufa-0.4.js.peg:361:// relative_clause //////// _cipra xruti seva'u tu'a zo noi_20150723UTC_
+zantufa-0.4.js.peg:567:// free //////// _galfi zoizoi SEI_clause free* terms? CU_elidible free* selbri SEhU_elidible zoi zoizoi SEI_clause free* statement SEhU_elidible zoi_20150723UTC_
+zantufa-0.4.js.peg:568:// free //////// _vimcu zoizoi SOI_clause free* sumti sumti? SEhU_elidible / zoi_20150723UTC_
+zantufa-0.4.js.peg:1176:// SOI_clause = pre:SOI_pre post:SOI_post {return _node2("SOI_clause", pre, post); } //////// _vimcu_20150723UTC_
+zantufa-0.4.js.peg:1177:// SOI_pre = pre_clause SOI spaces? //////// _vimcu_20150723UTC_
+zantufa-0.4.js.peg:1178:// SOI_post = post_clause //////// _vimcu_20150723UTC_
+zantufa-0.4.js.peg:1274:// //////// _jmina la bridi ra'abri tcita: XOI_clause, XOI_pre, XOI_post_20150723UTC_
+zantufa-0.4.js.peg:1334:// CMAVO //////// _+XOI -SOI_20150723UTC_
+zantufa-0.4.js.peg:1802:// NIhO //////// _cipra jmina: +iau +i'au_20150723UTC_
+zantufa-0.4.js.peg:1832:// SEI //////// _+soi_20150723UTC_
+zantufa-0.4.js.peg:1839:// SOI = &cmavo expr:( s o i ) &post_word {return ["SOI", _join(expr)];} //////// _vimcu_20150723UTC_
+zantufa-0.4.js.peg:1879:// //////// _jmina la bridi ra'abri: XOI_20150723UTC_
+------------------ mulno fa la zantufa_0.4 ------------------
+maltufa-0.4.js.peg:135:// gek_statement //////// _maltufa: vimcu zoizoi + zoi la gik_20150723UTC_
+maltufa-0.4.js.peg:146:// subsentence //////// _maltufa: xruti la'o zoi subsentence zoi_20150723UTC_
+maltufa-0.4.js.peg:152:// gek_bridi_tail //////// _maltufa: vimcu zoizoi + zoi la gik_20150723UTC_
+maltufa-0.4.js.peg:161:// term_2 //////// _maltufa: xruti la'o zoi subsentence zoi (XOI)_20150723UTC_
+maltufa-0.4.js.peg:165:// gek_term //////// _maltufa: vimcu zoizoi + zoi la gik_20150723UTC_
+maltufa-0.4.js.peg:172:// sumti_3 //////// _maltufa: vimcu zoizoi + zoi la gik_20150723UTC_
+maltufa-0.4.js.peg:175:// sumti_5 //////// _maltufa: xruti la'o zoi subsentence zoi (LOhOI)_20150723UTC_
+maltufa-0.4.js.peg:181:// relative_clause //////// _maltufa: xruti la'o zoi subsentence zoi_20150723UTC_
+maltufa-0.4.js.peg:192:// tanru_unit_2 //////// _maltufa: vimcu zoizoi + zoi la gik_20150723UTC_
+maltufa-0.4.js.peg:193:// tanru_unit_2 //////// _maltufa: xruti la'o zoi subsentence zoi_20150723UTC_
+maltufa-0.4.js.peg:230:// free //////// _maltufa: xruti tu'a la'o zoi SEI zoi_20150723UTC_
+maltufa-0.4.js.peg:231:// free //////// _maltufa: jmina zoizoi SOI_clause free* subsentence SEhU_elidible / zoi_20150723UTC_
+maltufa-0.4.js.peg:668:// SOI_clause //////// _maltufa: xruti zoizoi SOI_clause zoi_20150723UTC_
+maltufa-0.4.js.peg:780:// CMAVO //////// _maltufa: xruti ma'oi SOI_20150723UTC_
+maltufa-0.4.js.peg:1033:// SEI //////// _maltufa: xruti ma'oi SOI_20150723UTC_
+maltufa-0.4.js.peg:1037:// SOI //////// _maltufa: xruti ma'oi SOI_20150723UTC_
+------------------ mulno fa la maltufa_0.4 ------------------
