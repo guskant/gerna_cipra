@@ -592,3 +592,12 @@ maltufa-0.4.js.peg:780:// CMAVO //////// _maltufa: xruti ma'oi SOI_20150723UTC_
 maltufa-0.4.js.peg:1033:// SEI //////// _maltufa: xruti ma'oi SOI_20150723UTC_
 maltufa-0.4.js.peg:1037:// SOI //////// _maltufa: xruti ma'oi SOI_20150723UTC_
 ------------------ mulno fa la maltufa_0.4 ------------------
+zantufa-0.41.js.peg:161:// paragraph //////// _galfi zoizoi statement zoi zoizoi statement_terms zoi_20150726UTC_
+zantufa-0.41.js.peg:164:// //////// _jmina zoizoi statement_terms zoi_20150726UTC_
+zantufa-0.41.js.peg:633:// //////// _jmina zoizoi IhAU_elidible zoi_20150726UTC_
+zantufa-0.41.js.peg:902:// //////// _jmina zoizoi IhAU_clause zoi noi jufra famyma'o_20150726UTC_
+zantufa-0.41.js.peg:1345:// CMAVO //////// _+IhAU_20150726UTC_
+zantufa-0.41.js.peg:1730:// //////// _jmina ma'oi IhAU_20150726UTC_
+zantufa-0.41.js.peg:1817:// NIhO //////// _finti ma'oi IhAU ija'ebo vimcu zo iau je zo i'au ti_20150726UTC_
+------------------ mulno fa la zantufa_0.41 ------------------
+------------------ mulno fa la maltufa_0.41 ------------------

@@ -158,7 +158,11 @@ paragraphs = expr:((NIhO_clause+ free* paragraph?)+ / paragraph (NIhO_clause+ fr
 
 // paragraph //////// _vimcu zo jek_20150703UTC
 // paragraph //////// _vimcu zoizoi !joik zoi tezu'e lo nu la joik cu fragment_20150705UTC
-paragraph = expr:((I_clause free* (statement / fragment)?)+ / (statement / fragment) (I_clause free* (statement / fragment)?)*) {return _node("paragraph", expr);}
+// paragraph //////// _galfi zoizoi statement zoi zoizoi statement_terms zoi_20150726UTC
+paragraph = expr:((I_clause free* (statement_terms / fragment)?)+ / (statement_terms / fragment) (I_clause free* (statement_terms / fragment)?)*) {return _node("paragraph", expr);}
+
+// //////// _jmina zoizoi statement_terms zoi_20150726UTC
+statement_terms = expr:(statement IhAU_elidible free* terms? free*) {return _node("statement_terms", expr);}
 
 statement = expr:(statement_1 / prenex statement) {return _node("statement", expr);}
 
@@ -626,6 +630,8 @@ FEhU_elidible = expr:(FEhU_clause?) {return (expr == "") ? ["FEhU"] : _node("FEh
 GEhU_elidible = expr:(GEhU_clause?) {return (expr == "") ? ["GEhU"] : _node("GEhU", expr);}
 // //////// _jmina la'o zoi GIhI_elidible zoi_20150706UTC
 GIhI_elidible = expr:(GIhI_clause?) {return (expr == "") ? ["GIhI"] : _node("GIhI", expr);}
+// //////// _jmina zoizoi IhAU_elidible zoi_20150726UTC
+IhAU_elidible = expr:(IhAU_clause?)   {return (expr == "") ? ["IhAU"]  : _node("IhAU", expr);}
 KEI_elidible = expr:(KEI_clause?)   {return (expr == "") ? ["KEI"]  : _node("KEI", expr);}
 KEhE_elidible = expr:(KEhE_clause?) {return (expr == "") ? ["KEhE"] : _node("KEhE", expr);}
 KU_elidible = expr:(KU_clause?)     {return (expr == "") ? ["KU"]   : _node("KU", expr);}
@@ -893,6 +899,10 @@ I_clause = expr:(I_pre I_post) {return _node("I_clause", expr); }
 I_pre = pre_clause I spaces?
 I_post = post_clause
 
+// //////// _jmina zoizoi IhAU_clause zoi noi jufra famyma'o_20150726UTC
+IhAU_clause = pre:IhAU_pre post:IhAU_post {return _node2("IhAU_clause", pre, post); }
+IhAU_pre = pre_clause IhAU spaces?
+IhAU_post = post_clause
 
 //         jeks; logical connectives within tanru 
 // JA_clause = pre:JA_pre post:JA_post {return _node2("JA_clause", pre, post); } //////// _vimcu_20150703UTC
@@ -1332,7 +1342,8 @@ gismu_2 = expr:(gismu) {return ["gismu", expr];}
 // CMAVO //////// _vimcu zo NUhA .i ma'oi ME basti_20150710UTC
 // CMAVO //////// _zo jo'i gau cmavo ma'oi VUhU i vimcu ma'oi JOhI_20150712UTC
 // CMAVO //////// _+XOI -SOI_20150723UTC
-CMAVO = expr:(A / BAI / BAhE / BE / BEI / BEhO / BIhE / BIhI / BO / BOI / BU / BY / CAhA / CAI / CEI / CO / COI / CU / CUhE / DAhO / DOI / DOhU / FA / FAhA / FAhO / FEhE / FEhU / FIhO / FOI / FUhA / FUhE / FUhO / GA / GAhO / GEhU / GI / GIhA / GIhI / GOI / GOhA / GOhOI / I / JAI / JOI / KE / KEhE / KEI / KI / KOhA / KU / KUhAU / KUhE / KUhO / LAU / LAhE / LEhAI / LE / LEhU / LI / LIhU / LOhAI / LOhO / LOhOI / LOhU / LU / LUhU / MAhO / MAI / ME / MEhU / MOhE / MOhI / MOI / NA / NAI / NAhE / NAhU / NIhE / NIhO / NOI / NU / PA / PEhO / PU / RAhOI / RAhO / ROI / SE / SEI / SEhU / SI / SU / TAhE / TEhU / TEI / TO / TOI / TUhE / TUhU / UI / VA / VAU / VEI / VEhO / VUhU / VEhA / VIhA / VUhO / XI / XOI / ZAhO / ZEhA / ZI / ZO / ZOI / ZOhU / cmavo) {return ["CMAVO", expr];}
+// CMAVO //////// _+IhAU_20150726UTC
+CMAVO = expr:(A / BAI / BAhE / BE / BEI / BEhO / BIhE / BIhI / BO / BOI / BU / BY / CAhA / CAI / CEI / CO / COI / CU / CUhE / DAhO / DOI / DOhU / FA / FAhA / FAhO / FEhE / FEhU / FIhO / FOI / FUhA / FUhE / FUhO / GA / GAhO / GEhU / GI / GIhA / GIhI / GOI / GOhA / GOhOI / I / IhAU / JAI / JOI / KE / KEhE / KEI / KI / KOhA / KU / KUhAU / KUhE / KUhO / LAU / LAhE / LEhAI / LE / LEhU / LI / LIhU / LOhAI / LOhO / LOhOI / LOhU / LU / LUhU / MAhO / MAI / ME / MEhU / MOhE / MOhI / MOI / NA / NAI / NAhE / NAhU / NIhE / NIhO / NOI / NU / PA / PEhO / PU / RAhOI / RAhO / ROI / SE / SEI / SEhU / SI / SU / TAhE / TEhU / TEI / TO / TOI / TUhE / TUhU / UI / VA / VAU / VEI / VEhO / VUhU / VEhA / VIhA / VUhO / XI / XOI / ZAhO / ZEhA / ZI / ZO / ZOI / ZOhU / cmavo) {return ["CMAVO", expr];}
 
 // This is a Parsing Expression Grammar for the morphology of Lojban.
 // See http://www.pdos.lcs.mit.edu/~baford/packrat/
@@ -1716,6 +1727,9 @@ GOhOI = &cmavo expr:( z e h o i / t a h a i / g o h o i ) &post_word {return ["G
 
 I = &cmavo expr:( i ) &post_word {return ["I", _join(expr)];}
 
+// //////// _jmina ma'oi IhAU_20150726UTC
+IhAU = &cmavo expr:( i h a u / i a u ) &post_word {return ["IhAU", _join(expr)];}
+
 // JA = &cmavo expr:( j e h i / j e / j o / j a / j u ) &post_word { return ["JA", _join(expr)];} //////// _muvdu ma'oi JOI_20150703UTC
 
 JAI = &cmavo expr:( j a h e i / j a i ) &post_word {return ["JAI", _join(expr)];}
@@ -1800,7 +1814,8 @@ NAhU = &cmavo expr:( n a h u ) &post_word {return ["NAhU", _join(expr)];}
 NIhE = &cmavo expr:( n i h e ) &post_word {return ["NIhE", _join(expr)];}
 
 // NIhO //////// _cipra jmina: +iau +i'au_20150723UTC
-NIhO = &cmavo expr:( n i h o / n o h i / i h a u / i a u ) &post_word {return ["NIhO", _join(expr)];}
+// NIhO //////// _finti ma'oi IhAU ija'ebo vimcu zo iau je zo i'au ti_20150726UTC
+NIhO = &cmavo expr:( n i h o / n o h i ) &post_word {return ["NIhO", _join(expr)];}
 
 NOI = &cmavo expr:( v o i h i / v o i / n o i / p o i ) &post_word {return ["NOI", _join(expr)];}
 
