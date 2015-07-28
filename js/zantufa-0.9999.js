@@ -120,13 +120,14 @@ var camxes = (function(){
         "free": parse_free,
         "xi_clause": parse_xi_clause,
         "vocative": parse_vocative,
-        "indicators": parse_indicators,
-        "indicator": parse_indicator,
         "bu_clause": parse_bu_clause,
         "bu_clause_no_pre": parse_bu_clause_no_pre,
         "bu_tail": parse_bu_tail,
         "dot_star": parse_dot_star,
         "post_clause": parse_post_clause,
+        "number_post_clause": parse_number_post_clause,
+        "lerfu_post_clause": parse_lerfu_post_clause,
+        "vocative_post_clause": parse_vocative_post_clause,
         "pre_clause": parse_pre_clause,
         "su_clause": parse_su_clause,
         "si_clause": parse_si_clause,
@@ -205,8 +206,6 @@ var camxes = (function(){
         "CUhE_pre": parse_CUhE_pre,
         "DAhO_clause": parse_DAhO_clause,
         "DAhO_pre": parse_DAhO_pre,
-        "DOI_clause": parse_DOI_clause,
-        "DOI_pre": parse_DOI_pre,
         "DOhU_clause": parse_DOhU_clause,
         "DOhU_pre": parse_DOhU_pre,
         "FA_clause": parse_FA_clause,
@@ -531,7 +530,6 @@ var camxes = (function(){
         "CU": parse_CU,
         "CUhE": parse_CUhE,
         "DAhO": parse_DAhO,
-        "DOI": parse_DOI,
         "DOhU": parse_DOhU,
         "FA": parse_FA,
         "FAhA": parse_FAhA,
@@ -693,7 +691,7 @@ var camxes = (function(){
           return cachedResult.result;
         }
         
-        var result0, result1, result2, result3, result4, result5, result6, result7;
+        var result0, result1, result2, result3, result4, result5, result6;
         var pos0, pos1;
         
         pos0 = pos;
@@ -707,32 +705,25 @@ var camxes = (function(){
             result2 = parse_NAI_clause();
           }
           if (result1 !== null) {
-            result2 = parse_indicators();
-            result2 = result2 !== null ? result2 : "";
+            result2 = [];
+            result3 = parse_free();
+            while (result3 !== null) {
+              result2.push(result3);
+              result3 = parse_free();
+            }
             if (result2 !== null) {
-              result3 = [];
-              result4 = parse_free();
-              while (result4 !== null) {
-                result3.push(result4);
-                result4 = parse_free();
-              }
+              result3 = parse_paragraphs();
+              result3 = result3 !== null ? result3 : "";
               if (result3 !== null) {
-                result4 = parse_paragraphs();
+                result4 = parse_si_clause();
                 result4 = result4 !== null ? result4 : "";
                 if (result4 !== null) {
-                  result5 = parse_si_clause();
-                  result5 = result5 !== null ? result5 : "";
+                  result5 = parse_faho_clause();
                   if (result5 !== null) {
-                    result6 = parse_faho_clause();
+                    result6 = parse_EOF();
+                    result6 = result6 !== null ? result6 : "";
                     if (result6 !== null) {
-                      result7 = parse_EOF();
-                      result7 = result7 !== null ? result7 : "";
-                      if (result7 !== null) {
-                        result0 = [result0, result1, result2, result3, result4, result5, result6, result7];
-                      } else {
-                        result0 = null;
-                        pos = pos1;
-                      }
+                      result0 = [result0, result1, result2, result3, result4, result5, result6];
                     } else {
                       result0 = null;
                       pos = pos1;
@@ -10132,7 +10123,7 @@ var camxes = (function(){
         }
         
         var result0, result1, result2, result3, result4;
-        var pos0, pos1;
+        var pos0, pos1, pos2, pos3;
         
         pos0 = pos;
         pos1 = pos;
@@ -10263,6 +10254,122 @@ var camxes = (function(){
                   result0 = parse_xi_clause();
                   if (result0 === null) {
                     result0 = parse_LOhAI_clause();
+                    if (result0 === null) {
+                      pos1 = pos;
+                      result0 = parse_FUhE_clause();
+                      result0 = result0 !== null ? result0 : "";
+                      if (result0 !== null) {
+                        pos2 = pos;
+                        pos3 = pos;
+                        result2 = parse_UI_clause();
+                        if (result2 === null) {
+                          result2 = parse_CAI_clause();
+                        }
+                        if (result2 !== null) {
+                          result3 = parse_NAI_clause();
+                          result3 = result3 !== null ? result3 : "";
+                          if (result3 !== null) {
+                            result2 = [result2, result3];
+                          } else {
+                            result2 = null;
+                            pos = pos3;
+                          }
+                        } else {
+                          result2 = null;
+                          pos = pos3;
+                        }
+                        if (result2 === null) {
+                          result2 = parse_DAhO_clause();
+                          if (result2 === null) {
+                            result2 = parse_FUhO_clause();
+                          }
+                        }
+                        if (result2 !== null) {
+                          pos3 = pos;
+                          reportFailures++;
+                          result3 = parse_BU_clause();
+                          reportFailures--;
+                          if (result3 === null) {
+                            result3 = "";
+                          } else {
+                            result3 = null;
+                            pos = pos3;
+                          }
+                          if (result3 !== null) {
+                            result2 = [result2, result3];
+                          } else {
+                            result2 = null;
+                            pos = pos2;
+                          }
+                        } else {
+                          result2 = null;
+                          pos = pos2;
+                        }
+                        if (result2 !== null) {
+                          result1 = [];
+                          while (result2 !== null) {
+                            result1.push(result2);
+                            pos2 = pos;
+                            pos3 = pos;
+                            result2 = parse_UI_clause();
+                            if (result2 === null) {
+                              result2 = parse_CAI_clause();
+                            }
+                            if (result2 !== null) {
+                              result3 = parse_NAI_clause();
+                              result3 = result3 !== null ? result3 : "";
+                              if (result3 !== null) {
+                                result2 = [result2, result3];
+                              } else {
+                                result2 = null;
+                                pos = pos3;
+                              }
+                            } else {
+                              result2 = null;
+                              pos = pos3;
+                            }
+                            if (result2 === null) {
+                              result2 = parse_DAhO_clause();
+                              if (result2 === null) {
+                                result2 = parse_FUhO_clause();
+                              }
+                            }
+                            if (result2 !== null) {
+                              pos3 = pos;
+                              reportFailures++;
+                              result3 = parse_BU_clause();
+                              reportFailures--;
+                              if (result3 === null) {
+                                result3 = "";
+                              } else {
+                                result3 = null;
+                                pos = pos3;
+                              }
+                              if (result3 !== null) {
+                                result2 = [result2, result3];
+                              } else {
+                                result2 = null;
+                                pos = pos2;
+                              }
+                            } else {
+                              result2 = null;
+                              pos = pos2;
+                            }
+                          }
+                        } else {
+                          result1 = null;
+                        }
+                        if (result1 !== null) {
+                          result0 = [result0, result1];
+                        } else {
+                          result0 = null;
+                          pos = pos1;
+                        }
+                      } else {
+                        result0 = null;
+                        pos = pos1;
+                      }
+                    }
                   }
                 }
               }
@@ -10342,12 +10449,11 @@ var camxes = (function(){
           return cachedResult.result;
         }
         
-        var result0, result1, result2, result3;
-        var pos0, pos1, pos2;
+        var result0, result1, result2;
+        var pos0, pos1;
         
         pos0 = pos;
         pos1 = pos;
-        pos2 = pos;
         result1 = parse_COI_clause();
         if (result1 !== null) {
           result2 = parse_NAI_clause();
@@ -10356,17 +10462,17 @@ var camxes = (function(){
             result1 = [result1, result2];
           } else {
             result1 = null;
-            pos = pos2;
+            pos = pos1;
           }
         } else {
           result1 = null;
-          pos = pos2;
+          pos = pos1;
         }
         if (result1 !== null) {
           result0 = [];
           while (result1 !== null) {
             result0.push(result1);
-            pos2 = pos;
+            pos1 = pos;
             result1 = parse_COI_clause();
             if (result1 !== null) {
               result2 = parse_NAI_clause();
@@ -10375,218 +10481,18 @@ var camxes = (function(){
                 result1 = [result1, result2];
               } else {
                 result1 = null;
-                pos = pos2;
+                pos = pos1;
               }
             } else {
               result1 = null;
-              pos = pos2;
-            }
-          }
-        } else {
-          result0 = null;
-        }
-        if (result0 !== null) {
-          result1 = parse_DOI_clause();
-          if (result1 !== null) {
-            result0 = [result0, result1];
-          } else {
-            result0 = null;
-            pos = pos1;
-          }
-        } else {
-          result0 = null;
-          pos = pos1;
-        }
-        if (result0 === null) {
-          pos1 = pos;
-          pos2 = pos;
-          result0 = parse_COI_clause();
-          if (result0 !== null) {
-            result1 = parse_NAI_clause();
-            result1 = result1 !== null ? result1 : "";
-            if (result1 !== null) {
-              result0 = [result0, result1];
-            } else {
-              result0 = null;
-              pos = pos2;
-            }
-          } else {
-            result0 = null;
-            pos = pos2;
-          }
-          if (result0 !== null) {
-            result1 = [];
-            pos2 = pos;
-            result2 = parse_COI_clause();
-            if (result2 !== null) {
-              result3 = parse_NAI_clause();
-              result3 = result3 !== null ? result3 : "";
-              if (result3 !== null) {
-                result2 = [result2, result3];
-              } else {
-                result2 = null;
-                pos = pos2;
-              }
-            } else {
-              result2 = null;
-              pos = pos2;
-            }
-            while (result2 !== null) {
-              result1.push(result2);
-              pos2 = pos;
-              result2 = parse_COI_clause();
-              if (result2 !== null) {
-                result3 = parse_NAI_clause();
-                result3 = result3 !== null ? result3 : "";
-                if (result3 !== null) {
-                  result2 = [result2, result3];
-                } else {
-                  result2 = null;
-                  pos = pos2;
-                }
-              } else {
-                result2 = null;
-                pos = pos2;
-              }
-            }
-            if (result1 !== null) {
-              result0 = [result0, result1];
-            } else {
-              result0 = null;
               pos = pos1;
             }
-          } else {
-            result0 = null;
-            pos = pos1;
           }
-          if (result0 === null) {
-            result0 = parse_DOI_clause();
-          }
+        } else {
+          result0 = null;
         }
         if (result0 !== null) {
           result0 = (function(offset, expr) {return _node("vocative", expr); })(pos0, result0);
-        }
-        if (result0 === null) {
-          pos = pos0;
-        }
-        
-        cache[cacheKey] = {
-          nextPos: pos,
-          result:  result0
-        };
-        return result0;
-      }
-      
-      function parse_indicators() {
-        var cacheKey = "indicators@" + pos;
-        var cachedResult = cache[cacheKey];
-        if (cachedResult) {
-          pos = cachedResult.nextPos;
-          return cachedResult.result;
-        }
-        
-        var result0, result1, result2;
-        var pos0, pos1;
-        
-        pos0 = pos;
-        pos1 = pos;
-        result0 = parse_FUhE_clause();
-        result0 = result0 !== null ? result0 : "";
-        if (result0 !== null) {
-          result2 = parse_indicator();
-          if (result2 !== null) {
-            result1 = [];
-            while (result2 !== null) {
-              result1.push(result2);
-              result2 = parse_indicator();
-            }
-          } else {
-            result1 = null;
-          }
-          if (result1 !== null) {
-            result0 = [result0, result1];
-          } else {
-            result0 = null;
-            pos = pos1;
-          }
-        } else {
-          result0 = null;
-          pos = pos1;
-        }
-        if (result0 !== null) {
-          result0 = (function(offset, expr) {return _node("indicators", expr); })(pos0, result0);
-        }
-        if (result0 === null) {
-          pos = pos0;
-        }
-        
-        cache[cacheKey] = {
-          nextPos: pos,
-          result:  result0
-        };
-        return result0;
-      }
-      
-      function parse_indicator() {
-        var cacheKey = "indicator@" + pos;
-        var cachedResult = cache[cacheKey];
-        if (cachedResult) {
-          pos = cachedResult.nextPos;
-          return cachedResult.result;
-        }
-        
-        var result0, result1;
-        var pos0, pos1, pos2;
-        
-        pos0 = pos;
-        pos1 = pos;
-        pos2 = pos;
-        result0 = parse_UI_clause();
-        if (result0 === null) {
-          result0 = parse_CAI_clause();
-        }
-        if (result0 !== null) {
-          result1 = parse_NAI_clause();
-          result1 = result1 !== null ? result1 : "";
-          if (result1 !== null) {
-            result0 = [result0, result1];
-          } else {
-            result0 = null;
-            pos = pos2;
-          }
-        } else {
-          result0 = null;
-          pos = pos2;
-        }
-        if (result0 === null) {
-          result0 = parse_DAhO_clause();
-          if (result0 === null) {
-            result0 = parse_FUhO_clause();
-          }
-        }
-        if (result0 !== null) {
-          pos2 = pos;
-          reportFailures++;
-          result1 = parse_BU_clause();
-          reportFailures--;
-          if (result1 === null) {
-            result1 = "";
-          } else {
-            result1 = null;
-            pos = pos2;
-          }
-          if (result1 !== null) {
-            result0 = [result0, result1];
-          } else {
-            result0 = null;
-            pos = pos1;
-          }
-        } else {
-          result0 = null;
-          pos = pos1;
-        }
-        if (result0 !== null) {
-          result0 = (function(offset, expr) {return _node("indicator", expr); })(pos0, result0);
         }
         if (result0 === null) {
           pos = pos0;
@@ -10682,7 +10588,7 @@ var camxes = (function(){
             result1 = null;
           }
           if (result1 !== null) {
-            result2 = parse_post_clause();
+            result2 = parse_lerfu_post_clause();
             if (result2 !== null) {
               result0 = [result0, result1, result2];
             } else {
@@ -10823,10 +10729,10 @@ var camxes = (function(){
           }
           if (result1 !== null) {
             result2 = [];
-            result3 = parse_indicators();
+            result3 = parse_free();
             while (result3 !== null) {
               result2.push(result3);
-              result3 = parse_indicators();
+              result3 = parse_free();
             }
             if (result2 !== null) {
               result0 = [result0, result1, result2];
@@ -10844,6 +10750,321 @@ var camxes = (function(){
         }
         if (result0 !== null) {
           result0 = (function(offset, expr) {return _node_nonempty("post_clause", expr); })(pos0, result0);
+        }
+        if (result0 === null) {
+          pos = pos0;
+        }
+        
+        cache[cacheKey] = {
+          nextPos: pos,
+          result:  result0
+        };
+        return result0;
+      }
+      
+      function parse_number_post_clause() {
+        var cacheKey = "number_post_clause@" + pos;
+        var cachedResult = cache[cacheKey];
+        if (cachedResult) {
+          pos = cachedResult.nextPos;
+          return cachedResult.result;
+        }
+        
+        var result0, result1, result2, result3, result4;
+        var pos0, pos1, pos2, pos3;
+        
+        pos0 = pos;
+        pos1 = pos;
+        result0 = parse_spaces();
+        result0 = result0 !== null ? result0 : "";
+        if (result0 !== null) {
+          pos2 = pos;
+          reportFailures++;
+          result1 = parse_BU_clause();
+          reportFailures--;
+          if (result1 === null) {
+            result1 = "";
+          } else {
+            result1 = null;
+            pos = pos2;
+          }
+          if (result1 !== null) {
+            result2 = [];
+            pos2 = pos;
+            pos3 = pos;
+            reportFailures++;
+            result3 = parse_number();
+            reportFailures--;
+            if (result3 === null) {
+              result3 = "";
+            } else {
+              result3 = null;
+              pos = pos3;
+            }
+            if (result3 !== null) {
+              result4 = parse_free();
+              if (result4 !== null) {
+                result3 = [result3, result4];
+              } else {
+                result3 = null;
+                pos = pos2;
+              }
+            } else {
+              result3 = null;
+              pos = pos2;
+            }
+            while (result3 !== null) {
+              result2.push(result3);
+              pos2 = pos;
+              pos3 = pos;
+              reportFailures++;
+              result3 = parse_number();
+              reportFailures--;
+              if (result3 === null) {
+                result3 = "";
+              } else {
+                result3 = null;
+                pos = pos3;
+              }
+              if (result3 !== null) {
+                result4 = parse_free();
+                if (result4 !== null) {
+                  result3 = [result3, result4];
+                } else {
+                  result3 = null;
+                  pos = pos2;
+                }
+              } else {
+                result3 = null;
+                pos = pos2;
+              }
+            }
+            if (result2 !== null) {
+              result0 = [result0, result1, result2];
+            } else {
+              result0 = null;
+              pos = pos1;
+            }
+          } else {
+            result0 = null;
+            pos = pos1;
+          }
+        } else {
+          result0 = null;
+          pos = pos1;
+        }
+        if (result0 !== null) {
+          result0 = (function(offset, expr) {return _node_nonempty("number_post_clause", expr); })(pos0, result0);
+        }
+        if (result0 === null) {
+          pos = pos0;
+        }
+        
+        cache[cacheKey] = {
+          nextPos: pos,
+          result:  result0
+        };
+        return result0;
+      }
+      
+      function parse_lerfu_post_clause() {
+        var cacheKey = "lerfu_post_clause@" + pos;
+        var cachedResult = cache[cacheKey];
+        if (cachedResult) {
+          pos = cachedResult.nextPos;
+          return cachedResult.result;
+        }
+        
+        var result0, result1, result2, result3, result4;
+        var pos0, pos1, pos2, pos3;
+        
+        pos0 = pos;
+        pos1 = pos;
+        result0 = parse_spaces();
+        result0 = result0 !== null ? result0 : "";
+        if (result0 !== null) {
+          pos2 = pos;
+          reportFailures++;
+          result1 = parse_BU_clause();
+          reportFailures--;
+          if (result1 === null) {
+            result1 = "";
+          } else {
+            result1 = null;
+            pos = pos2;
+          }
+          if (result1 !== null) {
+            result2 = [];
+            pos2 = pos;
+            pos3 = pos;
+            reportFailures++;
+            result3 = parse_lerfu_string();
+            reportFailures--;
+            if (result3 === null) {
+              result3 = "";
+            } else {
+              result3 = null;
+              pos = pos3;
+            }
+            if (result3 !== null) {
+              result4 = parse_free();
+              if (result4 !== null) {
+                result3 = [result3, result4];
+              } else {
+                result3 = null;
+                pos = pos2;
+              }
+            } else {
+              result3 = null;
+              pos = pos2;
+            }
+            while (result3 !== null) {
+              result2.push(result3);
+              pos2 = pos;
+              pos3 = pos;
+              reportFailures++;
+              result3 = parse_lerfu_string();
+              reportFailures--;
+              if (result3 === null) {
+                result3 = "";
+              } else {
+                result3 = null;
+                pos = pos3;
+              }
+              if (result3 !== null) {
+                result4 = parse_free();
+                if (result4 !== null) {
+                  result3 = [result3, result4];
+                } else {
+                  result3 = null;
+                  pos = pos2;
+                }
+              } else {
+                result3 = null;
+                pos = pos2;
+              }
+            }
+            if (result2 !== null) {
+              result0 = [result0, result1, result2];
+            } else {
+              result0 = null;
+              pos = pos1;
+            }
+          } else {
+            result0 = null;
+            pos = pos1;
+          }
+        } else {
+          result0 = null;
+          pos = pos1;
+        }
+        if (result0 !== null) {
+          result0 = (function(offset, expr) {return _node_nonempty("lerfu_post_clause", expr); })(pos0, result0);
+        }
+        if (result0 === null) {
+          pos = pos0;
+        }
+        
+        cache[cacheKey] = {
+          nextPos: pos,
+          result:  result0
+        };
+        return result0;
+      }
+      
+      function parse_vocative_post_clause() {
+        var cacheKey = "vocative_post_clause@" + pos;
+        var cachedResult = cache[cacheKey];
+        if (cachedResult) {
+          pos = cachedResult.nextPos;
+          return cachedResult.result;
+        }
+        
+        var result0, result1, result2, result3, result4;
+        var pos0, pos1, pos2, pos3;
+        
+        pos0 = pos;
+        pos1 = pos;
+        result0 = parse_spaces();
+        result0 = result0 !== null ? result0 : "";
+        if (result0 !== null) {
+          pos2 = pos;
+          reportFailures++;
+          result1 = parse_BU_clause();
+          reportFailures--;
+          if (result1 === null) {
+            result1 = "";
+          } else {
+            result1 = null;
+            pos = pos2;
+          }
+          if (result1 !== null) {
+            result2 = [];
+            pos2 = pos;
+            pos3 = pos;
+            reportFailures++;
+            result3 = parse_vocative();
+            reportFailures--;
+            if (result3 === null) {
+              result3 = "";
+            } else {
+              result3 = null;
+              pos = pos3;
+            }
+            if (result3 !== null) {
+              result4 = parse_free();
+              if (result4 !== null) {
+                result3 = [result3, result4];
+              } else {
+                result3 = null;
+                pos = pos2;
+              }
+            } else {
+              result3 = null;
+              pos = pos2;
+            }
+            while (result3 !== null) {
+              result2.push(result3);
+              pos2 = pos;
+              pos3 = pos;
+              reportFailures++;
+              result3 = parse_vocative();
+              reportFailures--;
+              if (result3 === null) {
+                result3 = "";
+              } else {
+                result3 = null;
+                pos = pos3;
+              }
+              if (result3 !== null) {
+                result4 = parse_free();
+                if (result4 !== null) {
+                  result3 = [result3, result4];
+                } else {
+                  result3 = null;
+                  pos = pos2;
+                }
+              } else {
+                result3 = null;
+                pos = pos2;
+              }
+            }
+            if (result2 !== null) {
+              result0 = [result0, result1, result2];
+            } else {
+              result0 = null;
+              pos = pos1;
+            }
+          } else {
+            result0 = null;
+            pos = pos1;
+          }
+        } else {
+          result0 = null;
+          pos = pos1;
+        }
+        if (result0 !== null) {
+          result0 = (function(offset, expr) {return _node_nonempty("vocative_post_clause", expr); })(pos0, result0);
         }
         if (result0 === null) {
           pos = pos0;
@@ -13571,7 +13792,7 @@ var camxes = (function(){
         pos1 = pos;
         result0 = parse_BY_pre();
         if (result0 !== null) {
-          result1 = parse_post_clause();
+          result1 = parse_lerfu_post_clause();
           if (result1 !== null) {
             result0 = [result0, result1];
           } else {
@@ -13974,7 +14195,7 @@ var camxes = (function(){
         pos1 = pos;
         result0 = parse_COI_pre();
         if (result0 !== null) {
-          result1 = parse_post_clause();
+          result1 = parse_vocative_post_clause();
           if (result1 !== null) {
             result0 = [result0, result1];
           } else {
@@ -14254,86 +14475,6 @@ var camxes = (function(){
         result0 = parse_pre_clause();
         if (result0 !== null) {
           result1 = parse_DAhO();
-          if (result1 !== null) {
-            result2 = parse_spaces();
-            result2 = result2 !== null ? result2 : "";
-            if (result2 !== null) {
-              result0 = [result0, result1, result2];
-            } else {
-              result0 = null;
-              pos = pos0;
-            }
-          } else {
-            result0 = null;
-            pos = pos0;
-          }
-        } else {
-          result0 = null;
-          pos = pos0;
-        }
-        
-        cache[cacheKey] = {
-          nextPos: pos,
-          result:  result0
-        };
-        return result0;
-      }
-      
-      function parse_DOI_clause() {
-        var cacheKey = "DOI_clause@" + pos;
-        var cachedResult = cache[cacheKey];
-        if (cachedResult) {
-          pos = cachedResult.nextPos;
-          return cachedResult.result;
-        }
-        
-        var result0, result1;
-        var pos0, pos1;
-        
-        pos0 = pos;
-        pos1 = pos;
-        result0 = parse_DOI_pre();
-        if (result0 !== null) {
-          result1 = parse_post_clause();
-          if (result1 !== null) {
-            result0 = [result0, result1];
-          } else {
-            result0 = null;
-            pos = pos1;
-          }
-        } else {
-          result0 = null;
-          pos = pos1;
-        }
-        if (result0 !== null) {
-          result0 = (function(offset, pre, post) {return _node2("DOI_clause", pre, post); })(pos0, result0[0], result0[1]);
-        }
-        if (result0 === null) {
-          pos = pos0;
-        }
-        
-        cache[cacheKey] = {
-          nextPos: pos,
-          result:  result0
-        };
-        return result0;
-      }
-      
-      function parse_DOI_pre() {
-        var cacheKey = "DOI_pre@" + pos;
-        var cachedResult = cache[cacheKey];
-        if (cachedResult) {
-          pos = cachedResult.nextPos;
-          return cachedResult.result;
-        }
-        
-        var result0, result1, result2;
-        var pos0;
-        
-        pos0 = pos;
-        result0 = parse_pre_clause();
-        if (result0 !== null) {
-          result1 = parse_DOI();
           if (result1 !== null) {
             result2 = parse_spaces();
             result2 = result2 !== null ? result2 : "";
@@ -19512,7 +19653,7 @@ var camxes = (function(){
         pos1 = pos;
         result0 = parse_PA_pre();
         if (result0 !== null) {
-          result1 = parse_post_clause();
+          result1 = parse_number_post_clause();
           if (result1 !== null) {
             result0 = [result0, result1];
           } else {
@@ -22489,202 +22630,199 @@ var camxes = (function(){
                                             if (result0 === null) {
                                               result0 = parse_DAhO();
                                               if (result0 === null) {
-                                                result0 = parse_DOI();
+                                                result0 = parse_DOhU();
                                                 if (result0 === null) {
-                                                  result0 = parse_DOhU();
+                                                  result0 = parse_FA();
                                                   if (result0 === null) {
-                                                    result0 = parse_FA();
+                                                    result0 = parse_FAhA();
                                                     if (result0 === null) {
-                                                      result0 = parse_FAhA();
+                                                      result0 = parse_FAhO();
                                                       if (result0 === null) {
-                                                        result0 = parse_FAhO();
+                                                        result0 = parse_FEhE();
                                                         if (result0 === null) {
-                                                          result0 = parse_FEhE();
+                                                          result0 = parse_FEhU();
                                                           if (result0 === null) {
-                                                            result0 = parse_FEhU();
+                                                            result0 = parse_FIhO();
                                                             if (result0 === null) {
-                                                              result0 = parse_FIhO();
+                                                              result0 = parse_FOI();
                                                               if (result0 === null) {
-                                                                result0 = parse_FOI();
+                                                                result0 = parse_FUhA();
                                                                 if (result0 === null) {
-                                                                  result0 = parse_FUhA();
+                                                                  result0 = parse_FUhE();
                                                                   if (result0 === null) {
-                                                                    result0 = parse_FUhE();
+                                                                    result0 = parse_FUhO();
                                                                     if (result0 === null) {
-                                                                      result0 = parse_FUhO();
+                                                                      result0 = parse_GA();
                                                                       if (result0 === null) {
-                                                                        result0 = parse_GA();
+                                                                        result0 = parse_GAhO();
                                                                         if (result0 === null) {
-                                                                          result0 = parse_GAhO();
+                                                                          result0 = parse_GEhU();
                                                                           if (result0 === null) {
-                                                                            result0 = parse_GEhU();
+                                                                            result0 = parse_GI();
                                                                             if (result0 === null) {
-                                                                              result0 = parse_GI();
+                                                                              result0 = parse_GIhA();
                                                                               if (result0 === null) {
-                                                                                result0 = parse_GIhA();
+                                                                                result0 = parse_GIhI();
                                                                                 if (result0 === null) {
-                                                                                  result0 = parse_GIhI();
+                                                                                  result0 = parse_GOI();
                                                                                   if (result0 === null) {
-                                                                                    result0 = parse_GOI();
+                                                                                    result0 = parse_GOhA();
                                                                                     if (result0 === null) {
-                                                                                      result0 = parse_GOhA();
+                                                                                      result0 = parse_GOhOI();
                                                                                       if (result0 === null) {
-                                                                                        result0 = parse_GOhOI();
+                                                                                        result0 = parse_I();
                                                                                         if (result0 === null) {
-                                                                                          result0 = parse_I();
+                                                                                          result0 = parse_IhAU();
                                                                                           if (result0 === null) {
-                                                                                            result0 = parse_IhAU();
+                                                                                            result0 = parse_JAI();
                                                                                             if (result0 === null) {
-                                                                                              result0 = parse_JAI();
+                                                                                              result0 = parse_JOI();
                                                                                               if (result0 === null) {
-                                                                                                result0 = parse_JOI();
+                                                                                                result0 = parse_KE();
                                                                                                 if (result0 === null) {
-                                                                                                  result0 = parse_KE();
+                                                                                                  result0 = parse_KEhE();
                                                                                                   if (result0 === null) {
-                                                                                                    result0 = parse_KEhE();
+                                                                                                    result0 = parse_KEI();
                                                                                                     if (result0 === null) {
-                                                                                                      result0 = parse_KEI();
+                                                                                                      result0 = parse_KI();
                                                                                                       if (result0 === null) {
-                                                                                                        result0 = parse_KI();
+                                                                                                        result0 = parse_KOhA();
                                                                                                         if (result0 === null) {
-                                                                                                          result0 = parse_KOhA();
+                                                                                                          result0 = parse_KU();
                                                                                                           if (result0 === null) {
-                                                                                                            result0 = parse_KU();
+                                                                                                            result0 = parse_KUhAU();
                                                                                                             if (result0 === null) {
-                                                                                                              result0 = parse_KUhAU();
+                                                                                                              result0 = parse_KUhE();
                                                                                                               if (result0 === null) {
-                                                                                                                result0 = parse_KUhE();
+                                                                                                                result0 = parse_KUhO();
                                                                                                                 if (result0 === null) {
-                                                                                                                  result0 = parse_KUhO();
+                                                                                                                  result0 = parse_LAU();
                                                                                                                   if (result0 === null) {
-                                                                                                                    result0 = parse_LAU();
+                                                                                                                    result0 = parse_LAhE();
                                                                                                                     if (result0 === null) {
-                                                                                                                      result0 = parse_LAhE();
+                                                                                                                      result0 = parse_LEhAI();
                                                                                                                       if (result0 === null) {
-                                                                                                                        result0 = parse_LEhAI();
+                                                                                                                        result0 = parse_LE();
                                                                                                                         if (result0 === null) {
-                                                                                                                          result0 = parse_LE();
+                                                                                                                          result0 = parse_LEhU();
                                                                                                                           if (result0 === null) {
-                                                                                                                            result0 = parse_LEhU();
+                                                                                                                            result0 = parse_LI();
                                                                                                                             if (result0 === null) {
-                                                                                                                              result0 = parse_LI();
+                                                                                                                              result0 = parse_LIhU();
                                                                                                                               if (result0 === null) {
-                                                                                                                                result0 = parse_LIhU();
+                                                                                                                                result0 = parse_LOhAI();
                                                                                                                                 if (result0 === null) {
-                                                                                                                                  result0 = parse_LOhAI();
+                                                                                                                                  result0 = parse_LOhO();
                                                                                                                                   if (result0 === null) {
-                                                                                                                                    result0 = parse_LOhO();
+                                                                                                                                    result0 = parse_LOhOI();
                                                                                                                                     if (result0 === null) {
-                                                                                                                                      result0 = parse_LOhOI();
+                                                                                                                                      result0 = parse_LOhU();
                                                                                                                                       if (result0 === null) {
-                                                                                                                                        result0 = parse_LOhU();
+                                                                                                                                        result0 = parse_LU();
                                                                                                                                         if (result0 === null) {
-                                                                                                                                          result0 = parse_LU();
+                                                                                                                                          result0 = parse_LUhU();
                                                                                                                                           if (result0 === null) {
-                                                                                                                                            result0 = parse_LUhU();
+                                                                                                                                            result0 = parse_MAhO();
                                                                                                                                             if (result0 === null) {
-                                                                                                                                              result0 = parse_MAhO();
+                                                                                                                                              result0 = parse_MAI();
                                                                                                                                               if (result0 === null) {
-                                                                                                                                                result0 = parse_MAI();
+                                                                                                                                                result0 = parse_ME();
                                                                                                                                                 if (result0 === null) {
-                                                                                                                                                  result0 = parse_ME();
+                                                                                                                                                  result0 = parse_MEhU();
                                                                                                                                                   if (result0 === null) {
-                                                                                                                                                    result0 = parse_MEhU();
+                                                                                                                                                    result0 = parse_MOhE();
                                                                                                                                                     if (result0 === null) {
-                                                                                                                                                      result0 = parse_MOhE();
+                                                                                                                                                      result0 = parse_MOhI();
                                                                                                                                                       if (result0 === null) {
-                                                                                                                                                        result0 = parse_MOhI();
+                                                                                                                                                        result0 = parse_MOI();
                                                                                                                                                         if (result0 === null) {
-                                                                                                                                                          result0 = parse_MOI();
+                                                                                                                                                          result0 = parse_NA();
                                                                                                                                                           if (result0 === null) {
-                                                                                                                                                            result0 = parse_NA();
+                                                                                                                                                            result0 = parse_NAI();
                                                                                                                                                             if (result0 === null) {
-                                                                                                                                                              result0 = parse_NAI();
+                                                                                                                                                              result0 = parse_NAhE();
                                                                                                                                                               if (result0 === null) {
-                                                                                                                                                                result0 = parse_NAhE();
+                                                                                                                                                                result0 = parse_NAhU();
                                                                                                                                                                 if (result0 === null) {
-                                                                                                                                                                  result0 = parse_NAhU();
+                                                                                                                                                                  result0 = parse_NIhE();
                                                                                                                                                                   if (result0 === null) {
-                                                                                                                                                                    result0 = parse_NIhE();
+                                                                                                                                                                    result0 = parse_NIhO();
                                                                                                                                                                     if (result0 === null) {
-                                                                                                                                                                      result0 = parse_NIhO();
+                                                                                                                                                                      result0 = parse_NOI();
                                                                                                                                                                       if (result0 === null) {
-                                                                                                                                                                        result0 = parse_NOI();
+                                                                                                                                                                        result0 = parse_NU();
                                                                                                                                                                         if (result0 === null) {
-                                                                                                                                                                          result0 = parse_NU();
+                                                                                                                                                                          result0 = parse_PA();
                                                                                                                                                                           if (result0 === null) {
-                                                                                                                                                                            result0 = parse_PA();
+                                                                                                                                                                            result0 = parse_PEhO();
                                                                                                                                                                             if (result0 === null) {
-                                                                                                                                                                              result0 = parse_PEhO();
+                                                                                                                                                                              result0 = parse_PU();
                                                                                                                                                                               if (result0 === null) {
-                                                                                                                                                                                result0 = parse_PU();
+                                                                                                                                                                                result0 = parse_RAhOI();
                                                                                                                                                                                 if (result0 === null) {
-                                                                                                                                                                                  result0 = parse_RAhOI();
+                                                                                                                                                                                  result0 = parse_RAhO();
                                                                                                                                                                                   if (result0 === null) {
-                                                                                                                                                                                    result0 = parse_RAhO();
+                                                                                                                                                                                    result0 = parse_ROI();
                                                                                                                                                                                     if (result0 === null) {
-                                                                                                                                                                                      result0 = parse_ROI();
+                                                                                                                                                                                      result0 = parse_SE();
                                                                                                                                                                                       if (result0 === null) {
-                                                                                                                                                                                        result0 = parse_SE();
+                                                                                                                                                                                        result0 = parse_SEI();
                                                                                                                                                                                         if (result0 === null) {
-                                                                                                                                                                                          result0 = parse_SEI();
+                                                                                                                                                                                          result0 = parse_SEhU();
                                                                                                                                                                                           if (result0 === null) {
-                                                                                                                                                                                            result0 = parse_SEhU();
+                                                                                                                                                                                            result0 = parse_SI();
                                                                                                                                                                                             if (result0 === null) {
-                                                                                                                                                                                              result0 = parse_SI();
+                                                                                                                                                                                              result0 = parse_SU();
                                                                                                                                                                                               if (result0 === null) {
-                                                                                                                                                                                                result0 = parse_SU();
+                                                                                                                                                                                                result0 = parse_TAhE();
                                                                                                                                                                                                 if (result0 === null) {
-                                                                                                                                                                                                  result0 = parse_TAhE();
+                                                                                                                                                                                                  result0 = parse_TEhU();
                                                                                                                                                                                                   if (result0 === null) {
-                                                                                                                                                                                                    result0 = parse_TEhU();
+                                                                                                                                                                                                    result0 = parse_TEI();
                                                                                                                                                                                                     if (result0 === null) {
-                                                                                                                                                                                                      result0 = parse_TEI();
+                                                                                                                                                                                                      result0 = parse_TO();
                                                                                                                                                                                                       if (result0 === null) {
-                                                                                                                                                                                                        result0 = parse_TO();
+                                                                                                                                                                                                        result0 = parse_TOI();
                                                                                                                                                                                                         if (result0 === null) {
-                                                                                                                                                                                                          result0 = parse_TOI();
+                                                                                                                                                                                                          result0 = parse_TUhE();
                                                                                                                                                                                                           if (result0 === null) {
-                                                                                                                                                                                                            result0 = parse_TUhE();
+                                                                                                                                                                                                            result0 = parse_TUhU();
                                                                                                                                                                                                             if (result0 === null) {
-                                                                                                                                                                                                              result0 = parse_TUhU();
+                                                                                                                                                                                                              result0 = parse_UI();
                                                                                                                                                                                                               if (result0 === null) {
-                                                                                                                                                                                                                result0 = parse_UI();
+                                                                                                                                                                                                                result0 = parse_VA();
                                                                                                                                                                                                                 if (result0 === null) {
-                                                                                                                                                                                                                  result0 = parse_VA();
+                                                                                                                                                                                                                  result0 = parse_VAU();
                                                                                                                                                                                                                   if (result0 === null) {
-                                                                                                                                                                                                                    result0 = parse_VAU();
+                                                                                                                                                                                                                    result0 = parse_VEI();
                                                                                                                                                                                                                     if (result0 === null) {
-                                                                                                                                                                                                                      result0 = parse_VEI();
+                                                                                                                                                                                                                      result0 = parse_VEhO();
                                                                                                                                                                                                                       if (result0 === null) {
-                                                                                                                                                                                                                        result0 = parse_VEhO();
+                                                                                                                                                                                                                        result0 = parse_VUhU();
                                                                                                                                                                                                                         if (result0 === null) {
-                                                                                                                                                                                                                          result0 = parse_VUhU();
+                                                                                                                                                                                                                          result0 = parse_VEhA();
                                                                                                                                                                                                                           if (result0 === null) {
-                                                                                                                                                                                                                            result0 = parse_VEhA();
+                                                                                                                                                                                                                            result0 = parse_VIhA();
                                                                                                                                                                                                                             if (result0 === null) {
-                                                                                                                                                                                                                              result0 = parse_VIhA();
+                                                                                                                                                                                                                              result0 = parse_VUhO();
                                                                                                                                                                                                                               if (result0 === null) {
-                                                                                                                                                                                                                                result0 = parse_VUhO();
+                                                                                                                                                                                                                                result0 = parse_XI();
                                                                                                                                                                                                                                 if (result0 === null) {
-                                                                                                                                                                                                                                  result0 = parse_XI();
+                                                                                                                                                                                                                                  result0 = parse_XOI();
                                                                                                                                                                                                                                   if (result0 === null) {
-                                                                                                                                                                                                                                    result0 = parse_XOI();
+                                                                                                                                                                                                                                    result0 = parse_ZAhO();
                                                                                                                                                                                                                                     if (result0 === null) {
-                                                                                                                                                                                                                                      result0 = parse_ZAhO();
+                                                                                                                                                                                                                                      result0 = parse_ZEhA();
                                                                                                                                                                                                                                       if (result0 === null) {
-                                                                                                                                                                                                                                        result0 = parse_ZEhA();
+                                                                                                                                                                                                                                        result0 = parse_ZI();
                                                                                                                                                                                                                                         if (result0 === null) {
-                                                                                                                                                                                                                                          result0 = parse_ZI();
+                                                                                                                                                                                                                                          result0 = parse_ZO();
                                                                                                                                                                                                                                           if (result0 === null) {
-                                                                                                                                                                                                                                            result0 = parse_ZO();
+                                                                                                                                                                                                                                            result0 = parse_ZOI();
                                                                                                                                                                                                                                             if (result0 === null) {
-                                                                                                                                                                                                                                              result0 = parse_ZOI();
+                                                                                                                                                                                                                                              result0 = parse_ZOhU();
                                                                                                                                                                                                                                               if (result0 === null) {
-                                                                                                                                                                                                                                                result0 = parse_ZOhU();
-                                                                                                                                                                                                                                                if (result0 === null) {
-                                                                                                                                                                                                                                                  result0 = parse_cmavo();
-                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                result0 = parse_cmavo();
                                                                                                                                                                                                                                               }
                                                                                                                                                                                                                                             }
                                                                                                                                                                                                                                           }
@@ -40170,15 +40308,40 @@ var camxes = (function(){
                                                       pos2 = pos;
                                                       result1 = parse_d();
                                                       if (result1 !== null) {
-                                                        result2 = parse_i();
+                                                        result2 = parse_o();
                                                         if (result2 !== null) {
-                                                          result3 = parse_h();
+                                                          result3 = parse_i();
                                                           if (result3 !== null) {
-                                                            result4 = parse_a();
-                                                            if (result4 !== null) {
-                                                              result5 = parse_i();
-                                                              if (result5 !== null) {
-                                                                result1 = [result1, result2, result3, result4, result5];
+                                                            result1 = [result1, result2, result3];
+                                                          } else {
+                                                            result1 = null;
+                                                            pos = pos2;
+                                                          }
+                                                        } else {
+                                                          result1 = null;
+                                                          pos = pos2;
+                                                        }
+                                                      } else {
+                                                        result1 = null;
+                                                        pos = pos2;
+                                                      }
+                                                      if (result1 === null) {
+                                                        pos2 = pos;
+                                                        result1 = parse_d();
+                                                        if (result1 !== null) {
+                                                          result2 = parse_i();
+                                                          if (result2 !== null) {
+                                                            result3 = parse_h();
+                                                            if (result3 !== null) {
+                                                              result4 = parse_a();
+                                                              if (result4 !== null) {
+                                                                result5 = parse_i();
+                                                                if (result5 !== null) {
+                                                                  result1 = [result1, result2, result3, result4, result5];
+                                                                } else {
+                                                                  result1 = null;
+                                                                  pos = pos2;
+                                                                }
                                                               } else {
                                                                 result1 = null;
                                                                 pos = pos2;
@@ -40195,36 +40358,11 @@ var camxes = (function(){
                                                           result1 = null;
                                                           pos = pos2;
                                                         }
-                                                      } else {
-                                                        result1 = null;
-                                                        pos = pos2;
-                                                      }
-                                                      if (result1 === null) {
-                                                        pos2 = pos;
-                                                        result1 = parse_c();
-                                                        if (result1 !== null) {
-                                                          result2 = parse_o();
-                                                          if (result2 !== null) {
-                                                            result3 = parse_i();
-                                                            if (result3 !== null) {
-                                                              result1 = [result1, result2, result3];
-                                                            } else {
-                                                              result1 = null;
-                                                              pos = pos2;
-                                                            }
-                                                          } else {
-                                                            result1 = null;
-                                                            pos = pos2;
-                                                          }
-                                                        } else {
-                                                          result1 = null;
-                                                          pos = pos2;
-                                                        }
                                                         if (result1 === null) {
                                                           pos2 = pos;
-                                                          result1 = parse_c();
+                                                          result1 = parse_d();
                                                           if (result1 !== null) {
-                                                            result2 = parse_o();
+                                                            result2 = parse_a();
                                                             if (result2 !== null) {
                                                               result3 = parse_h();
                                                               if (result3 !== null) {
@@ -40255,15 +40393,21 @@ var camxes = (function(){
                                                           }
                                                           if (result1 === null) {
                                                             pos2 = pos;
-                                                            result1 = parse_c();
+                                                            result1 = parse_d();
                                                             if (result1 !== null) {
-                                                              result2 = parse_o();
+                                                              result2 = parse_a();
                                                               if (result2 !== null) {
                                                                 result3 = parse_h();
                                                                 if (result3 !== null) {
-                                                                  result4 = parse_o();
+                                                                  result4 = parse_e();
                                                                   if (result4 !== null) {
-                                                                    result1 = [result1, result2, result3, result4];
+                                                                    result5 = parse_i();
+                                                                    if (result5 !== null) {
+                                                                      result1 = [result1, result2, result3, result4, result5];
+                                                                    } else {
+                                                                      result1 = null;
+                                                                      pos = pos2;
+                                                                    }
                                                                   } else {
                                                                     result1 = null;
                                                                     pos = pos2;
@@ -40284,23 +40428,11 @@ var camxes = (function(){
                                                               pos2 = pos;
                                                               result1 = parse_c();
                                                               if (result1 !== null) {
-                                                                result2 = parse_i();
+                                                                result2 = parse_o();
                                                                 if (result2 !== null) {
-                                                                  result3 = parse_h();
+                                                                  result3 = parse_i();
                                                                   if (result3 !== null) {
-                                                                    result4 = parse_o();
-                                                                    if (result4 !== null) {
-                                                                      result5 = parse_i();
-                                                                      if (result5 !== null) {
-                                                                        result1 = [result1, result2, result3, result4, result5];
-                                                                      } else {
-                                                                        result1 = null;
-                                                                        pos = pos2;
-                                                                      }
-                                                                    } else {
-                                                                      result1 = null;
-                                                                      pos = pos2;
-                                                                    }
+                                                                    result1 = [result1, result2, result3];
                                                                   } else {
                                                                     result1 = null;
                                                                     pos = pos2;
@@ -40315,9 +40447,9 @@ var camxes = (function(){
                                                               }
                                                               if (result1 === null) {
                                                                 pos2 = pos;
-                                                                result1 = parse_b();
+                                                                result1 = parse_c();
                                                                 if (result1 !== null) {
-                                                                  result2 = parse_u();
+                                                                  result2 = parse_o();
                                                                   if (result2 !== null) {
                                                                     result3 = parse_h();
                                                                     if (result3 !== null) {
@@ -40348,13 +40480,13 @@ var camxes = (function(){
                                                                 }
                                                                 if (result1 === null) {
                                                                   pos2 = pos;
-                                                                  result1 = parse_b();
+                                                                  result1 = parse_c();
                                                                   if (result1 !== null) {
-                                                                    result2 = parse_e();
+                                                                    result2 = parse_o();
                                                                     if (result2 !== null) {
                                                                       result3 = parse_h();
                                                                       if (result3 !== null) {
-                                                                        result4 = parse_e();
+                                                                        result4 = parse_o();
                                                                         if (result4 !== null) {
                                                                           result1 = [result1, result2, result3, result4];
                                                                         } else {
@@ -40375,15 +40507,21 @@ var camxes = (function(){
                                                                   }
                                                                   if (result1 === null) {
                                                                     pos2 = pos;
-                                                                    result1 = parse_a();
+                                                                    result1 = parse_c();
                                                                     if (result1 !== null) {
-                                                                      result2 = parse_h();
+                                                                      result2 = parse_i();
                                                                       if (result2 !== null) {
-                                                                        result3 = parse_o();
+                                                                        result3 = parse_h();
                                                                         if (result3 !== null) {
-                                                                          result4 = parse_i();
+                                                                          result4 = parse_o();
                                                                           if (result4 !== null) {
-                                                                            result1 = [result1, result2, result3, result4];
+                                                                            result5 = parse_i();
+                                                                            if (result5 !== null) {
+                                                                              result1 = [result1, result2, result3, result4, result5];
+                                                                            } else {
+                                                                              result1 = null;
+                                                                              pos = pos2;
+                                                                            }
                                                                           } else {
                                                                             result1 = null;
                                                                             pos = pos2;
@@ -40399,6 +40537,96 @@ var camxes = (function(){
                                                                     } else {
                                                                       result1 = null;
                                                                       pos = pos2;
+                                                                    }
+                                                                    if (result1 === null) {
+                                                                      pos2 = pos;
+                                                                      result1 = parse_b();
+                                                                      if (result1 !== null) {
+                                                                        result2 = parse_u();
+                                                                        if (result2 !== null) {
+                                                                          result3 = parse_h();
+                                                                          if (result3 !== null) {
+                                                                            result4 = parse_o();
+                                                                            if (result4 !== null) {
+                                                                              result5 = parse_i();
+                                                                              if (result5 !== null) {
+                                                                                result1 = [result1, result2, result3, result4, result5];
+                                                                              } else {
+                                                                                result1 = null;
+                                                                                pos = pos2;
+                                                                              }
+                                                                            } else {
+                                                                              result1 = null;
+                                                                              pos = pos2;
+                                                                            }
+                                                                          } else {
+                                                                            result1 = null;
+                                                                            pos = pos2;
+                                                                          }
+                                                                        } else {
+                                                                          result1 = null;
+                                                                          pos = pos2;
+                                                                        }
+                                                                      } else {
+                                                                        result1 = null;
+                                                                        pos = pos2;
+                                                                      }
+                                                                      if (result1 === null) {
+                                                                        pos2 = pos;
+                                                                        result1 = parse_b();
+                                                                        if (result1 !== null) {
+                                                                          result2 = parse_e();
+                                                                          if (result2 !== null) {
+                                                                            result3 = parse_h();
+                                                                            if (result3 !== null) {
+                                                                              result4 = parse_e();
+                                                                              if (result4 !== null) {
+                                                                                result1 = [result1, result2, result3, result4];
+                                                                              } else {
+                                                                                result1 = null;
+                                                                                pos = pos2;
+                                                                              }
+                                                                            } else {
+                                                                              result1 = null;
+                                                                              pos = pos2;
+                                                                            }
+                                                                          } else {
+                                                                            result1 = null;
+                                                                            pos = pos2;
+                                                                          }
+                                                                        } else {
+                                                                          result1 = null;
+                                                                          pos = pos2;
+                                                                        }
+                                                                        if (result1 === null) {
+                                                                          pos2 = pos;
+                                                                          result1 = parse_a();
+                                                                          if (result1 !== null) {
+                                                                            result2 = parse_h();
+                                                                            if (result2 !== null) {
+                                                                              result3 = parse_o();
+                                                                              if (result3 !== null) {
+                                                                                result4 = parse_i();
+                                                                                if (result4 !== null) {
+                                                                                  result1 = [result1, result2, result3, result4];
+                                                                                } else {
+                                                                                  result1 = null;
+                                                                                  pos = pos2;
+                                                                                }
+                                                                              } else {
+                                                                                result1 = null;
+                                                                                pos = pos2;
+                                                                              }
+                                                                            } else {
+                                                                              result1 = null;
+                                                                              pos = pos2;
+                                                                            }
+                                                                          } else {
+                                                                            result1 = null;
+                                                                            pos = pos2;
+                                                                          }
+                                                                        }
+                                                                      }
                                                                     }
                                                                   }
                                                                 }
@@ -40869,157 +41097,6 @@ var camxes = (function(){
         }
         if (result0 !== null) {
           result0 = (function(offset, expr) {return ["DAhO", _join(expr)];})(pos0, result0[1]);
-        }
-        if (result0 === null) {
-          pos = pos0;
-        }
-        
-        cache[cacheKey] = {
-          nextPos: pos,
-          result:  result0
-        };
-        return result0;
-      }
-      
-      function parse_DOI() {
-        var cacheKey = "DOI@" + pos;
-        var cachedResult = cache[cacheKey];
-        if (cachedResult) {
-          pos = cachedResult.nextPos;
-          return cachedResult.result;
-        }
-        
-        var result0, result1, result2, result3, result4, result5;
-        var pos0, pos1, pos2;
-        
-        pos0 = pos;
-        pos1 = pos;
-        pos2 = pos;
-        reportFailures++;
-        result0 = parse_cmavo();
-        reportFailures--;
-        if (result0 !== null) {
-          result0 = "";
-          pos = pos2;
-        } else {
-          result0 = null;
-        }
-        if (result0 !== null) {
-          pos2 = pos;
-          result1 = parse_d();
-          if (result1 !== null) {
-            result2 = parse_a();
-            if (result2 !== null) {
-              result3 = parse_h();
-              if (result3 !== null) {
-                result4 = parse_e();
-                if (result4 !== null) {
-                  result5 = parse_i();
-                  if (result5 !== null) {
-                    result1 = [result1, result2, result3, result4, result5];
-                  } else {
-                    result1 = null;
-                    pos = pos2;
-                  }
-                } else {
-                  result1 = null;
-                  pos = pos2;
-                }
-              } else {
-                result1 = null;
-                pos = pos2;
-              }
-            } else {
-              result1 = null;
-              pos = pos2;
-            }
-          } else {
-            result1 = null;
-            pos = pos2;
-          }
-          if (result1 === null) {
-            pos2 = pos;
-            result1 = parse_d();
-            if (result1 !== null) {
-              result2 = parse_a();
-              if (result2 !== null) {
-                result3 = parse_h();
-                if (result3 !== null) {
-                  result4 = parse_o();
-                  if (result4 !== null) {
-                    result5 = parse_i();
-                    if (result5 !== null) {
-                      result1 = [result1, result2, result3, result4, result5];
-                    } else {
-                      result1 = null;
-                      pos = pos2;
-                    }
-                  } else {
-                    result1 = null;
-                    pos = pos2;
-                  }
-                } else {
-                  result1 = null;
-                  pos = pos2;
-                }
-              } else {
-                result1 = null;
-                pos = pos2;
-              }
-            } else {
-              result1 = null;
-              pos = pos2;
-            }
-            if (result1 === null) {
-              pos2 = pos;
-              result1 = parse_d();
-              if (result1 !== null) {
-                result2 = parse_o();
-                if (result2 !== null) {
-                  result3 = parse_i();
-                  if (result3 !== null) {
-                    result1 = [result1, result2, result3];
-                  } else {
-                    result1 = null;
-                    pos = pos2;
-                  }
-                } else {
-                  result1 = null;
-                  pos = pos2;
-                }
-              } else {
-                result1 = null;
-                pos = pos2;
-              }
-            }
-          }
-          if (result1 !== null) {
-            pos2 = pos;
-            reportFailures++;
-            result2 = parse_post_word();
-            reportFailures--;
-            if (result2 !== null) {
-              result2 = "";
-              pos = pos2;
-            } else {
-              result2 = null;
-            }
-            if (result2 !== null) {
-              result0 = [result0, result1, result2];
-            } else {
-              result0 = null;
-              pos = pos1;
-            }
-          } else {
-            result0 = null;
-            pos = pos1;
-          }
-        } else {
-          result0 = null;
-          pos = pos1;
-        }
-        if (result0 !== null) {
-          result0 = (function(offset, expr) {return ["DOI", _join(expr)];})(pos0, result0[1]);
         }
         if (result0 === null) {
           pos = pos0;
