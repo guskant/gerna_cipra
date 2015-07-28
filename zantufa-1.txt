@@ -2,18 +2,9 @@ platu:
 
 http://mw.lojban.org/papri/zasni_gerna_cenba_vreji
 
-Merged and eliminated selma'o
-JOI, A, BIhI, (VUhU,) JOhI -> JOI
-(
-http://mw.lojban.org/papri/mEX_grammar_proposal
-for VUhU
-)
 FEhE, MOhI, NAhE -> NAhE
 KI, BAI, PU, ZI, ZEhA, FAhA, VA, VEhA, VIhA, TAhE, ZAhO, CAhA, CUhE -> BAI
-FUhE, UI, CAI, NAI, DAhO, FUhO, RAhO, GAhO -> UI
-ME, NUhA -> ME
 LAU, TEI, FOI, BY -> BY
-BIhE,  MAhO, NAhU, PEhO, KUhE, FUhA, MOhE -> /
 
 syllabic consonants
 Eliminated from fuhivla, except for the hyphen of type-3. A 'y' is also allowed in front of the hyphen, so that they are not even required there. This has the additional advantage that 'l' is never needed as hyphen.
@@ -110,4 +101,15 @@ mulno:
 # me TAG = SELBRI.
 # eg. mi me pi'o ti = mi pilno ti
 
+# Merged and eliminated selma'o
+# JOI, A, BIhI, (VUhU,) JOhI -> JOI
+# (
+# http://mw.lojban.org/papri/mEX_grammar_proposal
+# for VUhU
+# )
+# FUhE, UI, CAI, NAI, DAhO, FUhO, RAhO -> UI
+%  GAhO -> UI
+# NAhU -> /
+% BIhE,  MAhO, PEhO, KUhE, FUhA, MOhE -> /
+# ME, NUhA -> ME
 

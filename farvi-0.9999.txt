@@ -606,44 +606,95 @@ zantufa-0.9999.js.peg:139:// text //////// _vimcu zoizoi indicators? zoi noi la'
 zantufa-0.9999.js.peg:140:// text //////// _vimcu zoizoi NAI_clause* zoi_20150728UTC_
 zantufa-0.9999.js.peg:243:// sumti_5 //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
 zantufa-0.9999.js.peg:275:// tanru_unit_2 //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
-zantufa-0.9999.js.peg:323:// ek //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
-zantufa-0.9999.js.peg:326:// gihek //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
-zantufa-0.9999.js.peg:329:// joik //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
-zantufa-0.9999.js.peg:332:// interval //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
-zantufa-0.9999.js.peg:339:// gek //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
-zantufa-0.9999.js.peg:342:// gik //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
-zantufa-0.9999.js.peg:351:// simple_tense_modal //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
-zantufa-0.9999.js.peg:354:// time //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
-zantufa-0.9999.js.peg:357:// time_offset //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
-zantufa-0.9999.js.peg:362:// space_offset //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
-zantufa-0.9999.js.peg:365:// space_interval //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
-zantufa-0.9999.js.peg:370:// interval_property //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
-zantufa-0.9999.js.peg:373:// free //////// _la'o zoi indicators zoi muvdu ti_20150728UTC_
-zantufa-0.9999.js.peg:374:// free //////// _vimcu zoizoi CAI_clause zoi_20150728UTC_
-zantufa-0.9999.js.peg:375:// free //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
-zantufa-0.9999.js.peg:380:// vocative //////// _galfi zoizoi (COI_clause NAI_clause?)+ DOI_clause / (COI_clause NAI_clause?) (COI_clause NAI_clause?)* / DOI_clause zoi zoizoi (COI_clause NAI_clause?)+ zoi_20150728UTC_
-zantufa-0.9999.js.peg:381:// vocative //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
-zantufa-0.9999.js.peg:384:// indicators = expr:(FUhE_clause? indicator+) {return _node("indicators", expr); } //////// _vimcu i cmima la'o zoi free zoi_20150728UTC_
-zantufa-0.9999.js.peg:386:// indicator =  expr:(((UI_clause / CAI_clause) NAI_clause? / DAhO_clause / FUhO_clause) !BU_clause) {return _node("indicator", expr); } //////// _vimcu i cmima la'o zoi free zoi_20150728UTC_
-zantufa-0.9999.js.peg:394:// bu_clause_no_pre //////// _galfi zoizoi post_clause zoi zoizoi lerfu_post_clause zoi_20150728UTC_
-zantufa-0.9999.js.peg:408:// post_clause //////// _galfi zoizoi indicators* zoi zoizoi free* zoi_20150728UTC_
-zantufa-0.9999.js.peg:410:// //////// _jmina la'o zoi number_post_clause, lerfu_post_clause, vocative_post_clause zoi_20150728UTC_
-zantufa-0.9999.js.peg:534:// BY_post //////// _galfi zoizoi post_clause zoi zoizoi lerfu_post_clause zoi_20150728UTC_
-zantufa-0.9999.js.peg:543:// CAI_clause = pre:CAI_pre post:CAI_post {return _node2("CAI_clause", pre, post); } //////// _vimcu ma'oi CAI_20150728UTC_
-zantufa-0.9999.js.peg:544:// CAI_pre = pre_clause CAI spaces? //////// _vimcu ma'oi CAI_20150728UTC_
-zantufa-0.9999.js.peg:545:// CAI_post = post_clause //////// _vimcu ma'oi CAI_20150728UTC_
-zantufa-0.9999.js.peg:567:// COI_post //////// _galfi zoizoi post_clause zoi zoizoi vocative_post_clause zoi_20150728UTC_
-zantufa-0.9999.js.peg:591:// DOI_clause, DOI_pre, DOI_post //////// _vimcu i zo doi cmavo ma'oi COI_20150728UTC_
-zantufa-0.9999.js.peg:874:// NAI_clause = pre:NAI_pre post:NAI_post {return _node2("NAI_clause", pre, post); } //////// _vimcu ma'oi NAI_20150728UTC_
-zantufa-0.9999.js.peg:875:// NAI_pre = pre_clause NAI spaces? //////// _vimcu ma'oi NAI_20150728UTC_
-zantufa-0.9999.js.peg:876:// NAI_post = post_clause //////// _vimcu ma'oi NAI_20150728UTC_
-zantufa-0.9999.js.peg:918:// PA_post //////// _galfi zoizoi post_clause zoi zoizoi number_post_clause zoi_20150728UTC_
-zantufa-0.9999.js.peg:1113:// CMAVO //////// _vimcu ma'oi DOI_20150728UTC_
-zantufa-0.9999.js.peg:1114:// CMAVO //////// _vimcu ma'oi CAI_20150728UTC_
-zantufa-0.9999.js.peg:1115:// CMAVO //////// _vimcu ma'oi NAI_20150728UTC_
-zantufa-0.9999.js.peg:1432:// CAI = &cmavo expr:( s a i / r u h e / p e i h o / p e i h a / p e i / n i h a u / n e h e / n a h o i / m e h a i / m a u h i / d a u h i / d a i h i / c u h i / c a i ) &post_word {return ["CAI", _join(expr)];} //////// _muvdu ma'oi UI_20150728UTC_
-zantufa-0.9999.js.peg:1439:// COI //////// _+doi +da'oi +da'ei iseja'ebo vimcu ma'oi DOI_20150728UTC_ 
-zantufa-0.9999.js.peg:1448:// DOI = &cmavo expr:( d a h e i / d a h o i / d o i ) &post_word {return ["DOI", _join(expr)];} //////// _vimcu i zo doi je zo da'oi je zo da'ei cmavo ma'oi COI_20150728UTC_
-zantufa-0.9999.js.peg:1562:// NAI = &cmavo expr:( j a h a i / n a i ) &post_word {return ["NAI", _join(expr)];} //////// _muvdu ma'oi UI_20150728UTC_
-zantufa-0.9999.js.peg:1618:// UI //////// _ro lo cmavo be ma'oi CAI cu muvdu ti_20150728UTC_
-zantufa-0.9999.js.peg:1619:// UI //////// _ro lo cmavo be ma'oi NAI cu muvdu ti_20150728UTC_
+zantufa-0.9999.js.peg:276:// tanru_unit_2 //////// _vimcu zoizoi RAhO_clause? zoi_20150728UTC_
+zantufa-0.9999.js.peg:308:// operator //////// _galfi zoizoi MAhO_clause mex TEhU_elidible / NAhU_clause selbri TEhU_elidible / zoi zoizoi MAhO_clause (mex / selbri / sumti) TEhU_elidible / zoi i ro lo cmavo be ma'oi NAhU cu muvdu ma'oi MAhO ije ma'oi MAhO ka'e lidne lo sumti ji'a_20150728UTC_
+zantufa-0.9999.js.peg:315:// operand //////// galfi zoizoi NIhE_clause selbri TEhU_elidible / MOhE_clause sumti TEhU_elidible /  zoi zoizoi MOhE_clause (selbri / sumti) TEhU_elidible /  zoi i ro lo cmavo be ma'oi NIhE cu muvdu ma'oi MOhE_20150728UTC_
+zantufa-0.9999.js.peg:326:// ek //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
+zantufa-0.9999.js.peg:329:// gihek //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
+zantufa-0.9999.js.peg:332:// joik //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
+zantufa-0.9999.js.peg:333:// joik //////// _vimcu zoizoi  / interval / GAhO_clause interval GAhO_clause zoi iseja'ebo tu'e lo cmavo be ma'oi BIhI cu muvdu ma'oi JOI ije lo cmavo be ma'oi GAhO cu muvdu ma'oi UI tu'u_20150728UTC_
+zantufa-0.9999.js.peg:334:// joik //////// _xruti zoizoi GAhO_clause zoi i ku'i se jbini zoizoi NA_clause? SE_clause? JOI_clause zoi_20150728UTC_
+zantufa-0.9999.js.peg:337:// interval //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
+zantufa-0.9999.js.peg:338:// interval = expr:(SE_clause? BIhI_clause) {return _node("interval", expr); } //////// _vimcu iseja'ebo lo cmavo be ma'oi BIhI cu muvdu ma'oi JOI_20150728UTC_
+zantufa-0.9999.js.peg:344:// gek //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
+zantufa-0.9999.js.peg:347:// gik //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
+zantufa-0.9999.js.peg:356:// simple_tense_modal //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
+zantufa-0.9999.js.peg:359:// time //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
+zantufa-0.9999.js.peg:362:// time_offset //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
+zantufa-0.9999.js.peg:367:// space_offset //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
+zantufa-0.9999.js.peg:370:// space_interval //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
+zantufa-0.9999.js.peg:375:// interval_property //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
+zantufa-0.9999.js.peg:378:// free //////// _la'o zoi indicators zoi muvdu ti_20150728UTC_
+zantufa-0.9999.js.peg:379:// free //////// _vimcu zoizoi CAI_clause zoi_20150728UTC_
+zantufa-0.9999.js.peg:380:// free //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
+zantufa-0.9999.js.peg:381:// free //////// _vimcu zoizoi DAhO_clause zoi_20150728UTC_
+zantufa-0.9999.js.peg:382:// free //////// _vimcu zoizoi FUhE_clause, FUhO_clause zoi_20150728UTC_
+zantufa-0.9999.js.peg:387:// vocative //////// _galfi zoizoi (COI_clause NAI_clause?)+ DOI_clause / (COI_clause NAI_clause?) (COI_clause NAI_clause?)* / DOI_clause zoi zoizoi (COI_clause NAI_clause?)+ zoi_20150728UTC_
+zantufa-0.9999.js.peg:388:// vocative //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
+zantufa-0.9999.js.peg:391:// indicators = expr:(FUhE_clause? indicator+) {return _node("indicators", expr); } //////// _vimcu i cmima la'o zoi free zoi_20150728UTC_
+zantufa-0.9999.js.peg:393:// indicator =  expr:(((UI_clause / CAI_clause) NAI_clause? / DAhO_clause / FUhO_clause) !BU_clause) {return _node("indicator", expr); } //////// _vimcu i cmima la'o zoi free zoi_20150728UTC_
+zantufa-0.9999.js.peg:401:// bu_clause_no_pre //////// _galfi zoizoi post_clause zoi zoizoi lerfu_post_clause zoi_20150728UTC_
+zantufa-0.9999.js.peg:415:// post_clause //////// _galfi zoizoi indicators* zoi zoizoi free* zoi_20150728UTC_
+zantufa-0.9999.js.peg:417:// //////// _jmina la'o zoi number_post_clause, lerfu_post_clause, vocative_post_clause zoi_20150728UTC_
+zantufa-0.9999.js.peg:519:// BIhI_clause = pre:BIhI_pre post:BIhI_post {return _node2("BIhI_clause", pre, post); } //////// _vimcu_20150728UTC_
+zantufa-0.9999.js.peg:520:// BIhI_pre = pre_clause BIhI spaces? //////// _vimcu_20150728UTC_
+zantufa-0.9999.js.peg:521:// BIhI_post = post_clause //////// _vimcu_20150728UTC_
+zantufa-0.9999.js.peg:541:// BY_post //////// _galfi zoizoi post_clause zoi zoizoi lerfu_post_clause zoi_20150728UTC_
+zantufa-0.9999.js.peg:550:// CAI_clause = pre:CAI_pre post:CAI_post {return _node2("CAI_clause", pre, post); } //////// _vimcu ma'oi CAI_20150728UTC_
+zantufa-0.9999.js.peg:551:// CAI_pre = pre_clause CAI spaces? //////// _vimcu ma'oi CAI_20150728UTC_
+zantufa-0.9999.js.peg:552:// CAI_post = post_clause //////// _vimcu ma'oi CAI_20150728UTC_
+zantufa-0.9999.js.peg:574:// COI_post //////// _galfi zoizoi post_clause zoi zoizoi vocative_post_clause zoi_20150728UTC_
+zantufa-0.9999.js.peg:593:// DAhO_clause = pre:DAhO_pre post:DAhO_post {return _node2("DAhO_clause", pre, post); } //////// _vimcu_20150728UTC_
+zantufa-0.9999.js.peg:594:// DAhO_pre = pre_clause DAhO spaces? //////// _vimcu_20150728UTC_
+zantufa-0.9999.js.peg:595:// DAhO_post = post_clause //////// _vimcu_20150728UTC_
+zantufa-0.9999.js.peg:598:// DOI_clause, DOI_pre, DOI_post //////// _vimcu i zo doi cmavo ma'oi COI_20150728UTC_
+zantufa-0.9999.js.peg:650:// FUhE_clause = pre:FUhE_pre post:FUhE_post {return _node2("FUhE_clause", pre, post); } //////// _vimcu_20150728UTC_
+zantufa-0.9999.js.peg:651:// FUhE_pre = pre_clause FUhE spaces? //////// _vimcu_20150728UTC_
+zantufa-0.9999.js.peg:652:// FUhE_post = !BU_clause spaces? !BU_clause //////// _vimcu_20150728UTC_
+zantufa-0.9999.js.peg:655:// FUhO_clause = pre:FUhO_pre post:FUhO_post {return _node2("FUhO_clause", pre, post); } //////// _vimcu_20150728UTC_
+zantufa-0.9999.js.peg:656:// FUhO_pre = pre_clause FUhO spaces? //////// _vimcu_20150728UTC_
+zantufa-0.9999.js.peg:657:// FUhO_post = post_clause //////// _vimcu_20150728UTC_
+zantufa-0.9999.js.peg:881:// NAI_clause = pre:NAI_pre post:NAI_post {return _node2("NAI_clause", pre, post); } //////// _vimcu ma'oi NAI_20150728UTC_
+zantufa-0.9999.js.peg:882:// NAI_pre = pre_clause NAI spaces? //////// _vimcu ma'oi NAI_20150728UTC_
+zantufa-0.9999.js.peg:883:// NAI_post = post_clause //////// _vimcu ma'oi NAI_20150728UTC_
+zantufa-0.9999.js.peg:891:// NAhU_clause = pre:NAhU_pre post:NAhU_post {return _node2("NAhU_clause", pre, post); } //////// _vimcu ma'oi NAhU_20150728UTC_
+zantufa-0.9999.js.peg:892:// NAhU_pre = pre_clause NAhU spaces? //////// _vimcu ma'oi NAhU_20150728UTC_
+zantufa-0.9999.js.peg:893:// NAhU_post = post_clause //////// _vimcu ma'oi NAhU_20150728UTC_
+zantufa-0.9999.js.peg:896:// NIhE_clause = pre:NIhE_pre post:NIhE_post {return _node2("NIhE_clause", pre, post); } //////// _vimcu_20150728UTC_
+zantufa-0.9999.js.peg:897:// NIhE_pre = pre_clause NIhE spaces? //////// _vimcu_20150728UTC_
+zantufa-0.9999.js.peg:898:// NIhE_post = post_clause //////// _vimcu_20150728UTC_
+zantufa-0.9999.js.peg:925:// PA_post //////// _galfi zoizoi post_clause zoi zoizoi number_post_clause zoi_20150728UTC_
+zantufa-0.9999.js.peg:945:// RAhO_clause = pre:RAhO_pre post:RAhO_post {return _node2("RAhO_clause", pre, post); } //////// _vimcu_20150728UTC_
+zantufa-0.9999.js.peg:946:// RAhO_pre = pre_clause RAhO spaces? //////// _vimcu_20150728UTC_
+zantufa-0.9999.js.peg:947:// RAhO_post = post_clause //////// _vimcu_20150728UTC_
+zantufa-0.9999.js.peg:1120:// CMAVO //////// _vimcu ma'oi DOI_20150728UTC_
+zantufa-0.9999.js.peg:1121:// CMAVO //////// _vimcu ma'oi CAI_20150728UTC_
+zantufa-0.9999.js.peg:1122:// CMAVO //////// _vimcu ma'oi NAI_20150728UTC_
+zantufa-0.9999.js.peg:1123:// CMAVO //////// _vimcu ma'oi DAhO_20150728UTC_
+zantufa-0.9999.js.peg:1124:// CMAVO //////// _vimcu ma'oi FUhE je ma'oi FUhO_20150728UTC_
+zantufa-0.9999.js.peg:1125:// CMAVO //////// _vimcu ma'oi RAhO_20150728UTC_
+zantufa-0.9999.js.peg:1126:// CMAVO //////// _vimcu ma'oi BIhI je ma'oi GAhO_20150728UTC_
+zantufa-0.9999.js.peg:1127:// CMAVO //////// _xruti ma'oi GAhO_20150728UTC_
+zantufa-0.9999.js.peg:1128:// CMAVO //////// _vimcu ma'oi NIhE_20150728UTC_
+zantufa-0.9999.js.peg:1129:// CMAVO //////// _vimcu ma'oi NAhU_20150728UTC_
+zantufa-0.9999.js.peg:1434:// BIhI = &cmavo expr:( m i h i / b i h o / b i h i ) &post_word {return ["BIhI", _join(expr)];} //////// _muvdu ma'oi JOI_20150728UTC_
+zantufa-0.9999.js.peg:1446:// CAI = &cmavo expr:( s a i / r u h e / p e i h o / p e i h a / p e i / n i h a u / n e h e / n a h o i / m e h a i / m a u h i / d a u h i / d a i h i / c u h i / c a i ) &post_word {return ["CAI", _join(expr)];} //////// _muvdu ma'oi UI_20150728UTC_
+zantufa-0.9999.js.peg:1453:// COI //////// _+doi +da'oi +da'ei iseja'ebo vimcu ma'oi DOI_20150728UTC_ 
+zantufa-0.9999.js.peg:1460:// DAhO = &cmavo expr:( d a i h o / d o h a i / d a h o ) &post_word {return ["DAhO", _join(expr)];} //////// _muvdu ma'oi UI_20150728UTC_
+zantufa-0.9999.js.peg:1462:// DOI = &cmavo expr:( d a h e i / d a h o i / d o i ) &post_word {return ["DOI", _join(expr)];} //////// _vimcu i zo doi je zo da'oi je zo da'ei cmavo ma'oi COI_20150728UTC_
+zantufa-0.9999.js.peg:1482:// FUhE = &cmavo expr:( f u h e i / f u h e ) &post_word {return ["FUhE", _join(expr)];} //////// _muvdu ma'oi UI_20150728UTC_
+zantufa-0.9999.js.peg:1484:// FUhO = &cmavo expr:( f u h o ) &post_word {return ["FUhO", _join(expr)];} //////// _muvdu ma'oi UI_20150728UTC_
+zantufa-0.9999.js.peg:1512:// JOI //////// _ro lo cmavo be ma'oi BIhI cu muvdu ti_20150728UTC_
+zantufa-0.9999.js.peg:1560:// MAhO //////// _ro lo cmavo be ma'oi NAhU cu muvdu ti_20150728UTC_
+zantufa-0.9999.js.peg:1569:// MOhE //////// _ro lo cmavo be ma'oi NIhE cu muvdu ti_20150728UTC_
+zantufa-0.9999.js.peg:1578:// NAI = &cmavo expr:( j a h a i / n a i ) &post_word {return ["NAI", _join(expr)];} //////// _muvdu ma'oi UI_20150728UTC_
+zantufa-0.9999.js.peg:1582:// NAhU = &cmavo expr:( n a h u ) &post_word {return ["NAhU", _join(expr)];} //////// _muvdu ma'oi MAhO_20150728UTC_
+zantufa-0.9999.js.peg:1584:// NIhE = &cmavo expr:( n i h e ) &post_word {return ["NIhE", _join(expr)];} //////// _muvdu ma'oi MOhE_20150728UTC_
+zantufa-0.9999.js.peg:1604:// RAhO = &cmavo expr:( r a h o ) &post_word {return ["RAhO", _join(expr)];} //////// _muvdu ma'oi UI_20150728UTC_
+zantufa-0.9999.js.peg:1634:// UI //////// _ro lo cmavo be ma'oi CAI cu muvdu ti_20150728UTC_
+zantufa-0.9999.js.peg:1635:// UI //////// _ro lo cmavo be ma'oi NAI cu muvdu ti_20150728UTC_
+zantufa-0.9999.js.peg:1636:// UI //////// _ro lo cmavo be ma'oi DAhO cu muvdu ti_20150728UTC_
+zantufa-0.9999.js.peg:1637:// UI //////// _ro lo cmavo be ma'oi FUhE je ma'oi FUhO cu muvdu ti_20150728UTC_
+zantufa-0.9999.js.peg:1638:// UI //////// _ro lo cmavo be ma'oi RAhO cu muvdu ti_20150728UTC_
+zantufa-0.9999.js.peg:1639:// UI //////// _ro lo cmavo be ma'oi GAhO cu muvdu ti_20150728UTC_
+zantufa-0.9999.js.peg:1640:// UI //////// _ro lo pu cmavo be ma'oi GAhO cu xruti_20150728UTC_
