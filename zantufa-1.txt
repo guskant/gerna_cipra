@@ -2,8 +2,6 @@ platu:
 
 http://mw.lojban.org/papri/zasni_gerna_cenba_vreji
 
-FEhE, MOhI, NAhE -> NAhE
-KI, BAI, PU, ZI, ZEhA, FAhA, VA, VEhA, VIhA, TAhE, ZAhO, CAhA, CUhE -> BAI
 LAU, TEI, FOI, BY -> BY
 
 syllabic consonants
@@ -112,4 +110,6 @@ mulno:
 # NAhU -> /
 % BIhE,  MAhO, PEhO, KUhE, FUhA, MOhE -> /
 # ME, NUhA -> ME
+# FEhE, MOhI, NAhE -> NAhE
+# KI, BAI, PU, ZI, ZEhA, FAhA, VA, VEhA, VIhA, TAhE, ZAhO, CAhA, CUhE -> BAI
 
