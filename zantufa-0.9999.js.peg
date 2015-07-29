@@ -229,8 +229,8 @@ sumti_4 = expr:(quantifier? sumti_5 relative_clauses? / quantifier selbri KU_eli
 
 // // // !(!joik_ek operator) : tu'a zoizoi !joik_ek zoi cu sarcu lo nu lu by joi (vei) pa (ve'o) by li'u cu sumti
 // sumti_5 //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
-/// /// /// cipra : NAhE_clause !(!sumti_5 operand) sumti_3 > NAhE_clause sumti_3
-/// /// /// jalge sei za'a xamgu : ([{<na'e (¹[ny BOI] [su'i {pa BOI}]¹) (¹ny BOI¹)> <je (¹my BOI¹)>} VAU] [i {<na'e bo> <(¹[{ny BOI} {su'i <pa BOI>}] [ny BOI]¹) (¹je [my BOI]¹)> LUhU} VAU] [i {<(¹vei [{na'e <ny BOI>} {su'i <pa BOI>}] VEhO¹) (¹ny BOI¹)> <je (¹my BOI¹)>} VAU] [i {<vei (¹[na'e bo] [{ny BOI} {su'i <pa BOI>}] LUhU¹) VEhO> <ny BOI>} {je <my BOI>}] VAU) 
+// sumti_5 //////// _cipra : NAhE_clause !(!sumti_5 operand) sumti_3 > NAhE_clause sumti_3_20150728UTC_
+// sumti_5 //////// _jalge sei za'a xamgu : ([{<na'e (¹[ny BOI] [su'i {pa BOI}]¹) (¹ny BOI¹)> <je (¹my BOI¹)>} VAU] [i {<na'e bo> <(¹[{ny BOI} {su'i <pa BOI>}] [ny BOI]¹) (¹je [my BOI]¹)> LUhU} VAU] [i {<(¹vei [{na'e <ny BOI>} {su'i <pa BOI>}] VEhO¹) (¹ny BOI¹)> <je (¹my BOI¹)>} VAU] [i {<vei (¹[na'e bo] [{ny BOI} {su'i <pa BOI>}] LUhU¹) VEhO> <ny BOI>} {je <my BOI>}] VAU)_20150728UTC_
 sumti_5 = expr:(RAhOI_clause / ZO_clause / ZOI_clause / LOhU_clause / lerfu_string BOI_elidible !(BO_clause* operand* !(joik_ek sumti) operator) !(operand KEhE) / LU_clause text LIhU_elidible / (LAhE_clause / NAhE_clause BO_clause) relative_clauses? sumti LUhU_elidible / KOhA_clause / LOhOI_clause (joik LOhOI_clause)* statement KUhAU_elidible / LE_clause sumti_tail KU_elidible / li_clause / NAhE_clause sumti_3) {return _node("sumti_5", expr);}
 
 li_clause = expr:(LI_clause mex LOhO_elidible) {return _node("li_clause", expr); }
@@ -336,7 +336,8 @@ tag = expr:(tcita_selci+ (joik tcita_selci+)*) {return _node("tag", expr); }
 
 // tense_modal //////// _galfi lo cmene zoizoi tcita_selci zoi_20150728UTC_
 // tcita_selci //////// _galfi fi zoizoi BAI_clause / mex ROI_clause / FIhO_clause selbri FEhU_elidible / (NAhE_clause / SE_clause) tcita_selci zoi_20150728UTC_
-tcita_selci = expr:(BAI_clause / mex ROI_clause / FIhO_clause selbri FEhU_elidible / (NAhE_clause / SE_clause) tcita_selci) {return _node("tcita_selci", expr); }
+// tcita_selci //////// _zoizoi (NAhE_clause / SE_clause) tcita_selci zoi cu lidne ro lo drata tezu'e tu'a lu ([i {<na'e (¹[ny BOI] [su'i {pa BOI}]¹) roi> KU} VAU] [i {<vei (¹[na'e {ny BOI}] [su'i {pa BOI}]¹) VEhO> roi} KU] VAU) li'u_20150729UTC_
+tcita_selci = expr:((NAhE_clause / SE_clause) tcita_selci / BAI_clause / mex ROI_clause / FIhO_clause selbri FEhU_elidible) {return _node("tcita_selci", expr); }
 
 // simple_tense_modal //////// _vimcu zoizoi NAI_clause? zoi_20150728UTC_
 // simple_tense_modal //////// _vimcu zoizoi KI_clause? zoi_20150728UTC_
