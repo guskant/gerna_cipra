@@ -203,9 +203,9 @@ mex_rp = FUhA_clause free* mex_2+ operator (mex_2* operator)* KUhE_elidible free
 // This is just to make for clearer parse trees
 mex_forethought = !(lerfu_string BOI_elidible free*) operator mex_2+ mex_forethought? KUhE_elidible free* / PEhO_clause free* operator mex_2+ mex_forethought? KUhE_elidible free* 
 // Right recursive version.
-// operator //////// _maltufa: na'e vimcu ma'oi NAhU iku'i jalge fa lo simsa be tu'a la zantufa:  (MAhO_clause / NAhU_clause) free* (mex / selbri / sumti) TEhU_elidible free*_20150728UTC
+// operator //////// _maltufa: na'e vimcu ma'oi NAhU iku'i jalge fa lo simsa be tu'a la zantufa:  (MAhO_clause / NAhU_clause) free* (mex / selbri / sumti) TEhU_elidible free*_20150728UTC_
 operator = expr:(SE_clause free* operator / NAhE_clause free* operator / (MAhO_clause / NAhU_clause) free* (mex / selbri / sumti) TEhU_elidible free* / VUhU_clause free* / joik_ek) {return _node("operator", expr); }
-// operand //////// _maltufa: na'e vimcu ma'oi NIhE iku'i jalge fa lo simsa be tu'a la zantufa: (NIhE_clause / MOhE_clause) free* (selbri / sumti) TEhU_elidible free*_20150728UTC
+// operand //////// _maltufa: na'e vimcu ma'oi NIhE iku'i jalge fa lo simsa be tu'a la zantufa: (NIhE_clause / MOhE_clause) free* (selbri / sumti) TEhU_elidible free*_20150728UTC_
 operand = expr:(number BOI_elidible free* / lerfu_string BOI_elidible free* / VEI_clause free* mex VEhO_elidible free* / (NIhE_clause / MOhE_clause) free* (selbri / sumti) TEhU_elidible free* / (LAhE_clause free* / NAhE_clause BO_clause free*) mex LUhU_elidible free* / NAhE_clause free* operand free*) {return _node("operand", expr); }
 number = expr:(PA_clause+) {return _node("number", expr); }
 lerfu_string = expr:(lerfu_word+) {return _node("lerfu_string", expr); }
