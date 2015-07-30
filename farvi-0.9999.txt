@@ -822,3 +822,4 @@ zantufa-0.5.js.peg:1678:// ZI = &cmavo expr:( z a h a i / z u / z a / z i ) &pos
 maltufa-0.5.js.peg:206:// operator //////// _maltufa: na'e vimcu ma'oi NAhU iku'i jalge fa lo simsa be tu'a la zantufa:  (MAhO_clause / NAhU_clause) free* (mex / selbri / sumti) TEhU_elidible free*_20150728UTC_
 maltufa-0.5.js.peg:208:// operand //////// _maltufa: na'e vimcu ma'oi NIhE iku'i jalge fa lo simsa be tu'a la zantufa: (NIhE_clause / MOhE_clause) free* (selbri / sumti) TEhU_elidible free*_20150728UTC_
 ------------------ mulno fa la maltufa_0.5 ------------------
+zantufa-0.9999.js.peg:247:// selbri //////// _galfi zoizoi tag? zoi zoizoi (!gek tag)? zoi tezu'e lonu stika tu'a lu ([{CU <(¹gi pu¹) broda (¹gi brode¹) GIhI> VAU} IAU] [i {CU <pu gi> <broda VAU> <gi (¹brode VAU¹)> GIhI VAU} IAU]) li'u i jalge fa tu'a lu ([CU {<pu gi> broda <gi brode> GIhI} VAU] IAU) li'u_20150730UTC_

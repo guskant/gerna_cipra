@@ -11,11 +11,6 @@ cause zasntufa/masnPAjednPA die, except masnre, masnrei...
 -> zantufa, mantipa, mantire, jendipa, jendire (.u'i zo manti zo jendu)
 )
 
-new SOI/XOI/VOI
-http://mw.lojban.org/papri/new_soi
-http://jbovlaste.lojban.org/dict/xoi
-http://mw.lojban.org/papri/new_voi
-
 http://mw.lojban.org/papri/ce_ki_tau_jau
 
 aipei curmi:
@@ -25,9 +20,6 @@ lo pu ko'a == ko'a pe puku
 )
 
 kurtyvla
-
-cekitaujau:
-http://mw.lojban.org/papri/ce_ki_tau_jau
 
 
 drata sitna:
@@ -112,4 +104,9 @@ mulno:
 # ME, NUhA -> ME
 # FEhE, MOhI, NAhE -> NAhE
 # KI, BAI, PU, ZI, ZEhA, FAhA, VA, VEhA, VIhA, TAhE, ZAhO, CAhA, CUhE -> BAI
+
+# new SOI/XOI/VOI
+# http://mw.lojban.org/papri/new_soi
+# http://jbovlaste.lojban.org/dict/xoi
+# http://mw.lojban.org/papri/new_voi : cekitaujau <- poi'i
 

@@ -243,7 +243,8 @@ relative_clauses = expr:(relative_clause (joik? relative_clause)*) {return _node
 
 relative_clause = expr:(GOI_clause term GEhU_elidible / NOI_clause statement KUhO_elidible) {return _node("relative_clause", expr); }
 
-selbri = expr:(tag? selbri_1) {return _node("selbri", expr); }
+// selbri //////// _galfi zoizoi tag? zoi zoizoi (!gek tag)? zoi tezu'e lonu stika tu'a lu ([{CU <(¹gi pu¹) broda (¹gi brode¹) GIhI> VAU} IAU] [i {CU <pu gi> <broda VAU> <gi (¹brode VAU¹)> GIhI VAU} IAU]) li'u i jalge fa tu'a lu ([CU {<pu gi> broda <gi brode> GIhI} VAU] IAU) li'u_20150730UTC_
+selbri = expr:((!gek tag)? selbri_1) {return _node("selbri", expr); }
 
 selbri_1 = expr:(selbri_2 / NA_clause selbri) {return _node("selbri_1", expr); }
 
