@@ -164,7 +164,8 @@ statement_1 = expr:(statement_2 (I_clause joik statement_2)*) {return _node("sta
 
 statement_2 = expr:(statement_3 (I_clause joik? tag? BO_clause statement_3)*) {return _node("statement_2", expr);}
 
-statement_3 = expr:(sentence / tag? TUhE_clause paragraphs TUhU_elidible / gek_statement) {return _node("statement_3", expr);}
+// statement_3 //////// _galfi zoizoi gek_statement zoi zoizoi terms? gek_statement zoi tezu'e tu'a lu da ge de broda gi di brode li'u_20150803UTC_
+statement_3 = expr:(sentence / tag? TUhE_clause paragraphs TUhU_elidible / terms? gek_statement) {return _node("statement_3", expr);}
 
 // // // ganai da'i curmi lo nu la gek lidne no gik gi lu ga ra broda gi ri brode li'u na se genturfa'i iki'ubo lo nu zo ga kuspe zo ra po'o i ka'e stika sepi'o zoi zoi !term zoi mu'a i ku'i lo gerna cu co'a no'e sampu 
 gek_statement = expr:(gek statement (gik statement)+ GIhI_elidible) {return _node("gek_statement", expr);}
