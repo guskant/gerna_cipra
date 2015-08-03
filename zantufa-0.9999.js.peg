@@ -164,8 +164,8 @@ statement_1 = expr:(statement_2 (I_clause joik statement_2)*) {return _node("sta
 
 statement_2 = expr:(statement_3 (I_clause joik? tag? BO_clause statement_3)*) {return _node("statement_2", expr);}
 
-// statement_3 //////// _galfi zoizoi gek_statement zoi zoizoi terms? gek_statement zoi tezu'e tu'a lu da ge de broda gi di brode li'u_20150803UTC_
-statement_3 = expr:(sentence / tag? TUhE_clause paragraphs TUhU_elidible / terms? gek_statement) {return _node("statement_3", expr);}
+// statement_3 //////// _galfi zoizoi gek_statement zoi zoizoi terms? gek_statement zoi tezu'e tu'a lu da ge de broda gi di brode li'u i ku'i xruti tezu'e lo nu tolcru tu'a lu ta ge ti zo'u broda gi tu brode li'u_20150803UTC_
+statement_3 = expr:(sentence / tag? TUhE_clause paragraphs TUhU_elidible / gek_statement) {return _node("statement_3", expr);}
 
 // // // ganai da'i curmi lo nu la gek lidne no gik gi lu ga ra broda gi ri brode li'u na se genturfa'i iki'ubo lo nu zo ga kuspe zo ra po'o i ka'e stika sepi'o zoi zoi !term zoi mu'a i ku'i lo gerna cu co'a no'e sampu 
 gek_statement = expr:(gek statement (gik statement)+ GIhI_elidible) {return _node("gek_statement", expr);}
@@ -181,7 +181,8 @@ fragment = expr:(prenex / joik / ek / gihek / NA_clause !terms !KU / terms VAU_e
 
 prenex = expr:(terms ZOhU_clause) {return _node("prenex", expr);}
 
-sentence = expr:((terms)? CU_elidible bridi_tail) {return _node("sentence", expr);}
+// sentence //////// _galfi fi zoizoi terms? (CU_elidible bridi_tail / gek sentence (gik sentence)+ GIhI_elidible) zoi tezuhe tu'a lu ([ta {ge <tu (¹CU [brode VAU]¹)> <gi (¹CU [brodo VAU]¹)> GIhI}] IAU) li'u_20150803UTC_
+sentence = expr:(terms? (CU_elidible bridi_tail / gek sentence (gik sentence)+ GIhI_elidible)) {return _node("sentence", expr);}
 
 bridi_tail = expr:(bridi_tail_1 (joik_gihek tag? CU_elidible bridi_tail_1)*) {return _node("bridi_tail", expr);}
 
@@ -192,6 +193,7 @@ bridi_tail_2 = expr:(bridi_tail_3 (joik_gihek tag? BO_clause CU_elidible bridi_t
 bridi_tail_3 = expr:(KE_clause !(selbri_2 KEhE) bridi_tail KEhE_elidible tail_terms / selbri tail_terms / gek_bridi_tail) {return _node("bridi_tail_3", expr);}
 
 // // // za'a nitcu fa zoizoi  / tag* KE_clause free* gek_bridi_tail KEhE_elidible free* / NA_clause free* gek_bridi_tail zoi
+// gek_bridi_tail //////// _cipra tu'a zoizoi terms? zoi i ku'i xruti iki'ubo lo nu zo CU lidne la gek.term.bridi_tail cu na xamgu_20150803UTC_
 gek_bridi_tail = expr:(gek bridi_tail (gik bridi_tail)+ GIhI_elidible tail_terms / tag* KE_clause gek_bridi_tail KEhE_elidible / NA_clause gek_bridi_tail) {return _node("gek_bridi_tail", expr);}
 
 //// EXP-FIX: tag? KE --> tag* KE

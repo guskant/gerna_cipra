@@ -828,4 +828,6 @@ zantufa-0.6.js.peg:211:// term_2 //////// _galfi zoizoi NA_clause KU_elidible zo
 zantufa-0.6.js.peg:249:// selbri //////// _galfi zoizoi tag? zoi zoizoi (!gek tag)? zoi tezu'e lonu stika tu'a lu ([{CU <(¹gi pu¹) broda (¹gi brode¹) GIhI> VAU} IAU] [i {CU <pu gi> <broda VAU> <gi (¹brode VAU¹)> GIhI VAU} IAU]) li'u i jalge fa tu'a lu ([CU {<pu gi> broda <gi brode> GIhI} VAU] IAU) li'u_20150730UTC_
 ------------------ mulno fa la zantufa_0.6 ------------------
 ------------------ mulno fa la maltufa_0.6 ------------------
-zantufa-0.9999.js.peg:167:// statement_3 //////// _galfi zoizoi gek_statement zoi zoizoi terms? gek_statement zoi tezu'e tu'a lu da ge de broda gi di brode li'u_20150803UTC_
+zantufa-0.9999.js.peg:167:// statement_3 //////// _galfi zoizoi gek_statement zoi zoizoi terms? gek_statement zoi tezu'e tu'a lu da ge de broda gi di brode li'u i ku'i xruti tezu'e lo nu tolcru tu'a lu ta ge ti zo'u broda gi tu brode li'u_20150803UTC_
+zantufa-0.9999.js.peg:184:// sentence //////// _galfi fi zoizoi terms? (CU_elidible bridi_tail / gek sentence (gik sentence)+ GIhI_elidible) zoi tezuhe tu'a lu ([ta {ge <tu (¹CU [brode VAU]¹)> <gi (¹CU [brodo VAU]¹)> GIhI}] IAU) li'u_20150803UTC_
+zantufa-0.9999.js.peg:196:// gek_bridi_tail //////// _cipra tu'a zoizoi terms? zoi i ku'i xruti iki'ubo lo nu zo CU lidne la gek.term.bridi_tail cu na xamgu_20150803UTC_
