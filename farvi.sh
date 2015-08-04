@@ -8,7 +8,12 @@ grep -n "UTC_" $PEG > temp
 awk --assign awk_var="$PEG" '{print awk_var":"$0}' temp >> farvi-$1.txt
 echo "------------------ mulno fa la zantufa_$1 ------------------" >> farvi-$1.txt
 rm temp
-awk --assign awk_var="$1" '{gsub(/farvi-0.9999.txt/, "farvi.txt"); gsub(/0.9999/, awk_var); print $0}' zantufa-0.9999.html > zantufa-$1.html
+awk --assign awk_var="$1" '{
+	gsub(/farvi-0.9999.txt/, "farvi.txt"); 
+	gsub(/0.9999/, awk_var); 
+	gsub(/\041--cekitaus /, ""); 
+	gsub(/ cekitaus--/, ""); 
+	print $0}' zantufa-0.9999.html > zantufa-$1.html
 # uncomment for real release:
 # ./tceki.sh $1
 # cp farvi-$1.txt farvi.txt
