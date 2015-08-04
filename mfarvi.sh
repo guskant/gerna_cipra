@@ -10,6 +10,7 @@ echo "------------------ mulno fa la maltufa_$1 ------------------" >> farvi-$1.
 rm temp
 awk --assign awk_var="$1" '{gsub(/farvi-0.9999.txt/, "farvi.txt"); gsub(/0.9999/, awk_var); print $0}' maltufa-0.9999.html > maltufa-$1.html
 # uncomment for real release:
+# ./mtceki.sh $1
 # cp farvi-$1.txt farvi.txt
 # cp -R js ../gh-pages
 # cp maltufa-$1.html ../gh-pages

@@ -27,6 +27,9 @@
 <meta name="msapplication-config" content="./icon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 <style>
+	.liste {
+	font: 0.8em arial, sans-serif;
+	}
 	.ciksi {
 	font: 0.9em arial, sans-serif;
 	}
@@ -43,7 +46,7 @@
 <div>
 <form id="form1" name="form1" method="post" action="" style="width:100%">
   <textarea id="input_textarea" style="width:100%" rows="8" autofocus></textarea><br/>
-<span  class="ciksi">.i ko cuxna lo jarco tarmi la'e di'e .i: </span>
+<span  class="ciksi">.i ko cuxna .i: </span>
   <select id="optlist" onchange="run_camxes()">
     <option>na'e se stika</option>
     <option>denmi</option>
@@ -54,6 +57,16 @@
     <option>gau melbi -- famyma'o + selma'o</option>
     <option>gau melbi -- famyma'o + selma'o + bripau</option>
   </select>
+<span  class="ciksi">.i</span>
+<select onChange="top.location.href=value">
+<option value="maltufa-0.9999.html" selected="1">na'e cekitaus</option>
+<option value="maltufa-0.9999-cekitaujoibu.html">cekitaujoibus</option>
+<option value="maltufa-0.9999-cekitaujoizai.html">cekitaujoizais</option>
+<option value="maltufa-0.9999-cekitaujaubu.html">cekitaujaubus</option>
+<option value="maltufa-0.9999-cekitaujauzai.html">cekitaujauzais</option>
+<option value="maltufa-0.9999-cekitaujeibu.html">cekitaujeibus</option>
+<option value="maltufa-0.9999-cekitaujeizai.html">cekitaujeizais</option>
+</select>
   <span class="urli">
     <a href="https://raw.githubusercontent.com/guskant/gerna_cipra/master/maltufa-0.9999.js.peg" target="_blank">[ lo gerna datnyvei ]</a>
   </span>
