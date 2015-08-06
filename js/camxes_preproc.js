@@ -50,7 +50,7 @@
 	}
 	input = transliterate(input);
 	// --- //
-	input = input.replace(/\(|\)|«|»|—|:|{|}/gm,"");
+	input = input.replace(/\(|\)|«|»|—|:|{|}|,/gm,"");
 	return input;
 }
 

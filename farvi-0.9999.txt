@@ -845,3 +845,12 @@ maltufa-0.7.js.peg:793:// CMAVO //////// _maltufa: vimcu ma'oi GIhI ki'u lo nu n
 maltufa-0.7.js.peg:994:// GIhA //////// _maltufa: xruti zo gi'i ki'u lo nu na'e sarcu ma'oi GIhI_20150803UTC_
 maltufa-0.7.js.peg:996:// GIhI = &cmavo expr:( g i h i ) &post_word {return ["GIhI", _join(expr)];} //////// _maltufa: vimcu ki'u lo nu na'e sarcu_20150803UTC_
 ------------------ mulno fa la maltufa_0.7 ------------------
+zantufa-0.9999.js.peg:137:// //////// _vimcu ro zoi zoi comma zoi imu'ibo ri zukte noda i fau ku stika tu'a la'o zoi preproc.js zoi_20150806UTC_
+zantufa-0.9999.js.peg:1010:// zifcme //////// _vimcu zoizoi / digit zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC_
+zantufa-0.9999.js.peg:1013:// jbocme //////// _vimcu zoizoi / digit zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC_
+zantufa-0.9999.js.peg:1022:// cmavo_form //////// _vimcu zoizoi / digit zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC_
+zantufa-0.9999.js.peg:1137:// diphthong //////// _xu tu'a zoizoi !glide zoi sarcu i la'a lu zo oiia li'u je zo oiua li'u cu na raktu i ei jalge fa tu'a lu zo oi ia li'u mu'a i cipra_20150806UTC_
+zantufa-0.9999.js.peg:1216:// digit = expr:([0123456789] !h !nucleus) {return _join(expr);} //////// _vimcu iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC_
+zantufa-0.9999.js.peg:1225:// comma = [,] {return "";} //////// _vimcu imu'ibo zukte noda_20150806UTC_
+zantufa-0.9999.js.peg:1271:// BY //////// _vimcu zoizoi  / digit h y zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC_
+zantufa-0.9999.js.peg:1386:// PA //////// _vimcu zoizoi / digit zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC_
