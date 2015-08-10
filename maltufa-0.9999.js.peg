@@ -119,9 +119,8 @@
     return typeof v.valueOf() === 'string';
   }
 }
-text = expr:(intro_null NAI_clause* indicators? free* paragraphs? si_clause? faho_clause EOF?) {return _node_nonempty("text", expr);}
-intro_null = expr:(spaces? su_clause* intro_si_clause) {return _node_nonempty("intro_null", expr); }
-intro_si_clause = expr:(si_clause? SI*)  {return _node_nonempty("intro_si_clause", expr); }
+text = expr:(intro_null NAI_clause* indicators? free* paragraphs? si_clause? SI_clause* faho_clause EOF?) {return _node_nonempty("text", expr);}
+intro_null = expr:(spaces? su_clause* (!paragraphs si_clause SI_clause*)?) {return _node_nonempty("intro_null", expr); }
 faho_clause = expr:((FAhO_clause dot_star)?) {return _node("faho_clause", expr);}
 // Please note that the "text_1" item in the text_1 production does
 // *not* match the BNF. This is due to a bug in the BNF.  The change
@@ -894,11 +893,12 @@ syllable = expr:(onset !y nucleus coda?) {return _join(expr);}
 //// FIX: preventing {bla'ypre} from being a valid lujvo
 consonantal_syllable = expr:(consonant &syllabic coda) {return _join(expr);}
 coda = expr:(!any_syllable consonant &any_syllable / syllabic? consonant? &pause) {return _join(expr);}
-onset = expr:(h / glide / initial) {return _join(expr);}
+// onset //////// _maltufa: di'a curmi la'o zoi CgV zoi_20150810UTC_
+onset = expr:(h / consonant? glide / initial) {return _join(expr);}
 nucleus = expr:(vowel / diphthong / y !nucleus) {return _join(expr);}
 //_________________________________________________________________
 glide = expr:(i / u) &nucleus {return expr;}
-diphthong = expr:(a i / a u / e i / o i) !nucleus !glide {return _join(expr);}
+diphthong = expr:(a i / a u / e i / o i) !nucleus {return _join(expr);}
 vowel = expr:(a / e / i / o / u) !nucleus {return expr;}
 a = [aA] {return "a";}
 e = [eE] {return "e";}
@@ -918,23 +918,24 @@ consonant = expr:(voiced / unvoiced / syllabic) {return expr;}
 syllabic = expr:(l / m / n / r) {return expr;}
 voiced = expr:(b / d / g / j / v / z) {return expr;}
 unvoiced = expr:(c / f / k / p / s / t / x) {return expr;}
-l = [lL] !h !glide !l {return "l";}
-m = [mM] !h !glide !m !z {return "m";}
-n = [nN] !h !glide !n !affricate  {return "n";}
-r = [rR] !h !glide !r {return "r";}
-b = [bB] !h !glide !b !unvoiced {return "b";}
-d = [dD] !h !glide !d !unvoiced {return "d";}
-g = [gG] !h !glide !g !unvoiced {return "g";}
-v = [vV] !h !glide !v !unvoiced {return "v";}
-j = [jJ] !h !glide !j !z !unvoiced {return "j";}
-z = [zZ] !h !glide !z !j !unvoiced {return "z";}
-s = [sS] !h !glide !s !c !voiced {return "s";}
-c = [cC] !h !glide !c !s !x !voiced {return "c";}
-x = [xX] !h !glide !x !c !k !voiced {return "x";}
-k = [kK] !h !glide !k !x !voiced {return "k";}
-f = [fF] !h !glide !f !voiced {return "f";}
-p = [pP] !h !glide !p !voiced {return "p";}
-t = [tT] !h !glide !t !voiced {return "t";}
+// l,m,...,t //////// _maltufa: di'a curmi la'o zoi CgV zoi_20150810UTC_
+l = [lL] !h !l {return "l";}
+m = [mM] !h !m !z {return "m";}
+n = [nN] !h !n !affricate  {return "n";}
+r = [rR] !h !r {return "r";}
+b = [bB] !h !b !unvoiced {return "b";}
+d = [dD] !h !d !unvoiced {return "d";}
+g = [gG] !h !g !unvoiced {return "g";}
+v = [vV] !h !v !unvoiced {return "v";}
+j = [jJ] !h !j !z !unvoiced {return "j";}
+z = [zZ] !h !z !j !unvoiced {return "z";}
+s = [sS] !h !s !c !voiced {return "s";}
+c = [cC] !h !c !s !x !voiced {return "c";}
+x = [xX] !h !x !c !k !voiced {return "x";}
+k = [kK] !h !k !x !voiced {return "k";}
+f = [fF] !h !f !voiced {return "f";}
+p = [pP] !h !p !voiced {return "p";}
+t = [tT] !h !t !voiced {return "t";}
 h = ['h] &nucleus {return "'";}
 //___________________________________________________________________
 post_word = expr:(pause / !nucleus lojban_word)  {return _join(expr);}
