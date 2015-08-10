@@ -845,3 +845,33 @@ maltufa-0.7.js.peg:793:// CMAVO //////// _maltufa: vimcu ma'oi GIhI ki'u lo nu n
 maltufa-0.7.js.peg:994:// GIhA //////// _maltufa: xruti zo gi'i ki'u lo nu na'e sarcu ma'oi GIhI_20150803UTC_
 maltufa-0.7.js.peg:996:// GIhI = &cmavo expr:( g i h i ) &post_word {return ["GIhI", _join(expr)];} //////// _maltufa: vimcu ki'u lo nu na'e sarcu_20150803UTC_
 ------------------ mulno fa la maltufa_0.7 ------------------
+zantufa-0.8.js.peg:137:// //////// _vimcu ro zoi zoi comma zoi imu'ibo ri zukte noda i fau ku stika tu'a la'o zoi preproc.js zoi_20150806UTC_
+zantufa-0.8.js.peg:138:// text //////// _vimcu lo pa cfila i galfi zoizoi si_clause? zoi zoizoi intro_si_clause zoi i jalge fa lo nu zoizoi idasibroda zoi zoizoi dasibroda zoi dunli lo ka stura_20150807UTC_
+zantufa-0.8.js.peg:139:// text //////// _galfi zoizoi intro_si_clause zoi zoizoi si_clause? SI_clause* zoi tezu'e lo go'i je lo nu curmi lo nu zo si du'e mei_20150810UTC_
+zantufa-0.8.js.peg:142:// intro_null //////// _vimcu lo pa cfila i vimcu zoizoi intro_si_clause zoi i jalge fa lo nu zoizoi idasibroda zoi zoizoi dasibroda zoi dunli lo ka stura_20150807UTC_
+zantufa-0.8.js.peg:143:// intro_null //////// _jmina zoizoi  (!paragraphs si_clause SI_clause*)? zoi tezu'e lo go'i je lo nu curmi lo nu zo si du'e mei_20150810UTC_
+zantufa-0.8.js.peg:146:// intro_si_clause = expr:(si_clause? SI*)  {return _node_nonempty("intro_si_clause", expr); } //////// _tu'a ti co'a na'e sarcu i vimcu_20150810UTC_
+zantufa-0.8.js.peg:1014:// zifcme //////// _vimcu zoizoi / digit zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC_
+zantufa-0.8.js.peg:1017:// jbocme //////// _vimcu zoizoi / digit zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC_
+zantufa-0.8.js.peg:1026:// cmavo_form //////// _vimcu zoizoi / digit zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC_
+zantufa-0.8.js.peg:1053:// stressed_fuhivla_rafsi //////// _galfi zoizoi &consonant zoi zoizoi consonantal_syllable* !h zoi sei la mezohe cu stika to zoizoi https://github.com/Ilmen-vodhr/ilmentufa/commit/9ae16d8cd6ef5f47bf5e4f740e75f321dd828226 zoi toi_20150810UTC_
+zantufa-0.8.js.peg:1056:// fuhivla_rafsi //////// _galfi zoizoi &consonant zoi zoizoi !h zoi sei la mezohe cu stika to zoizoi https://github.com/Ilmen-vodhr/ilmentufa/commit/9ae16d8cd6ef5f47bf5e4f740e75f321dd828226 zoi toi_20150810UTC_
+zantufa-0.8.js.peg:1122:// stress //////// _jmina zoizoi / glide zoi sei la mezohe cu stika to zoizoi https://github.com/Ilmen-vodhr/ilmentufa/commit/9ae16d8cd6ef5f47bf5e4f740e75f321dd828226 zoi toi_20150810UTC_
+zantufa-0.8.js.peg:1144:// diphthong //////// _xu tu'a zoizoi !glide zoi sarcu i la'a lu zo oiia li'u je lu zo oiua li'u je lu zo oiian li'u cu na raktu i ei jalge fa tu'a lu zo oi ia li'u je lu zo oi ua li'u je lu zo oiian li'u mu'a i cipra_20150806UTC_
+zantufa-0.8.js.peg:1145:// diphthong //////// _pe'i da na'e ka'e te frica lu aian li'u zoizoi aiian li'u isemu'ibo galfi fi zoizoi (a i !i / a u !u / e i !i / o i !i) !nucleus zoi sei la mezohe cu stika to zoizoi https://github.com/Ilmen-vodhr/ilmentufa/commit/9ae16d8cd6ef5f47bf5e4f740e75f321dd828226 zoi toi_20150810UTC_
+zantufa-0.8.js.peg:1224:// digit = expr:([0123456789] !h !nucleus) {return _join(expr);} //////// _vimcu iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC_
+zantufa-0.8.js.peg:1233:// comma = [,] {return "";} //////// _vimcu imu'ibo zukte noda_20150806UTC_
+zantufa-0.8.js.peg:1279:// BY //////// _vimcu zoizoi  / digit h y zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC_
+zantufa-0.8.js.peg:1394:// PA //////// _vimcu zoizoi / digit zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC_
+------------------ mulno fa la zantufa_0.8 ------------------
+maltufa-0.8.js.peg:122:// text //////// _maltufa: lo cmevla co'u selbrisle : xruti tu'a zoizoi (CMEVLA_clause+ / indicators?) free* zoi_20150810UTC_
+maltufa-0.8.js.peg:181:// sumti_5 //////// _maltufa: lo cmevla co'u selbrisle : xruti tu'a zoizoi  / LA_clause free* relative_clauses? CMEVLA_clause+ free* / (LA_clause / LE_clause) free* sumti_tail KU_elidible free* zoi_20150810UTC_
+maltufa-0.8.js.peg:201:// tanru_unit_2 //////// _maltufa: lo cmevla co'u selbrisle : vimcu zoizoi  CMEVLA_clause free* / zoi_20150810UTC_
+maltufa-0.8.js.peg:242:// free //////// _maltufa: lo cmevla co'u selbrisle : xruti tu'a zoizoi  / vocative relative_clauses? CMEVLA_clause+ free* relative_clauses? DOhU_elidible zoi_20150810UTC_
+maltufa-0.8.js.peg:531://         name descriptors //////// _maltufa: lo cmevla co'u selbrisle : xruti tu'a la'o zoi LA_clause, LA_pre, LA_post zoi_20150810UTC_
+maltufa-0.8.js.peg:800:// CMAVO //////// _maltufa: lo cmevla co'u selbrisle : xruti ma'oi LA_20150810UTC_
+maltufa-0.8.js.peg:904:// onset //////// _maltufa: di'a curmi la'o zoi CgV zoi_20150810UTC_
+maltufa-0.8.js.peg:929:// l,m,...,t //////// _maltufa: di'a curmi la'o zoi CgV zoi_20150810UTC_
+maltufa-0.8.js.peg:1020:// LA //////// _maltufa: lo cmevla co'u selbrisle : xruti ma'oi LA_20150810UTC_
+maltufa-0.8.js.peg:1024:// LE //////// _maltufa: lo cmevla co'u selbrisle : xruti ma'oi LA : vimcu la'o zoi la'ei zo'au lai la'i la zoi_20150810UTC_
+------------------ mulno fa la maltufa_0.8 ------------------

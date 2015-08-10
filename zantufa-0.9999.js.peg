@@ -134,16 +134,16 @@
   }
 }
 
-// //////// _vimcu ro zoi zoi comma zoi imu'ibo ri zukte noda i fau ku stika tu'a la'o zoi preproc.js zoi_20150806UTC_
-// text //////// _vimcu lo pa cfila i galfi zoizoi si_clause? zoi zoizoi intro_si_clause zoi i jalge fa lo nu zoizoi idasibroda zoi zoizoi dasibroda zoi dunli lo ka stura_20150807UTC_
-// text //////// _galfi zoizoi intro_si_clause zoi zoizoi si_clause? SI_clause* zoi tezu'e lo go'i je lo nu curmi lo nu zo si du'e mei_20150810UTC_
+// //////// _vimcu ro zoi zoi comma zoi imu'ibo ri zukte noda i fau ku stika tu'a la'o zoi preproc.js zoi_20150806UTC
+// text //////// _vimcu lo pa cfila i galfi zoizoi si_clause? zoi zoizoi intro_si_clause zoi i jalge fa lo nu zoizoi idasibroda zoi zoizoi dasibroda zoi dunli lo ka stura_20150807UTC
+// text //////// _galfi zoizoi intro_si_clause zoi zoizoi si_clause? SI_clause* zoi tezu'e lo go'i je lo nu curmi lo nu zo si du'e mei_20150810UTC
 text = expr:(intro_null free* paragraphs? si_clause? SI_clause* faho_clause EOF?) {return _node_nonempty("text", expr);}
 
-// intro_null //////// _vimcu lo pa cfila i vimcu zoizoi intro_si_clause zoi i jalge fa lo nu zoizoi idasibroda zoi zoizoi dasibroda zoi dunli lo ka stura_20150807UTC_
-// intro_null //////// _jmina zoizoi  (!paragraphs si_clause SI_clause*)? zoi tezu'e lo go'i je lo nu curmi lo nu zo si du'e mei_20150810UTC_
+// intro_null //////// _vimcu lo pa cfila i vimcu zoizoi intro_si_clause zoi i jalge fa lo nu zoizoi idasibroda zoi zoizoi dasibroda zoi dunli lo ka stura_20150807UTC
+// intro_null //////// _jmina zoizoi  (!paragraphs si_clause SI_clause*)? zoi tezu'e lo go'i je lo nu curmi lo nu zo si du'e mei_20150810UTC
 intro_null = expr:(spaces? su_clause* (!paragraphs si_clause SI_clause*)?) {return _node_nonempty("intro_null", expr); }
 
-// intro_si_clause = expr:(si_clause? SI*)  {return _node_nonempty("intro_si_clause", expr); } //////// _tu'a ti co'a na'e sarcu i vimcu_20150810UTC_
+// intro_si_clause = expr:(si_clause? SI*)  {return _node_nonempty("intro_si_clause", expr); } //////// _tu'a ti co'a na'e sarcu i vimcu_20150810UTC
 
 faho_clause = expr:((FAhO_clause dot_star)?) {return _node("faho_clause", expr);}
 
@@ -1011,10 +1011,10 @@ zoi_close = w:any_word &{ return (_zoi_check_delim(w)); }
 
 cmevla = expr:(jbocme / zifcme) { return ["cmevla", _join(expr)]; }
 
-// zifcme //////// _vimcu zoizoi / digit zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC_
+// zifcme //////// _vimcu zoizoi / digit zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC
 zifcme = (!h (nucleus / glide / h / consonant !pause)* consonant &pause)
 
-// jbocme //////// _vimcu zoizoi / digit zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC_
+// jbocme //////// _vimcu zoizoi / digit zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC
 jbocme = (&zifcme any_syllable* &pause)
 
 //___________________________________________________________________
@@ -1023,7 +1023,7 @@ cmavo = expr:(!cmevla !CVCy_lujvo cmavo_form &post_word) { return _join(expr); }
 
 CVCy_lujvo = expr:(CVC_rafsi y h? initial_rafsi* brivla_core / stressed_CVC_rafsi y short_final_rafsi) { return _join(expr); }
 
-// cmavo_form //////// _vimcu zoizoi / digit zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC_
+// cmavo_form //////// _vimcu zoizoi / digit zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC
 cmavo_form = expr:(!h !cluster onset (nucleus h)* (!stressed nucleus / nucleus !cluster) / y+) { return _join(expr); }
 
 //___________________________________________________________________
@@ -1050,9 +1050,11 @@ stressed_brivla_rafsi = expr:(&unstressed_syllable brivla_head stressed_syllable
 
 brivla_rafsi = expr:(&(syllable consonantal_syllable* syllable) brivla_head h y h?) { return _join(expr); }
 
-stressed_fuhivla_rafsi = expr:(fuhivla_head stressed_syllable &consonant onset y) { return _join(expr); }
+// stressed_fuhivla_rafsi //////// _galfi zoizoi &consonant zoi zoizoi consonantal_syllable* !h zoi sei la mezohe cu stika to zoizoi https://github.com/Ilmen-vodhr/ilmentufa/commit/9ae16d8cd6ef5f47bf5e4f740e75f321dd828226 zoi toi_20150810UTC
+stressed_fuhivla_rafsi = expr:(fuhivla_head stressed_syllable consonantal_syllable* !h onset y) { return _join(expr); }
 
-fuhivla_rafsi = expr:(&unstressed_syllable fuhivla_head &consonant onset y h?) { return _join(expr); }
+// fuhivla_rafsi //////// _galfi zoizoi &consonant zoi zoizoi !h zoi sei la mezohe cu stika to zoizoi https://github.com/Ilmen-vodhr/ilmentufa/commit/9ae16d8cd6ef5f47bf5e4f740e75f321dd828226 zoi toi_20150810UTC
+fuhivla_rafsi = expr:(&unstressed_syllable fuhivla_head !h onset y h?) { return _join(expr); }
 
 fuhivla_head = expr:(!rafsi_string brivla_head) { return _join(expr); }
 
@@ -1117,7 +1119,8 @@ unstressed_diphthong = expr:(!stressed diphthong !stress) {return _join(expr);}
 unstressed_vowel = expr:(!stressed vowel !stress) {return _join(expr);}
 
 //// FIX: Xorxes' fix for fu'ivla rafsi stress
-stress = expr:(consonant* h? y? syllable pause) {return _join(expr);}
+// stress //////// _jmina zoizoi / glide zoi sei la mezohe cu stika to zoizoi https://github.com/Ilmen-vodhr/ilmentufa/commit/9ae16d8cd6ef5f47bf5e4f740e75f321dd828226 zoi toi_20150810UTC
+stress = expr:((consonant / glide)* h? y? syllable pause) {return _join(expr);}
 
 stressed = expr:(onset [AEIOU]) {return _join(expr);}
 
@@ -1138,8 +1141,9 @@ nucleus = expr:(vowel / diphthong / y !nucleus) {return _join(expr);}
 
 glide = expr:(i / u) &nucleus {return expr;}
 
-// diphthong //////// _xu tu'a zoizoi !glide zoi sarcu i la'a lu zo oiia li'u je lu zo oiua li'u je lu zo oiian li'u cu na raktu i ei jalge fa tu'a lu zo oi ia li'u je lu zo oi ua li'u je lu zo oiian li'u mu'a i cipra_20150806UTC_
-diphthong = expr:(a i / a u / e i / o i) !nucleus {return _join(expr);}
+// diphthong //////// _xu tu'a zoizoi !glide zoi sarcu i la'a lu zo oiia li'u je lu zo oiua li'u je lu zo oiian li'u cu na raktu i ei jalge fa tu'a lu zo oi ia li'u je lu zo oi ua li'u je lu zo oiian li'u mu'a i cipra_20150806UTC
+// diphthong //////// _pe'i da na'e ka'e te frica lu aian li'u zoizoi aiian li'u isemu'ibo galfi fi zoizoi (a i !i / a u !u / e i !i / o i !i) !nucleus zoi sei la mezohe cu stika to zoizoi https://github.com/Ilmen-vodhr/ilmentufa/commit/9ae16d8cd6ef5f47bf5e4f740e75f321dd828226 zoi toi_20150810UTC
+diphthong = expr:(a i !i / a u !u / e i !i / o i !i) !nucleus {return _join(expr);}
 
 vowel = expr:(a / e / i / o / u) !nucleus {return expr;}
 
@@ -1217,7 +1221,7 @@ h = ['h] &nucleus {return "'";}
 
 //___________________________________________________________________
 
-// digit = expr:([0123456789] !h !nucleus) {return _join(expr);} //////// _vimcu iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC_
+// digit = expr:([0123456789] !h !nucleus) {return _join(expr);} //////// _vimcu iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC
 
 post_word = expr:(pause / !nucleus lojban_word)  {return _join(expr);}
 
@@ -1226,7 +1230,7 @@ pause = expr:(space_char+ / EOF)  {return _join(expr);}
 // // // za'a sarcu
 EOF = expr:(!.)  {return _join(expr);}
 
-// comma = [,] {return "";} //////// _vimcu imu'ibo zukte noda_20150806UTC_
+// comma = [,] {return "";} //////// _vimcu imu'ibo zukte noda_20150806UTC
 
 non_lojban_word = expr:(!lojban_word non_space+)  {return _join(expr);}
 
@@ -1272,7 +1276,7 @@ BOI = &cmavo expr:( b o i ) &post_word {return ["BOI", _join(expr)];}
 
 BU = &cmavo expr:( b u ) &post_word {return ["BU", _join(expr)];}
 
-// BY //////// _vimcu zoizoi  / digit h y zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC_
+// BY //////// _vimcu zoizoi  / digit h y zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC
 BY = &cmavo expr:( z y / z e h y / z a h u h y / y h y / ybu / x y / x o h y / x o h e h y / x i h i h e i h y / x e i h y / x a h y / v y / v o h y / v o h e i h a h y / v i h e i h e h y / v a u h a u h o h y / v a i h y / v a h e i h a h y / u y / u i h y / u h y / t y / t u h o h y / t o h a / t e h o h y / t a u h u h y / s y / s u h o i h y / s u h o h y / s u h e h y / s o i h u h y / s o i h a h y / s o h y / s o h u h y / s o h o h y / s o h i h y / s o h e h y / s o h a h y / s e i h u h e h y / s e h i h i h y / s e h e / r y / r u h o / r o h y / r o h o i h y / r e i h y / r e h y / r a u h y / r a h e h y / p y / p u h e h u h o h y / p i h y / p e i h i h a h y / p a i h y / p a h y / p a h a u h o h y / o h y / n y / n o h y / n o h o h y / n o h e h u h y / n o h a i h y / n i h u h y / n i h e h o i h y / n i h e h e i h y / n a h a / m y / m u h y / m u h i h a i h y / m o h a h y / m e h i h y / m a i h e h e h y / m a h u h y / l y / l o h a / k y / k o i h o h y / k i h o h y / k e i h o h y / k a u h o h y / k a i h o h y / k a h o h y / k a h o h a i h y / k a h e i h a h y / j y / j o h o / j i h i h y / j e h o / j a u h y / i y / i h y / g y / g o h o h i h a h y / g e h o / g a u h i h o h y / g a i h y / g a h e / g a h a u h y / f y / f u h a h a u h y / f u h a h a i h y / f i h u h y / f e i h y / f a i h u h y / f a i h u h a h y / f a i h e h a u h y / e h y / d y / d u h e h y / d a u h y / d a h a h y / c y / c i h y / c i h i h y / c e h i h y / b y / b u h o h e / b i h y / a h y ) &post_word {return ["BY", _join(expr)];}
 
 CEI = &cmavo expr:( c e i ) &post_word {return ["CEI", _join(expr)];}
@@ -1387,7 +1391,7 @@ NOI = &cmavo expr:( v o i h i / v o i / n o i / p o i ) &post_word {return ["NOI
 
 NU = &cmavo expr:( b u h a i / k a i h u / p o i h i / n i / d u h u / s i h o / n u / l i h i / k a / j e i / s u h u / z u h o / m u h e / p u h u / z a h i ) &post_word {return ["NU", _join(expr)];}
 
-// PA //////// _vimcu zoizoi / digit zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC_
+// PA //////// _vimcu zoizoi / digit zoi iki'ubo la digit cu se galfi la'o zoi preproc.js zoi_20150806UTC
 PA = &cmavo expr:( z e / z a h u / x o h e / x o / x i h i h e i / x e i / x a / v o h e i h a / v o / v i h e i h e / v a u h a u h o / v a i / v a h e i h a / t u h o / t e h o / t a u h u / s u h o i / s u h o / s u h e / s o i h u / s o i h a / s o h u / s o h o / s o h i / s o h e / s o h a / s o / s e i h u h e / s e h i h i / r o h o i / r o / r e i / r e / r a u / r a h e / p u h e h u h o / p i / p e i h i h a / p a i / p a h a u h o / p a / n o h o / n o h e h u / n o h a i / n o / n i h u / n i h e h o i / n i h e h e i / m u h i h a i / m u / m o h a / m e h i / m a i h e h e / m a h u / k o i h o / k i h o / k e i h o / k a u h o / k a i h o / k a h o h a i / k a h o / k a h e i h a / j i h i / j a u / g o h o h i h a / g a u h i h o / g a i / g a h a u / f u h a h a u / f u h a h a i / f i h u / f e i / f a i h u h a / f a i h u / f a i h e h a u / d u h e / d a u / d a h a / c i h i / c i / c e h i / b i ) &post_word {return ["PA", _join(expr)];}
 
 PEhO = &cmavo expr:( k e i h a i / p e h o ) &post_word {return ["PEhO", _join(expr)];}
