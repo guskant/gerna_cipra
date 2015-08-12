@@ -875,13 +875,17 @@ maltufa-0.8.js.peg:929:// l,m,...,t //////// _maltufa: di'a curmi la'o zoi CgV z
 maltufa-0.8.js.peg:1020:// LA //////// _maltufa: lo cmevla co'u selbrisle : xruti ma'oi LA_20150810UTC_
 maltufa-0.8.js.peg:1024:// LE //////// _maltufa: lo cmevla co'u selbrisle : xruti ma'oi LA : vimcu la'o zoi la'ei zo'au lai la'i la zoi_20150810UTC_
 ------------------ mulno fa la maltufa_0.8 ------------------
-zantufa-0.9999.js.peg:212:// tag_term //////// _la'o zoi tanru_unit_2 zoi binxo la'o zoi tanru_unit_1 zoi_20150810UTC_
-zantufa-0.9999.js.peg:239:// sumti_tail_1 //////// _vimcu zoizoi relative_clauses? zoi ki'u lo nu vo'e co'a pagbu la'o zoi selbri_1 zoi_20150810UTC_
-zantufa-0.9999.js.peg:249:// selbri_1 //////// _ma'oi CEI cu .ei jongau lo selbri jenai lo selbrisle i jmina zoizoi  (CEI_clause selbri)* zoi_20150810UTC_
-zantufa-0.9999.js.peg:250:// selbri_1 //////// _jmina zoizoi relative_clauses? zoi_20150810UTC_
-zantufa-0.9999.js.peg:251:// selbri_1 //////// _gau melbi: zoizoi NA_clause selbri zoi muvdu la'o zoi selbri zoi_20150810UTC_
-zantufa-0.9999.js.peg:265:// tanru_unit = expr:(tanru_unit_1 (CEI_clause tanru_unit_1)*) {return _node("tanru_unit", expr); } //////// _ma'oi CEI cu .ei jongau lo selbri jenai lo selbrisle i vimcu_20150810UTC_
-zantufa-0.9999.js.peg:267:// tanru_unit_1 //////// _ma'oi CEI cu .ei jongau lo selbri jenai lo selbrisle i binxo la'o zoi tanru_unit zoi_20150810UTC_
-zantufa-0.9999.js.peg:268:// tanru_unit //////// _la'o zoi tanru_unit_2 zoi binxo la'o zoi tanru_unit_1 zoi_20150810UTC_
-zantufa-0.9999.js.peg:271:// tanru_unit_2 //////// _la'o zoi tanru_unit_2 zoi binxo la'o zoi tanru_unit_1 zoi_20150810UTC_
-zantufa-0.9999.js.peg:328:// free //////// _galfi zoizoi selbri relative_clauses? zoi zoizoi selbri zoi ki'u lo nu zoizoi relative_clauses? zoi co'a pagbu la'o zoi selbri_1 zoi_20150810UTC_
+zantufa-0.9.js.peg:212:// tag_term //////// _la'o zoi tanru_unit_2 zoi binxo la'o zoi tanru_unit_1 zoi_20150810UTC_
+zantufa-0.9.js.peg:239:// sumti_tail_1 //////// _vimcu zoizoi relative_clauses? zoi ki'u lo nu vo'e co'a pagbu la'o zoi selbri_1 zoi_20150810UTC_
+zantufa-0.9.js.peg:240:// sumti_tail_1 //////// _galfi zoizoi selbri / quantifier selbri zoi zoizoi quantifier? selbri zoi_20150811UTC_
+zantufa-0.9.js.peg:247:// selbri //////// _gau melbi: zoizoi NA_clause selbri zoi muvdu ti la'o zoi selbri_1 zoi i jalge fa tu'a zoizoi selbri_1 / !gek tag selbri / NA_clause selbri zoi_20150810UTC_
+zantufa-0.9.js.peg:250:// selbri_1 //////// _ma'oi CEI cu .ei jongau lo selbri jenai lo selbrisle i jmina zoizoi  (CEI_clause selbri)* zoi_20150810UTC_
+zantufa-0.9.js.peg:251:// selbri_1 //////// _jmina zoizoi relative_clauses? zoi_20150810UTC_
+zantufa-0.9.js.peg:252:// selbri_1 //////// _gau melbi: zoizoi NA_clause selbri zoi muvdu la'o zoi selbri zoi_20150810UTC_
+zantufa-0.9.js.peg:266:// tanru_unit = expr:(tanru_unit_1 (CEI_clause tanru_unit_1)*) {return _node("tanru_unit", expr); } //////// _ma'oi CEI cu .ei jongau lo selbri jenai lo selbrisle i vimcu_20150810UTC_
+zantufa-0.9.js.peg:268:// tanru_unit_1 //////// _ma'oi CEI cu .ei jongau lo selbri jenai lo selbrisle i binxo la'o zoi tanru_unit zoi_20150810UTC_
+zantufa-0.9.js.peg:269:// tanru_unit //////// _la'o zoi tanru_unit_2 zoi binxo la'o zoi tanru_unit_1 zoi_20150810UTC_
+zantufa-0.9.js.peg:272:// tanru_unit_2 //////// _la'o zoi tanru_unit_2 zoi binxo la'o zoi tanru_unit_1 zoi_20150810UTC_
+zantufa-0.9.js.peg:329:// free //////// _galfi zoizoi selbri relative_clauses? zoi zoizoi selbri zoi ki'u lo nu zoizoi relative_clauses? zoi co'a pagbu la'o zoi selbri_1 zoi_20150810UTC_
+------------------ mulno fa la zantufa_0.9 ------------------
+------------------ mulno fa la maltufa_0.9 ------------------
