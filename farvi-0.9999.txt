@@ -891,3 +891,8 @@ zantufa-0.9.js.peg:329:// free //////// _galfi zoizoi selbri relative_clauses? z
 ------------------ mulno fa la maltufa_0.9 ------------------
 zantufa-0.9999.js.peg:179:// fragment //////// _vimcu lo cfila pe la zantufa xisu'o0.6: i galfi zoi zoi joik zoi zoizoi !terms joik zoi tezu'e lo nu genturfa'i lu joigiragiri li'u_20150819UTC_
 zantufa-0.9999.js.peg:249:// selbri //////// _galfi zoizoi !gek tag selbri zoi zoizoi tag selbri zoi ki'u lo nu za'a co'u nabmi fi tu'a lu pugi broda gi brode i gipu broda gi brode li'u_20150819UTC_
+zantufa-0.9999.js.peg:275:// tanru_unit_1 //////// _jmina zoizoi MUhOI_clause zoi_20150819UTC_
+zantufa-0.9999.js.peg:378:// si_word //////// _galfi zoi ly ZOI ly zoi ly (ZOI / MUhOI) ly_20150819UTC_
+zantufa-0.9999.js.peg:771:// //////// _galfi lo na'e lojbo lo selbrisle: jmina la'o zoi MUhOI_clause, MUhOI_pre, MUhOI_post zoi_20150819UTC_
+zantufa-0.9999.js.peg:982:// CMAVO //////// _jmina zoizoi MUhOI zoi_20150819UTC_
+zantufa-0.9999.js.peg:1405:// //////// _jmina ma'oi MUhOI_20150819UTC_
