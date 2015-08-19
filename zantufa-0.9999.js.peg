@@ -176,7 +176,8 @@ gek_statement = expr:(gek statement (gik statement)+ GIhI_elidible) {return _nod
 // ([{vei <(¹by BOI¹) (¹joi [pa BOI]¹)> VEhO} {by BOI}] VAU) 
 // (vei [{by BOI} {joi <pa BOI>} {joi <by BOI>}] VEhO) 
 // ([{<by BOI> <joi (¹pa BOI¹) (¹by BOI¹)>} da] VAU) 
-fragment = expr:(prenex / joik / ek / gihek / NA_clause !terms !KU / terms VAU_elidible !mex / mex / relative_clauses / links / linkargs) {return _node("fragment", expr);}
+// fragment //////// _vimcu lo cfila pe la zantufa xisu'o0.6: i galfi zoi zoi joik zoi zoizoi !terms joik zoi tezu'e lo nu genturfa'i lu joigiragiri li'u_20150819UTC_
+fragment = expr:(prenex / !terms joik / ek / gihek / NA_clause !terms !KU / terms VAU_elidible !mex / mex / relative_clauses / links / linkargs) {return _node("fragment", expr);}
 
 prenex = expr:(terms ZOhU_clause) {return _node("prenex", expr);}
 
@@ -245,7 +246,8 @@ relative_clauses = expr:(relative_clause (joik? relative_clause)*) {return _node
 relative_clause = expr:(GOI_clause term GEhU_elidible / NOI_clause statement KUhO_elidible) {return _node("relative_clause", expr); }
 
 // selbri //////// _gau melbi: zoizoi NA_clause selbri zoi muvdu ti la'o zoi selbri_1 zoi i jalge fa tu'a zoizoi selbri_1 / !gek tag selbri / NA_clause selbri zoi_20150810UTC
-selbri = expr:(selbri_1 / !gek tag selbri / NA_clause selbri) {return _node("selbri", expr); }
+// selbri //////// _galfi zoizoi !gek tag selbri zoi zoizoi tag selbri zoi ki'u lo nu za'a co'u nabmi fi tu'a lu pugi broda gi brode i gipu broda gi brode li'u_20150819UTC_
+selbri = expr:(selbri_1 / tag selbri / NA_clause selbri) {return _node("selbri", expr); }
 
 // selbri_1 //////// _ma'oi CEI cu .ei jongau lo selbri jenai lo selbrisle i jmina zoizoi  (CEI_clause selbri)* zoi_20150810UTC
 // selbri_1 //////// _jmina zoizoi relative_clauses? zoi_20150810UTC
