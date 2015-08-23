@@ -2,7 +2,7 @@
 
 # ./farvi.sh $1
 #zasni muvdu
-mv maltufa-0.9999.js.peg maltufa-0.99999.js.peg
+mv maltufa-1.9999.js.peg maltufa-1.99999.js.peg
 #tamgau
 DETRI="`date +%Y%m%dUTC_`"
 JOIBUS="(ce'u ce) (ke'a ki) (tu'a tau) (du'u du) (su'o su) (bu'u bu) (ko'oi koi) (si'au si'u) (zu'ai se'e) (moi'oi gei) (lau'u lau) (poi'i voi) (xu'u po) (ku'au po'e)"
@@ -97,9 +97,9 @@ awk --assign awk_cekitau="$JOIBU" --assign awk_detri="$DETRI" '{
 	print $0
 	} END {
 	print awk_cekitau awk_detri
-	}' "maltufa-"$1".js.peg" > maltufa-0.9999.js.peg
+	}' "maltufa-"$1".js.peg" > maltufa-1.9999.js.peg
 node maltufa-pegjs.js
-./minajimpe.sh js/maltufa-0.9999.js
+./minajimpe.sh js/maltufa-1.9999.js
 mv temp.js ../gh-pages/js/maltufa-$1-cekitaujoibu.js
 awk --assign awk_var="$1" --assign awk_cekitaus="$JOIBUS" '{
 	gsub(/\074\057title\076/, "-cekitaujoibu\074\057title\076");
@@ -108,7 +108,7 @@ awk --assign awk_var="$1" --assign awk_cekitaus="$JOIBUS" '{
 	gsub(/\076cekitaujoibus/, " selected=\0421\042\076cekitaujoibus"); 
 	gsub(/\074\057form\076/, "\074\057form\076\074span class=\042liste\042\076\056i basti simxu : "awk_cekitaus"\074\057span\076"); 
 	print $0}' maltufa-$1.html > ../gh-pages/maltufa-$1-cekitaujoibu.html
-mv maltufa-0.9999.js.peg maltufa-$1-cekitaujoibu.js.peg
+mv maltufa-1.9999.js.peg maltufa-$1-cekitaujoibu.js.peg
 # cekitaujoizai
 awk --assign awk_cekitau="$JOIZAI" --assign awk_detri="$DETRI" '!/cekitaujoibu/{
 	sub(/\057 b u \051/, "\051"); 
@@ -123,9 +123,9 @@ awk --assign awk_cekitau="$JOIZAI" --assign awk_detri="$DETRI" '!/cekitaujoibu/{
 	print $0
 	} END {
 	print awk_cekitau awk_detri
-	}' "maltufa-"$1"-cekitaujoibu.js.peg" > maltufa-0.9999.js.peg
+	}' "maltufa-"$1"-cekitaujoibu.js.peg" > maltufa-1.9999.js.peg
 node maltufa-pegjs.js
-./minajimpe.sh js/maltufa-0.9999.js
+./minajimpe.sh js/maltufa-1.9999.js
 mv temp.js ../gh-pages/js/maltufa-$1-cekitaujoizai.js
 awk --assign awk_var="$1" --assign awk_cekitaus="$JOIZAIS" '{
 	gsub(/\074\057title\076/, "-cekitaujoizai\074\057title\076");
@@ -134,7 +134,7 @@ awk --assign awk_var="$1" --assign awk_cekitaus="$JOIZAIS" '{
 	gsub(/\076cekitaujoizais/, " selected=\0421\042\076cekitaujoizais"); 
 	gsub(/\074\057form\076/, "\074\057form\076\074span class=\042liste\042\076\056i basti simxu : "awk_cekitaus"\074\057span\076"); 
 	print $0}' maltufa-$1.html > ../gh-pages/maltufa-$1-cekitaujoizai.html
-mv maltufa-0.9999.js.peg maltufa-$1-cekitaujoizai.js.peg
+mv maltufa-1.9999.js.peg maltufa-$1-cekitaujoizai.js.peg
 # cekitaujaubu
 awk --assign awk_cekitau="$JAUBU" --assign awk_detri="$DETRI" '!/cekitaujoibu/{
 	sub(/ j o h u \051/, " qqqj a u \051"); 
@@ -145,9 +145,9 @@ awk --assign awk_cekitau="$JAUBU" --assign awk_detri="$DETRI" '!/cekitaujoibu/{
 	print $0
 	} END {
 	print awk_cekitau awk_detri
-	}' "maltufa-"$1"-cekitaujoibu.js.peg" > maltufa-0.9999.js.peg
+	}' "maltufa-"$1"-cekitaujoibu.js.peg" > maltufa-1.9999.js.peg
 node maltufa-pegjs.js
-./minajimpe.sh js/maltufa-0.9999.js
+./minajimpe.sh js/maltufa-1.9999.js
 mv temp.js ../gh-pages/js/maltufa-$1-cekitaujaubu.js
 awk --assign awk_var="$1" --assign awk_cekitaus="$JAUBUS" '{
 	gsub(/\074\057title\076/, "-cekitaujaubu\074\057title\076");
@@ -156,7 +156,7 @@ awk --assign awk_var="$1" --assign awk_cekitaus="$JAUBUS" '{
 	gsub(/\076cekitaujaubus/, " selected=\0421\042\076cekitaujaubus"); 
 	gsub(/\074\057form\076/, "\074\057form\076\074span class=\042liste\042\076\056i basti simxu : "awk_cekitaus"\074\057span\076"); 
 	print $0}' maltufa-$1.html > ../gh-pages/maltufa-$1-cekitaujaubu.html
-mv maltufa-0.9999.js.peg maltufa-$1-cekitaujaubu.js.peg
+mv maltufa-1.9999.js.peg maltufa-$1-cekitaujaubu.js.peg
 # cekitaujauzai
 awk --assign awk_cekitau="$JAUZAI" --assign awk_detri="$DETRI" '!/cekitaujaubu/{
 	sub(/\057 b u \051/, "\051"); 
@@ -171,9 +171,9 @@ awk --assign awk_cekitau="$JAUZAI" --assign awk_detri="$DETRI" '!/cekitaujaubu/{
 	print $0
 	} END {
 	print awk_cekitau awk_detri
-	}' "maltufa-"$1"-cekitaujaubu.js.peg" > maltufa-0.9999.js.peg
+	}' "maltufa-"$1"-cekitaujaubu.js.peg" > maltufa-1.9999.js.peg
 node maltufa-pegjs.js
-./minajimpe.sh js/maltufa-0.9999.js
+./minajimpe.sh js/maltufa-1.9999.js
 mv temp.js ../gh-pages/js/maltufa-$1-cekitaujauzai.js
 awk --assign awk_var="$1" --assign awk_cekitaus="$JAUZAIS" '{
 	gsub(/\074\057title\076/, "-cekitaujauzai\074\057title\076");
@@ -182,7 +182,7 @@ awk --assign awk_var="$1" --assign awk_cekitaus="$JAUZAIS" '{
 	gsub(/\076cekitaujauzais/, " selected=\0421\042\076cekitaujauzais"); 
 	gsub(/\074\057form\076/, "\074\057form\076\074span class=\042liste\042\076\056i basti simxu : "awk_cekitaus"\074\057span\076"); 
 	print $0}' maltufa-$1.html > ../gh-pages/maltufa-$1-cekitaujauzai.html
-mv maltufa-0.9999.js.peg maltufa-$1-cekitaujauzai.js.peg
+mv maltufa-1.9999.js.peg maltufa-$1-cekitaujauzai.js.peg
 # cekitaujeibu
 awk --assign awk_cekitau="$JEIBU" --assign awk_detri="$DETRI" '!/cekitaujoibu/{
 	sub(/ j o h u \051/, " qqqj e i \051"); 
@@ -193,9 +193,9 @@ awk --assign awk_cekitau="$JEIBU" --assign awk_detri="$DETRI" '!/cekitaujoibu/{
 	print $0
 	} END {
 	print awk_cekitau awk_detri
-	}' "maltufa-"$1"-cekitaujoibu.js.peg" > maltufa-0.9999.js.peg
+	}' "maltufa-"$1"-cekitaujoibu.js.peg" > maltufa-1.9999.js.peg
 node maltufa-pegjs.js
-./minajimpe.sh js/maltufa-0.9999.js
+./minajimpe.sh js/maltufa-1.9999.js
 mv temp.js ../gh-pages/js/maltufa-$1-cekitaujeibu.js
 awk --assign awk_var="$1" --assign awk_cekitaus="$JEIBUS" '{
 	gsub(/\074\057title\076/, "-cekitaujeibu\074\057title\076");
@@ -204,7 +204,7 @@ awk --assign awk_var="$1" --assign awk_cekitaus="$JEIBUS" '{
 	gsub(/\076cekitaujeibus/, " selected=\0421\042\076cekitaujeibus"); 
 	gsub(/\074\057form\076/, "\074\057form\076\074span class=\042liste\042\076\056i basti simxu : "awk_cekitaus"\074\057span\076"); 
 	print $0}' maltufa-$1.html > ../gh-pages/maltufa-$1-cekitaujeibu.html
-mv maltufa-0.9999.js.peg maltufa-$1-cekitaujeibu.js.peg
+mv maltufa-1.9999.js.peg maltufa-$1-cekitaujeibu.js.peg
 # cekitaujeizai
 awk --assign awk_cekitau="$JEIZAI" --assign awk_detri="$DETRI" '!/cekitaujeibu/{
 	sub(/\057 b u \051/, "\051"); 
@@ -219,9 +219,9 @@ awk --assign awk_cekitau="$JEIZAI" --assign awk_detri="$DETRI" '!/cekitaujeibu/{
 	print $0
 	} END {
 	print awk_cekitau awk_detri
-	}' "maltufa-"$1"-cekitaujeibu.js.peg" > maltufa-0.9999.js.peg
+	}' "maltufa-"$1"-cekitaujeibu.js.peg" > maltufa-1.9999.js.peg
 node maltufa-pegjs.js
-./minajimpe.sh js/maltufa-0.9999.js
+./minajimpe.sh js/maltufa-1.9999.js
 mv temp.js ../gh-pages/js/maltufa-$1-cekitaujeizai.js
 awk --assign awk_var="$1" --assign awk_cekitaus="$JEIZAIS" '{
 	gsub(/\074\057title\076/, "-cekitaujeizai\074\057title\076");
@@ -230,7 +230,7 @@ awk --assign awk_var="$1" --assign awk_cekitaus="$JEIZAIS" '{
 	gsub(/\076cekitaujeizais/, " selected=\0421\042\076cekitaujeizais"); 
 	gsub(/\074\057form\076/, "\074\057form\076\074span class=\042liste\042\076\056i basti simxu : "awk_cekitaus"\074\057span\076"); 
 	print $0}' maltufa-$1.html > ../gh-pages/maltufa-$1-cekitaujeizai.html
-mv maltufa-0.9999.js.peg maltufa-$1-cekitaujeizai.js.peg
+mv maltufa-1.9999.js.peg maltufa-$1-cekitaujeizai.js.peg
 # xruti lo muvdu
-mv maltufa-0.99999.js.peg maltufa-0.9999.js.peg
+mv maltufa-1.99999.js.peg maltufa-1.9999.js.peg
 ./mfarvi9999.sh

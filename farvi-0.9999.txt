@@ -889,10 +889,47 @@ zantufa-0.9.js.peg:272:// tanru_unit_2 //////// _la'o zoi tanru_unit_2 zoi binxo
 zantufa-0.9.js.peg:329:// free //////// _galfi zoizoi selbri relative_clauses? zoi zoizoi selbri zoi ki'u lo nu zoizoi relative_clauses? zoi co'a pagbu la'o zoi selbri_1 zoi_20150810UTC_
 ------------------ mulno fa la zantufa_0.9 ------------------
 ------------------ mulno fa la maltufa_0.9 ------------------
-zantufa-0.9999.js.peg:179:// fragment //////// _vimcu lo cfila pe la zantufa xisu'o0.6: i galfi zoi zoi joik zoi zoizoi !terms joik zoi tezu'e lo nu genturfa'i lu joigiragiri li'u_20150819UTC_
-zantufa-0.9999.js.peg:249:// selbri //////// _galfi zoizoi !gek tag selbri zoi zoizoi tag selbri zoi ki'u lo nu za'a co'u nabmi fi tu'a lu pugi broda gi brode i gipu broda gi brode li'u_20150819UTC_
-zantufa-0.9999.js.peg:275:// tanru_unit_1 //////// _jmina zoizoi MUhOI_clause zoi_20150819UTC_
-zantufa-0.9999.js.peg:378:// si_word //////// _galfi zoi ly ZOI ly zoi ly (ZOI / MUhOI) ly_20150819UTC_
-zantufa-0.9999.js.peg:771:// //////// _galfi lo na'e lojbo lo selbrisle: jmina la'o zoi MUhOI_clause, MUhOI_pre, MUhOI_post zoi_20150819UTC_
-zantufa-0.9999.js.peg:982:// CMAVO //////// _jmina zoizoi MUhOI zoi_20150819UTC_
-zantufa-0.9999.js.peg:1405:// //////// _jmina ma'oi MUhOI_20150819UTC_
+zantufa-1.js.peg:180:// fragment //////// _vimcu lo cfila pe la zantufa xisu'o0.6: i galfi zoi zoi joik zoi zoizoi !terms joik zoi tezu'e lo nu genturfa'i lu joigiragiri li'u_20150819UTC_
+zantufa-1.js.peg:250:// selbri //////// _galfi zoizoi !gek tag selbri zoi zoizoi tag selbri zoi ki'u lo nu za'a co'u nabmi fi tu'a lu pugi broda gi brode i gipu broda gi brode li'u_20150819UTC_
+zantufa-1.js.peg:276:// tanru_unit_1 //////// _jmina zoizoi MUhOI_clause zoi_20150819UTC_
+zantufa-1.js.peg:379:// si_word //////// _galfi zoi ly ZOI ly zoi ly (ZOI / MUhOI) ly_20150819UTC_
+zantufa-1.js.peg:772:// //////// _galfi lo na'e lojbo lo selbrisle: jmina la'o zoi MUhOI_clause, MUhOI_pre, MUhOI_post zoi_20150819UTC_
+zantufa-1.js.peg:983:// CMAVO //////// _jmina zoizoi MUhOI zoi_20150819UTC_
+zantufa-1.js.peg:1283:// BAI //////// _+gai'i +ki'oi +mu'ai +po'a +pu'ai +xo'u_20150820UTC_
+zantufa-1.js.peg:1286:// BAhE //////// _+ba'ei_20150820UTC_
+zantufa-1.js.peg:1304:// BY //////// _+xe'e'y_20150820UTC_
+zantufa-1.js.peg:1305:// BY //////// _+iy'y +jo'au'o +ro'au'o_20150820UTC_
+zantufa-1.js.peg:1306:// BY //////// _+fai'e'ai'y +su'ai'y +su'au'y_20150820UTC_
+zantufa-1.js.peg:1313:// COI //////// _+goi'e_20150820UTC_
+zantufa-1.js.peg:1344:// GOI //////// _+voi'e_20150820UTC_
+zantufa-1.js.peg:1349:// GOhOI //////// _+bo'ei_20150820UTC_
+zantufa-1.js.peg:1358:// JOI //////// _+ji'o'e +y'i_20150820UTC_
+zantufa-1.js.peg:1361:// KE //////// _+ke'ai +ke'ei +ke'oi_20150820UTC_
+zantufa-1.js.peg:1364:// KEhE //////// _+ke'ei'a_20150820UTC_
+zantufa-1.js.peg:1369:// KOhA //////// _+bo'a +bo'e +bo'i +bo'o +bo'u +ca'au +tu'oi +zi'oi_20150820UTC_
+zantufa-1.js.peg:1376:// KUhE //////// _+te'oi'oi +tei'u_20150820UTC_
+zantufa-1.js.peg:1383:// LAhE //////// _+la'e'au +tau'e_20150820UTC_
+zantufa-1.js.peg:1386:// LE //////// _+lei'e +loi'e_20150820UTC_
+zantufa-1.js.peg:1393:// LI //////// _+bo'ai +li'ei +mai'o_20150820UTC_
+zantufa-1.js.peg:1418:// MOhE //////// _+boi'au_20150820UTC_
+zantufa-1.js.peg:1423:// //////// _jmina ma'oi MUhOI_20150819UTC_
+zantufa-1.js.peg:1426:// NA //////// _+cau'a_20150820UTC_
+zantufa-1.js.peg:1429:// NAhE //////// _+cau'e_20150820UTC_
+zantufa-1.js.peg:1434:// NOI //////// _+no'oi +po'oi_20150820UTC_
+zantufa-1.js.peg:1437:// NU //////// _+ka'ei +kai'ei +ni'ai_20150820UTC_
+zantufa-1.js.peg:1441:// PA //////// _+xe'e_20150820UTC_
+zantufa-1.js.peg:1442:// PA //////// _+fai'e'ai +su'ai +su'au_20150820UTC_
+zantufa-1.js.peg:1449:// ROI //////// _+xu'au_20150820UTC_
+zantufa-1.js.peg:1452:// SE //////// _-su'ai +tau'o_20150820UTC_
+zantufa-1.js.peg:1455:// SEI //////// _+cei'e +noi'a +poi'a_20150820UTC_
+zantufa-1.js.peg:1458:// SEhU //////// _+xe'au_20150820UTC_
+zantufa-1.js.peg:1465:// TEhU //////// _+ku'oi'u_20150820UTC_
+zantufa-1.js.peg:1470:// TO //////// _+mau'e +noi'i_20150820UTC_
+zantufa-1.js.peg:1473:// TOI //////// _+mau'o +ge'u'i_20150820UTC_
+zantufa-1.js.peg:1480:// UI //////// _-xe'e_20150820UTC_
+zantufa-1.js.peg:1481:// UI //////// _+cau'i +dau'a +de'ai +de'au +de'oi +doi'a +ge'ei +ji'au +ke'e'u +ki'a'au'u'au'i +koi'e +oi'u +pei'e +ta'oi +toi'e +toi'o +uei'e +xau'e'o +xau'o'o_20150820UTC_
+zantufa-1.js.peg:1490:// VUhU //////// _+boi'ai +de'au'u +fau'au +fe'au'u +ga'u'au +ja'oi +ka'o'ei +kei'au +kei'i +ni'a'au +si'oi'e +te'au +vi'oi'au_20150820UTC_
+zantufa-1.js.peg:1495:// XI //////// _+fau'e_20150820UTC_
+zantufa-1.js.peg:1506:// ZOhU //////// _+ge'ai +ke'au_20150820UTC_
+------------------ mulno fa la zantufa_1 ------------------
+------------------ mulno fa la maltufa_1 ------------------
