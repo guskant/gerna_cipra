@@ -933,3 +933,5 @@ zantufa-1.js.peg:1495:// XI //////// _+fau'e_20150820UTC_
 zantufa-1.js.peg:1506:// ZOhU //////// _+ge'ai +ke'au_20150820UTC_
 ------------------ mulno fa la zantufa_1 ------------------
 ------------------ mulno fa la maltufa_1 ------------------
+zantufa-1.9999.js.peg:156:// paragraphs //////// _iku'i va'o lo nu la paragraf cu se pagbu la fragment kei la paragraf cu na logji i va'o lo nu la paragraf cu na logji kei lo jonma'o pe la paragraf cu ka'e claxu lo ka logji i cipra curmi lo'u NIhO JOI, NIhO (BAI) BO le'u_20150824UTC_
+zantufa-1.9999.js.peg:159:// //////// _NIhO JOI, NIhO (BAI) BO: jmina la'o zoi paragraphs_1 zoi joi la'o zoi paragraphs_2 zoi_20150824UTC_

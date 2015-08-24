@@ -153,7 +153,13 @@ faho_clause = expr:((FAhO_clause dot_star)?) {return _node("faho_clause", expr);
 
 // // // curmi lu niho je li'u pei
 // // // mu'a la oz cu se pagbu lo'u ni'o ca bo le'u i ku'i la paragraf cu se pagbu la fragment ji'a i ma'i lo logji saske cu na'e xambu fa lo nu lo na'e ka'e ckaji be lo ka jetnu cu simxu co jorne fi lo jonma'o i frica lo sedu'u sumti jorne ku noi ka'e se tamgau fi lo sedu'u jufra jorne i jdice lo du'u na curmi
-paragraphs = expr:((NIhO_clause+ paragraph?)+ / paragraph (NIhO_clause+ paragraph?)*) {return _node("paragraphs", expr);}
+// paragraphs //////// _iku'i va'o lo nu la paragraf cu se pagbu la fragment kei la paragraf cu na logji i va'o lo nu la paragraf cu na logji kei lo jonma'o pe la paragraf cu ka'e claxu lo ka logji i cipra curmi lo'u NIhO JOI, NIhO (BAI) BO le'u_20150824UTC_
+paragraphs = expr:((NIhO_clause+ paragraphs_1?)+ / paragraphs_1 (NIhO_clause+ paragraphs_1?)*) {return _node("paragraphs", expr);}
+
+// //////// _NIhO JOI, NIhO (BAI) BO: jmina la'o zoi paragraphs_1 zoi joi la'o zoi paragraphs_2 zoi_20150824UTC_
+paragraphs_1 = expr:(paragraphs_2 (NIhO_clause+ joik paragraphs_2)*) {return _node("paragraphs_1", expr);}
+
+paragraphs_2 = expr:(paragraph (NIhO_clause+ joik? tag? BO_clause paragraph)*) {return _node("paragraphs_2", expr);}
 
 paragraph = expr:((I_clause (statement_terms / fragment)?)+ / (statement_terms / fragment) (I_clause (statement_terms / fragment)?)*) {return _node("paragraph", expr);}
 
