@@ -935,3 +935,10 @@ zantufa-1.js.peg:1506:// ZOhU //////// _+ge'ai +ke'au_20150820UTC_
 ------------------ mulno fa la maltufa_1 ------------------
 zantufa-1.9999.js.peg:156:// paragraphs //////// _iku'i va'o lo nu la paragraf cu se pagbu la fragment kei la paragraf cu na logji i va'o lo nu la paragraf cu na logji kei lo jonma'o pe la paragraf cu ka'e claxu lo ka logji i cipra curmi lo'u NIhO JOI, NIhO (BAI) BO le'u_20150824UTC_
 zantufa-1.9999.js.peg:159:// //////// _NIhO JOI, NIhO (BAI) BO: jmina la'o zoi paragraphs_1 zoi joi la'o zoi paragraphs_2 zoi_20150824UTC_
+zantufa-1.9999.js.peg:283:// tanru_unit_1 //////// _jmina zoizoi  LUhEI_clause text LIhAU_elidible zoi_20150827UTC_
+zantufa-1.9999.js.peg:406:// //////// jmina zoizoi LIhAU_elidible zoi_20150827UTC_
+zantufa-1.9999.js.peg:715:// //////// _jmina zoizoi LIhAU_clause, LIhAU_pre, LIhAU_post zoi_20150827UTC_
+zantufa-1.9999.js.peg:750:// //////// _jmina zoizoi LUhEI_clause, LUhEI_pre, LUhEI_post zoi_20150827UTC_
+zantufa-1.9999.js.peg:1005:// CMAVO //////// _jmina zoizoi LIhAU / LUhEI zoi_20150827UTC_
+zantufa-1.9999.js.peg:1418:// //////// jmina ma'oi LIhAU_20150827UTC_
+zantufa-1.9999.js.peg:1433:// //////// _jmina ma'oi LUhEI_20150827UTC_
