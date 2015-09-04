@@ -713,7 +713,7 @@ LI_pre = pre_clause LI spaces?
 LI_post = post_clause
 
 // //////// _jmina zoizoi LIhAU_clause, LIhAU_pre, LIhAU_post zoi_20150827UTC_
-//         galfi lo se li'erla'i selsku lo selbrisle
+//         famyma'o ma'oi LUhEI
 LIhAU_clause = pre:LIhAU_pre post:LIhAU_post {return _node2("LIhAU_clause", pre, post); }
 LIhAU_pre = pre_clause LIhAU spaces?
 LIhAU_post = post_clause
@@ -748,7 +748,7 @@ LU_pre = pre_clause LU spaces?
 LU_post = post_clause
 
 // //////// _jmina zoizoi LUhEI_clause, LUhEI_pre, LUhEI_post zoi_20150827UTC_
-//         famyma'o ma'oi LIhAU 
+//         galfi lo se li'erla'i selsku lo selbrisle 
 LUhEI_clause = pre:LUhEI_pre post:LUhEI_post {return _node2("LUhEI_clause", pre, post); }
 LUhEI_pre = pre_clause LUhEI spaces?
 LUhEI_post = post_clause
