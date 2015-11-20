@@ -933,3 +933,76 @@ zantufa-1.js.peg:1495:// XI //////// _+fau'e_20150820UTC_
 zantufa-1.js.peg:1506:// ZOhU //////// _+ge'ai +ke'au_20150820UTC_
 ------------------ mulno fa la zantufa_1 ------------------
 ------------------ mulno fa la maltufa_1 ------------------
+zantufa-1.1.js.peg:156:// paragraphs //////// _iku'i va'o lo nu la paragraf cu se pagbu la fragment kei la paragraf cu na logji i va'o lo nu la paragraf cu na logji kei lo jonma'o pe la paragraf cu ka'e claxu lo ka logji i cipra curmi lo'u NIhO JOI, NIhO (BAI) BO le'u_20150824UTC_
+zantufa-1.1.js.peg:159:// //////// _NIhO JOI, NIhO (BAI) BO: jmina la'o zoi paragraphs_1 zoi joi la'o zoi paragraphs_2 zoi_20150824UTC_
+zantufa-1.1.js.peg:241:// sumti_5 //////// _vimcu lo cfila: galfi zoizoi  lerfu_string BOI_elidible free* !(BO_clause* free* operand* !(joik_ek sumti) operator) !(operand KEhE) zoi zoizoi  lerfu_string BOI_elidible free* !(BO_clause* free* operand* !(joik_ek (sumti / relative_clause)) operator) !(operand KEhE) zoi tezu'e tu'a lu da poi broda sy joi noi brode li'u_20151118UTC_
+zantufa-1.1.js.peg:246:// sumti_tail //////// _galfi zoizoi (sumti_5 relative_clauses?)? sumti_tail_1 / relative_clauses sumti_tail_1 zoi zoizoi relative_clauses? (!quantifier sumti)? sumti_tail_1 zoi tezu'e tu'a lu ([lo {<mi (¹joi [by BOI]¹)> broda} KU] VAU) li'u enai lu ([lo {mi <joi (¹by BOI¹) KUhE> broda} KU] VAU) li'u_20151119UTC_
+zantufa-1.1.js.peg:285:// tanru_unit_1 //////// _jmina zoizoi  LUhEI_clause text LIhAU_elidible zoi_20150827UTC_
+zantufa-1.1.js.peg:408:// //////// jmina zoizoi LIhAU_elidible zoi_20150827UTC_
+zantufa-1.1.js.peg:717:// //////// _jmina zoizoi LIhAU_clause, LIhAU_pre, LIhAU_post zoi_20150827UTC_
+zantufa-1.1.js.peg:752:// //////// _jmina zoizoi LUhEI_clause, LUhEI_pre, LUhEI_post zoi_20150827UTC_
+zantufa-1.1.js.peg:1007:// CMAVO //////// _jmina zoizoi LIhAU / LUhEI zoi_20150827UTC_
+zantufa-1.1.js.peg:1420:// //////// jmina ma'oi LIhAU_20150827UTC_
+zantufa-1.1.js.peg:1435:// //////// _jmina ma'oi LUhEI_20150827UTC_
+------------------ mulno fa la zantufa_1.1 ------------------
+maltufa-1.1.js.peg:137:// statement_3 //////// _maltufa: jmina zoizoi !prenex fragment zoi tezu'e lo nu la fragment la sentens cu jorne la'o zoi i joik zoi_20151019UTC_
+maltufa-1.1.js.peg:162:// tail_terms //////// _maltufa: galfi zoizoi term* zoi zoizoi nonabs_terms? zoi pe ma'oi PEhE e ma'oi CEhE_20151019UTC_
+maltufa-1.1.js.peg:164:// terms //////// _maltufa: xruti la'o zoi terms_1 zoi pe ma'oi PEhE_20151019UTC_
+maltufa-1.1.js.peg:167:// //////// _maltufa: xruti la'o zoi terms_1 zoi pe ma'oi PEhE_20151019UTC_
+maltufa-1.1.js.peg:169:// //////// _maltufa: xruti la'o zoi terms_2 zoi pe ma'oi CEhE_20151019UTC_
+maltufa-1.1.js.peg:171:// //////// _maltufa: xruti la'o zoi nonabs_terms zoi pe ma'oi PEhE e ma'oi CEhE_20151019UTC_
+maltufa-1.1.js.peg:173:// //////// _maltufa: xruti la'o zoi nonabs_terms_1 zoi pe ma'oi PEhE e ma'oi CEhE_20151019UTC_
+maltufa-1.1.js.peg:175:// //////// _maltufa: xruti la'o zoi nonabs_terms_2 zoi pe ma'oi PEhE e ma'oi CEhE_20151019UTC_
+maltufa-1.1.js.peg:180:// term_2 //////// _maltufa: xruti la'o zoi termset zoi_20151019UTC_
+maltufa-1.1.js.peg:181:// term_2 //////// _maltufa: xruti la'o zoi nonabs_termset zoi_20151019UTC_
+maltufa-1.1.js.peg:185:// //////// _maltufa: xruti la'o zoi termset zoi_20151019UTC_
+maltufa-1.1.js.peg:187:// //////// _maltufa: xruti la'o zoi terms_gik_terms zoi_20151019UTC_
+maltufa-1.1.js.peg:189:// //////// _maltufa: xruti la'o zoi nonabs_termset zoi_20151019UTC_
+maltufa-1.1.js.peg:191:// //////// _maltufa: xruti la'o zoi nonabs_gek_termset zoi_20151019UTC_
+maltufa-1.1.js.peg:193:// //////// _maltufa: xruti la'o zoi nonabs_terms_gik_terms zoi_20151019UTC_
+maltufa-1.1.js.peg:197:// gek_term //////// _maltufa: zo NUhI je zo NUhU di'a selma'o i jmina zoizoi / NUhI_clause free* gek term+ NUhU_elidible free* gik term+ NUhU_elidible free* / NUhI_clause free* term+ NUhU_elidible free* zoi_20150904UTC_
+maltufa-1.1.js.peg:229:// tanru_unit_1 //////// _maltufa: va'o lo nu claxu ma'oi GIhI lu ge selbri gi selbri vau li'u se genturfa'i ja'e ei tu'a lu ge bridi_tail gi bridi_tail li'u i jmina zoizoi !VAU zoi zoizoi NAhE_clause? free* gek selbri_2 (gik selbri_2) !term zoi_20151119UTC_
+maltufa-1.1.js.peg:323:// //////// _maltufa: zo NUhI je zo NUhU di'a selma'o i jmina la'o zoi NUhU_elidible zoi_20150904UTC_
+maltufa-1.1.js.peg:403:// //////// _maltufa: xruti la'o zoi CEhE_clause, CEhE_pre, CEhE_post zoi_20151019UTC_
+maltufa-1.1.js.peg:690:// //////// _maltufa: zo NUhI je zo NUhU di'a selma'o i jmina la'o zoi NUhI_clause, NUhI_pre, NUhI_post zoi_20150904UTC_
+maltufa-1.1.js.peg:695:// //////// _maltufa: zo NUhI je zo NUhU di'a selma'o i jmina la'o zoi NUhU_clause, NUhU_pre, NUhU_post zoi_20150904UTC_
+maltufa-1.1.js.peg:705:// //////// _maltufa: xruti la'o zoi PEhE_clause, PEhE_pre, PEhE_post zoi_20151019UTC_
+maltufa-1.1.js.peg:860:// CMAVO //////// _maltufa: zo NUhI je zo NUhU di'a selma'o_20150904UTC_
+maltufa-1.1.js.peg:1027:// //////// _maltufa: zo PEhE di'a selma'o i vimcu zo pe'e ma'oi BAhE_20151019UTC_
+maltufa-1.1.js.peg:1034:// //////// _maltufa: zo CEhE di'a selma'o i vimcu zo ce'e ma'oi BO_20151019UTC_
+maltufa-1.1.js.peg:1042:// //////// _maltufa: zo CEhE di'a selma'o_20151019UTC_
+maltufa-1.1.js.peg:1075:// KE //////// _maltufa: zo NUhI je zo NUhU di'a selma'o i zo nu'i muvdu ma'oi NUhI_20150904UTC_
+maltufa-1.1.js.peg:1077:// KEhE //////// _maltufa: zo NUhI je zo NUhU di'a selma'o i zo nu'u muvdu ma'oi NUhU_20150904UTC_
+maltufa-1.1.js.peg:1120:// //////// _maltufa: zo NUhI je zo NUhU di'a selma'o_20150904UTC_
+maltufa-1.1.js.peg:1124:// //////// _maltufa: zo PEhE di'a selma'o_20151019UTC_
+------------------ mulno fa la maltufa_1.1 ------------------
+maftufa-1.1.js.peg:44:// //////// _maltufa_oz: lu ... li'u ei se basti zo co'e i stika tu'a la preproc_20151118UTC_
+maftufa-1.1.js.peg:124:// text //////// _maltufa_oz: lo cmevla di'a selbrisle : galfi zoizoi (CMEVLA_clause+ / indicators?) zoi zoizoi indicators? zoi_20151019UTC_
+maftufa-1.1.js.peg:137:// statement_1 //////// _maltufa_oz: lo'u broda ije da zo'u brode le'u ei se genturfa'i i jmina zoizoi prenex? zoi_20151117UTC_
+maftufa-1.1.js.peg:139:// statement_2 //////// _maltufa_oz: lo'u broda ije da zo'u brode le'u ei se genturfa'i i jmina zoizoi prenex? zoi_20151117UTC_
+maftufa-1.1.js.peg:156:// subsentence //////// _maltufa_oz: lo'u du'u ge da zo'u broda gi de zo'u brode le'u ei se genturfa'i i jmina zoizoi / gek subsentence gik subsentence zoi_20151117UTC_
+maftufa-1.1.js.peg:188:// tag_term //////// _maltufa_oz: ei zo jai ka'e tcita lo sumti i ku'i lu pu se manci vlipa jai se gasnu li'u ji'a ru'i ei gendra i galfi zoizoi  / FA_clause free* (joik FA_clause free*)* !tanru_unit_1 zoi zoizoi  / (FA_clause free* (joik FA_clause free*)* / JAI_clause free*) !tanru_unit_1 zoi_20151119UTC_
+maftufa-1.1.js.peg:216:// sumti_5 //////// _maltufa_oz: lo cmevla di'a selbrisle : vimcu zoizoi / LA_clause free* relative_clauses? CMEVLA_clause+ free* zoi ije galfi zoizoi (LA_clause / LE_clause) zoi zoizoi LE_clause zoi_20151019UTC_
+maftufa-1.1.js.peg:217:// sumti_5 //////// _maltufa_oz: galfi zoizoi LU_clause text zoi zoizoi LU_clause free* ((I_clause? free* joik? stag? BO_clause free* statement_3 (I_clause free* joik? stag? BO_clause free* statement_3)* / I_clause? free* joik free* statement_2) (I_clause free* joik free* statement_2)* IAU_elidible free* terms? free* ((I_clause / NIhO_clause) free* paragraphs)? / text) zoi_20151116UTC_
+maftufa-1.1.js.peg:221:// sumti_tail_1 //////// _maltufa_oz: lo'u lo vi so'i smacu le'u ei se genturfa'i i jmina zoi zoi tag? zoi_20151118UTC_
+maftufa-1.1.js.peg:227:// selbri_1 //////// _maltufa_oz: ei curmi lo nu lo'u selbri_2 ke'e be le'u na'e se lidne zo ke i galfi zoizoi selbri_2 zoi zoizoi (!KE selbri_2 KEhE_clause free* linkargs / selbri_2) zoi_20151119UTC_
+maftufa-1.1.js.peg:239:// tanru_unit_1 //////// _maltufa_oz: lo cmevla di'a selbrisle : jmina zoizoi CMEVLA_clause free* / zoi_20151019UTC_
+maftufa-1.1.js.peg:240:// tanru_unit_1 //////// _maltufa_oz: galfi zoizoi LUhEI_clause free* text zoi zoizoi LUhEI_clause free* ((I_clause? free* joik? stag? BO_clause free* statement_3 (I_clause free* joik? stag? BO_clause free* statement_3)* / I_clause? free* joik free* statement_2) (I_clause free* joik free* statement_2)* IAU_elidible free* terms? free* ((I_clause / NIhO_clause) free* paragraphs)? / text) zoi_20151116UTC_
+maftufa-1.1.js.peg:262:// gihek //////// _maltufa_oz: lo'u gi ju'e le'u cu ei se genturfa'i : jmina zoizoi / GI_clause joik zoi_20151112UTC_
+maftufa-1.1.js.peg:270:// tag //////// _maltufa_oz: lo'u i to'e se ki'u bai bo le'u ei se genturfa'i i galfi zoizoi joik zoi zoizoi joik? zoi_20151118UTC_
+maftufa-1.1.js.peg:272:// stag //////// _maltufa_oz: lo'u i to'e se ki'u bai bo le'u ei se genturfa'i i galfi zoizoi joik zoi zoizoi joik? zoi_20151118UTC_
+maftufa-1.1.js.peg:278:// space //////// _maltufa_oz: lo'u fe'e pu le'u ei se genturfa'i : jmina zoizoi / FEhE_clause time zoi_20151117UTC_
+maftufa-1.1.js.peg:280:// space_offset //////// _maltufa_oz: lo'u se ru'u cy le'u ei se genturfa'i : galfi fi zoizoi SE_clause? FAhA_clause zoi_20151117UTC_
+maftufa-1.1.js.peg:282:// space_interval //////// _maltufa_oz: lo'u se ru'u cy le'u ei se genturfa'i : galfi fi zoizoi SE_clause? FAhA_clause zoi_20151117UTC_
+maftufa-1.1.js.peg:289:// free //////// _maltufa_oz: lo cmevla di'a selbrisle : vimcu zoizoi / vocative relative_clauses? CMEVLA_clause+ free* relative_clauses? DOhU_elidible zoi_20151019UTC_
+maftufa-1.1.js.peg:290:// free //////// _maltufa_oz: galfi zoizoi TO_clause text zoi zoizoi TO_clause free* ((I_clause? free* joik? stag? BO_clause free* statement_3 (I_clause free* joik? stag? BO_clause free* statement_3)* / I_clause? free* joik free* statement_2) (I_clause free* joik free* statement_2)* IAU_elidible free* terms? free* ((I_clause / NIhO_clause) free* paragraphs)? / text) zoi_20151116UTC_
+maftufa-1.1.js.peg:587:// LA_clause = pre:LA_pre post:LA_post {return _node2("LA_clause", pre, post); } //////// _maltufa_oz: lo cmevla di'a selbrisle : vimcu_20151019UTC_
+maftufa-1.1.js.peg:588:// LA_pre = pre_clause LA spaces? //////// _maltufa_oz: lo cmevla di'a selbrisle : vimcu_20151019UTC_
+maftufa-1.1.js.peg:589:// LA_post = post_clause //////// _maltufa_oz: lo cmevla di'a selbrisle : vimcu_20151019UTC_
+maftufa-1.1.js.peg:881:// CMAVO //////// _maltufa_oz: lo cmevla di'a selbrisle : vimcu zoizoi  / LA zoi_20151019UTC_
+maftufa-1.1.js.peg:979:// stressed //////// _maltufa_oz: majuscule -> non-accent : stika la preproc po'o_20151116UTC_
+maftufa-1.1.js.peg:1096:// JOI //////// _maltufa_oz: zo su'i gau cmima ma'oi JOI : +su'i_20151119UTC_
+maftufa-1.1.js.peg:1110:// LA = &cmavo expr:( l a h e i / z o h a u / l a i / l a h i / l a ) &post_word { return ["LA", _join(expr)]; } //////// _maltufa_oz: lo cmevla di'a selbrisle : muvdu lo cmavo ma'oi LE_20151019UTC_
+maftufa-1.1.js.peg:1114:// LE //////// _maltufa_oz: lo cmevla di'a selbrisle : +la'ei +zo'au +lai +la'i +la_20151019UTC_
+maftufa-1.1.js.peg:1175:// VUhU //////// _maltufa_oz: zo su'i gau cmima ma'oi JOI : -su'i_20151119UTC_
+------------------ mulno fa la maftufa_1.1 ------------------

@@ -153,10 +153,10 @@ faho_clause = expr:((FAhO_clause dot_star)?) {return _node("faho_clause", expr);
 
 // // // curmi lu niho je li'u pei
 // // // mu'a la oz cu se pagbu lo'u ni'o ca bo le'u i ku'i la paragraf cu se pagbu la fragment ji'a i ma'i lo logji saske cu na'e xambu fa lo nu lo na'e ka'e ckaji be lo ka jetnu cu simxu co jorne fi lo jonma'o i frica lo sedu'u sumti jorne ku noi ka'e se tamgau fi lo sedu'u jufra jorne i jdice lo du'u na curmi
-// paragraphs //////// _iku'i va'o lo nu la paragraf cu se pagbu la fragment kei la paragraf cu na logji i va'o lo nu la paragraf cu na logji kei lo jonma'o pe la paragraf cu ka'e claxu lo ka logji i cipra curmi lo'u NIhO JOI, NIhO (BAI) BO le'u_20150824UTC_
+// paragraphs //////// _iku'i va'o lo nu la paragraf cu se pagbu la fragment kei la paragraf cu na logji i va'o lo nu la paragraf cu na logji kei lo jonma'o pe la paragraf cu ka'e claxu lo ka logji i cipra curmi lo'u NIhO JOI, NIhO (BAI) BO le'u_20150824UTC
 paragraphs = expr:((NIhO_clause+ paragraphs_1?)+ / paragraphs_1 (NIhO_clause+ paragraphs_1?)*) {return _node("paragraphs", expr);}
 
-// //////// _NIhO JOI, NIhO (BAI) BO: jmina la'o zoi paragraphs_1 zoi joi la'o zoi paragraphs_2 zoi_20150824UTC_
+// //////// _NIhO JOI, NIhO (BAI) BO: jmina la'o zoi paragraphs_1 zoi joi la'o zoi paragraphs_2 zoi_20150824UTC
 paragraphs_1 = expr:(paragraphs_2 (NIhO_clause+ joik paragraphs_2)*) {return _node("paragraphs_1", expr);}
 
 paragraphs_2 = expr:(paragraph (NIhO_clause+ joik? tag? BO_clause paragraph)*) {return _node("paragraphs_2", expr);}
@@ -238,11 +238,13 @@ sumti_3 = expr:(KE_clause sumti KEhE_elidible / sumti_4 / gek sumti (gik sumti)+
 sumti_4 = expr:(quantifier? sumti_5 relative_clauses? / quantifier selbri KU_elidible relative_clauses?) {return _node("sumti_4", expr);}
 
 // // // !(!joik_ek operator) : tu'a zoizoi !joik_ek zoi cu sarcu lo nu lu by joi (vei) pa (ve'o) by li'u cu sumti
-sumti_5 = expr:(RAhOI_clause / ZO_clause / ZOI_clause / LOhU_clause / lerfu_string BOI_elidible !(BO_clause* operand* !(joik_ek sumti) operator) !(operand KEhE) / LU_clause text LIhU_elidible / (LAhE_clause / NAhE_clause BO_clause) relative_clauses? sumti LUhU_elidible / KOhA_clause / LOhOI_clause (joik LOhOI_clause)* statement KUhAU_elidible / LE_clause sumti_tail KU_elidible / li_clause / NAhE_clause sumti_3) {return _node("sumti_5", expr);}
+// sumti_5 //////// _vimcu lo cfila: galfi zoizoi  lerfu_string BOI_elidible free* !(BO_clause* free* operand* !(joik_ek sumti) operator) !(operand KEhE) zoi zoizoi  lerfu_string BOI_elidible free* !(BO_clause* free* operand* !(joik_ek (sumti / relative_clause)) operator) !(operand KEhE) zoi tezu'e tu'a lu da poi broda sy joi noi brode li'u_20151118UTC
+sumti_5 = expr:(RAhOI_clause / ZO_clause / ZOI_clause / LOhU_clause / lerfu_string BOI_elidible !(BO_clause* operand* !(joik_ek (sumti / relative_clause)) operator) !(operand KEhE) / LU_clause text LIhU_elidible / (LAhE_clause / NAhE_clause BO_clause) relative_clauses? sumti LUhU_elidible / KOhA_clause / LOhOI_clause (joik LOhOI_clause)* statement KUhAU_elidible / LE_clause sumti_tail KU_elidible / li_clause / NAhE_clause sumti_3) {return _node("sumti_5", expr);}
 
 li_clause = expr:(LI_clause mex LOhO_elidible) {return _node("li_clause", expr); }
 
-sumti_tail = expr:((sumti_5 relative_clauses?)? sumti_tail_1 / relative_clauses sumti_tail_1) {return _node("sumti_tail", expr); }
+// sumti_tail //////// _galfi zoizoi (sumti_5 relative_clauses?)? sumti_tail_1 / relative_clauses sumti_tail_1 zoi zoizoi relative_clauses? (!quantifier sumti)? sumti_tail_1 zoi tezu'e tu'a lu ([lo {<mi (¹joi [by BOI]¹)> broda} KU] VAU) li'u enai lu ([lo {mi <joi (¹by BOI¹) KUhE> broda} KU] VAU) li'u_20151119UTC
+sumti_tail = expr:(relative_clauses? (!quantifier sumti)? sumti_tail_1) {return _node("sumti_tail", expr); }
 
 // sumti_tail_1 //////// _vimcu zoizoi relative_clauses? zoi ki'u lo nu vo'e co'a pagbu la'o zoi selbri_1 zoi_20150810UTC
 // sumti_tail_1 //////// _galfi zoizoi selbri / quantifier selbri zoi zoizoi quantifier? selbri zoi_20150811UTC
@@ -280,7 +282,7 @@ tanru_unit = expr:(tanru_unit_1 linkargs?) {return _node("tanru_unit", expr); }
 
 // tanru_unit_2 //////// _la'o zoi tanru_unit_2 zoi binxo la'o zoi tanru_unit_1 zoi_20150810UTC
 // tanru_unit_1 //////// _jmina zoizoi MUhOI_clause zoi_20150819UTC
-// tanru_unit_1 //////// _jmina zoizoi  LUhEI_clause text LIhAU_elidible zoi_20150827UTC_
+// tanru_unit_1 //////// _jmina zoizoi  LUhEI_clause text LIhAU_elidible zoi_20150827UTC
 tanru_unit_1 = expr:(CMEVLA_clause / BRIVLA_clause / GOhA_clause / KE_clause selbri_2 KEhE_elidible / NAhE_clause? gek selbri_2 (gik selbri_2)+ !term GIhI_elidible / MUhOI_clause / GOhOI_clause / LUhEI_clause text LIhAU_elidible / ME_clause (sumti / operator+ / mex / tag) MEhU_elidible MOI_clause? / mex MOI_clause / (FA_clause (joik FA_clause)* / SE_clause) tanru_unit_1 / JAI_clause tag? tanru_unit_1 / NAhE_clause tanru_unit_1 / NU_clause (joik NU_clause)* statement KEI_elidible) {return _node("tanru_unit_1", expr); }
 
 linkargs = expr:(BE_clause term links? BEhO_elidible)  {return _node("linkargs", expr);}
@@ -403,7 +405,7 @@ KUhAU_elidible = expr:(KUhAU_clause?)   {return (expr == "") ? ["KUhAU"]  : _nod
 KUhE_elidible = expr:(KUhE_clause?) {return (expr == "") ? ["KUhE"] : _node("KUhE", expr);}
 KUhO_elidible = expr:(KUhO_clause?) {return (expr == "") ? ["KUhO"] : _node("KUhO", expr);}
 // LEhU is never elidible
-// //////// jmina zoizoi LIhAU_elidible zoi_20150827UTC_
+// //////// jmina zoizoi LIhAU_elidible zoi_20150827UTC
 LIhAU_elidible = expr:(LIhAU_clause?) {return (expr == "") ? ["LIhAU"] : _node("LIhAU", expr);}
 LIhU_elidible = expr:(LIhU_clause?) {return (expr == "") ? ["LIhU"] : _node("LIhU", expr);}
 LOhO_elidible = expr:(LOhO_clause?) {return (expr == "") ? ["LOhO"] : _node("LOhO", expr);}
@@ -712,7 +714,7 @@ LI_clause = pre:LI_pre post:LI_post {return _node2("LI_clause", pre, post); }
 LI_pre = pre_clause LI spaces?
 LI_post = post_clause
 
-// //////// _jmina zoizoi LIhAU_clause, LIhAU_pre, LIhAU_post zoi_20150827UTC_
+// //////// _jmina zoizoi LIhAU_clause, LIhAU_pre, LIhAU_post zoi_20150827UTC
 //         famyma'o ma'oi LUhEI
 LIhAU_clause = pre:LIhAU_pre post:LIhAU_post {return _node2("LIhAU_clause", pre, post); }
 LIhAU_pre = pre_clause LIhAU spaces?
@@ -747,7 +749,7 @@ LU_clause = pre:LU_pre post:LU_post {return _node2("LU_clause", pre, post); }
 LU_pre = pre_clause LU spaces?
 LU_post = post_clause
 
-// //////// _jmina zoizoi LUhEI_clause, LUhEI_pre, LUhEI_post zoi_20150827UTC_
+// //////// _jmina zoizoi LUhEI_clause, LUhEI_pre, LUhEI_post zoi_20150827UTC
 //         galfi lo se li'erla'i selsku lo selbrisle 
 LUhEI_clause = pre:LUhEI_pre post:LUhEI_post {return _node2("LUhEI_clause", pre, post); }
 LUhEI_pre = pre_clause LUhEI spaces?
@@ -1002,7 +1004,7 @@ CMEVLA = expr:cmevla {return ["CMEVLA", expr];}
 BRIVLA = expr:(gismu_2 / lujvo / fuhivla) {return ["BRIVLA", expr];}
 gismu_2 = expr:(gismu) {return ["gismu", expr];}
 // CMAVO //////// _jmina zoizoi MUhOI zoi_20150819UTC
-// CMAVO //////// _jmina zoizoi LIhAU / LUhEI zoi_20150827UTC_
+// CMAVO //////// _jmina zoizoi LIhAU / LUhEI zoi_20150827UTC
 CMAVO = expr:(A / BAI / BAhE / BE / BEI / BEhO / BIhE / BO / BOI / BU / BY / CEI / CO / COI / CU / DOhU / FA / FAhO / FEhU / FIhO / FOI / FUhA / GA / GAhO / GEhU / GI / GIhA / GIhI / GOI / GOhA / GOhOI / I / IAU / JAI / JOI / KE / KEhE / KEI / KOhA / KU / KUhAU / KUhE / KUhO / LAU / LAhE / LEhAI / LE / LEhU / LI / LIhAU / LIhU / LOhAI / LOhO / LOhOI / LOhU / LU / LUhEI / LUhU / MAhO / MAI / ME / MEhU / MOhE / MOI / MUhOI / NA / NAhE / NIhO / NOI / NU / PA / PEhO / RAhOI / ROI / SE / SEI / SEhU / SI / SU / TEhU / TEI / TO / TOI / TUhE / TUhU / UI / VAU / VEI / VEhO / VUhU / VUhO / XI / XOI / ZO / ZOI / ZOhU / cmavo) {return ["CMAVO", expr];}
 
 // This is a Parsing Expression Grammar for the morphology of Lojban.
@@ -1415,7 +1417,7 @@ LEhU = &cmavo expr:( l e h u ) &post_word {return ["LEhU", _join(expr)];}
 // LI //////// _+bo'ai +li'ei +mai'o_20150820UTC
 LI = &cmavo expr:( m e h o / m a i h o / l i h e i / l i h a i / l i / b o h a i ) &post_word {return ["LI", _join(expr)];}
 
-// //////// jmina ma'oi LIhAU_20150827UTC_
+// //////// jmina ma'oi LIhAU_20150827UTC
 LIhAU = &cmavo expr:( l i h a u ) &post_word {return ["LIhAU", _join(expr)];}
 
 LIhU = &cmavo expr:( l i h u ) &post_word {return ["LIhU", _join(expr)];}
@@ -1430,7 +1432,7 @@ LOhU = &cmavo expr:( l a h a i / l o h u ) &post_word {return ["LOhU", _join(exp
 
 LU = &cmavo expr:( t u h a i / l a h a u / l u ) &post_word {return ["LU", _join(expr)];}
 
-// //////// _jmina ma'oi LUhEI_20150827UTC_
+// //////// _jmina ma'oi LUhEI_20150827UTC
 LUhEI = &cmavo expr:( l u h e i ) &post_word {return ["LUhEI", _join(expr)];}
 
 LUhU = &cmavo expr:( l u h u ) &post_word {return ["LUhU", _join(expr)];}
