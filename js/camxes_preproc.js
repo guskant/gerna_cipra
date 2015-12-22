@@ -19,11 +19,11 @@
 	input = input.replace(/\[/gm,"to");
 	input = input.replace(/\]/gm,"toi");
 	// --- //
-	input = input.replace(/[áàâä]/g,"A");
-	input = input.replace(/[éèêë]/g,"E");
-	input = input.replace(/[íìîïĭị]/g,"I");
-	input = input.replace(/[óòôö]/g,"O");
-	input = input.replace(/[úùûüŭụw]/g,"U");
+	input = input.replace(/[áàâäā]/g,"A");
+	input = input.replace(/[éèêëē]/g,"E");
+	input = input.replace(/[íìîïĭịī]/g,"I");
+	input = input.replace(/[óòôöō]/g,"O");
+	input = input.replace(/[úùûüŭụwū]/g,"U");
 	input = input.replace(/[ýỳŷÿ]/g,"Y");
 	// --- //
 	input = input.replace(/sh/igm,"c");

@@ -15,12 +15,12 @@ awk --assign awk_var="$1" '{
 	gsub(/ cekitaus--/, ""); 
 	print $0}' zantufa-1.9999.html > zantufa-$1.html
 # uncomment for real release:
-# ./tceki.sh $1
-# cp farvi-$1.txt farvi.txt
-# cp -R js ../gh-pages
-# cp zantufa-$1.html ../gh-pages
-# sed 's/UTC_/UTC/' $PEG > zantufa-1.9999.js.peg
-# rm farvi-$1.txt zantufa-$1.html js/zantufa-$1.js
+ ./tceki.sh $1
+ cp farvi-$1.txt farvi.txt
+ cp -R js ../gh-pages
+ cp zantufa-$1.html ../gh-pages
+ sed 's/UTC_/UTC/' $PEG > zantufa-1.9999.js.peg
+ rm farvi-$1.txt zantufa-$1.html js/zantufa-$1.js
 #
 # uncomment to remove the version:
 # rm farvi-$1.txt zantufa-$1.html zantufa-$1.js.peg js/zantufa-$1.js

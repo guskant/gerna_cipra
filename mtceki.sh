@@ -5,27 +5,27 @@
 mv maltufa-1.9999.js.peg maltufa-1.99999.js.peg
 #tamgau
 DETRI="`date +%Y%m%dUTC_`"
-JOIBUS="(ce'u ce) (ke'a ki) (tu'a tau) (du'u du) (su'o su) (bu'u bu) (ko'oi koi) (si'au si'u) (zu'ai se'e) (moi'oi gei) (lau'u lau) (poi'i voi) (xu'u po) (ku'au po'e)"
+JOIBUS="(ce'u ce) (ke'a ki) (tu'a tau) (du'u du) (su'o su) (bu'u bu) (ko'oi koi) (si'au si'u) (zu'ai se'e) (moi'oi gei) (lau'u lau) (poi'i voi) (xu'u po) (ku'au po'e) (ne'e tei)"
 JOIBU="
 // //////// _cekitaujoibu: "$JOIBUS"_
 // //////// _cekitaujoibu: ju'a lo'u (mo'oi ge) (i'au go) (zo'u go) (moi'oi<gei<ge'i) le'u na'e ka'e se cuxna ma'i la zantufa noi se vajni ma'oi GA_"
-JOIZAIS="(ce'u ce) (ke'a ki) (tu'a tau) (du'u du) (su'o su) (bu'u zai) (ko'oi koi) (si'au si'u) (zu'ai se'e) (moi'oi gei) (lau'u lau) (poi'i voi) (xu'u po) (ku'au po'e)"
+JOIZAIS="(ce'u ce) (ke'a ki) (tu'a tau) (du'u du) (su'o su) (bu'u zai) (ko'oi koi) (si'au si'u) (zu'ai se'e) (moi'oi gei) (lau'u lau) (poi'i voi) (xu'u po) (ku'au po'e) (ne'e tei)"
 JOIZAI="
 // //////// _cekitaujoizai: "$JOIZAIS"_
 // //////// _cekitaujoizai: ju'a lo'u (mo'oi ge) (i'au go) (zo'u go) (moi'oi<gei<ge'i) le'u na'e ka'e se cuxna ma'i la zantufa noi se vajni ma'oi GA_"
-JAUBUS="(ce'u ce) (ke'a ki) (tu'a tau) (jo'u jau) (du'u du) (su'o su) (bu'u bu) (ko'oi koi) (si'au si'u) (zu'ai se'e) (moi'oi gei) (lau'u lau) (poi'i voi) (xu'u po) (ku'au po'e)"
+JAUBUS="(ce'u ce) (ke'a ki) (tu'a tau) (jo'u jau) (du'u du) (su'o su) (bu'u bu) (ko'oi koi) (si'au si'u) (zu'ai se'e) (moi'oi gei) (lau'u lau) (poi'i voi) (xu'u po) (ku'au po'e) (ne'e tei)"
 JAUBU="
 // //////// _cekitaujaubu: "$JAUBUS"_
 // //////// _cekitaujaubu: ju'a lo'u (mo'oi ge) (i'au go) (zo'u go) (moi'oi<gei<ge'i) le'u na'e ka'e se cuxna ma'i la zantufa noi se vajni ma'oi GA_"
-JAUZAIS="(ce'u ce) (ke'a ki) (tu'a tau) (jo'u jau) (du'u du) (su'o su) (bu'u zai) (ko'oi koi) (si'au si'u) (zu'ai se'e) (moi'oi gei) (lau'u lau) (poi'i voi) (xu'u po) (ku'au po'e)"
+JAUZAIS="(ce'u ce) (ke'a ki) (tu'a tau) (jo'u jau) (du'u du) (su'o su) (bu'u zai) (ko'oi koi) (si'au si'u) (zu'ai se'e) (moi'oi gei) (lau'u lau) (poi'i voi) (xu'u po) (ku'au po'e) (ne'e tei)"
 JAUZAI="
 // //////// _cekitaujauzai: "$JAUZAIS"_
 // //////// _cekitaujauzai: ju'a lo'u (mo'oi ge) (i'au go) (zo'u go) (moi'oi<gei<ge'i) le'u na'e ka'e se cuxna ma'i la zantufa noi se vajni ma'oi GA_"
-JEIBUS="(ce'u ce) (ke'a ki) (tu'a tau) (jo'u jei) (du'u du) (su'o su) (bu'u bu) (ko'oi koi) (si'au si'u) (zu'ai se'e) (moi'oi gei) (lau'u lau) (poi'i voi) (xu'u po) (ku'au po'e)"
+JEIBUS="(ce'u ce) (ke'a ki) (tu'a tau) (jo'u jei) (du'u du) (su'o su) (bu'u bu) (ko'oi koi) (si'au si'u) (zu'ai se'e) (moi'oi gei) (lau'u lau) (poi'i voi) (xu'u po) (ku'au po'e) (ne'e tei)"
 JEIBU="
 // //////// _cekitaujeibu: "$JEIBUS"_
 // //////// _cekitaujeibu: ju'a lo'u (mo'oi ge) (i'au go) (zo'u go) (moi'oi<gei<ge'i) le'u na'e ka'e se cuxna ma'i la zantufa noi se vajni ma'oi GA_"
-JEIZAIS="(ce'u ce) (ke'a ki) (tu'a tau) (jo'u jei) (du'u du) (su'o su) (bu'u zai) (ko'oi koi) (si'au si'u) (zu'ai se'e) (moi'oi gei) (lau'u lau) (poi'i voi) (xu'u po) (ku'au po'e)"
+JEIZAIS="(ce'u ce) (ke'a ki) (tu'a tau) (jo'u jei) (du'u du) (su'o su) (bu'u zai) (ko'oi koi) (si'au si'u) (zu'ai se'e) (moi'oi gei) (lau'u lau) (poi'i voi) (xu'u po) (ku'au po'e) (ne'e tei)"
 JEIZAI="
 // //////// _cekitaujeizai: "$JEIZAIS"_
 // //////// _cekitaujeizai: ju'a lo'u (mo'oi ge) (i'au go) (zo'u go) (moi'oi<gei<ge'i) le'u na'e ka'e se cuxna ma'i la zantufa noi se vajni ma'oi GA_"
@@ -93,6 +93,10 @@ awk --assign awk_cekitau="$JOIBU" --assign awk_detri="$DETRI" '{
 	sub(/ k u h a u \057/, " qqqp o h e \057"); 
 	sub(/ p o h e \051/, " qqqk u h a u \051"); 
 	sub(/ p o h e \057/, " qqqk u h a u \057"); 
+	sub(/ n e h e \051/, " qqqt e i \051"); 
+	sub(/ n e h e \057/, " qqqt e i \057"); 
+	sub(/ t e i \051/, " qqqn e h e \051"); 
+	sub(/ t e i \057/, " qqqn e h e \057"); 
 	gsub(/ qqq/, " "); 
 	print $0
 	} END {
