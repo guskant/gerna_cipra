@@ -1006,3 +1006,4 @@ maftufa-1.1.js.peg:1110:// LA = &cmavo expr:( l a h e i / z o h a u / l a i / l 
 maftufa-1.1.js.peg:1114:// LE //////// _maltufa_oz: lo cmevla di'a selbrisle : +la'ei +zo'au +lai +la'i +la_20151019UTC_
 maftufa-1.1.js.peg:1175:// VUhU //////// _maltufa_oz: zo su'i gau cmima ma'oi JOI : -su'i_20151119UTC_
 ------------------ mulno fa la maftufa_1.1 ------------------
+------------------ mulno fa la zantufa_1.11 ------------------

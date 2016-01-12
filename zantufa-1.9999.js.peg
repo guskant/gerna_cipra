@@ -248,6 +248,7 @@ sumti_tail = expr:(relative_clauses? (!quantifier sumti)? sumti_tail_1) {return 
 
 // sumti_tail_1 //////// _vimcu zoizoi relative_clauses? zoi ki'u lo nu vo'e co'a pagbu la'o zoi selbri_1 zoi_20150810UTC
 // sumti_tail_1 //////// _galfi zoizoi selbri / quantifier selbri zoi zoizoi quantifier? selbri zoi_20150811UTC
+// // // lo'u lo goi bai broda le'u einai se genturfa'i fi'o frica la camxes
 sumti_tail_1 = expr:(quantifier? selbri / quantifier sumti) {return _node("sumti_tail_1", expr);}
 
 relative_clauses = expr:(relative_clause (joik? relative_clause)*) {return _node("relative_clauses", expr); }
