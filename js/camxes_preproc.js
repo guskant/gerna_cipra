@@ -15,6 +15,8 @@
 	input = input.replace(/8/gm,"bi");
 	input = input.replace(/9/gm,"so");
 	// --- //
+	input = input.replace(/^x_/gm,"xy xi");
+	input = input.replace(/ x_/gm," xy xi");
 	input = input.replace(/_/gm," xi");
 	input = input.replace(/\[/gm,"to");
 	input = input.replace(/\]/gm,"toi");
