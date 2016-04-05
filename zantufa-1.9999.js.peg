@@ -215,7 +215,8 @@ term = expr:(term_1 (joik_ek term_1)*) {return _node("term", expr);}
 
 term_1 = expr:(term_2 (joik_ek? BO_clause term_2)*) {return _node("term_1", expr);}
 
-term_2 = expr:(XOI_clause statement SEhU_elidible / KE_clause term+ KEhE_elidible / tag_term / !tag sumti / NA_clause !bridi_tail KU_elidible / gek_term) {return _node("term_2", expr);}
+// term_2 //////// _vimcu lo cfila i va'i jmina zoizoi !joik_gihek zoi ja'e lo nu stura fa lo'u ([CU {<co'a broda> VAU} {na gi'a} CU {brode VAU} VAU] IAU) le'u_20160404UTC
+term_2 = expr:(XOI_clause statement SEhU_elidible / KE_clause term+ KEhE_elidible / tag_term / !tag sumti / NA_clause !bridi_tail !joik_gihek KU_elidible / gek_term) {return _node("term_2", expr);}
 
 // tag_term //////// _la'o zoi tanru_unit_2 zoi binxo la'o zoi tanru_unit_1 zoi_20150810UTC
 tag_term = expr:(!gek (tag !(!tag selbri) !gek_bridi_tail / FA_clause (joik FA_clause)* !tanru_unit_1) (sumti / KU_elidible)) {return _node("tag_term", expr);}

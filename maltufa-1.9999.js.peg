@@ -179,7 +179,8 @@ term_1 = expr:(term_2 (joik_ek? BO_clause free* term_2)*) {return _node("term_1"
 // term_2 //////// _maltufa: xruti la'o zoi subsentence zoi (XOI)_20150723UTC
 // term_2 //////// _maltufa: xruti la'o zoi termset zoi_20151019UTC
 // term_2 //////// _maltufa: xruti la'o zoi nonabs_termset zoi_20151019UTC
-term_2 = expr:(XOI_clause free* subsentence SEhU_elidible free* / KE_clause free* term+ KEhE_elidible free* / termset / tag_term / !tag sumti / NA_clause free* !bridi_tail KU_elidible free* / gek_term / nonabs_termset) {return _node("term_2", expr);}
+// term_2 //////// _vimcu lo cfila i va'i jmina zoizoi !joik_gihek zoi ja'e lo nu stura fa lo'u ([CU {<co'a broda> VAU} {na gi'a} CU {brode VAU} VAU] IAU) le'u_20160404UTC
+term_2 = expr:(XOI_clause free* subsentence SEhU_elidible free* / KE_clause free* term+ KEhE_elidible free* / termset / tag_term / !tag sumti / NA_clause free* !bridi_tail !joik_gihek KU_elidible free* / gek_term / nonabs_termset) {return _node("term_2", expr);}
 tag_term = expr:(!gek (tag !(!tag selbri) !gek_bridi_tail / FA_clause free* (joik FA_clause free*)* !tanru_unit_1) (sumti / KU_elidible free*)) {return _node("tag_term", expr);}
 /*** END EXP-SELBRITCITA-FIX ***/
 // //////// _maltufa: xruti la'o zoi termset zoi_20151019UTC
