@@ -1013,5 +1013,5 @@ maltufa-1.12.js.peg:182:// term_2 //////// _vimcu lo cfila i va'i jmina zoizoi !
 ------------------ mulno fa la maltufa_1.12 ------------------
 maftufa-1.12.js.peg:187:// term_2 //////// _vimcu lo cfila i va'i jmina zoizoi !joik_gihek zoi ja'e lo nu stura fa lo'u ([CU {<co'a broda> VAU} {na gi'a} CU {brode VAU} VAU] IAU) le'u_20160404UTC_
 ------------------ mulno fa la maftufa_1.12 ------------------
-zantufa-1.9999.js.peg:391:// si_word ////// _vimcu lo cfila no'u mu'a zoizoi ([RAhOI:ra'oi vla:tai] VAU) zoi i galfi zoizoi (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi zoizoi (y_rafsi / y_less_rafsi / gismu) zoi_20160414UTC_
-zantufa-1.9999.js.peg:855:// RAhOI_pre ////// _vimcu lo cfila no'u mu'a zoizoi ([RAhOI:ra'oi vla:tai] VAU) zoi i galfi zoizoi (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi zoizoi (y_rafsi / y_less_rafsi / gismu) zoi_20160414UTC_
+maftufa-1.9999.js.peg:321:// si_word ////// _vimcu lo cfila no'u mu'a zoizoi ([RAhOI:ra'oi vla:tai] VAU) zoi i galfi zoizoi (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi zoizoi (y_rafsi / y_less_rafsi / gismu) zoi_20160414UTC_
+maftufa-1.9999.js.peg:740:// RAhOI_pre ////// _vimcu lo cfila no'u mu'a zoizoi ([RAhOI:ra'oi vla:tai] VAU) zoi i galfi zoizoi (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi zoizoi (y_rafsi / y_less_rafsi / gismu) zoi_20160414UTC_

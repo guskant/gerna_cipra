@@ -298,7 +298,8 @@ su_clause = expr:((erasable_clause / su_valsi)* SU_clause) {return _node("su_cla
 si_clause = ((erasable_clause / si_word) si_clause? SI_clause)+
 erasable_clause = expr:(bu_clause_no_pre !BU_clause) {return _node("erasable_clause", expr); }
 su_valsi = expr:(si_word / !SU_clause !FAhO_clause any_word spaces?) {return _node("su_valsi", expr); }
-si_word = (CMEVLA / BRIVLA / RAhOI spaces? (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) / GOhOI spaces? any_word / ZO spaces? any_word / (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? LEhAI / LOhU spaces? (!LEhU any_word)* LEhU / (ZOI / MUhOI) spaces? zoi_open spaces? zoi_word* zoi_close / !BU !SI !SU !FAhO CMAVO) spaces?
+// si_word ////// _vimcu lo cfila no'u mu'a zoizoi ([RAhOI:ra'oi vla:tai] VAU) zoi i galfi zoizoi (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi zoizoi (y_rafsi / y_less_rafsi / gismu) zoi_20160414UTC_
+si_word = (CMEVLA / BRIVLA / RAhOI spaces? (y_rafsi / y_less_rafsi / gismu) / GOhOI spaces? any_word / ZO spaces? any_word / (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? LEhAI / LOhU spaces? (!LEhU any_word)* LEhU / (ZOI / MUhOI) spaces? zoi_open spaces? zoi_word* zoi_close / !BU !SI !SU !FAhO CMAVO) spaces?
 // ___ ELIDIBLE TERMINATORS ___
 BEhO_elidible = expr:(BEhO_clause?) {return (expr == "") ? ["BEhO"] : _node("BEhO", expr);}
 BOI_elidible = expr:(BOI_clause?)   {return (expr == "") ? ["BOI"]  : _node("BOI", expr);}
@@ -716,7 +717,8 @@ PU_clause = pre:PU_pre post:PU_post {return _node2("PU_clause", pre, post); }
 PU_pre = pre_clause PU spaces?
 PU_post = post_clause
 RAhOI_clause = pre:RAhOI_pre post:RAhOI_post {return _node2("RAhOI_clause", pre, post); }
-RAhOI_pre = pre_clause RAhOI spaces? (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) spaces?
+// RAhOI_pre ////// _vimcu lo cfila no'u mu'a zoizoi ([RAhOI:ra'oi vla:tai] VAU) zoi i galfi zoizoi (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi zoizoi (y_rafsi / y_less_rafsi / gismu) zoi_20160414UTC_
+RAhOI_pre = pre_clause RAhOI spaces? (y_rafsi / y_less_rafsi / gismu) spaces?
 RAhOI_post = post_clause
 //         flag for modified interpretation of GOhI 
 RAhO_clause = pre:RAhO_pre post:RAhO_post {return _node2("RAhO_clause", pre, post); }
