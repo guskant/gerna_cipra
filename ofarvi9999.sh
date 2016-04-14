@@ -9,3 +9,4 @@ cp farvi.txt farvi-1.9999.txt
 grep -n "UTC_" maftufa-1.9999.js.peg > temp
 awk '{print "maftufa-1.9999.js.peg:"$0}' temp >> farvi-1.9999.txt
 rm temp
+./pegpoho.sh maftufa-1.9999.js.peg maftufa-1.9999.peg

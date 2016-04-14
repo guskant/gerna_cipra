@@ -21,6 +21,7 @@ awk --assign awk_var="$1" '{
 # cp maltufa-$1.html ../gh-pages
 # sed 's/UTC_/UTC/' $PEG > maltufa-1.9999.js.peg
 # rm farvi-$1.txt maltufa-$1.html js/maltufa-$1.js
+# ./pegpoho.sh $PEG "maltufa-"$1".peg"
 #
 # uncomment to remove the version:
 # rm farvi-$1.txt maltufa-$1.html maltufa-$1.js.peg js/maltufa-$1.js
