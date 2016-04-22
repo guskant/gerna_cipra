@@ -1430,7 +1430,8 @@ LOhAI = &cmavo expr:( l o h a i / s a h a i ) &post_word {return ["LOhAI", _join
 
 LOhO = &cmavo expr:( l o h o ) &post_word {return ["LOhO", _join(expr)];}
 
-LOhOI = &cmavo expr:( l o h o i / x u h u ) &post_word {return ["LOhOI", _join(expr)];}
+// //////// _+xau'a +mau'a +moi'a_20160422UTC_
+LOhOI = &cmavo expr:( x u h u / x a u h a / m o i h a / m a u h a / l o h o i ) &post_word {return ["LOhOI", _join(expr)];}
 
 LOhU = &cmavo expr:( l a h a i / l o h u ) &post_word {return ["LOhU", _join(expr)];}
 

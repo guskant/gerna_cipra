@@ -318,7 +318,6 @@ su_clause = expr:((erasable_clause / su_valsi)* SU_clause) {return _node("su_cla
 si_clause = ((erasable_clause / si_word) si_clause? SI_clause)+
 erasable_clause = expr:(bu_clause_no_pre !BU_clause) {return _node("erasable_clause", expr); }
 su_valsi = expr:(si_word / !SU_clause !FAhO_clause any_word spaces?) {return _node("su_valsi", expr); }
-// si_word ////// _vimcu lo cfila no'u mu'a zoizoi ([RAhOI:ra'oi vla:tai] VAU) zoi i galfi zoizoi (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi zoizoi (y_rafsi / y_less_rafsi / gismu) zoi_20160414UTC_
 si_word = (CMEVLA / BRIVLA / RAhOI spaces? (y_rafsi / y_less_rafsi / gismu) / GOhOI spaces? any_word / ZO spaces? any_word / (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? LEhAI / LOhU spaces? (!LEhU any_word)* LEhU / (ZOI / MUhOI) spaces? zoi_open spaces? zoi_word* zoi_close / !BU !SI !SU !FAhO CMAVO) spaces?
 // ___ ELIDIBLE TERMINATORS ___
 BEhO_elidible = expr:(BEhO_clause?) {return (expr == "") ? ["BEhO"] : _node("BEhO", expr);}
@@ -737,7 +736,6 @@ PU_clause = pre:PU_pre post:PU_post {return _node2("PU_clause", pre, post); }
 PU_pre = pre_clause PU spaces?
 PU_post = post_clause
 RAhOI_clause = pre:RAhOI_pre post:RAhOI_post {return _node2("RAhOI_clause", pre, post); }
-// RAhOI_pre ////// _vimcu lo cfila no'u mu'a zoizoi ([RAhOI:ra'oi vla:tai] VAU) zoi i galfi zoizoi (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi zoizoi (y_rafsi / y_less_rafsi / gismu) zoi_20160414UTC_
 RAhOI_pre = pre_clause RAhOI spaces? (y_rafsi / y_less_rafsi / gismu) spaces?
 RAhOI_post = post_clause
 //         flag for modified interpretation of GOhI 
@@ -1123,7 +1121,7 @@ LIhAU = &cmavo expr:( l i h a u ) &post_word {return ["LIhAU", _join(expr)];}
 LIhU = &cmavo expr:( l i h u ) &post_word {return ["LIhU", _join(expr)];}
 LOhAI = &cmavo expr:( l o h a i / s a h a i ) &post_word {return ["LOhAI", _join(expr)];}
 LOhO = &cmavo expr:( l o h o ) &post_word {return ["LOhO", _join(expr)];}
-LOhOI = &cmavo expr:( l o h o i / x u h u ) &post_word {return ["LOhOI", _join(expr)];}
+LOhOI = &cmavo expr:( x u h u / x a u h a / m o i h a / m a u h a / l o h o i ) &post_word {return ["LOhOI", _join(expr)];}
 LOhU = &cmavo expr:( l a h a i / l o h u ) &post_word {return ["LOhU", _join(expr)];}
 LU = &cmavo expr:( t u h a i / l a h a u / l u ) &post_word {return ["LU", _join(expr)];}
 LUhEI = &cmavo expr:( l u h e i ) &post_word {return ["LUhEI", _join(expr)];}
