@@ -141,7 +141,8 @@ text = expr:(intro_null free* paragraphs? si_clause? SI_clause* faho_clause EOF?
 
 // intro_null //////// _vimcu lo pa cfila i vimcu zoizoi intro_si_clause zoi i jalge fa lo nu zoizoi idasibroda zoi zoizoi dasibroda zoi dunli lo ka stura_20150807UTC
 // intro_null //////// _jmina zoizoi  (!paragraphs si_clause SI_clause*)? zoi tezu'e lo go'i je lo nu curmi lo nu zo si du'e mei_20150810UTC
-intro_null = expr:(spaces? su_clause* (!paragraphs si_clause SI_clause*)?) {return _node_nonempty("intro_null", expr); }
+// intro_null //////// _galfi zoizoi spaces? zoi zoizoi initial_spaces? zoi ja'e lo nu y bu po'o ji'a gendra_20160426UTC_
+intro_null = expr:(initial_spaces? su_clause* (!paragraphs si_clause SI_clause*)?) {return _node_nonempty("intro_null", expr); }
 
 // intro_si_clause = expr:(si_clause? SI*)  {return _node_nonempty("intro_si_clause", expr); } //////// _tu'a ti co'a na'e sarcu i vimcu_20150810UTC
 
@@ -342,6 +343,7 @@ tag = expr:(tcita_selci+ (joik tcita_selci+)*) {return _node("tag", expr); }
 tcita_selci = expr:((NAhE_clause / SE_clause) tcita_selci / BAI_clause / mex ROI_clause / FIhO_clause selbri FEhU_elidible) {return _node("tcita_selci", expr); }
 
 // free //////// _galfi zoizoi selbri relative_clauses? zoi zoizoi selbri zoi ki'u lo nu zoizoi relative_clauses? zoi co'a pagbu la'o zoi selbri_1 zoi_20150810UTC
+// // // _au zo sei cmavo ma'oi COI ije ma'oi SEI co'a se cmene zo SOI i ku'i va'o la'e di'u lo sumti na'e ka'e jbini zo sei ce lo selbrisni ja'e lo nu lo so'i pu jufra cu co'u gendra i no'e jdice_20160426
 free = expr:(SEI_clause statement SEhU_elidible / vocative relative_clauses? selbri DOhU_elidible / vocative sumti? DOhU_elidible / mex_2 MAI_clause / TO_clause text TOI_elidible / xi_clause / LOhAI_clause / (UI_clause !BU_clause)+) {return _node("free", expr); }
 
 xi_clause = expr:(XI_clause mex_2) {return _node("xi_clause", expr); }
@@ -1207,7 +1209,8 @@ o = [oO] {return "o";}
 
 u = [uU] {return "u";}
 
-y = [yY] !nucleus {return "y";}
+// y //////// _galfi zoizoi !nucleus zoi zoizoi !(!y nucleus) zoi ja'e lo nu lu yyyyyyyyy li'u ji'a ei gendra_20160426UTC_
+y = [yY] !(!y nucleus) {return "y";}
 
 //___________________________________________________________________
 
