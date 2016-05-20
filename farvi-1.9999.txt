@@ -1014,7 +1014,9 @@ maltufa-1.12.js.peg:182:// term_2 //////// _vimcu lo cfila i va'i jmina zoizoi !
 maftufa-1.12.js.peg:187:// term_2 //////// _vimcu lo cfila i va'i jmina zoizoi !joik_gihek zoi ja'e lo nu stura fa lo'u ([CU {<co'a broda> VAU} {na gi'a} CU {brode VAU} VAU] IAU) le'u_20160404UTC_
 ------------------ mulno fa la maftufa_1.12 ------------------
 zantufa-1.9999.js.peg:144:// intro_null //////// _galfi zoizoi spaces? zoi zoizoi initial_spaces? zoi ja'e lo nu y bu po'o ji'a gendra_20160426UTC_
-zantufa-1.9999.js.peg:393:// si_word ////// _vimcu lo cfila no'u mu'a zoizoi ([RAhOI:ra'oi vla:tai] VAU) zoi i galfi zoizoi (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi zoizoi (y_rafsi / y_less_rafsi / gismu) zoi_20160414UTC_
-zantufa-1.9999.js.peg:857:// RAhOI_pre ////// _vimcu lo cfila no'u mu'a zoizoi ([RAhOI:ra'oi vla:tai] VAU) zoi i galfi zoizoi (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi zoizoi (y_rafsi / y_less_rafsi / gismu) zoi_20160414UTC_
-zantufa-1.9999.js.peg:1212:// y //////// _galfi zoizoi !nucleus zoi zoizoi !(!y nucleus) zoi ja'e lo nu lu yyyyyyyyy li'u ji'a ei gendra_20160426UTC_
-zantufa-1.9999.js.peg:1436:// //////// _+xau'a +mau'a +moi'a_20160422UTC_
+zantufa-1.9999.js.peg:192:// sentence //////// _galfi zoizoi terms? (CU_elidible bridi_tail / gek sentence (gik sentence)+ GIhI_elidible) zoi zoizoi terms? CU_elidible bridi_tail / terms gek sentence (gik sentence)+ GIhI_elidible zoi tezu'e tu'a lu ([ge {da CU <broda VAU>} {gi <CU (¹brode VAU¹)> <i je (¹CU [brodi VAU]¹)>} GIhI] IAU) li'u e lu ([{da ge <da CU (¹broda VAU¹)> <gi (¹CU [brode VAU]¹)> GIhI} {i je <CU (¹brodi VAU¹)>}] IAU) li'u_20160520UTC_
+zantufa-1.9999.js.peg:216:// term //////// _galfi zoizoi joik_ek zoi zoizoi !(joik tag BO_clause? CU) joik_ek zoi tezu'e tu'a lu ([CU {broda <da VAU>} {je ba cu <brode VAU> VAU}] IAU) li'u_20160520UTC_
+zantufa-1.9999.js.peg:395:// si_word ////// _vimcu lo cfila no'u mu'a zoizoi ([RAhOI:ra'oi vla:tai] VAU) zoi i galfi zoizoi (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi zoizoi (y_rafsi / y_less_rafsi / gismu) zoi_20160414UTC_
+zantufa-1.9999.js.peg:859:// RAhOI_pre ////// _vimcu lo cfila no'u mu'a zoizoi ([RAhOI:ra'oi vla:tai] VAU) zoi i galfi zoizoi (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi zoizoi (y_rafsi / y_less_rafsi / gismu) zoi_20160414UTC_
+zantufa-1.9999.js.peg:1214:// y //////// _galfi zoizoi !nucleus zoi zoizoi !(!y nucleus) zoi ja'e lo nu lu yyyyyyyyy li'u ji'a ei gendra_20160426UTC_
+zantufa-1.9999.js.peg:1438:// LOhOI //////// _+xau'a +mau'a +moi'a_20160422UTC_

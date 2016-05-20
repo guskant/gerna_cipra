@@ -189,7 +189,8 @@ fragment = expr:(prenex / !terms joik / ek / gihek / NA_clause !terms !KU / term
 
 prenex = expr:(terms ZOhU_clause) {return _node("prenex", expr);}
 
-sentence = expr:(terms? (CU_elidible bridi_tail / gek sentence (gik sentence)+ GIhI_elidible)) {return _node("sentence", expr);}
+// sentence //////// _galfi zoizoi terms? (CU_elidible bridi_tail / gek sentence (gik sentence)+ GIhI_elidible) zoi zoizoi terms? CU_elidible bridi_tail / terms gek sentence (gik sentence)+ GIhI_elidible zoi tezu'e tu'a lu ([ge {da CU <broda VAU>} {gi <CU (¹brode VAU¹)> <i je (¹CU [brodi VAU]¹)>} GIhI] IAU) li'u e lu ([{da ge <da CU (¹broda VAU¹)> <gi (¹CU [brode VAU]¹)> GIhI} {i je <CU (¹brodi VAU¹)>}] IAU) li'u_20160520UTC_
+sentence = expr:(terms? CU_elidible bridi_tail / terms gek sentence (gik sentence)+ GIhI_elidible) {return _node("sentence", expr);}
 
 bridi_tail = expr:(bridi_tail_1 (joik_gihek tag? CU_elidible bridi_tail_1)*) {return _node("bridi_tail", expr);}
 
@@ -212,7 +213,8 @@ terms = expr:(term+) {return _node("terms", expr);}
 
 /*** EXP-SELBRITCITA-FIX ***/
 
-term = expr:(term_1 (joik_ek term_1)*) {return _node("term", expr);}
+// term //////// _galfi zoizoi joik_ek zoi zoizoi !(joik tag BO_clause? CU) joik_ek zoi tezu'e tu'a lu ([CU {broda <da VAU>} {je ba cu <brode VAU> VAU}] IAU) li'u_20160520UTC_
+term = expr:(term_1 (!(joik tag BO_clause? CU) joik_ek term_1)*) {return _node("term", expr);}
 
 term_1 = expr:(term_2 (joik_ek? BO_clause term_2)*) {return _node("term_1", expr);}
 
@@ -1433,7 +1435,7 @@ LOhAI = &cmavo expr:( l o h a i / s a h a i ) &post_word {return ["LOhAI", _join
 
 LOhO = &cmavo expr:( l o h o ) &post_word {return ["LOhO", _join(expr)];}
 
-// //////// _+xau'a +mau'a +moi'a_20160422UTC_
+// LOhOI //////// _+xau'a +mau'a +moi'a_20160422UTC_
 LOhOI = &cmavo expr:( x u h u / x a u h a / m o i h a / m a u h a / l o h o i ) &post_word {return ["LOhOI", _join(expr)];}
 
 LOhU = &cmavo expr:( l a h a i / l o h u ) &post_word {return ["LOhU", _join(expr)];}
