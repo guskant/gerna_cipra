@@ -113,7 +113,7 @@ awk --assign awk_var="$1" --assign awk_cekitaus="$JOIBUS" '{
 	gsub(/\074\057form\076/, "\074\057form\076\074span class=\042liste\042\076\056i basti simxu : "awk_cekitaus"\074\057span\076"); 
 	print $0}' zantufa-$1.html > ../gh-pages/zantufa-$1-cekitaujoibu.html
 ./pegpoho.sh zantufa-1.9999.js.peg zantufa-$1-cekitaujoibu.peg
-rm  zantufa-1.9999.js.peg
+mv zantufa-1.9999.js.peg zantufa-$1-cekitaujoibu.js.peg
 # cekitaujoizai
 awk --assign awk_cekitau="$JOIZAI" --assign awk_detri="$DETRI" '!/cekitaujoibu/{
 	sub(/\057 b u \051/, "\051"); 
@@ -140,7 +140,7 @@ awk --assign awk_var="$1" --assign awk_cekitaus="$JOIZAIS" '{
 	gsub(/\074\057form\076/, "\074\057form\076\074span class=\042liste\042\076\056i basti simxu : "awk_cekitaus"\074\057span\076"); 
 	print $0}' zantufa-$1.html > ../gh-pages/zantufa-$1-cekitaujoizai.html
 ./pegpoho.sh zantufa-1.9999.js.peg zantufa-$1-cekitaujoizai.peg
-rm  zantufa-1.9999.js.peg
+mv zantufa-1.9999.js.peg zantufa-$1-cekitaujoizai.js.peg
 # cekitaujaubu
 awk --assign awk_cekitau="$JAUBU" --assign awk_detri="$DETRI" '!/cekitaujoibu/{
 	sub(/ j o h u \051/, " qqqj a u \051"); 
@@ -163,7 +163,7 @@ awk --assign awk_var="$1" --assign awk_cekitaus="$JAUBUS" '{
 	gsub(/\074\057form\076/, "\074\057form\076\074span class=\042liste\042\076\056i basti simxu : "awk_cekitaus"\074\057span\076"); 
 	print $0}' zantufa-$1.html > ../gh-pages/zantufa-$1-cekitaujaubu.html
 ./pegpoho.sh zantufa-1.9999.js.peg zantufa-$1-cekitaujaubu.peg
-rm  zantufa-1.9999.js.peg
+mv zantufa-1.9999.js.peg zantufa-$1-cekitaujaubu.js.peg
 # cekitaujauzai
 awk --assign awk_cekitau="$JAUZAI" --assign awk_detri="$DETRI" '!/cekitaujaubu/{
 	sub(/\057 b u \051/, "\051"); 
@@ -190,7 +190,7 @@ awk --assign awk_var="$1" --assign awk_cekitaus="$JAUZAIS" '{
 	gsub(/\074\057form\076/, "\074\057form\076\074span class=\042liste\042\076\056i basti simxu : "awk_cekitaus"\074\057span\076"); 
 	print $0}' zantufa-$1.html > ../gh-pages/zantufa-$1-cekitaujauzai.html
 ./pegpoho.sh zantufa-1.9999.js.peg zantufa-$1-cekitaujauzai.peg
-rm  zantufa-1.9999.js.peg
+mv zantufa-1.9999.js.peg zantufa-$1-cekitaujauzai.js.peg
 # cekitaujeibu
 awk --assign awk_cekitau="$JEIBU" --assign awk_detri="$DETRI" '!/cekitaujoibu/{
 	sub(/ j o h u \051/, " qqqj e i \051"); 
@@ -213,7 +213,7 @@ awk --assign awk_var="$1" --assign awk_cekitaus="$JEIBUS" '{
 	gsub(/\074\057form\076/, "\074\057form\076\074span class=\042liste\042\076\056i basti simxu : "awk_cekitaus"\074\057span\076"); 
 	print $0}' zantufa-$1.html > ../gh-pages/zantufa-$1-cekitaujeibu.html
 ./pegpoho.sh zantufa-1.9999.js.peg zantufa-$1-cekitaujeibu.peg
-rm  zantufa-1.9999.js.peg
+mv zantufa-1.9999.js.peg zantufa-$1-cekitaujeibu.js.peg
 # cekitaujeizai
 awk --assign awk_cekitau="$JEIZAI" --assign awk_detri="$DETRI" '!/cekitaujeibu/{
 	sub(/\057 b u \051/, "\051"); 
@@ -240,7 +240,9 @@ awk --assign awk_var="$1" --assign awk_cekitaus="$JEIZAIS" '{
 	gsub(/\074\057form\076/, "\074\057form\076\074span class=\042liste\042\076\056i basti simxu : "awk_cekitaus"\074\057span\076"); 
 	print $0}' zantufa-$1.html > ../gh-pages/zantufa-$1-cekitaujeizai.html
 ./pegpoho.sh zantufa-1.9999.js.peg zantufa-$1-cekitaujeizai.peg
-rm  zantufa-1.9999.js.peg
+mv zantufa-1.9999.js.peg zantufa-$1-cekitaujeizai.js.peg
 # xruti lo muvdu
 mv zantufa-1.99999.js.peg zantufa-1.9999.js.peg
 ./farvi9999.sh
+# vimcu la'o zoi zantufa-$1-*.js.peg
+rm zantufa-$1-cekitau*.js.peg

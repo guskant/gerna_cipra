@@ -141,7 +141,7 @@ text = expr:(intro_null free* paragraphs? si_clause? SI_clause* faho_clause EOF?
 
 // intro_null //////// _vimcu lo pa cfila i vimcu zoizoi intro_si_clause zoi i jalge fa lo nu zoizoi idasibroda zoi zoizoi dasibroda zoi dunli lo ka stura_20150807UTC
 // intro_null //////// _jmina zoizoi  (!paragraphs si_clause SI_clause*)? zoi tezu'e lo go'i je lo nu curmi lo nu zo si du'e mei_20150810UTC
-// intro_null //////// _galfi zoizoi spaces? zoi zoizoi initial_spaces? zoi ja'e lo nu y bu po'o ji'a gendra_20160426UTC_
+// intro_null //////// _galfi zoizoi spaces? zoi zoizoi initial_spaces? zoi ja'e lo nu y bu po'o ji'a gendra_20160426UTC
 intro_null = expr:(initial_spaces? su_clause* (!paragraphs si_clause SI_clause*)?) {return _node_nonempty("intro_null", expr); }
 
 // intro_si_clause = expr:(si_clause? SI*)  {return _node_nonempty("intro_si_clause", expr); } //////// _tu'a ti co'a na'e sarcu i vimcu_20150810UTC
@@ -189,7 +189,7 @@ fragment = expr:(prenex / !terms joik / ek / gihek / NA_clause !terms !KU / term
 
 prenex = expr:(terms ZOhU_clause) {return _node("prenex", expr);}
 
-// sentence //////// _galfi zoizoi terms? (CU_elidible bridi_tail / gek sentence (gik sentence)+ GIhI_elidible) zoi zoizoi terms? CU_elidible bridi_tail / terms gek sentence (gik sentence)+ GIhI_elidible zoi tezu'e tu'a lu ([ge {da CU <broda VAU>} {gi <CU (¹brode VAU¹)> <i je (¹CU [brodi VAU]¹)>} GIhI] IAU) li'u e lu ([{da ge <da CU (¹broda VAU¹)> <gi (¹CU [brode VAU]¹)> GIhI} {i je <CU (¹brodi VAU¹)>}] IAU) li'u_20160520UTC_
+// sentence //////// _vimcu lo cfila noi ca tu'a lo 0.7 moi co'a pagbu i galfi zoizoi terms? (CU_elidible bridi_tail / gek sentence (gik sentence)+ GIhI_elidible) zoi zoizoi terms? CU_elidible bridi_tail / terms gek sentence (gik sentence)+ GIhI_elidible zoi tezu'e tu'a lu ([ge {da CU <broda VAU>} {gi <CU (¹brode VAU¹)> <i je (¹CU [brodi VAU]¹)>} GIhI] IAU) li'u e lu ([{da ge <da CU (¹broda VAU¹)> <gi (¹CU [brode VAU]¹)> GIhI} {i je <CU (¹brodi VAU¹)>}] IAU) li'u_20160520UTC
 sentence = expr:(terms? CU_elidible bridi_tail / terms gek sentence (gik sentence)+ GIhI_elidible) {return _node("sentence", expr);}
 
 bridi_tail = expr:(bridi_tail_1 (joik_gihek tag? CU_elidible bridi_tail_1)*) {return _node("bridi_tail", expr);}
@@ -213,7 +213,7 @@ terms = expr:(term+) {return _node("terms", expr);}
 
 /*** EXP-SELBRITCITA-FIX ***/
 
-// term //////// _galfi zoizoi joik_ek zoi zoizoi !(joik tag BO_clause? CU) joik_ek zoi tezu'e tu'a lu ([CU {broda <da VAU>} {je ba cu <brode VAU> VAU}] IAU) li'u_20160520UTC_
+// term //////// _galfi zoizoi joik_ek zoi zoizoi !(joik tag BO_clause? CU) joik_ek zoi tezu'e tu'a lu ([CU {broda <da VAU>} {je ba cu <brode VAU> VAU}] IAU) li'u_20160520UTC
 term = expr:(term_1 (!(joik tag BO_clause? CU) joik_ek term_1)*) {return _node("term", expr);}
 
 term_1 = expr:(term_2 (joik_ek? BO_clause term_2)*) {return _node("term_1", expr);}
@@ -392,7 +392,7 @@ erasable_clause = expr:(bu_clause_no_pre !BU_clause) {return _node("erasable_cla
 su_valsi = expr:(si_word / !SU_clause !FAhO_clause any_word spaces?) {return _node("su_valsi", expr); }
 
 // si_word //////// _galfi zoi ly ZOI ly zoi ly (ZOI / MUhOI) ly_20150819UTC
-// si_word ////// _vimcu lo cfila no'u mu'a zoizoi ([RAhOI:ra'oi vla:tai] VAU) zoi i galfi zoizoi (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi zoizoi (y_rafsi / y_less_rafsi / gismu) zoi_20160414UTC_
+// si_word ////// _vimcu lo cfila no'u mu'a zoizoi ([RAhOI:ra'oi vla:tai] VAU) zoi i galfi zoizoi (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi zoizoi (y_rafsi / y_less_rafsi / gismu) zoi_20160414UTC
 si_word = (CMEVLA / BRIVLA / RAhOI spaces? (y_rafsi / y_less_rafsi / gismu) / GOhOI spaces? any_word / ZO spaces? any_word / (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? (LOhAI spaces? (!LOhAI !LEhAI any_word)*)? LEhAI / LOhU spaces? (!LEhU any_word)* LEhU / (ZOI / MUhOI) spaces? zoi_open spaces? zoi_word* zoi_close / !BU !SI !SU !FAhO CMAVO) spaces?
 
 // ___ ELIDIBLE TERMINATORS ___
@@ -856,7 +856,7 @@ PEhO_post = post_clause
 //         directions in time 
 
 RAhOI_clause = pre:RAhOI_pre post:RAhOI_post {return _node2("RAhOI_clause", pre, post); }
-// RAhOI_pre ////// _vimcu lo cfila no'u mu'a zoizoi ([RAhOI:ra'oi vla:tai] VAU) zoi i galfi zoizoi (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi zoizoi (y_rafsi / y_less_rafsi / gismu) zoi_20160414UTC_
+// RAhOI_pre ////// _vimcu lo cfila no'u mu'a zoizoi ([RAhOI:ra'oi vla:tai] VAU) zoi i galfi zoizoi (initial_rafsi / gismu / CVV_final_rafsi / stressed_initial_rafsi short_final_rafsi) zoi zoizoi (y_rafsi / y_less_rafsi / gismu) zoi_20160414UTC
 RAhOI_pre = pre_clause RAhOI spaces? (y_rafsi / y_less_rafsi / gismu) spaces?
 RAhOI_post = post_clause
 
@@ -1211,7 +1211,7 @@ o = [oO] {return "o";}
 
 u = [uU] {return "u";}
 
-// y //////// _galfi zoizoi !nucleus zoi zoizoi !(!y nucleus) zoi ja'e lo nu lu yyyyyyyyy li'u ji'a ei gendra_20160426UTC_
+// y //////// _galfi zoizoi !nucleus zoi zoizoi !(!y nucleus) zoi ja'e lo nu lu yyyyyyyyy li'u ji'a ei gendra_20160426UTC
 y = [yY] !(!y nucleus) {return "y";}
 
 //___________________________________________________________________
@@ -1435,8 +1435,9 @@ LOhAI = &cmavo expr:( l o h a i / s a h a i ) &post_word {return ["LOhAI", _join
 
 LOhO = &cmavo expr:( l o h o ) &post_word {return ["LOhO", _join(expr)];}
 
-// LOhOI //////// _+xau'a +mau'a +moi'a_20160422UTC_
+// LOhOI //////// _+xau'a +mau'a +moi'a (lo nu jdice cu ei balvi lo nu jmina fi la jbovlaste)_20160422UTC_
 LOhOI = &cmavo expr:( x u h u / x a u h a / m o i h a / m a u h a / l o h o i ) &post_word {return ["LOhOI", _join(expr)];}
+//LOhOI = &cmavo expr:( x u h u / l o h o i ) &post_word {return ["LOhOI", _join(expr)];}
 
 LOhU = &cmavo expr:( l a h a i / l o h u ) &post_word {return ["LOhU", _join(expr)];}
 

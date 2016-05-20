@@ -123,7 +123,7 @@
 // text //////// _maltufa: lo cmevla co'u selbrisle : xruti tu'a zoizoi (CMEVLA_clause+ / indicators?) free* zoi_20150810UTC
 // text //////// _maltufa_oz: lo cmevla di'a selbrisle : galfi zoizoi (CMEVLA_clause+ / indicators?) zoi zoizoi indicators? zoi_20151019UTC
 text = expr:(intro_null NAI_clause* indicators? free* paragraphs? si_clause? SI_clause* faho_clause EOF?) {return _node_nonempty("text", expr);}
-intro_null = expr:(spaces? su_clause* (!paragraphs si_clause SI_clause*)?) {return _node_nonempty("intro_null", expr); }
+intro_null = expr:(initial_spaces? su_clause* (!paragraphs si_clause SI_clause*)?) {return _node_nonempty("intro_null", expr); }
 faho_clause = expr:((FAhO_clause dot_star)?) {return _node("faho_clause", expr);}
 // Please note that the "text_1" item in the text_1 production does
 // *not* match the BNF. This is due to a bug in the BNF.  The change
@@ -179,12 +179,11 @@ nonabs_terms = expr:(nonabs_terms_1+) {return _node("nonabs_terms", expr);}
 nonabs_terms_1 = expr:(nonabs_terms_2 (PEhE_clause free* joik nonabs_terms_2)*) {return _node("nonabs_terms_1", expr);}
 // //////// _maltufa: xruti la'o zoi nonabs_terms_2 zoi pe ma'oi PEhE e ma'oi CEhE_20151019UTC
 nonabs_terms_2 = expr:(term (CEhE_clause free* term)*) {return _node("nonabs_terms_2", expr);}
-term = expr:(term_1 (joik_ek term_1)*) {return _node("term", expr);}
+term = expr:(term_1 (!(joik tag BO_clause? CU) joik_ek term_1)*) {return _node("term", expr);}
 term_1 = expr:(term_2 (joik_ek? BO_clause free* term_2)*) {return _node("term_1", expr);}
 // term_2 //////// _maltufa: xruti la'o zoi subsentence zoi (XOI)_20150723UTC
 // term_2 //////// _maltufa: xruti la'o zoi termset zoi_20151019UTC
 // term_2 //////// _maltufa: xruti la'o zoi nonabs_termset zoi_20151019UTC
-// term_2 //////// _vimcu lo cfila i va'i jmina zoizoi !joik_gihek zoi ja'e lo nu stura fa lo'u ([CU {<co'a broda> VAU} {na gi'a} CU {brode VAU} VAU] IAU) le'u_20160404UTC
 term_2 = expr:(XOI_clause free* subsentence SEhU_elidible free* / KE_clause free* term+ KEhE_elidible free* / termset / tag_term / !tag sumti / NA_clause free* !bridi_tail !joik_gihek KU_elidible free* / gek_term / nonabs_termset) {return _node("term_2", expr);}
 // tag_term //////// _maltufa_oz: ei zo jai ka'e tcita lo sumti i ku'i lu pu se manci vlipa jai se gasnu li'u ji'a ru'i ei gendra i galfi zoizoi  / FA_clause free* (joik FA_clause free*)* !tanru_unit_1 zoi zoizoi  / (FA_clause free* (joik FA_clause free*)* / JAI_clause free*) !tanru_unit_1 zoi_20151119UTC
 tag_term = expr:(!gek (tag !(!tag selbri) !gek_bridi_tail / (FA_clause free* (joik FA_clause free*)* / JAI_clause free*) !tanru_unit_1) (sumti / KU_elidible free*)) {return _node("tag_term", expr);}
@@ -996,7 +995,7 @@ e = [eEè] {return "e";}
 i = [iIì] {return "i";}
 o = [oOò] {return "o";}
 u = [uUù] {return "u";}
-y = [yYỳ] !nucleus {return "y";}
+y = [yY] !(!y nucleus) {return "y";}
 //___________________________________________________________________
 cluster = expr:(consonant consonant+) {return _join(expr);}
 initial_pair = expr:(&initial consonant consonant !consonant) {return _join(expr);}
@@ -1121,7 +1120,7 @@ LIhAU = &cmavo expr:( l i h a u ) &post_word {return ["LIhAU", _join(expr)];}
 LIhU = &cmavo expr:( l i h u ) &post_word {return ["LIhU", _join(expr)];}
 LOhAI = &cmavo expr:( l o h a i / s a h a i ) &post_word {return ["LOhAI", _join(expr)];}
 LOhO = &cmavo expr:( l o h o ) &post_word {return ["LOhO", _join(expr)];}
-LOhOI = &cmavo expr:( x u h u / x a u h a / m o i h a / m a u h a / l o h o i ) &post_word {return ["LOhOI", _join(expr)];}
+LOhOI = &cmavo expr:( x u h u / l o h o i ) &post_word {return ["LOhOI", _join(expr)];}
 LOhU = &cmavo expr:( l a h a i / l o h u ) &post_word {return ["LOhU", _join(expr)];}
 LU = &cmavo expr:( t u h a i / l a h a u / l u ) &post_word {return ["LU", _join(expr)];}
 LUhEI = &cmavo expr:( l u h e i ) &post_word {return ["LUhEI", _join(expr)];}
