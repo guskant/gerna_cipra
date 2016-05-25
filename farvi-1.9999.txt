@@ -1020,4 +1020,5 @@ zantufa-1.13.js.peg:1214:// y //////// _galfi zoizoi !nucleus zoi zoizoi !(!y nu
 ------------------ mulno fa la zantufa_1.13 ------------------
 ------------------ mulno fa la maltufa_1.13 ------------------
 ------------------ mulno fa la maftufa_1.13 ------------------
-zantufa-1.9999.js.peg:1438:// LOhOI //////// _+xau'a +mau'a +moi'a (lo nu jdice cu ei balvi lo nu jmina fi la jbovlaste)_20160422UTC_
+zantufa-1.9999.js.peg:1417:// LAhE //////// _+moi'a_20160525UTC_
+zantufa-1.9999.js.peg:1439:// LOhOI //////// _+xau'a +mau'a_20160525UTC_

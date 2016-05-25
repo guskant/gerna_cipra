@@ -1,4 +1,4 @@
-; la'o zoi zantufa-1.9999.peg zoi peg zei gerna de'i li 20160520 tede'i UTC
+; la'o zoi zantufa-1.9999.peg zoi peg zei gerna de'i li 20160525 tede'i UTC
 ; i ku'i la'o peg zoi_open zoi_word zoi_close peg na'e ka'e se tamgau va'o la peg po'o fa'o
 
 text <- (intro_null free* paragraphs? si_clause? SI_clause* faho_clause EOF?)
@@ -559,7 +559,7 @@ KUhAU <- &cmavo ( k u h a u ) &post_word
 KUhE <- &cmavo ( t e i h u / t e h o i h o i / k u h e ) &post_word
 KUhO <- &cmavo ( k u h o ) &post_word
 LAU <- &cmavo ( c e h a / l a u / z a i / t a u ) &post_word
-LAhE <- &cmavo ( z o h e i / v u h i / t u h a / t a u h e / l u h o / l u h i / l u h e / l u h a u / l u h a / l a i h e / l a h e h a u / l a h e / d u h a u ) &post_word
+LAhE <- &cmavo ( z o h e i / v u h i / t u h a / t a u h e / m o i h a / l u h o / l u h i / l u h e / l u h a u / l u h a / l a i h e / l a h e h a u / l a h e / d u h a u ) &post_word
 LE <- &cmavo ( z o h a u / r i h o i / m o i h o i / m o h o i / m e h e i / l o i h i / l o i h e / l o i / l o h i / l o h e i / l o h e / l o / l e i h i / l e i h e / l e i / l e h i / l e h e i / l e h e / l e / l a i / l a h i / l a h e i / l a ) &post_word
 LEhAI <- &cmavo ( l e h a i ) &post_word
 LEhU <- &cmavo ( l e h u ) &post_word
@@ -568,7 +568,7 @@ LIhAU <- &cmavo ( l i h a u ) &post_word
 LIhU <- &cmavo ( l i h u ) &post_word
 LOhAI <- &cmavo ( l o h a i / s a h a i ) &post_word
 LOhO <- &cmavo ( l o h o ) &post_word
-LOhOI <- &cmavo ( x u h u / x a u h a / m o i h a / m a u h a / l o h o i ) &post_word
+LOhOI <- &cmavo ( x u h u / x a u h a / m a u h a / l o h o i ) &post_word
 LOhU <- &cmavo ( l a h a i / l o h u ) &post_word
 LU <- &cmavo ( t u h a i / l a h a u / l u ) &post_word
 LUhEI <- &cmavo ( l u h e i ) &post_word
