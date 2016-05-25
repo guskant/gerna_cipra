@@ -1109,7 +1109,7 @@ KUhO = &cmavo expr:( k u h o ) &post_word {return ["KUhO", _join(expr)];}
 // LA //////// _maltufa: lo cmevla co'u selbrisle : xruti ma'oi LA_20150810UTC
 // LA = &cmavo expr:( l a h e i / z o h a u / l a i / l a h i / l a ) &post_word { return ["LA", _join(expr)]; } //////// _maltufa_oz: lo cmevla di'a selbrisle : muvdu lo cmavo ma'oi LE_20151019UTC
 LAU = &cmavo expr:( c e h a / l a u / z a i / t a u ) &post_word {return ["LAU", _join(expr)];}
-LAhE = &cmavo expr:( z o h e i / v u h i / t u h a / t a u h e / l u h o / l u h i / l u h e / l u h a u / l u h a / l a i h e / l a h e h a u / l a h e / d u h a u ) &post_word {return ["LAhE", _join(expr)];}
+LAhE = &cmavo expr:( z o h e i / v u h i / t u h a / t a u h e / m o i h a / l u h o / l u h i / l u h e / l u h a u / l u h a / l a i h e / l a h e h a u / l a h e / d u h a u ) &post_word {return ["LAhE", _join(expr)];}
 // LE //////// _maltufa: lo cmevla co'u selbrisle : xruti ma'oi LA : vimcu la'o zoi la'ei zo'au lai la'i la zoi_20150810UTC
 // LE //////// _maltufa_oz: lo cmevla di'a selbrisle : +la'ei +zo'au +lai +la'i +la_20151019UTC
 LE = &cmavo expr:( z o h a u / r i h o i / m o i h o i / m o h o i / m e h e i / l o i h i / l o i h e / l o i / l o h i / l o h e i / l o h e / l o / l e i h i / l e i h e / l e i / l e h i / l e h e i / l e h e / l e / l a i / l a h i / l a h e i / l a ) &post_word { return ["LE", _join(expr)];}
@@ -1120,7 +1120,7 @@ LIhAU = &cmavo expr:( l i h a u ) &post_word {return ["LIhAU", _join(expr)];}
 LIhU = &cmavo expr:( l i h u ) &post_word {return ["LIhU", _join(expr)];}
 LOhAI = &cmavo expr:( l o h a i / s a h a i ) &post_word {return ["LOhAI", _join(expr)];}
 LOhO = &cmavo expr:( l o h o ) &post_word {return ["LOhO", _join(expr)];}
-LOhOI = &cmavo expr:( x u h u / l o h o i ) &post_word {return ["LOhOI", _join(expr)];}
+LOhOI = &cmavo expr:( x u h u / x a u h a / m a u h a / l o h o i ) &post_word {return ["LOhOI", _join(expr)];}
 LOhU = &cmavo expr:( l a h a i / l o h u ) &post_word {return ["LOhU", _join(expr)];}
 LU = &cmavo expr:( t u h a i / l a h a u / l u ) &post_word {return ["LU", _join(expr)];}
 LUhEI = &cmavo expr:( l u h e i ) &post_word {return ["LUhEI", _join(expr)];}
