@@ -1499,7 +1499,7 @@ ROI = &cmavo expr:( x u h a u / v a h e i / r o i / r e h u / m u h e i / d e h 
 SE = &cmavo expr:( x o h a i / x e / v o h a i / v e / t o h a i / t e / t a u h o / s u h e i / s e h u h o / s e h o h e / s e / r e h a u h e ) &post_word {return ["SE", _join(expr)];}
 
 // SEI //////// _+cei'e +noi'a +poi'a_20150820UTC
-// SEI //////// _-poi'a -noi'a (to muvdu ma'oi FEhU toi)_20160602UTC
+// SEI //////// _-poi'a -noi'a (to muvdu ma'oi FIhO toi)_20160602UTC
 SEI = &cmavo expr:( t i h o / s o i / s e i / l e h a u / c e i h e ) &post_word {return ["SEI", _join(expr)];}
 
 // SEhU //////// _+xe'au_20150820UTC
