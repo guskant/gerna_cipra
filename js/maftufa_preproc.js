@@ -2,7 +2,7 @@
 	if (!(typeof input.valueOf() === 'string'))
 		return "ERROR: Wrong input type.";
 	input = input.replace(/’/gm,"'");
-	input = input.replace(/·/gm,".");
+	input = input.replace(/·|・/gm,".");
 	input = input.replace(/\.\.\./gm,"co'e");
 	input = input.replace(/([0-9])\.([0-9])/gm,"$1 pi $2");
 	input = input.replace(/0/gm,"no");
@@ -57,7 +57,7 @@
 	}
 	input = transliterate(input);
 	// --- //
-	input = input.replace(/\(|\)|«|»|—|:|{|}|,/gm,"");
+	input = input.replace(/­|\-|\(|\)|«|»|‹|›|—|:|{|}|,/gm,"");
 	return input;
 }
 
