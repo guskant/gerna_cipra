@@ -1020,3 +1020,20 @@ zantufa-1.13.js.peg:1214:// y //////// _galfi zoizoi !nucleus zoi zoizoi !(!y nu
 ------------------ mulno fa la zantufa_1.13 ------------------
 ------------------ mulno fa la maltufa_1.13 ------------------
 ------------------ mulno fa la maftufa_1.13 ------------------
+zantufa-1.14.js.peg:1243:// m //////// _vimcu zoi zoi !z zoi tezu'e lo nu curmi tu'a lu mz li'u_20160602UTC_
+zantufa-1.14.js.peg:1341:// BY //////// _-soi'a'y (to pa'a lo nu zo soi'a muvdu ma'oi FIhO ma'oi PA toi)_20160602UTC_
+zantufa-1.14.js.peg:1361:// FIhO //////// _+soi'a +poi'o'a +poi'a +noi'o'a +noi'a_20160602UTC_
+zantufa-1.14.js.peg:1420:// LAhE //////// _+moi'a_20160525UTC_
+zantufa-1.14.js.peg:1442:// LOhOI //////// _+xau'a +mau'a_20160525UTC_
+zantufa-1.14.js.peg:1488:// PA //////// _-soi'a (to muvdu ma'oi FIhO toi)_20160602UTC_
+zantufa-1.14.js.peg:1502:// SEI //////// _-poi'a -noi'a (to muvdu ma'oi FEhU toi)_20160602UTC_
+zantufa-1.14.js.peg:1547:// Y //////// _+ie'o_20160602UTC_
+------------------ mulno fa la zantufa_1.14 ------------------
+------------------ mulno fa la maltufa_1.14 ------------------
+maftufa-1.14.js.peg:187:// term_2 //////// _maltufa_oz: jmina zoizoi adverbial zoi_20160603UTC_
+maftufa-1.14.js.peg:227:// selbri //////// _maltufa_oz: jmina zoizoi adverbial zoi_20160603UTC_
+maftufa-1.14.js.peg:247:// //////// _maltufa_oz: jmina la'o zoi adverbial zoi_20160603UTC_
+maftufa-1.14.js.peg:272:// gek //////// _maltufa_oz: ma'oi GA gauku cirko lo ka jonma'o kei gi'e binxo lo po'o tcita be lo li'erla'i jonma'o iau ki'u lo nu mi carmi lo ka xebni lo ka fegli kei po la'o zoi ga_clause zoi jo'u la'o zoi gu_clause zoi vu'o po la ilmentufa.exp i galfi zoizoi SE_clause? GA_clause NAI_clause? free* / GI_clause (joik / stag) (BO_clause)? free* zoi zoizoi (GA_clause / GI_clause) (joik / stag) (BO_clause)? free* zoi_20160602UTC_
+maftufa-1.14.js.peg:738:// //////// _maltufa_oz: jmina la'o zoi POIhA_clause zoi_20160603UTC_ 
+maftufa-1.14.js.peg:1160:// //////// _maltufa_oz: jmina ma'oi POIhA_20160603UTC_
+------------------ mulno fa la maftufa_1.14 ------------------

@@ -11,8 +11,11 @@ rm temp
 awk --assign awk_var="$1" '{
 	gsub(/farvi-1.9999.txt/, "farvi.txt"); 
 	gsub(/1.9999/, awk_var); 
+	gsub(/\041--cekitaus /, ""); 
+	gsub(/ cekitaus--/, ""); 
 	print $0}' maftufa-1.9999.html > maftufa-$1.html
 # uncomment for real release:
+# ./otceki.sh $1
 # cp farvi-$1.txt farvi.txt
 # cp -R js ../gh-pages
 # cp maftufa-$1.html ../gh-pages

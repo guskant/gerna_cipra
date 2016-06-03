@@ -1,4 +1,4 @@
-; la'o zoi zantufa-1.9999.peg zoi peg zei gerna de'i li 20160525 tede'i UTC
+; la'o zoi zantufa-1.9999.peg zoi peg zei gerna de'i li 20160603 tede'i UTC
 ; i ku'i la'o peg zoi_open zoi_word zoi_close peg na'e ka'e se tamgau va'o la peg po'o fa'o
 
 text <- (intro_null free* paragraphs? si_clause? SI_clause* faho_clause EOF?)
@@ -488,7 +488,7 @@ syllabic <- (l / m / n / r)
 voiced <- (b / d / g / j / v / z)
 unvoiced <- (c / f / k / p / s / t / x)
 l <- [lL] !h !glide !l
-m <- [mM] !h !glide !m !z
+m <- [mM] !h !glide !m
 n <- [nN] !h !glide !n !affricate
 r <- [rR] !h !glide !r
 b <- [bB] !h !glide !b !unvoiced
@@ -525,7 +525,7 @@ BIhE <- &cmavo ( b i h e ) &post_word
 BO <- &cmavo ( c e h e / b o ) &post_word
 BOI <- &cmavo ( b o i ) &post_word
 BU <- &cmavo ( b u ) &post_word
-BY <- &cmavo ( z y / z e h y / z a h u h y / y h y / ybu / x y / x o h y / x o h e h y / x i h i h e i h y / x e i h y / x e h e h y / x a h y / v y / v o h y / v o h e i h a h y / v i h e i h e h y / v a u h a u h o h y / v a i h y / v a h e i h a h y / u y / u i h y / u h y / t y / t u h o h y / t o h a / t e h o h y / t a u h u h y / s y / s u h o i h y / s u h o h y / s u h e h y / s u h a u h y / s u h a i h y / s o i h u h y / s o i h a h y / s o h y / s o h u h y / s o h o h y / s o h i h y / s o h e h y / s o h a h y / s e i h u h e h y / s e h i h i h y / s e h e / r y / r u h o / r o h y / r o h o i h y / r o h a u h o / r e i h y / r e h y / r a u h y / r a h e h y / p y / p u h e h u h o h y / p i h y / p e i h i h a h y / p a i h y / p a h y / p a h a u h o h y / o h y / n y / n o h y / n o h o h y / n o h e h u h y / n o h a i h y / n i h u h y / n i h e h o i h y / n i h e h e i h y / n a h a / m y / m u h y / m u h i h a i h y / m o h a h y / m e h i h y / m a i h e h e h y / m a h u h y / l y / l o h a / k y / k o i h o h y / k i h o h y / k e i h o h y / k a u h o h y / k a i h o h y / k a h o h y / k a h o h a i h y / k a h e i h a h y / j y / j o h o / j o h a u h o / j i h i h y / j e h o / j a u h y / i y h y / i y / i h y / g y / g o h o h i h a h y / g e h o / g a u h i h o h y / g a i h y / g a h e / g a h a u h y / f y / f u h a h a u h y / f u h a h a i h y / f i h u h y / f e i h y / f a i h u h y / f a i h u h a h y / f a i h e h a u h y / f a i h e h a i h y / e h y / d y / d u h e h y / d a u h y / d a h a h y / c y / c i h y / c i h i h y / c e h i h y / b y / b u h o h e / b i h y / a h y ) &post_word
+BY <- &cmavo ( z y / z e h y / z a h u h y / y h y / ybu / x y / x o h y / x o h e h y / x i h i h e i h y / x e i h y / x e h e h y / x a h y / v y / v o h y / v o h e i h a h y / v i h e i h e h y / v a u h a u h o h y / v a i h y / v a h e i h a h y / u y / u i h y / u h y / t y / t u h o h y / t o h a / t e h o h y / t a u h u h y / s y / s u h o i h y / s u h o h y / s u h e h y / s u h a u h y / s u h a i h y / s o i h u h y / s o h y / s o h u h y / s o h o h y / s o h i h y / s o h e h y / s o h a h y / s e i h u h e h y / s e h i h i h y / s e h e / r y / r u h o / r o h y / r o h o i h y / r o h a u h o / r e i h y / r e h y / r a u h y / r a h e h y / p y / p u h e h u h o h y / p i h y / p e i h i h a h y / p a i h y / p a h y / p a h a u h o h y / o h y / n y / n o h y / n o h o h y / n o h e h u h y / n o h a i h y / n i h u h y / n i h e h o i h y / n i h e h e i h y / n a h a / m y / m u h y / m u h i h a i h y / m o h a h y / m e h i h y / m a i h e h e h y / m a h u h y / l y / l o h a / k y / k o i h o h y / k i h o h y / k e i h o h y / k a u h o h y / k a i h o h y / k a h o h y / k a h o h a i h y / k a h e i h a h y / j y / j o h o / j o h a u h o / j i h i h y / j e h o / j a u h y / i y h y / i y / i h y / g y / g o h o h i h a h y / g e h o / g a u h i h o h y / g a i h y / g a h e / g a h a u h y / f y / f u h a h a u h y / f u h a h a i h y / f i h u h y / f e i h y / f a i h u h y / f a i h u h a h y / f a i h e h a u h y / f a i h e h a i h y / e h y / d y / d u h e h y / d a u h y / d a h a h y / c y / c i h y / c i h i h y / c e h i h y / b y / b u h o h e / b i h y / a h y ) &post_word
 CEI <- &cmavo ( c e i ) &post_word
 CO <- &cmavo ( c o ) &post_word
 COI <- &cmavo ( v i h o / t a i h i / t a h a / s a u h e i / s a h e i / r e h i / p e h u / o h a i / n u h e / m u h o / m i h e / k i h e / k i h a i / k e h o / j u h i / j o h a u / j e h e / g o i h e / f i h i h e / f i h i / f e h o / f a u h u / d o i h o i / d o i / d i h a i / d a h o i / d a h e i / c o i / c o h o i / c o h o / c i h o i / b u h o i / b e h e / a h o i ) &post_word
@@ -534,7 +534,7 @@ DOhU <- &cmavo ( d o h u ) &post_word
 FA <- &cmavo ( f a i / f a / f e / f o / f u / f i h a / f i ) &post_word
 FAhO <- &cmavo ( f a h o ) &post_word
 FEhU <- &cmavo ( f e h u ) &post_word
-FIhO <- &cmavo ( f i h o ) &post_word
+FIhO <- &cmavo ( s o i h a / p o i h o h a / p o i h a / n o i h o h a / n o i h a / f i h o ) &post_word
 FOI <- &cmavo ( f o i ) &post_word
 FUhA <- &cmavo ( f u h a ) &post_word
 GA <- &cmavo ( g u h e / g u h i / g u h o / g u h a / g u h u / g e h i / g u / g o / g e / g a ) &post_word
@@ -585,12 +585,12 @@ NAhE <- &cmavo ( t o h e / s a i h e / r e i h e / p a i h e / n o i h e / n o h
 NIhO <- &cmavo ( n i h o / n o h i ) &post_word
 NOI <- &cmavo ( v o i h i / v o i / p o i / p o h o i / n o i / n o h o i ) &post_word
 NU <- &cmavo ( z u h o / z a h i / s u h u / s i h o / p u h u / p o i h i / n u / n i h a i / n i / m u h e / l i h i / k a i h u / k a i h e i / k a h e i / k a / j e i / d u h u / b u h a i ) &post_word
-PA <- &cmavo ( z e / z a h u / x o h e / x o / x i h i h e i / x e i / x e h e / x a / v o h e i h a / v o / v i h e i h e / v a u h a u h o / v a i / v a h e i h a / t u h o / t e h o / t a u h u / s u h o i / s u h o / s u h e / s u h a u / s u h a i / s o i h u / s o i h a / s o h u / s o h o / s o h i / s o h e / s o h a / s o / s e i h u h e / s e h i h i / r o h o i / r o / r e i / r e / r a u / r a h e / p u h e h u h o / p i / p e i h i h a / p a i / p a h a u h o / p a / n o h o / n o h e h u / n o h a i / n o / n i h u / n i h e h o i / n i h e h e i / m u h i h a i / m u / m o h a / m e h i / m a i h e h e / m a h u / k o i h o / k i h o / k e i h o / k a u h o / k a i h o / k a h o h a i / k a h o / k a h e i h a / j i h i / j a u / g o h o h i h a / g a u h i h o / g a i / g a h a u / f u h a h a u / f u h a h a i / f i h u / f e i / f a i h u h a / f a i h u / f a i h e h a u / f a i h e h a i / d u h e / d a u / d a h a / c i h i / c i / c e h i / b i ) &post_word
+PA <- &cmavo ( z e / z a h u / x o h e / x o / x i h i h e i / x e i / x e h e / x a / v o h e i h a / v o / v i h e i h e / v a u h a u h o / v a i / v a h e i h a / t u h o / t e h o / t a u h u / s u h o i / s u h o / s u h e / s u h a u / s u h a i / s o i h u / s o h u / s o h o / s o h i / s o h e / s o h a / s o / s e i h u h e / s e h i h i / r o h o i / r o / r e i / r e / r a u / r a h e / p u h e h u h o / p i / p e i h i h a / p a i / p a h a u h o / p a / n o h o / n o h e h u / n o h a i / n o / n i h u / n i h e h o i / n i h e h e i / m u h i h a i / m u / m o h a / m e h i / m a i h e h e / m a h u / k o i h o / k i h o / k e i h o / k a u h o / k a i h o / k a h o h a i / k a h o / k a h e i h a / j i h i / j a u / g o h o h i h a / g a u h i h o / g a i / g a h a u / f u h a h a u / f u h a h a i / f i h u / f e i / f a i h u h a / f a i h u / f a i h e h a u / f a i h e h a i / d u h e / d a u / d a h a / c i h i / c i / c e h i / b i ) &post_word
 PEhO <- &cmavo ( k e i h a i / p e h o ) &post_word
 RAhOI <- &cmavo ( r a h o i ) &post_word
 ROI <- &cmavo ( x u h a u / v a h e i / r o i / r e h u / m u h e i / d e h e i / b a h o i ) &post_word
 SE <- &cmavo ( x o h a i / x e / v o h a i / v e / t o h a i / t e / t a u h o / s u h e i / s e h u h o / s e h o h e / s e / r e h a u h e ) &post_word
-SEI <- &cmavo ( t i h o / s o i / s e i / p o i h a / n o i h a / l e h a u / c e i h e ) &post_word
+SEI <- &cmavo ( t i h o / s o i / s e i / l e h a u / c e i h e ) &post_word
 SEhU <- &cmavo ( x e h a u / s e h u ) &post_word
 SI <- &cmavo ( z e h e i / z e i / s i h u h i / s i ) &post_word
 SU <- &cmavo ( s u ) &post_word
@@ -608,7 +608,7 @@ VUhU <- &cmavo ( z i h a h o / z a h e i / x o h e i / v u h u / v o h a u h u /
 VUhO <- &cmavo ( v u h o ) &post_word
 XI <- &cmavo ( x i h i / x i h e / x i / t e h a i / f a u h e ) &post_word
 XOI <- &cmavo ( x o i / f i h o i ) &post_word
-Y <- &cmavo ( y+ ) &post_word
+Y <- &cmavo ( y+ / i e h o ) &post_word
 ZO <- &cmavo ( z o / r a h a i / m a h o i ) &post_word
 ZOI <- &cmavo ( z o i / l a h o ) &post_word
 ZOhU <- &cmavo ( z o h u / k e h a u / g e h a i / c e h a i ) &post_word
