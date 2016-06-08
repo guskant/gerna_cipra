@@ -39,9 +39,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.3028094"
-     inkscape:cx="258.62815"
-     inkscape:cy="4542.6054"
+     inkscape:zoom="0.92122539"
+     inkscape:cx="391.96402"
+     inkscape:cy="5604.9143"
      inkscape:document-units="px"
      inkscape:current-layer="layer4"
      showgrid="false"
@@ -65,7 +65,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -73,19 +73,19 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="vanbi"
-     transform="translate(263.13504,4425.4995)"
+     transform="translate(263.13504,4675.4995)"
      style="display:inline"
      sodipodi:insensitive="true">
     <ellipse
        style="fill:#f7f8f8;fill-opacity:1;stroke:none"
        id="path3060"
        cx="128.82898"
-       cy="-1201.6973"
+       cy="-1451.6973"
        rx="391.96402"
        ry="3223.8022" />
     <path
        style="display:inline;fill:#ff9955;fill-opacity:0.66326527;stroke:none"
-       d="m 315.61032,731.64612 c -47.14286,-4.28575 -36.8169,-45.09927 -39.60498,-121.24616 -1.35997,-37.14286 4.38098,-97.81516 6.2821,-155.27836 1.80678,-54.61143 2.60676,-157.14966 5.23715,-240.14223 2.48554,-78.42229 13.36689,-268.905297 27.52325,-438.23572 10.74987,-128.58397 14.45862,-203.11598 15.75932,-244.85317 1.40644,-45.1301 3.2592,-97.86739 2.86439,-148.23587 -0.19206,-24.50122 -7.1104,-127.8631 -10.25664,-226.16605 -1.61886,-50.58068 -0.51081,-240.93976 -2.52631,-410.75026 -1.02437,-86.3058 1.36761,-240.2102 0.14504,-368.5073 -1.24941,-131.1142 0.0892,-1895.8645 32.11332,-1897.2921 37.08827,-1.6534 23.00179,1763.0067 25.66826,1894.7864 2.58299,127.6541 -2.19654,278.1126 -0.64507,365.9732 3.02798,171.4754 0.74246,375.13175 2.97725,418.30461 5.12918,99.08855 7.19285,187.19358 8.71191,210.05981 2.91147,43.82605 -1.41234,111.8063 -1.30566,146.98098 0.22983,75.77834 -4.86813,175.99287 -6.73986,211.91249 -9.09058,174.453169 -17.60773,317.134998 -18.64193,391.33274 -0.8669,62.1952 -7.11329,202.22341 -7.11932,227.19953 -0.0153,63.61484 -5.27201,143.63277 22.41491,125.586 33.74389,-21.9948 78.76648,-2.06994 38.57143,18.57143 -42.45758,21.80324 -51.16357,63.95864 -48.18393,150.47897 2.02346,58.75563 2.46965,90.94961 -53.24463,89.52106 z"
+       d="m 315.61032,731.64612 c -47.14286,-4.28575 -36.8169,-45.09927 -39.60498,-121.24616 -1.35997,-37.14286 4.38098,-97.81516 6.2821,-155.27836 1.80678,-54.61143 2.60676,-157.14966 5.23715,-240.14223 2.48554,-78.42229 13.36689,-268.905297 27.52325,-438.23572 10.74987,-128.58397 14.45862,-203.11598 15.75932,-244.85317 1.40644,-45.1301 3.2592,-97.86739 2.86439,-148.23587 -0.19206,-24.50122 -7.1104,-127.8631 -10.25664,-226.16605 -1.61886,-50.58068 -0.51081,-240.93976 -2.52631,-410.75026 -1.02437,-86.3058 1.36761,-240.2102 0.14504,-368.5073 -1.24941,-131.1142 1.17471,-2234.5438 33.19883,-2235.9714 37.08827,-1.6534 21.91628,2101.686 24.58275,2233.4657 2.58299,127.6541 -2.19654,278.1126 -0.64507,365.9732 3.02798,171.4754 0.74246,375.13175 2.97725,418.30461 5.12918,99.08855 7.19285,187.19358 8.71191,210.05981 2.91147,43.82605 -1.41234,111.8063 -1.30566,146.98098 0.22983,75.77834 -4.86813,175.99287 -6.73986,211.91249 -9.09058,174.453169 -17.60773,317.134998 -18.64193,391.33274 -0.8669,62.1952 -7.11329,202.22341 -7.11932,227.19953 -0.0153,63.61484 -5.27201,143.63277 22.41491,125.586 33.74389,-21.9948 78.76648,-2.06994 38.57143,18.57143 -42.45758,21.80324 -51.16357,63.95864 -48.18393,150.47897 2.02346,58.75563 2.46965,90.94961 -53.24463,89.52106 z"
        id="path5237"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="csssssssssssssssssssssc"
@@ -186,13 +186,25 @@
        id="path5237-0-1-3-5-7-6-7"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccsc" />
+    <path
+       style="display:inline;fill:#121a00;fill-opacity:0.35204085;stroke:none"
+       d="m 124.47056,-3811.6609 c -8.58505,-27.8931 -15.3073,-37.5576 -24.11559,-51.3075 -15.001773,-19.567 -63.92871,41.04 -75.01454,19.5211 -11.37273,-15.7032 56.558397,-53.5713 87.90659,-35.2067 13.19014,7.7272 14.13351,28.2196 11.22354,66.9931 z"
+       id="path5237-0-1-3-5-2-6-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccsc" />
+    <path
+       style="display:inline;fill:#d45500;fill-opacity:0.35204085;stroke:none"
+       d="m 124.47056,-3844.6609 c -8.58505,-27.8931 -15.3073,-37.5576 -24.11559,-51.3075 -15.001773,-19.567 -86.92871,-104.96 -71.01454,-115.4789 11.62727,-10.7032 52.558397,81.4287 83.90659,99.7933 13.19014,7.7272 14.13351,28.2196 11.22354,66.9931 z"
+       id="path5237-0-1-3-5-7-4-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccsc" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="lerfu"
      style="display:inline"
-     transform="translate(264.73875,4437.4995)"
+     transform="translate(264.73875,4687.4995)"
      sodipodi:insensitive="true">
     <g
        transform="translate(-206.20674,-186.97784)"
@@ -3235,7 +3247,7 @@
        xml:space="preserve"
        id="flowRoot5267-72-1-9"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#2c4c00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="matrix(0.72904399,-0.68446685,0.68446685,0.72904399,-1017.8744,-2768.5423)"><flowRegion
+       transform="matrix(0.72904399,-0.68446685,0.68446685,0.72904399,-871.8744,-2884.5423)"><flowRegion
          id="flowRegion5269-76-7-8"><rect
            id="rect5271-6-3-4"
            width="298.26685"
@@ -3309,7 +3321,7 @@
        xml:space="preserve"
        id="flowRoot5284-2"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:125%;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(23.95342,-3470.9266)"><flowRegion
+       transform="translate(19.95342,-3474.9266)"><flowRegion
          id="flowRegion5286-3"><rect
            id="rect5288-9"
            width="204"
@@ -3345,7 +3357,7 @@
        xml:space="preserve"
        id="flowRoot5284-62"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:35px;line-height:125%;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(-89.04658,-4772.9266)"><flowRegion
+       transform="translate(-89.04658,-5022.9266)"><flowRegion
          id="flowRegion5286-2"><rect
            id="rect5288-8"
            width="327"
@@ -3548,18 +3560,115 @@
            x="556"
            y="896.84668"
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum Bold';text-align:end;text-anchor:end;fill:#851d00;fill-opacity:1" /></flowRegion><flowPara
-         id="flowPara5228-5-4-0">maltufa</flowPara></flowRoot>  </g>
+         id="flowPara5228-5-4-0">maltufa</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5267-38-7"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;line-height:125%;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#df69d2;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="matrix(0.76997032,0.6380797,-0.6380797,0.76997032,376.77212,-4970.2854)"><flowRegion
+         id="flowRegion5269-3-5"><rect
+           id="rect5271-3-9"
+           width="141"
+           height="29"
+           x="556"
+           y="896.84668"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum Bold';fill:#df69d2;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara5273-76-7">cekitaus</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5267-3-1-4"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#e7cc8d;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="matrix(0.31589379,-0.94879456,0.94879456,0.31589379,-1055.7426,-3469.154)"><flowRegion
+         id="flowRegion5269-9-2-3"><rect
+           id="rect5271-06-1-2"
+           width="141"
+           height="29"
+           x="556"
+           y="896.84668"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum Bold';fill:#e7cc8d;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara5273-7-2-8">cekitaus</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5267-72-4-6-2"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum Bold';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;display:inline;fill:#ff2219;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="matrix(0.76997032,0.6380797,-0.6380797,0.76997032,-30.79563,-5263.9745)"><flowRegion
+         id="flowRegion5269-76-0-1-1"><rect
+           id="rect5271-6-6-0-5"
+           width="298.26685"
+           height="109.06961"
+           x="556"
+           y="896.84668"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum Bold';text-align:end;text-anchor:end;fill:#ff2219;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara5366-4-1">maftufa</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5267-72-1-9-1-4"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#2c4c00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="matrix(0.72904399,-0.68446685,0.68446685,0.72904399,-919.8752,-4226.5222)"><flowRegion
+         id="flowRegion5269-76-7-8-6-4"><rect
+           id="rect5271-6-3-4-7-7"
+           width="298.26685"
+           height="109.06961"
+           x="556"
+           y="896.84668"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum Bold';text-align:start;text-anchor:start;fill:#2c4c00;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara5228-7-0">ma'oi POIhA briga'i</flowPara><flowPara
+         id="flowPara5506">ka'e, ca'a, pu'i, nu'o ∈ NA</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5284-9-4"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:125%;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-121.73966,-4776.1005)"><flowRegion
+         id="flowRegion5286-9-9"><rect
+           id="rect5288-06-8"
+           width="204"
+           height="74"
+           x="39"
+           y="882.84668"
+           style="font-size:35px" /></flowRegion><flowPara
+         id="flowPara5290-23-4">-1.15</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5284-0-9-4"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:125%;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-133.80576,-4904.3072)"><flowRegion
+         id="flowRegion5286-6-7-1"><rect
+           id="rect5288-1-1-6"
+           width="204"
+           height="74"
+           x="39"
+           y="882.84668"
+           style="font-size:35px" /></flowRegion><flowPara
+         id="flowPara5290-5-0-8">~1.15</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5284-2-6-9"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:125%;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(35.9525,-4830.9065)"><flowRegion
+         id="flowRegion5286-3-8-9"><rect
+           id="rect5288-9-0-2"
+           width="204"
+           height="74"
+           x="39"
+           y="882.84668"
+           style="font-size:35px" /></flowRegion><flowPara
+         id="flowPara5290-3-9-5">1.15</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5267-72-1-9-7-8-7-2"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum Bold';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;display:inline;fill:#851d00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="matrix(0.71951726,0.69447457,-0.69447457,0.71951726,85.02232,-5126.983)"><flowRegion
+         id="flowRegion5269-76-7-8-5-2-5-7"><rect
+           id="rect5271-6-3-4-4-4-3-3"
+           width="298.26685"
+           height="109.06961"
+           x="556"
+           y="896.84668"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum Bold';text-align:end;text-anchor:end;fill:#851d00;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara5228-5-4-0-1">maltufa</flowPara></flowRoot>  </g>
   <g
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="link"
      style="display:inline"
-     transform="translate(92.015212,4372.2886)">
+     transform="translate(92.015212,4622.2886)">
     <a
        id="a4575"
        xlink:href="http://guskant.github.io/gerna_cipra/liste.html"
        target="_top"
-       transform="translate(-4,-702)">
+       transform="translate(-4,-952)">
       <ellipse
          id="path4137"
          style="fill:#74cec3;fill-opacity:0.22471912;stroke:none"
@@ -5042,15 +5151,14 @@
          style="display:inline;fill:#851d00;fill-opacity:0.33163267;stroke:none" />
     </a>
     <a
-       id="a5330"
+       id="a5293"
        xlink:href="http://guskant.github.io/gerna_cipra/zantufa-1.1.html"
        target="_top">
       <ellipse
-         transform="translate(66.21301,-2582.0001)"
          id="path3184-1-8-5-8-4-1-7-0-2-1-0-8-0"
          style="display:inline;fill:#76cf37;fill-opacity:0.27040818;stroke:none"
-         cx="267.99347"
-         cy="74.953323"
+         cx="334.20648"
+         cy="-2507.0469"
          rx="61.518291"
          ry="31.112698" />
     </a>
@@ -6426,6 +6534,409 @@
          sodipodi:cx="341.52542"
          sodipodi:sides="5"
          id="path4382-0-2-9-7-2-2"
+         style="display:inline;fill:#ff879c;fill-opacity:1;stroke:none"
+         sodipodi:type="star"
+         transform="matrix(-1,0,0,1,670.64898,-2814.1623)" />
+    </a>
+    <a
+       transform="translate(10.216523,-1363.3534)"
+       style="display:inline"
+       id="a5354-2-0"
+       xlink:href="http://guskant.github.io/gerna_cipra/maltufa-1.15.html"
+       target="_top">
+      <path
+         sodipodi:nodetypes="cccsc"
+         inkscape:connector-curvature="0"
+         id="path5237-0-4-2-1-6-7-1-1"
+         d="m 243.65439,-2443.2542 c -8.74209,-27.1002 -99.17244,107.7417 -82.00661,41.0777 21.52415,-36.5034 12.32993,-22.157 -21.08714,-15.1165 -48.71288,12.163 32.76607,-20.1095 3.29228,-29.1562 -37.42732,-11.4879 102.90344,-35.5636 99.80147,3.195 z"
+         style="display:inline;fill:#851d00;fill-opacity:0.33163267;stroke:none" />
+    </a>
+    <a
+       transform="translate(10.216523,-1363.3534)"
+       style="display:inline"
+       id="a5330-1-7"
+       xlink:href="http://guskant.github.io/gerna_cipra/zantufa-1.15.html"
+       target="_top">
+      <ellipse
+         transform="translate(66.21301,-2582.0001)"
+         id="path3184-1-8-5-8-4-1-7-0-2-1-0-8-0-5-9"
+         style="display:inline;fill:#76cf37;fill-opacity:0.27040818;stroke:none"
+         cx="267.99347"
+         cy="74.953323"
+         rx="61.518291"
+         ry="31.112698" />
+    </a>
+    <a
+       transform="translate(10.216523,-1363.3534)"
+       style="display:inline"
+       id="a5366-0-2"
+       xlink:href="http://guskant.github.io/gerna_cipra/maltufa-1.15-cekitaujauzai.html"
+       target="_top">
+      <path
+         inkscape:transform-center-y="-0.23982805"
+         inkscape:transform-center-x="0.11471065"
+         d="m 411.43651,107.24484 c 21.8982,31.82971 24.71485,-25.512616 -0.006,3.99048 -24.72058,29.50309 34.06831,7.81526 -4.17908,1.49425 -38.24739,-6.32101 -1.47464,36.23907 -1.97755,-3.2769 -0.5029,-39.51598 -34.77419,14.6285 1.79458,-3.48978 36.56877,-18.118276 -17.53044,-30.547756 4.36777,1.28195 z"
+         inkscape:randomized="-0.087"
+         inkscape:rounded="10"
+         inkscape:flatsided="true"
+         sodipodi:arg2="-0.015182572"
+         sodipodi:arg1="-0.6435011"
+         sodipodi:r2="2.7629986"
+         sodipodi:r1="3.4152541"
+         sodipodi:cy="109.26751"
+         sodipodi:cx="408.46439"
+         sodipodi:sides="5"
+         id="path4372-3-1-7-4-5"
+         style="display:inline;fill:#e7cc8d;fill-opacity:1;stroke:none"
+         sodipodi:type="star"
+         transform="translate(-198.14798,-2471.3181)" />
+    </a>
+    <a
+       transform="translate(10.216523,-1363.3534)"
+       style="display:inline"
+       id="a5342-1-2"
+       xlink:href="http://guskant.github.io/gerna_cipra/zantufa-1.15-cekitaujauzai.html"
+       target="_top">
+      <path
+         inkscape:transform-center-y="0.98814626"
+         inkscape:transform-center-x="-0.92476852"
+         transform="matrix(0.94268926,-0.33367192,0.33367192,0.94268926,-12.55856,-2388.489)"
+         d="m 412.05754,109.25448 c 2.50494,41.10007 34.22107,-10.175776 -2.78125,3.24492 -37.00232,13.42069 18.33626,32.88549 -3.51181,-1.17521 -21.84807,-34.060711 -21.23393,32.11589 0.003,-3.94526 21.23653,-36.061145 -35.42403,-13.860678 3.50335,-1.30104 38.92737,12.55964 0.28217,-37.923475 2.78711,3.17659 z"
+         inkscape:randomized="-0.087"
+         inkscape:rounded="10"
+         inkscape:flatsided="true"
+         sodipodi:arg2="0.62831853"
+         sodipodi:arg1="0"
+         sodipodi:r2="2.7629986"
+         sodipodi:r1="3.4152541"
+         sodipodi:cy="109.26751"
+         sodipodi:cx="408.46439"
+         sodipodi:sides="5"
+         id="path4372-5-2-0-8"
+         style="display:inline;fill:#df69d2;fill-opacity:1;stroke:none"
+         sodipodi:type="star" />
+    </a>
+    <a
+       transform="translate(10.216523,-1363.3534)"
+       style="display:inline"
+       id="a5339-5-9"
+       xlink:href="http://guskant.github.io/gerna_cipra/zantufa-1.15-cekitaujaubu.html"
+       target="_top">
+      <path
+         inkscape:transform-center-y="-0.60248595"
+         inkscape:transform-center-x="-1.2813235"
+         transform="matrix(0.94268926,-0.33367192,0.33367192,0.94268926,-8.90037,-2372.3639)"
+         d="m 364.84539,87.832564 c 9.63958,-40.158901 -36.87757,-0.59914 2.74516,-2.235458 39.62273,-1.636317 -13.07338,-35.256753 3.82749,1.782832 16.90087,37.039582 31.51168,-19.27587 -0.64553,4.110487 -32.15721,23.386355 30.59768,19.372795 -4.04904,0.135776 -34.64672,-19.237014 -11.51765,36.365269 -1.87808,-3.793637 z"
+         inkscape:randomized="-0.087"
+         inkscape:rounded="10"
+         inkscape:flatsided="true"
+         sodipodi:arg2="-2.3158786"
+         sodipodi:arg1="-2.9441971"
+         sodipodi:r2="2.8177166"
+         sodipodi:r1="3.4828894"
+         sodipodi:cy="88.775978"
+         sodipodi:cx="368.1644"
+         sodipodi:sides="5"
+         id="path4374-7-8-6-5"
+         style="display:inline;fill:#df69d2;fill-opacity:1;stroke:none"
+         sodipodi:type="star" />
+    </a>
+    <a
+       transform="translate(10.216523,-1363.3534)"
+       style="display:inline"
+       id="a5336-6-7"
+       xlink:href="http://guskant.github.io/gerna_cipra/zantufa-1.15-cekitaujoizai.html"
+       target="_top">
+      <path
+         inkscape:transform-center-y="1.2706914"
+         inkscape:transform-center-x="-0.4160906"
+         transform="matrix(0.94268926,-0.33367192,0.33367192,0.94268926,-9.48866,-2371.1309)"
+         d="m 381.25776,47.735247 c 22.47589,-25.667845 -26.66884,-13.502271 3.44183,-0.311694 30.11067,13.190577 11.0339,-28.746311 1.59105,3.068562 -9.44285,31.814874 31.78856,-5.864071 -2.41714,2.229149 -34.20569,8.09322 7.82593,29.092519 -3.06049,-1.642613 -10.88641,-30.735131 -22.03114,22.324441 0.44475,-3.343404 z"
+         inkscape:randomized="-0.087"
+         inkscape:rounded="10"
+         inkscape:flatsided="true"
+         sodipodi:arg2="-1.727876"
+         sodipodi:arg1="-2.3561945"
+         sodipodi:r2="2.3444819"
+         sodipodi:r1="2.8979392"
+         sodipodi:cy="49.842083"
+         sodipodi:cx="383.1915"
+         sodipodi:sides="5"
+         id="path4376-3-3-9-2"
+         style="display:inline;fill:#df69d2;fill-opacity:1;stroke:none"
+         sodipodi:type="star" />
+    </a>
+    <a
+       transform="translate(10.216523,-1363.3534)"
+       style="display:inline"
+       id="a5345-4-8"
+       xlink:href="http://guskant.github.io/gerna_cipra/zantufa-1.15-cekitaujeibu.html"
+       target="_top">
+      <path
+         inkscape:transform-center-y="-0.85520963"
+         inkscape:transform-center-x="-1.1910703"
+         transform="matrix(0.94268926,-0.33367192,0.33367192,0.94268926,-4.45993,-2380.0838)"
+         d="m 378.2159,140.71068 c -39.84365,12.74889 22.42113,32.10186 -3.73231,-0.85931 -26.15345,-32.96117 -21.76855,33.45903 -0.55986,-4.25767 21.2087,-37.716712 -38.8771,-6.84127 3.87933,-2.05669 42.75642,4.78458 0.10687,-40.51253 3.04335,3.29184 2.93648,43.80438 37.21314,-8.86705 -2.63051,3.88183 z"
+         inkscape:randomized="-0.087"
+         inkscape:rounded="10"
+         inkscape:flatsided="true"
+         sodipodi:arg2="1.8186085"
+         sodipodi:arg1="1.1902899"
+         sodipodi:r2="2.9758406"
+         sodipodi:r1="3.6783412"
+         sodipodi:cy="137.27258"
+         sodipodi:cx="377.04404"
+         sodipodi:sides="5"
+         id="path4378-7-4-5-6"
+         style="display:inline;fill:#df69d2;fill-opacity:1;stroke:none"
+         sodipodi:type="star" />
+    </a>
+    <a
+       transform="translate(10.216523,-1363.3534)"
+       style="display:inline"
+       id="a5348-4-6"
+       xlink:href="http://guskant.github.io/gerna_cipra/zantufa-1.15-cekitaujeizai.html"
+       target="_top">
+      <path
+         inkscape:transform-center-y="0.67191896"
+         inkscape:transform-center-x="2.5502944"
+         transform="matrix(0.94268926,-0.33367192,0.33367192,0.94268926,-10.71062,-2378.4716)"
+         d="m 426.98703,156.94682 c -41.17415,-10.41947 6.012,35.86761 -2.74299,-2.95037 -8.755,-38.81798 -34.83193,11.49708 1.90365,-3.72589 36.73558,-15.22296 -27.31922,-25.73457 4.21788,1.30521 31.53709,27.03977 25.13716,-30.27566 0.24572,3.78634 -24.89144,34.062 37.54989,12.00418 -3.62426,1.58471 z"
+         inkscape:randomized="-0.087"
+         inkscape:rounded="10"
+         inkscape:flatsided="true"
+         sodipodi:arg2="2.3965105"
+         sodipodi:arg1="1.7681919"
+         sodipodi:r2="2.2103989"
+         sodipodi:r1="3.4828894"
+         sodipodi:cy="153.66582"
+         sodipodi:cx="427.58981"
+         sodipodi:sides="5"
+         id="path4380-5-0-9-8"
+         style="display:inline;fill:#df69d2;fill-opacity:1;stroke:none"
+         sodipodi:type="star" />
+    </a>
+    <a
+       transform="translate(10.216523,-1363.3534)"
+       style="display:inline"
+       id="a5333-8-9"
+       xlink:href="http://guskant.github.io/gerna_cipra/zantufa-1.15-cekitaujoibu.html"
+       target="_top">
+      <path
+         inkscape:transform-center-y="-1.0626911"
+         inkscape:transform-center-x="0.11360869"
+         transform="matrix(0.94268926,-0.33367192,0.33367192,0.94268926,-10.51197,-2376.917)"
+         d="m 342.18199,41.176449 c 39.36375,4.110094 0.43696,-39.2434426 2.74299,2.95037 2.30603,42.193812 37.66869,-9.698868 -1.87098,3.399581 -39.53968,13.098449 25.63656,29.556711 -4.2185,-0.684431 -29.85505,-30.241143 -24.11923,31.095231 -0.27839,-4.06606 23.84083,-35.1612924 -35.73888,-5.709554 3.62488,-1.59946 z"
+         inkscape:randomized="-0.087"
+         inkscape:rounded="10"
+         inkscape:flatsided="true"
+         sodipodi:arg2="-0.74508224"
+         sodipodi:arg1="-1.3734008"
+         sodipodi:r2="2.8177166"
+         sodipodi:r1="3.4828894"
+         sodipodi:cy="44.377678"
+         sodipodi:cx="341.52542"
+         sodipodi:sides="5"
+         id="path4382-8-1-0-6"
+         style="display:inline;fill:#df69d2;fill-opacity:1;stroke:none"
+         sodipodi:type="star" />
+    </a>
+    <a
+       transform="translate(10.216523,-1363.3534)"
+       style="display:inline"
+       id="a5363-4-8"
+       xlink:href="http://guskant.github.io/gerna_cipra/maltufa-1.15-cekitaujaubu.html"
+       target="_top">
+      <path
+         inkscape:transform-center-y="-0.1062814"
+         inkscape:transform-center-x="-0.91967866"
+         d="m 368.65927,92.023567 c -40.68487,7.124779 14.38458,33.217263 -3.47318,-1.659968 -17.85777,-34.877232 -28.60475,24.514751 0.61673,-4.113813 29.22149,-28.628562 -30.30513,-22.185376 3.70371,-0.697761 34.00884,21.487615 4.51493,-36.748292 1.93172,3.53546 -2.58321,40.283755 37.90589,-4.188697 -2.77898,2.936082 z"
+         inkscape:randomized="-0.087"
+         inkscape:rounded="10"
+         inkscape:flatsided="true"
+         sodipodi:arg2="2.0017193"
+         sodipodi:arg1="1.3734008"
+         sodipodi:r2="2.8177166"
+         sodipodi:r1="3.4828894"
+         sodipodi:cy="88.775978"
+         sodipodi:cx="368.1644"
+         sodipodi:sides="5"
+         id="path4374-3-8-0-3-5"
+         style="display:inline;fill:#e7cc8d;fill-opacity:1;stroke:none"
+         sodipodi:type="star"
+         transform="translate(-118.84543,-2461.4724)" />
+    </a>
+    <a
+       transform="translate(10.216523,-1363.3534)"
+       style="display:inline"
+       id="a5360-8-3"
+       xlink:href="http://guskant.github.io/gerna_cipra/maltufa-1.15-cekitaujoizai.html"
+       target="_top">
+      <path
+         inkscape:transform-center-y="0.13357094"
+         inkscape:transform-center-x="-1.4116434"
+         d="m 380.64248,51.45055 c -18.93216,-30.03503 -24.94062,20.855026 0.31374,-3.788938 25.25437,-24.643964 -26.36808,-19.805807 3.87718,-0.511128 30.24525,19.294679 6.90508,-31.643169 1.36054,3.002355 -5.54454,34.645524 34.12655,0.27873 -2.33549,2.550471 -36.46204,2.271741 15.7162,28.782271 -3.21597,-1.25276 z"
+         inkscape:randomized="-0.087"
+         inkscape:rounded="10"
+         inkscape:flatsided="true"
+         sodipodi:arg2="3.3062635"
+         sodipodi:arg1="2.677945"
+         sodipodi:r2="2.3444819"
+         sodipodi:r1="3.0546961"
+         sodipodi:cy="49.842083"
+         sodipodi:cx="383.1915"
+         sodipodi:sides="5"
+         id="path4376-0-3-9-2-2"
+         style="display:inline;fill:#e7cc8d;fill-opacity:1;stroke:none"
+         sodipodi:type="star"
+         transform="translate(-159.89713,-2453.11)" />
+    </a>
+    <a
+       transform="translate(10.216523,-1363.3534)"
+       style="display:inline"
+       id="a5369-5-1"
+       xlink:href="http://guskant.github.io/gerna_cipra/maltufa-1.15-cekitaujeibu.html"
+       target="_top">
+      <path
+         inkscape:transform-center-y="0.31498945"
+         inkscape:transform-center-x="0.16209906"
+         d="m 380.03987,136.1044 c 13.84056,32.11365 22.88237,-23.9074 -0.9113,3.21284 -23.79366,27.12023 31.15399,13.22974 -3.71191,0.75191 -34.8659,-12.47782 -5.58021,30.80332 -1.35179,-3.33072 4.22842,-34.13403 -32.87422,7.78251 2.75904,-2.41831 35.63326,-10.20081 -10.62459,-30.32937 3.21596,1.78428 z"
+         inkscape:randomized="-0.087"
+         inkscape:rounded="10"
+         inkscape:flatsided="true"
+         sodipodi:arg2="0.16467097"
+         sodipodi:arg1="-0.46364763"
+         sodipodi:r2="2.9758406"
+         sodipodi:r1="3.0546963"
+         sodipodi:cy="137.27258"
+         sodipodi:cx="377.04404"
+         sodipodi:sides="5"
+         id="path4378-2-3-9-3-5"
+         style="display:inline;fill:#e7cc8d;fill-opacity:1;stroke:none"
+         sodipodi:type="star"
+         transform="translate(-157.24191,-2467.9028)" />
+    </a>
+    <a
+       transform="translate(10.216523,-1363.3534)"
+       style="display:inline"
+       id="a5372-4-3"
+       xlink:href="http://guskant.github.io/gerna_cipra/maltufa-1.15-cekitaujeizai.html"
+       target="_top">
+      <path
+         inkscape:transform-center-y="0.38872159"
+         inkscape:transform-center-x="1.2382479"
+         d="m 429.4745,156.51902 c -29.44221,26.21071 31.91124,18.43316 -3.88777,-0.0676 -35.79902,-18.50075 -16.16476,32.95546 -1.19532,-3.95129 14.96944,-36.90675 -36.03431,-5.23937 2.94448,-2.22714 38.97879,3.01223 -10.69353,-33.92599 3.42561,2.49784 14.11914,36.42383 28.1552,-22.46252 -1.287,3.74819 z"
+         inkscape:randomized="-0.087"
+         inkscape:rounded="10"
+         inkscape:flatsided="true"
+         sodipodi:arg2="1.5556138"
+         sodipodi:arg1="0.92729522"
+         sodipodi:r2="2.2103989"
+         sodipodi:r1="3.4152541"
+         sodipodi:cy="153.66582"
+         sodipodi:cx="427.58981"
+         sodipodi:sides="5"
+         id="path4380-7-9-9-5-2"
+         style="display:inline;fill:#e7cc8d;fill-opacity:1;stroke:none"
+         sodipodi:type="star"
+         transform="translate(-230.53429,-2457.3456)" />
+    </a>
+    <a
+       transform="translate(10.216523,-1363.3534)"
+       style="display:inline"
+       id="a5357-3-4"
+       xlink:href="http://guskant.github.io/gerna_cipra/maltufa-1.15-cekitaujoibu.html"
+       target="_top">
+      <path
+         inkscape:transform-center-y="0.35450898"
+         inkscape:transform-center-x="1.4335877"
+         d="m 344.08313,45.180142 c -11.3818,30.255699 31.53279,-4.325588 -2.37599,1.932 -33.90879,6.257587 11.23853,27.830178 -2.61922,-1.571119 -13.85775,-29.401297 -24.73087,17.549546 0.70169,-3.436143 25.43255,-20.985689 -26.30251,-14.183835 3.35686,-0.234163 29.65937,13.949673 12.31847,-26.946275 0.93666,3.309425 z"
+         inkscape:randomized="-0.087"
+         inkscape:rounded="10"
+         inkscape:flatsided="true"
+         sodipodi:arg2="0.87329722"
+         sodipodi:arg1="0.24497866"
+         sodipodi:r2="2.8177166"
+         sodipodi:r1="2.8162906"
+         sodipodi:cy="44.377678"
+         sodipodi:cx="341.52542"
+         sodipodi:sides="5"
+         id="path4382-0-6-3-9-1"
+         style="display:inline;fill:#e7cc8d;fill-opacity:1;stroke:none"
+         sodipodi:type="star"
+         transform="translate(-84.52716,-2466.0193)" />
+    </a>
+    <a
+       transform="translate(10.216523,-1363.3534)"
+       style="display:inline"
+       id="a4526-7-3"
+       xlink:href="http://guskant.github.io/gerna_cipra/maftufa-1.15.html"
+       target="_top">
+      <path
+         inkscape:transform-center-y="-0.40116096"
+         inkscape:transform-center-x="-0.49829147"
+         transform="translate(-1.0152,-2575.9096)"
+         d="M 183.48727,0.08762022 C 188.8014,-31.503316 147.82803,-52.350815 123.67837,-32.140457 c -23.50369,19.669755 24.39774,57.685839 48.08743,38.8208632 24.34077,-19.3834602 28.01658,-53.8518922 -2.97166,-63.5694462 -30.15933,-9.457622 -26.68114,43.72528 1.67734,54.9682582 29.13788,11.5519801 56.1656,-8.5363542 43.30749,-37.3771092 -12.51417,-28.069299 -56.52495,4.042315 -47.97112,33.3228066 8.78892,30.0852354 56.77574,37.9037864 65.9452,7.2870819 8.92418,-29.7977435 -51.43394,-36.9318645 -65.35242,-9.5140109 -14.30103,28.1714044 10.41962,60.7345264 40.68992,50.6019644 29.46061,-9.861529 -1.75663,-62.936235 -32.67794,-55.373625 -31.77115,7.7704608 -42.56447,44.183832 -17.7636,61.951097 24.13746,17.292012 43.66986,-40.2796349 18.64057,-60.140412 -25.7172,-20.406631 -53.22826,-7.496423 -56.15656,24.436185 -2.84996,31.07845 59.18227,17.560341 64.35425,-13.18557578 z"
+         inkscape:randomized="-0.087"
+         inkscape:rounded="0.5"
+         inkscape:flatsided="false"
+         sodipodi:arg2="-2.5794825"
+         sodipodi:arg1="0.40489205"
+         sodipodi:r2="55.904858"
+         sodipodi:r1="7.6157722"
+         sodipodi:cy="-4.1533203"
+         sodipodi:cx="173"
+         sodipodi:sides="7"
+         id="path5282-7-6"
+         style="fill:#ff231a;fill-opacity:0.32142861;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+         sodipodi:type="star" />
+    </a>
+    <a
+       transform="matrix(-1,0,0,1,568.4814,-1125.0449)"
+       style="display:inline;fill:#ff879c;fill-opacity:1"
+       id="a4535-9-1-8"
+       xlink:href="http://guskant.github.io/gerna_cipra/maftufa-1.15-cekitaujoizai.html"
+       target="_top">
+      <path
+         inkscape:transform-center-y="0.13357094"
+         inkscape:transform-center-x="-1.4116434"
+         d="m 380.64248,51.45055 c -18.93216,-30.03503 -24.94062,20.855026 0.31374,-3.788938 25.25437,-24.643964 -26.36808,-19.805807 3.87718,-0.511128 30.24525,19.294679 6.90508,-31.643169 1.36054,3.002355 -5.54454,34.645524 34.12655,0.27873 -2.33549,2.550471 -36.46204,2.271741 15.7162,28.782271 -3.21597,-1.25276 z"
+         inkscape:randomized="-0.087"
+         inkscape:rounded="10"
+         inkscape:flatsided="true"
+         sodipodi:arg2="3.3062635"
+         sodipodi:arg1="2.677945"
+         sodipodi:r2="2.3444819"
+         sodipodi:r1="3.0546961"
+         sodipodi:cy="49.842083"
+         sodipodi:cx="383.1915"
+         sodipodi:sides="5"
+         id="path4376-0-5-4-6-4-7-8"
+         style="display:inline;fill:#ff879c;fill-opacity:1;stroke:none"
+         sodipodi:type="star"
+         transform="matrix(-1,0,0,1,746.01896,-2801.253)" />
+    </a>
+    <a
+       transform="matrix(-1,0,0,1,568.4814,-1125.0449)"
+       style="display:inline;fill:#ff879c;fill-opacity:1"
+       id="a4532-3-1-6"
+       xlink:href="http://guskant.github.io/gerna_cipra/maftufa-1.15-cekitaujoibu.html"
+       target="_top">
+      <path
+         inkscape:transform-center-y="0.35450898"
+         inkscape:transform-center-x="1.4335877"
+         d="m 344.08313,45.180142 c -11.3818,30.255699 31.53279,-4.325588 -2.37599,1.932 -33.90879,6.257587 11.23853,27.830178 -2.61922,-1.571119 -13.85775,-29.401297 -24.73087,17.549546 0.70169,-3.436143 25.43255,-20.985689 -26.30251,-14.183835 3.35686,-0.234163 29.65937,13.949673 12.31847,-26.946275 0.93666,3.309425 z"
+         inkscape:randomized="-0.087"
+         inkscape:rounded="10"
+         inkscape:flatsided="true"
+         sodipodi:arg2="0.87329722"
+         sodipodi:arg1="0.24497866"
+         sodipodi:r2="2.8177166"
+         sodipodi:r1="2.8162906"
+         sodipodi:cy="44.377678"
+         sodipodi:cx="341.52542"
+         sodipodi:sides="5"
+         id="path4382-0-2-9-7-2-2-0"
          style="display:inline;fill:#ff879c;fill-opacity:1;stroke:none"
          sodipodi:type="star"
          transform="matrix(-1,0,0,1,670.64898,-2814.1623)" />
