@@ -1,4 +1,4 @@
-; la'o zoi maftufa-1.9999.peg zoi peg zei gerna de'i li 20160603 tede'i UTC
+; la'o zoi maftufa-1.9999.peg zoi peg zei gerna de'i li 20160608 tede'i UTC
 ; i ku'i la'o peg zoi_open zoi_word zoi_close peg na'e ka'e se tamgau va'o la peg po'o fa'o
 
 text <- (intro_null NAI_clause* indicators? free* paragraphs? si_clause? SI_clause* faho_clause EOF?)
@@ -62,7 +62,7 @@ tanru_unit <- (tanru_unit_1 linkargs?)
 tanru_unit_1 <- (BRIVLA_clause free* / CMEVLA_clause free* / GOhA_clause RAhO_clause? free* / KE_clause free* selbri_2 KEhE_elidible free* / NAhE_clause? free* gek selbri_2 (gik selbri_2) !term !VAU / JAI_clause free* tag? tanru_unit_1 / MUhOI_clause free* / GOhOI_clause free* / LUhEI_clause free* ((I_clause? free* joik? stag? BO_clause free* statement_3 (I_clause free* joik? stag? BO_clause free* statement_3)* / I_clause? free* joik free* statement_2) (I_clause free* joik free* statement_2)* IAU_elidible free* terms? free* ((I_clause / NIhO_clause) free* paragraphs)? / text) LIhAU_elidible free* / ME_clause free* (sumti / operator+ / mex / tag) MEhU_elidible free* MOI_clause? free* / mex MOI_clause free* / (FA_clause free* (joik FA_clause free*)* / SE_clause free*) tanru_unit_1 / NAhE_clause free* tanru_unit_1 / NU_clause NAI_clause? free* (joik NU_clause NAI_clause? free*)* subsentence KEI_elidible free*)
 linkargs <- (BE_clause free* term links? BEhO_elidible free*)
 links <- (BEI_clause free* term links?)
-adverbial <- POIhA_clause free* selbri FEhU_elidible
+adverbial <- (POIhA_clause free* selbri FEhU_elidible)
 quantifier <- (!sumti_5 !selbri mex relative_clauses?)
 mex <- (mex_1 (operator+ mex_1?)*)
 mex_1 <- ((KE_clause free* mex_2+ KEhE_elidible free* / mex_2 (BO_clause free* mex_2)*) (BIhE_clause free* operator+ (KE_clause free* mex_2+ KEhE_elidible free* / mex_2 (BO_clause free* mex_2)*)?)*)
@@ -514,7 +514,7 @@ ZOhU_post <- post_clause
 CMEVLA <- cmevla
 BRIVLA <- (gismu_2 / lujvo / fuhivla)
 gismu_2 <- (gismu)
-CMAVO <- (A / BAI / BAhE / BE / BEI / BEhO / BIhE / BIhI / BO / BOI / BU / BY / CAhA / CAI / CEI / CO / COI / CU / CUhE / DAhO / DOI / DOhU / FA / FAhA / FAhO / FEhE / FEhU / FIhO / FOI / FUhA / FUhE / FUhO / GA / GAhO / GEhU / GI / GIhA / GOI / GOhA / GOhOI / I / IAU / JAI / JOI / KE / KEhE / KEI / KI / KOhA / KU / KUhAU / KUhE / KUhO / LAU / LAhE / LEhAI / LE / LEhU / LI / LIhAU / LIhU / LOhAI / LOhO / LOhOI / LOhU / LU / LUhEI / LUhU / MAhO / MAI / ME / MEhU / MOhE / MOhI / MOI / MUhOI / NA / NAI / NAhE / NAhU / NIhE / NIhO / NOI / NU / NUhI / NUhU / PA / PEhO / PU / RAhOI / RAhO / ROI / SE / SEI / SEhU / SI / SOI / SU / TAhE / TEhU / TEI / TO / TOI / TUhE / TUhU / UI / VA / VAU / VEI / VEhO / VUhU / VEhA / VIhA / VUhO / XI / XOI / ZAhO / ZEhA / ZI / ZO / ZOI / ZOhU / cmavo)
+CMAVO <- (A / BAI / BAhE / BE / BEI / BEhO / BIhE / BIhI / BO / BOI / BU / BY / CAhA / CAI / CEI / CO / COI / CU / CUhE / DAhO / DOI / DOhU / FA / FAhA / FAhO / FEhE / FEhU / FIhO / FOI / FUhA / FUhE / FUhO / GA / GAhO / GEhU / GI / GIhA / GOI / GOhA / GOhOI / I / IAU / JAI / JOI / KE / KEhE / KEI / KI / KOhA / KU / KUhAU / KUhE / KUhO / LAU / LAhE / LEhAI / LE / LEhU / LI / LIhAU / LIhU / LOhAI / LOhO / LOhOI / LOhU / LU / LUhEI / LUhU / MAhO / MAI / ME / MEhU / MOhE / MOhI / MOI / MUhOI / NA / NAI / NAhE / NAhU / NIhE / NIhO / NOI / NU / NUhI / NUhU / PA / PEhO / POIhA / PU / RAhOI / RAhO / ROI / SE / SEI / SEhU / SI / SOI / SU / TAhE / TEhU / TEI / TO / TOI / TUhE / TUhU / UI / VA / VAU / VEI / VEhO / VUhU / VEhA / VIhA / VUhO / XI / XOI / ZAhO / ZEhA / ZI / ZO / ZOI / ZOhU / cmavo)
 lojban_word <- (CMEVLA / CMAVO / BRIVLA)
 any_word <- lojban_word spaces?
 zoi_open <- lojban_word

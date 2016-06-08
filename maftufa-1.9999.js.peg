@@ -245,7 +245,8 @@ tanru_unit_1 = expr:(BRIVLA_clause free* / CMEVLA_clause free* / GOhA_clause RAh
 linkargs = expr:(BE_clause free* term links? BEhO_elidible free*)  {return _node("linkargs", expr);}
 links = expr:(BEI_clause free* term links?) {return _node("links", expr);}
 // //////// _maltufa_oz: jmina la'o zoi adverbial zoi_20160603UTC
-adverbial = POIhA_clause free* selbri FEhU_elidible
+// //////// _maltufa_oz: cmalu stika ra'a la javaskript_20160608UTC
+adverbial = expr:(POIhA_clause free* selbri FEhU_elidible) {return _node("adverbial", expr); }
 quantifier = expr:(!sumti_5 !selbri mex relative_clauses?) {return _node("quantifier", expr); }
 mex = expr:(mex_1 (operator+ mex_1?)*) {return _node("mex", expr); }
 mex_1 = expr:((KE_clause free* mex_2+ KEhE_elidible free* / mex_2 (BO_clause free* mex_2)*) (BIhE_clause free* operator+ (KE_clause free* mex_2+ KEhE_elidible free* / mex_2 (BO_clause free* mex_2)*)?)*) {return _node("mex_1", expr); }
@@ -888,7 +889,7 @@ gismu_2 = expr:(gismu) {return ["gismu", expr];}
 // CMAVO //////// _maltufa: lo cmevla co'u selbrisle : xruti ma'oi LA_20150810UTC
 // CMAVO //////// _maltufa: zo NUhI je zo NUhU di'a selma'o_20150904UTC
 // CMAVO //////// _maltufa_oz: lo cmevla di'a selbrisle : vimcu zoizoi  / LA zoi_20151019UTC
-// CMAVO //////// _maltufa_oz: +POIhA_20160607UTC_
+// CMAVO //////// _maltufa_oz: vimcu lo cmacfila: +POIhA_20160607UTC
 CMAVO = expr:(A / BAI / BAhE / BE / BEI / BEhO / BIhE / BIhI / BO / BOI / BU / BY / CAhA / CAI / CEI / CO / COI / CU / CUhE / DAhO / DOI / DOhU / FA / FAhA / FAhO / FEhE / FEhU / FIhO / FOI / FUhA / FUhE / FUhO / GA / GAhO / GEhU / GI / GIhA / GOI / GOhA / GOhOI / I / IAU / JAI / JOI / KE / KEhE / KEI / KI / KOhA / KU / KUhAU / KUhE / KUhO / LAU / LAhE / LEhAI / LE / LEhU / LI / LIhAU / LIhU / LOhAI / LOhO / LOhOI / LOhU / LU / LUhEI / LUhU / MAhO / MAI / ME / MEhU / MOhE / MOhI / MOI / MUhOI / NA / NAI / NAhE / NAhU / NIhE / NIhO / NOI / NU / NUhI / NUhU / PA / PEhO / POIhA / PU / RAhOI / RAhO / ROI / SE / SEI / SEhU / SI / SOI / SU / TAhE / TEhU / TEI / TO / TOI / TUhE / TUhU / UI / VA / VAU / VEI / VEhO / VUhU / VEhA / VIhA / VUhO / XI / XOI / ZAhO / ZEhA / ZI / ZO / ZOI / ZOhU / cmavo) {return ["CMAVO", expr];}
 // This is a Parsing Expression Grammar for the morphology of Lojban.
 // See http://www.pdos.lcs.mit.edu/~baford/packrat/

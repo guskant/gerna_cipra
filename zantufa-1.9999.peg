@@ -1,4 +1,4 @@
-; la'o zoi zantufa-1.9999.peg zoi peg zei gerna de'i li 20160607 tede'i UTC
+; la'o zoi zantufa-1.9999.peg zoi peg zei gerna de'i li 20160608 tede'i UTC
 ; i ku'i la'o peg zoi_open zoi_word zoi_close peg na'e ka'e se tamgau va'o la peg po'o fa'o
 
 text <- (intro_null free* paragraphs? si_clause? SI_clause* faho_clause EOF?)
@@ -26,7 +26,8 @@ tail_terms <- (term* VAU_elidible)
 terms <- (term+)
 term <- (term_1 (!(joik tag BO_clause? CU) joik_ek term_1)*)
 term_1 <- (term_2 (joik_ek? BO_clause term_2)*)
-term_2 <- (XOI_clause statement SEhU_elidible / KE_clause term+ KEhE_elidible / tag_term / !tag sumti / NA_clause !bridi_tail !joik_gihek KU_elidible / gek_term)
+term_2 <- (XOI_clause statement SEhU_elidible / KE_clause term+ KEhE_elidible / tag_term / !tag sumti / brigahi / gek_term)
+brigahi <- ((POIhA_clause free* selbri / NA_clause !bridi_tail !joik_gihek ) KU_elidible)
 tag_term <- (!gek (tag !(!tag selbri) !gek_bridi_tail / FA_clause (joik FA_clause)* !tanru_unit_1) (sumti / KU_elidible))
 gek_term <- (gek term+ (gik term+)+ GIhI_elidible)
 sumti <- (sumti_1 (VUhO_clause relative_clauses)?)
@@ -333,6 +334,9 @@ PA_post <- number_post_clause
 PEhO_clause <- PEhO_pre PEhO_post
 PEhO_pre <- pre_clause PEhO spaces?
 PEhO_post <- post_clause
+POIhA_clause <- POIhA_pre POIhA_post
+POIhA_pre <- pre_clause POIhA spaces?
+POIhA_post <- post_clause
 RAhOI_clause <- RAhOI_pre RAhOI_post
 RAhOI_pre <- pre_clause RAhOI spaces? (y_rafsi / y_less_rafsi / gismu) spaces?
 RAhOI_post <- post_clause
@@ -406,7 +410,7 @@ ZOhU_post <- post_clause
 CMEVLA <- cmevla
 BRIVLA <- (gismu_2 / lujvo / fuhivla)
 gismu_2 <- (gismu)
-CMAVO <- (A / BAI / BAhE / BE / BEI / BEhO / BIhE / BO / BOI / BU / BY / CEI / CO / COI / CU / DOhU / FA / FAhO / FEhU / FIhO / FOI / FUhA / GA / GAhO / GEhU / GI / GIhA / GIhI / GOI / GOhA / GOhOI / I / IAU / JAI / JOI / KE / KEhE / KEI / KOhA / KU / KUhAU / KUhE / KUhO / LAU / LAhE / LEhAI / LE / LEhU / LI / LIhAU / LIhU / LOhAI / LOhO / LOhOI / LOhU / LU / LUhEI / LUhU / MAhO / MAI / ME / MEhU / MOhE / MOI / MUhOI / NA / NAhE / NIhO / NOI / NU / PA / PEhO / RAhOI / ROI / SE / SEI / SEhU / SI / SU / TEhU / TEI / TO / TOI / TUhE / TUhU / UI / VAU / VEI / VEhO / VUhU / VUhO / XI / XOI / ZO / ZOI / ZOhU / cmavo)
+CMAVO <- (A / BAI / BAhE / BE / BEI / BEhO / BIhE / BO / BOI / BU / BY / CEI / CO / COI / CU / DOhU / FA / FAhO / FEhU / FIhO / FOI / FUhA / GA / GAhO / GEhU / GI / GIhA / GIhI / GOI / GOhA / GOhOI / I / IAU / JAI / JOI / KE / KEhE / KEI / KOhA / KU / KUhAU / KUhE / KUhO / LAU / LAhE / LEhAI / LE / LEhU / LI / LIhAU / LIhU / LOhAI / LOhO / LOhOI / LOhU / LU / LUhEI / LUhU / MAhO / MAI / ME / MEhU / MOhE / MOI / MUhOI / NA / NAhE / NIhO / NOI / NU / PA / PEhO / POIhA / RAhOI / ROI / SE / SEI / SEhU / SI / SU / TEhU / TEI / TO / TOI / TUhE / TUhU / UI / VAU / VEI / VEhO / VUhU / VUhO / XI / XOI / ZO / ZOI / ZOhU / cmavo)
 lojban_word <- (CMEVLA / CMAVO / BRIVLA)
 any_word <- lojban_word spaces?
 zoi_open <- lojban_word
@@ -534,7 +538,7 @@ DOhU <- &cmavo ( d o h u ) &post_word
 FA <- &cmavo ( f a i / f a / f e / f o / f u / f i h a / f i ) &post_word
 FAhO <- &cmavo ( f a h o ) &post_word
 FEhU <- &cmavo ( f e h u ) &post_word
-FIhO <- &cmavo ( s o i h a / p o i h o h a / p o i h a / n o i h o h a / n o i h a / f i h o ) &post_word
+FIhO <- &cmavo ( f i h o ) &post_word
 FOI <- &cmavo ( f o i ) &post_word
 FUhA <- &cmavo ( f u h a ) &post_word
 GA <- &cmavo ( g u h e / g u h i / g u h o / g u h a / g u h u / g e h i / g u / g o / g e / g a ) &post_word
@@ -587,6 +591,7 @@ NOI <- &cmavo ( v o i h i / v o i / p o i / p o h o i / n o i / n o h o i ) &pos
 NU <- &cmavo ( z u h o / z a h i / s u h u / s i h o / p u h u / p o i h i / n u / n i h a i / n i / m u h e / l i h i / k a i h u / k a i h e i / k a h e i / k a / j e i / d u h u / b u h a i ) &post_word
 PA <- &cmavo ( z e / z a h u / x o h e / x o / x i h i h e i / x e i / x e h e / x a / v o h e i h a / v o / v i h e i h e / v a u h a u h o / v a i / v a h e i h a / t u h o / t e h o / t a u h u / s u h o i / s u h o / s u h e / s u h a u / s u h a i / s o i h u / s o h u / s o h o / s o h i / s o h e / s o h a / s o / s e i h u h e / s e h i h i / r o h o i / r o / r e i / r e / r a u / r a h e / p u h e h u h o / p i / p e i h i h a / p a i / p a h a u h o / p a / n o h o / n o h e h u / n o h a i / n o / n i h u / n i h e h o i / n i h e h e i / m u h i h a i / m u / m o h a / m e h i / m a i h e h e / m a h u / k o i h o / k i h o / k e i h o / k a u h o / k a i h o / k a h o h a i / k a h o / k a h e i h a / j i h i / j a u / g o h o h i h a / g a u h i h o / g a i / g a h a u / f u h a h a u / f u h a h a i / f i h u / f e i / f a i h u h a / f a i h u / f a i h e h a u / f a i h e h a i / d u h e / d a u / d a h a / c i h i / c i / c e h i / b i ) &post_word
 PEhO <- &cmavo ( k e i h a i / p e h o ) &post_word
+POIhA <- &cmavo ( s o i h a / p o i h o h a / p o i h a / n o i h o h a / n o i h a ) &post_word
 RAhOI <- &cmavo ( r a h o i ) &post_word
 ROI <- &cmavo ( x u h a u / v a h e i / r o i / r e h u / m u h e i / d e h e i / b a h o i ) &post_word
 SE <- &cmavo ( x o h a i / x e / v o h a i / v e / t o h a i / t e / t a u h o / s u h e i / s e h u h o / s e h o h e / s e / r e h a u h e ) &post_word

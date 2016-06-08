@@ -1037,5 +1037,15 @@ maftufa-1.14.js.peg:272:// gek //////// _maltufa_oz: ma'oi GA gauku cirko lo ka 
 maftufa-1.14.js.peg:738:// //////// _maltufa_oz: jmina la'o zoi POIhA_clause zoi_20160603UTC_ 
 maftufa-1.14.js.peg:1160:// //////// _maltufa_oz: jmina ma'oi POIhA_20160603UTC_
 ------------------ mulno fa la maftufa_1.14 ------------------
-zantufa-1.9999.js.peg:1318:// BAI //////// _cipra: -caha -kahe -pu'i -nu'o -bi'ai : muvdu ma'oi NA tezu'e lo nu sarxe lo modal logji pe la kripkes_20160607UTC_
-zantufa-1.9999.js.peg:1473:// NA //////// _cipra: +caha +kahe +pu'i +nu'o +bi'ai : muvdu fi ma'oi BAI tezu'e lo nu sarxe lo modal logji pe la kripkes_20160607UTC_
+zantufa-1.15.js.peg:222:// term_2 //////// _cipra: galfi zoizoi NA_clause !bridi_tail !joik_gihek KU_elidible zoi zo brigahi_20160608UTC_
+zantufa-1.15.js.peg:225:// //////// _cipra: jmina la briga'i i va'o lo nu zo ka'e joi lo simsa cu cmavo ma'oi NA kei zabna fa lo nu ma'oi NA ji'a claxu ma'oi KU_20160608UTC_
+zantufa-1.15.js.peg:860:// //////// _cipra: jmina la'o zoi POIhA_clause zoi_20160608UTC_ 
+zantufa-1.15.js.peg:1025:// CMAVO //////// _cipra: jmina ma'oi POIhA_20160608UTC_ 
+zantufa-1.15.js.peg:1328:// BAI //////// _cipra: -caha -kahe -pu'i -nu'o -bi'ai : muvdu ma'oi NA tezu'e lo nu sarxe lo modal logji pe la kripkes_20160607UTC_
+zantufa-1.15.js.peg:1373:// FIhO //////// _cipra: -soi'a -poi'o'a -poi'a -noi'o'a -noi'a_20160608UTC_
+zantufa-1.15.js.peg:1484:// NA //////// _cipra: +caha +kahe +pu'i +nu'o +bi'ai : muvdu fi ma'oi BAI tezu'e lo nu sarxe lo modal logji pe la kripkes_20160607UTC_
+zantufa-1.15.js.peg:1506:// //////// _cipra: jmina ma'oi POIhA_20160608UTC_
+------------------ mulno fa la zantufa_1.15 ------------------
+maftufa-1.15.js.peg:248:// //////// _maltufa_oz: cmalu stika ra'a la javaskript_20160608UTC_
+maftufa-1.15.js.peg:892:// CMAVO //////// _maltufa_oz: vimcu lo cmacfila: +POIhA_20160607UTC_
+------------------ mulno fa la maftufa_1.15 ------------------

@@ -233,7 +233,8 @@ tanru_unit_1 = expr:(BRIVLA_clause free* / GOhA_clause RAhO_clause? free* / KE_c
 linkargs = expr:(BE_clause free* term links? BEhO_elidible free*)  {return _node("linkargs", expr);}
 links = expr:(BEI_clause free* term links?) {return _node("links", expr);}
 // //////// _maltufa_oz: jmina la'o zoi adverbial zoi_20160603UTC
-adverbial = POIhA_clause free* selbri FEhU_elidible
+// //////// _maltufa_oz: cmalu stika ra'a la javaskript_20160608UTC
+adverbial = expr:(POIhA_clause free* selbri FEhU_elidible) {return _node("adverbial", expr); }
 quantifier = expr:(!sumti_5 !selbri mex relative_clauses?) {return _node("quantifier", expr); }
 mex = expr:(mex_1 (operator+ mex_1?)*) {return _node("mex", expr); }
 mex_1 = expr:((KE_clause free* mex_2+ KEhE_elidible free* / mex_2 (BO_clause free* mex_2)*) (BIhE_clause free* operator+ (KE_clause free* mex_2+ KEhE_elidible free* / mex_2 (BO_clause free* mex_2)*)?)*) {return _node("mex_1", expr); }

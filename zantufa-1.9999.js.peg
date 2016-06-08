@@ -219,7 +219,11 @@ term = expr:(term_1 (!(joik tag BO_clause? CU) joik_ek term_1)*) {return _node("
 term_1 = expr:(term_2 (joik_ek? BO_clause term_2)*) {return _node("term_1", expr);}
 
 // term_2 //////// _vimcu lo cfila i va'i jmina zoizoi !joik_gihek zoi ja'e lo nu stura fa lo'u ([CU {<co'a broda> VAU} {na gi'a} CU {brode VAU} VAU] IAU) le'u_20160404UTC
-term_2 = expr:(XOI_clause statement SEhU_elidible / KE_clause term+ KEhE_elidible / tag_term / !tag sumti / NA_clause !bridi_tail !joik_gihek KU_elidible / gek_term) {return _node("term_2", expr);}
+// term_2 //////// _cipra: galfi zoizoi NA_clause !bridi_tail !joik_gihek KU_elidible zoi zo brigahi_20160608UTC
+term_2 = expr:(XOI_clause statement SEhU_elidible / KE_clause term+ KEhE_elidible / tag_term / !tag sumti / brigahi / gek_term) {return _node("term_2", expr);}
+
+// //////// _cipra: jmina la briga'i i va'o lo nu zo ka'e joi lo simsa cu cmavo ma'oi NA kei zabna fa lo nu ma'oi NA ji'a claxu ma'oi KU_20160608UTC
+brigahi = expr:((POIhA_clause free* selbri / NA_clause !bridi_tail !joik_gihek ) KU_elidible) {return _node("brigahi", expr); }
 
 // tag_term //////// _la'o zoi tanru_unit_2 zoi binxo la'o zoi tanru_unit_1 zoi_20150810UTC
 tag_term = expr:(!gek (tag !(!tag selbri) !gek_bridi_tail / FA_clause (joik FA_clause)* !tanru_unit_1) (sumti / KU_elidible)) {return _node("tag_term", expr);}
@@ -853,6 +857,11 @@ PEhO_clause = pre:PEhO_pre post:PEhO_post {return _node2("PEhO_clause", pre, pos
 PEhO_pre = pre_clause PEhO spaces?
 PEhO_post = post_clause
 
+// //////// _cipra: jmina la'o zoi POIhA_clause zoi_20160608UTC 
+POIhA_clause = pre:POIhA_pre post:POIhA_post {return _node2("POIhA_clause", pre, post); }
+POIhA_pre = pre_clause POIhA spaces?
+POIhA_post = post_clause
+
 //         directions in time 
 
 RAhOI_clause = pre:RAhOI_pre post:RAhOI_post {return _node2("RAhOI_clause", pre, post); }
@@ -1013,7 +1022,8 @@ BRIVLA = expr:(gismu_2 / lujvo / fuhivla) {return ["BRIVLA", expr];}
 gismu_2 = expr:(gismu) {return ["gismu", expr];}
 // CMAVO //////// _jmina zoizoi MUhOI zoi_20150819UTC
 // CMAVO //////// _jmina zoizoi LIhAU / LUhEI zoi_20150827UTC
-CMAVO = expr:(A / BAI / BAhE / BE / BEI / BEhO / BIhE / BO / BOI / BU / BY / CEI / CO / COI / CU / DOhU / FA / FAhO / FEhU / FIhO / FOI / FUhA / GA / GAhO / GEhU / GI / GIhA / GIhI / GOI / GOhA / GOhOI / I / IAU / JAI / JOI / KE / KEhE / KEI / KOhA / KU / KUhAU / KUhE / KUhO / LAU / LAhE / LEhAI / LE / LEhU / LI / LIhAU / LIhU / LOhAI / LOhO / LOhOI / LOhU / LU / LUhEI / LUhU / MAhO / MAI / ME / MEhU / MOhE / MOI / MUhOI / NA / NAhE / NIhO / NOI / NU / PA / PEhO / RAhOI / ROI / SE / SEI / SEhU / SI / SU / TEhU / TEI / TO / TOI / TUhE / TUhU / UI / VAU / VEI / VEhO / VUhU / VUhO / XI / XOI / ZO / ZOI / ZOhU / cmavo) {return ["CMAVO", expr];}
+// CMAVO //////// _cipra: jmina ma'oi POIhA_20160608UTC 
+CMAVO = expr:(A / BAI / BAhE / BE / BEI / BEhO / BIhE / BO / BOI / BU / BY / CEI / CO / COI / CU / DOhU / FA / FAhO / FEhU / FIhO / FOI / FUhA / GA / GAhO / GEhU / GI / GIhA / GIhI / GOI / GOhA / GOhOI / I / IAU / JAI / JOI / KE / KEhE / KEI / KOhA / KU / KUhAU / KUhE / KUhO / LAU / LAhE / LEhAI / LE / LEhU / LI / LIhAU / LIhU / LOhAI / LOhO / LOhOI / LOhU / LU / LUhEI / LUhU / MAhO / MAI / ME / MEhU / MOhE / MOI / MUhOI / NA / NAhE / NIhO / NOI / NU / PA / PEhO / POIhA / RAhOI / ROI / SE / SEI / SEhU / SI / SU / TEhU / TEI / TO / TOI / TUhE / TUhU / UI / VAU / VEI / VEhO / VUhU / VUhO / XI / XOI / ZO / ZOI / ZOhU / cmavo) {return ["CMAVO", expr];}
 
 // This is a Parsing Expression Grammar for the morphology of Lojban.
 // See http://www.pdos.lcs.mit.edu/~baford/packrat/
@@ -1315,7 +1325,7 @@ lujvo = expr:(!gismu !fuhivla brivla)  {return _node("lujvo", expr);}
 A = &cmavo expr:( a / e / o / u ) &post_word {return ["A", _join(expr)];}
 
 // BAI //////// _+gai'i +ki'oi +mu'ai +po'a +pu'ai +xo'u_20150820UTC
-// BAI //////// _cipra: -caha -kahe -pu'i -nu'o -bi'ai : muvdu ma'oi NA tezu'e lo nu sarxe lo modal logji pe la kripkes_20160607UTC_
+// BAI //////// _cipra: -caha -kahe -pu'i -nu'o -bi'ai : muvdu ma'oi NA tezu'e lo nu sarxe lo modal logji pe la kripkes_20160607UTC
 BAI = &cmavo expr:( z u h e / z u h a u / z u h a / z u / z o h i / z o h a / z i / z e i h a / z e h u / z e h o / z e h i / z e h e / z e h a i / z e h a / z a u / z a h o / z a h a i / z a / x o h u / x a u / x a h o / v u h a / v u / v i h u / v i h i / v i h e / v i h a / v i / v e h u / v e h i / v e h e / v e h a / v a h u / v a h o / v a / t u h i / t o h o / t i h u h i / t i h u h e / t i h u h a / t i h u / t i h i / t i h a / t e h i / t e h e / t a i / t a h i / t a h e / s i h u / s a u / r u h u / r u h i / r i h u / r i h i / r i h a / r e h o / r a i / r a h i / r a h a / p u h o / p u h e / p u h a u / p u h a i / p u h a / p u / p o h i / p o h a / p i h o / p a h u / p a h o / p a h a / n i h i / n i h a / n e h u / n e h i / n e h a / n a u / n a h o / m u h u / m u h a i / m u h i / m o h u / m e h e / m e h a / m a u / m a h i / m a h e / l i h i h e / l i h e / l e h a / l a h u / k u h u / k o i / k o h a u / k i h u / k i h o i / k i h i / k i / k a i / k a h i / k a h a i / k a h a / j i h u / j i h o / j i h e / j a h i / j a h e / g u h a u / g a u / g a i h i / g a h u / g a h a / f i h e / f a u / f a h e / f a h a / d u h o i / d u h o / d u h i / d u h a / d o h e / d i h o / d i h i / d i h a / d e i h a / d e h i h u / d e h i h o / d e h i h i / d e h i h e / d e h i h a / d e h i / d e h a / c u h u / c u h e / c o h u / c o h i / c o h a / c i h u / c i h o / c i h e / c a u / c a h u / c a h o / c a h i / c a / b u h u / b e h i / b e h e i / b e h a u / b e h a / b a u / b a i / b a h o / b a h i / b a h a u / b a ) &post_word {return ["BAI", _join(expr)];}
 
 // BAhE //////// _+ba'ei_20150820UTC
@@ -1360,7 +1370,8 @@ FAhO = &cmavo expr:( f a h o ) &post_word {return ["FAhO", _join(expr)];}
 FEhU = &cmavo expr:( f e h u ) &post_word {return ["FEhU", _join(expr)];}
 
 // FIhO //////// _+soi'a +poi'o'a +poi'a +noi'o'a +noi'a_20160602UTC
-FIhO = &cmavo expr:( s o i h a / p o i h o h a / p o i h a / n o i h o h a / n o i h a / f i h o ) &post_word {return ["FIhO", _join(expr)];}
+// FIhO //////// _cipra: -soi'a -poi'o'a -poi'a -noi'o'a -noi'a_20160608UTC
+FIhO = &cmavo expr:( f i h o ) &post_word {return ["FIhO", _join(expr)];}
 
 FOI = &cmavo expr:( f o i ) &post_word {return ["FOI", _join(expr)];}
 
@@ -1470,7 +1481,7 @@ MOI = &cmavo expr:( m o i h o / m e i / m o i / s i h e / c u h o / v a h e ) &p
 MUhOI = &cmavo expr:( m u h o i ) &post_word {return ["MUhOI", _join(expr)];}
 
 // NA //////// _+cau'a_20150820UTC
-// NA //////// _cipra: +caha +kahe +pu'i +nu'o +bi'ai : muvdu fi ma'oi BAI tezu'e lo nu sarxe lo modal logji pe la kripkes_20160607UTC_
+// NA //////// _cipra: +caha +kahe +pu'i +nu'o +bi'ai : muvdu fi ma'oi BAI tezu'e lo nu sarxe lo modal logji pe la kripkes_20160607UTC
 NA = &cmavo expr:( x u h o h e / p u h i / n u h o / n a / k a h e / j a h a / c a u h a / c a h a / b i h a i ) &post_word {return ["NA", _join(expr)];}
 
 // NAhE //////// _+cau'e_20150820UTC
@@ -1491,6 +1502,9 @@ NU = &cmavo expr:( z u h o / z a h i / s u h u / s i h o / p u h u / p o i h i /
 PA = &cmavo expr:( z e / z a h u / x o h e / x o / x i h i h e i / x e i / x e h e / x a / v o h e i h a / v o / v i h e i h e / v a u h a u h o / v a i / v a h e i h a / t u h o / t e h o / t a u h u / s u h o i / s u h o / s u h e / s u h a u / s u h a i / s o i h u / s o h u / s o h o / s o h i / s o h e / s o h a / s o / s e i h u h e / s e h i h i / r o h o i / r o / r e i / r e / r a u / r a h e / p u h e h u h o / p i / p e i h i h a / p a i / p a h a u h o / p a / n o h o / n o h e h u / n o h a i / n o / n i h u / n i h e h o i / n i h e h e i / m u h i h a i / m u / m o h a / m e h i / m a i h e h e / m a h u / k o i h o / k i h o / k e i h o / k a u h o / k a i h o / k a h o h a i / k a h o / k a h e i h a / j i h i / j a u / g o h o h i h a / g a u h i h o / g a i / g a h a u / f u h a h a u / f u h a h a i / f i h u / f e i / f a i h u h a / f a i h u / f a i h e h a u / f a i h e h a i / d u h e / d a u / d a h a / c i h i / c i / c e h i / b i ) &post_word {return ["PA", _join(expr)];}
 
 PEhO = &cmavo expr:( k e i h a i / p e h o ) &post_word {return ["PEhO", _join(expr)];}
+
+// //////// _cipra: jmina ma'oi POIhA_20160608UTC
+POIhA = &cmavo expr:( s o i h a / p o i h o h a / p o i h a / n o i h o h a / n o i h a ) &post_word {return ["POIhA", _join(expr)];}
 
 RAhOI = &cmavo expr:( r a h o i ) &post_word {return ["RAhOI", _join(expr)];}
 
