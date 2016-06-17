@@ -340,7 +340,8 @@ joik_ek = expr:(joik / ek) {return _node("joik_ek", expr); }
 
 joik_gihek = expr:(joik / gihek) {return _node("joik_gihek", expr); }
 
-gek = expr:(SE_clause? GA_clause / GI_clause (joik / tag) (BO_clause)? / (joik / tag) GI_clause (BO_clause)?) {return _node("gek", expr); }
+// gek //////// _curmi tu'a lo'u gonaibo le'u tezu'e lo nu lu gonai broda gi brode gi brodi li'u lu gonaibo broda gi brode gi brodi li'u frica lo ka smuni i sa'unai lo pamoi cu smudu'i lu go na broda gi brode gi brodi li'u ije lo remoi cu smudu'i la'e lo pamei be zo broda jo'u zo brode jo'u zo brodi i galfi zoizoi SE_clause? GA_clause / GI_clause (joik / tag) (BO_clause)? / (joik / tag) GI_clause (BO_clause)? zoi zoizoi (SE_clause? GA_clause / GI_clause (joik / tag) / (joik / tag) GI_clause) BO_clause? zoi_20160617UTC_
+gek = expr:((SE_clause? GA_clause / GI_clause (joik / tag) / (joik / tag) GI_clause) BO_clause?) {return _node("gek", expr); }
 
 gik = expr:(GI_clause) {return _node("gik", expr); }
 
