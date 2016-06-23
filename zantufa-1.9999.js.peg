@@ -196,7 +196,8 @@ bridi_tail = expr:(bridi_tail_1 (joik_gihek tag? CU_elidible bridi_tail_1)*) {re
 
 bridi_tail_1 = expr:(bridi_tail_2 (joik_gihek !(tag? BO_clause) !(tag? KE_clause) CU_elidible bridi_tail_2 tail_terms)*) {return _node("bridi_tail_1", expr);}
 
-bridi_tail_2 = expr:(bridi_tail_3 (joik_gihek tag? BO_clause CU_elidible bridi_tail_3 tail_terms)*) {return _node("bridi_tail_2", expr);}
+// bridi_tail_2 //////// _curmi tu'a lo'u broda babocu brode le'u i galfi zoizoi joik_gihek tag? zoi zoizoi (tag / joik_gihek tag?) zoi_20160623UTC
+bridi_tail_2 = expr:(bridi_tail_3 ((tag / joik_gihek tag?) BO_clause CU_elidible bridi_tail_3 tail_terms)*) {return _node("bridi_tail_2", expr);}
 
 bridi_tail_3 = expr:(KE_clause !(selbri_2 KEhE) bridi_tail KEhE_elidible tail_terms / selbri tail_terms / gek_bridi_tail) {return _node("bridi_tail_3", expr);}
 
@@ -226,7 +227,8 @@ term_2 = expr:(XOI_clause statement SEhU_elidible / KE_clause term+ KEhE_elidibl
 brigahi = expr:((POIhA_clause free* selbri / NA_clause !bridi_tail !joik_gihek ) KU_elidible) {return _node("brigahi", expr); }
 
 // tag_term //////// _la'o zoi tanru_unit_2 zoi binxo la'o zoi tanru_unit_1 zoi_20150810UTC
-tag_term = expr:(!gek (tag !(!tag selbri) !gek_bridi_tail / FA_clause (joik FA_clause)* !tanru_unit_1) (sumti / KU_elidible)) {return _node("tag_term", expr);}
+// tag_term //////// _curmi tu'a lo'u broda babocu brode le'u i jmina zoizoi !BO zoi_20160623UTC
+tag_term = expr:(!gek (tag !(!tag selbri) !gek_bridi_tail !BO / FA_clause (joik FA_clause)* !tanru_unit_1) (sumti / KU_elidible)) {return _node("tag_term", expr);}
 /*** END EXP-SELBRITCITA-FIX ***/
 
 gek_term = expr:(gek term+ (gik term+)+ GIhI_elidible) {return _node("gek_term", expr);}
@@ -270,7 +272,8 @@ selbri = expr:(selbri_1 / tag selbri / NA_clause selbri) {return _node("selbri",
 // selbri_1 //////// _ma'oi CEI cu .ei jongau lo selbri jenai lo selbrisle i jmina zoizoi  (CEI_clause selbri)* zoi_20150810UTC
 // selbri_1 //////// _jmina zoizoi relative_clauses? zoi_20150810UTC
 // selbri_1 //////// _gau melbi: zoizoi NA_clause selbri zoi muvdu la'o zoi selbri zoi_20150810UTC
-selbri_1 = expr:(selbri_2 relative_clauses? (CEI_clause selbri)*) {return _node("selbri_1", expr); }
+// selbri_1 //////// _tugni tu'a la oz: galfi zoizoi selbri_2 zoi zoizoi (!KE selbri_2 KEhE_clause linkargs / selbri_2) zoi_20160623UTC
+selbri_1 = expr:((!KE selbri_2 KEhE_clause linkargs / selbri_2) relative_clauses? (CEI_clause selbri)*) {return _node("selbri_1", expr); }
 
 selbri_2 = expr:(selbri_3 (CO_clause selbri_3)*) {return _node("selbri_2", expr); }
 
@@ -340,7 +343,7 @@ joik_ek = expr:(joik / ek) {return _node("joik_ek", expr); }
 
 joik_gihek = expr:(joik / gihek) {return _node("joik_gihek", expr); }
 
-// gek //////// _curmi tu'a lo'u gonaibo le'u tezu'e lo nu lu gonai broda gi brode gi brodi li'u lu gonaibo broda gi brode gi brodi li'u frica lo ka smuni i sa'unai lo pamoi cu smudu'i lu go na broda gi brode gi brodi li'u ije lo remoi cu smudu'i la'e lo pamei be zo broda jo'u zo brode jo'u zo brodi i galfi zoizoi SE_clause? GA_clause / GI_clause (joik / tag) (BO_clause)? / (joik / tag) GI_clause (BO_clause)? zoi zoizoi (SE_clause? GA_clause / GI_clause (joik / tag) / (joik / tag) GI_clause) BO_clause? zoi_20160617UTC_
+// gek //////// _curmi tu'a lo'u gonaibo le'u tezu'e lo nu lu gonai broda gi brode gi brodi li'u lu gonaibo broda gi brode gi brodi li'u frica lo ka smuni i sa'unai lo pamoi cu smudu'i lu go na broda gi brode gi brodi li'u ije lo remoi cu smudu'i la'e lo pamei be zo broda jo'u zo brode jo'u zo brodi i galfi zoizoi SE_clause? GA_clause / GI_clause (joik / tag) (BO_clause)? / (joik / tag) GI_clause (BO_clause)? zoi zoizoi (SE_clause? GA_clause / GI_clause (joik / tag) / (joik / tag) GI_clause) BO_clause? zoi_20160617UTC
 gek = expr:((SE_clause? GA_clause / GI_clause (joik / tag) / (joik / tag) GI_clause) BO_clause?) {return _node("gek", expr); }
 
 gik = expr:(GI_clause) {return _node("gik", expr); }

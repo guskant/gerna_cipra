@@ -1050,4 +1050,8 @@ maftufa-1.15.js.peg:248:// //////// _maltufa_oz: cmalu stika ra'a la javaskript_
 maftufa-1.15.js.peg:892:// CMAVO //////// _maltufa_oz: vimcu lo cmacfila: +POIhA_20160607UTC_
 ------------------ mulno fa la maftufa_1.15 ------------------
 ------------------ mulno fa la maltufa_1.15 ------------------
-zantufa-1.9999.js.peg:343:// gek //////// _curmi tu'a lo'u gonaibo le'u tezu'e lo nu lu gonai broda gi brode gi brodi li'u lu gonaibo broda gi brode gi brodi li'u frica lo ka smuni i sa'unai lo pamoi cu smudu'i lu go na broda gi brode gi brodi li'u ije lo remoi cu smudu'i la'e lo pamei be zo broda jo'u zo brode jo'u zo brodi i galfi zoizoi SE_clause? GA_clause / GI_clause (joik / tag) (BO_clause)? / (joik / tag) GI_clause (BO_clause)? zoi zoizoi (SE_clause? GA_clause / GI_clause (joik / tag) / (joik / tag) GI_clause) BO_clause? zoi_20160617UTC_
+zantufa-1.16.js.peg:199:// bridi_tail_2 //////// _curmi tu'a lo'u broda babocu brode le'u i galfi zoizoi joik_gihek tag? zoi zoizoi (tag / joik_gihek tag?) zoi_20160623UTC_
+zantufa-1.16.js.peg:230:// tag_term //////// _curmi tu'a lo'u broda babocu brode le'u i jmina zoizoi !BO zoi_20160623UTC_
+zantufa-1.16.js.peg:275:// selbri_1 //////// _tugni tu'a la oz: galfi zoizoi selbri_2 zoi zoizoi (!KE selbri_2 KEhE_clause linkargs / selbri_2) zoi_20160623UTC_
+zantufa-1.16.js.peg:346:// gek //////// _curmi tu'a lo'u gonaibo le'u tezu'e lo nu lu gonai broda gi brode gi brodi li'u lu gonaibo broda gi brode gi brodi li'u frica lo ka smuni i sa'unai lo pamoi cu smudu'i lu go na broda gi brode gi brodi li'u ije lo remoi cu smudu'i la'e lo pamei be zo broda jo'u zo brode jo'u zo brodi i galfi zoizoi SE_clause? GA_clause / GI_clause (joik / tag) (BO_clause)? / (joik / tag) GI_clause (BO_clause)? zoi zoizoi (SE_clause? GA_clause / GI_clause (joik / tag) / (joik / tag) GI_clause) BO_clause? zoi_20160617UTC_
+------------------ mulno fa la zantufa_1.16 ------------------
