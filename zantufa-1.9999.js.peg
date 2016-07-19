@@ -185,8 +185,8 @@ gek_statement = expr:(gek statement (gik statement)+ GIhI_elidible) {return _nod
 // (vei [{by BOI} {joi <pa BOI>} {joi <by BOI>}] VEhO) 
 // ([{<by BOI> <joi (¹pa BOI¹) (¹by BOI¹)>} da] VAU) 
 // fragment //////// _vimcu lo cfila pe la zantufa xisu'o0.6: i galfi zoi zoi joik zoi zoizoi !terms joik zoi tezu'e lo nu genturfa'i lu joigiragiri li'u_20150819UTC
-// fragment //////// _danfu lo ge'i zei preti i jmina zo gek_20160719UTC_
-fragment = expr:(prenex / gek / !terms joik / ek / gihek / NA_clause !terms !KU / terms VAU_elidible !mex / mex / relative_clauses / links / linkargs) {return _node("fragment", expr);}
+// fragment //////// _danfu lo ge'i zei preti i jmina zoizoi !terms gek zoi i zoizoi !terms zoi cu jai se zukte fi tu'a lu joigiragiri li'u_20160719UTC_
+fragment = expr:(prenex / !terms gek / !terms joik / ek / gihek / NA_clause !terms !KU / terms VAU_elidible !mex / mex / relative_clauses / links / linkargs) {return _node("fragment", expr);}
 
 prenex = expr:(terms ZOhU_clause) {return _node("prenex", expr);}
 
