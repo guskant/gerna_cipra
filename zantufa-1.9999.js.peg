@@ -1411,7 +1411,8 @@ I = &cmavo expr:( i ) &post_word {return ["I", _join(expr)];}
 
 IAU = &cmavo expr:( i h a u / i a u ) &post_word {return ["IAU", _join(expr)];}
 
-JAI = &cmavo expr:( j a h e i / j a i ) &post_word {return ["JAI", _join(expr)];}
+// JAI //////// _+jo'ai_20161116UTC_
+JAI = &cmavo expr:( j o h a i / j a h e i / j a i ) &post_word {return ["JAI", _join(expr)];}
 
 // JOI //////// _+ji'o'e +y'i_20150820UTC
 JOI = &cmavo expr:( z i h e / y h i / x o i h u / p i h u / m i h i / k u h a / j u h e / j u / j o i / j o h u / j o h e i h i / j o h e i / j o h e / j o / j i h o h e / j i / j e h i / j e / j a / f a h u h a i / f a h u / c e h o i / c e h o / c e / b i h o / b i h i ) &post_word {return ["JOI", _join(expr)];}

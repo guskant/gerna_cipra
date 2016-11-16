@@ -1063,3 +1063,4 @@ zantufa-1.17.js.peg:408:// si_word //////// vimcu lo cfila i galfi zoizoi RAhOI 
 zantufa-1.17.js.peg:878:// RAhOI_pre //////// vimcu lo cfila i galfi zoizoi RAhOI spaces? (y_rafsi / y_less_rafsi / gismu) zoi zoizoi RAhOI spaces? (y_rafsi / long_rafsi / y_less_rafsi / gismu) zoi_20160909UTC_
 zantufa-1.17.js.peg:1555:// UI //////// _+lau'i +nu'oi + pu'ei +ca'ai_20160629UTC_
 ------------------ mulno fa la zantufa_1.17 ------------------
+zantufa-1.9999.js.peg:1414:// JAI //////// _+jo'ai_20161116UTC_
