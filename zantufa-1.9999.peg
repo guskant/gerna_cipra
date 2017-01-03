@@ -1,4 +1,4 @@
-; la'o zoi zantufa-1.9999.peg zoi peg zei gerna de'i li 20161116 tede'i UTC
+; la'o zoi zantufa-1.9999.peg zoi peg zei gerna de'i li 20170103 tede'i UTC
 ; i ku'i la'o peg zoi_open zoi_word zoi_close peg na'e ka'e se tamgau va'o la peg po'o fa'o
 
 text <- (intro_null free* paragraphs? si_clause? SI_clause* faho_clause EOF?)
@@ -21,7 +21,7 @@ bridi_tail <- (bridi_tail_1 (joik_gihek tag? CU_elidible bridi_tail_1)*)
 bridi_tail_1 <- (bridi_tail_2 (joik_gihek !(tag? BO_clause) !(tag? KE_clause) CU_elidible bridi_tail_2 tail_terms)*)
 bridi_tail_2 <- (bridi_tail_3 ((tag / joik_gihek tag?) BO_clause CU_elidible bridi_tail_3 tail_terms)*)
 bridi_tail_3 <- (KE_clause !(selbri_2 KEhE) bridi_tail KEhE_elidible tail_terms / selbri tail_terms / gek_bridi_tail)
-gek_bridi_tail <- (gek bridi_tail (gik bridi_tail)+ GIhI_elidible tail_terms / tag* KE_clause gek_bridi_tail KEhE_elidible / NA_clause gek_bridi_tail)
+gek_bridi_tail <- (gek bridi_tail (gik bridi_tail)+ !(gik (term / CU)) GIhI_elidible tail_terms / tag* KE_clause gek_bridi_tail KEhE_elidible / NA_clause gek_bridi_tail)
 tail_terms <- (term* VAU_elidible)
 terms <- (term+)
 term <- (term_1 (!(joik tag BO_clause? CU) joik_ek term_1)*)
@@ -49,7 +49,7 @@ selbri_4 <- (selbri_5 (joik selbri_5)*)
 selbri_5 <- (selbri_6 (joik tag? BO_clause selbri_6)*)
 selbri_6 <- (tanru_unit (BO_clause tanru_unit)*)
 tanru_unit <- (tanru_unit_1 linkargs?)
-tanru_unit_1 <- (CMEVLA_clause / BRIVLA_clause / GOhA_clause / KE_clause selbri_2 KEhE_elidible / NAhE_clause? gek selbri_2 (gik selbri_2)+ !term GIhI_elidible / MUhOI_clause / GOhOI_clause / LUhEI_clause text LIhAU_elidible / ME_clause (sumti / operator+ / mex / tag) MEhU_elidible MOI_clause? / mex MOI_clause / (FA_clause (joik FA_clause)* / SE_clause) tanru_unit_1 / JAI_clause tag? tanru_unit_1 / NAhE_clause tanru_unit_1 / NU_clause (joik NU_clause)* statement KEI_elidible)
+tanru_unit_1 <- (CMEVLA_clause / BRIVLA_clause / GOhA_clause / KE_clause selbri_2 KEhE_elidible / NAhE_clause? gek selbri_2 (gik selbri_2)+ !(gik? (term / CU)) GIhI_elidible / MUhOI_clause / GOhOI_clause / LUhEI_clause text LIhAU_elidible / ME_clause (sumti / operator+ / mex / tag) MEhU_elidible MOI_clause? / mex MOI_clause / (FA_clause (joik FA_clause)* / SE_clause) tanru_unit_1 / JAI_clause tag? tanru_unit_1 / NAhE_clause tanru_unit_1 / NU_clause (joik NU_clause)* statement KEI_elidible)
 linkargs <- (BE_clause term links? BEhO_elidible)
 links <- (BEI_clause term links?)
 quantifier <- (!sumti_5 !selbri mex relative_clauses?)
