@@ -1064,5 +1064,8 @@ zantufa-1.17.js.peg:878:// RAhOI_pre //////// vimcu lo cfila i galfi zoizoi RAhO
 zantufa-1.17.js.peg:1555:// UI //////// _+lau'i +nu'oi + pu'ei +ca'ai_20160629UTC_
 ------------------ mulno fa la zantufa_1.17 ------------------
 zantufa-1.9999.js.peg:207:// gek_bridi_tail //////// _vimcu lo cfila i galfi zoizoi !term zoi zoizoi !(gik (term / CU)) zoi tezuhelonu genturfahi lu ge broda gi brode gi brodi ... gi cu brodo li'u_20170103UTC_
-zantufa-1.9999.js.peg:303:// tanru_unit_1 //////// _vimcu lo cfila i galfi zoizoi !term zoi zoizoi !(gik? (term / CU)) zoi tezuhelonu genturfahi lu ge broda gi brode gi brodi ... gi cu brodo li'u_20170103UTC_
-zantufa-1.9999.js.peg:1416:// JAI //////// _+jo'ai_20161116UTC_
+zantufa-1.9999.js.peg:227:// term_2 //////// _jmina zoizoi !(sumti KEhE) zoi tezu'e tu'a lu ke da ke'e noi broda li'u_20170203UTC_
+zantufa-1.9999.js.peg:252:// sumti_3 //////// _jmina zoi zoi relative_clauses? zoi te zu'e lo nu ma'oi VUhO na jai sarcu tu'a lo ra'abri noi se li'erla'i lo li'erla'i jonma'o sumti_20170203UTC_
+zantufa-1.9999.js.peg:255:// sumti_4 //////// _vimcu zoizoi relative_clauses? zoi imu'ibo lo sumti_3 co'a se pagbu lo se go'i_20170203UTC_
+zantufa-1.9999.js.peg:307:// tanru_unit_1 //////// _vimcu lo cfila i galfi zoizoi !term zoi zoizoi !(gik? (term / CU)) zoi tezuhelonu genturfahi lu ge broda gi brode gi brodi ... gi cu brodo li'u_20170103UTC_
+zantufa-1.9999.js.peg:1420:// JAI //////// _+jo'ai_20161116UTC_
