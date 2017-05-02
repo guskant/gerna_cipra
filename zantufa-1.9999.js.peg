@@ -204,7 +204,7 @@ bridi_tail_2 = expr:(bridi_tail_3 ((tag / joik_gihek tag?) BO_clause CU_elidible
 bridi_tail_3 = expr:(KE_clause !(selbri_2 KEhE) bridi_tail KEhE_elidible tail_terms / selbri tail_terms / gek_bridi_tail) {return _node("bridi_tail_3", expr);}
 
 // // // za'a nitcu fa zoizoi  / tag* KE_clause free* gek_bridi_tail KEhE_elidible free* / NA_clause free* gek_bridi_tail zoi
-// gek_bridi_tail //////// _vimcu lo cfila i galfi zoizoi !term zoi zoizoi !(gik (term / CU)) zoi tezuhelonu genturfahi lu ge broda gi brode gi brodi ... gi cu brodo li'u_20170103UTC_
+// gek_bridi_tail //////// _vimcu lo cfila i galfi zoizoi !term zoi zoizoi !(gik (term / CU)) zoi tezuhelonu genturfahi lu ge broda gi brode gi brodi ... gi cu brodo li'u_20170103UTC
 gek_bridi_tail = expr:(gek bridi_tail (gik bridi_tail)+ !(gik (term / CU)) GIhI_elidible tail_terms / tag* KE_clause gek_bridi_tail KEhE_elidible / NA_clause gek_bridi_tail) {return _node("gek_bridi_tail", expr);}
 
 //// EXP-FIX: tag? KE --> tag* KE
@@ -224,7 +224,7 @@ term_1 = expr:(term_2 (joik_ek? BO_clause term_2)*) {return _node("term_1", expr
 
 // term_2 //////// _vimcu lo cfila i va'i jmina zoizoi !joik_gihek zoi ja'e lo nu stura fa lo'u ([CU {<co'a broda> VAU} {na gi'a} CU {brode VAU} VAU] IAU) le'u_20160404UTC
 // term_2 //////// _cipra: galfi zoizoi NA_clause !bridi_tail !joik_gihek KU_elidible zoi zo brigahi_20160608UTC
-// term_2 //////// _jmina zoizoi !(sumti KEhE) zoi tezu'e tu'a lu ke da ke'e noi broda li'u_20170203UTC_
+// term_2 //////// _jmina zoizoi !(sumti KEhE) zoi tezu'e tu'a lu ke da ke'e noi broda li'u_20170203UTC
 term_2 = expr:(XOI_clause statement SEhU_elidible / KE_clause !(sumti KEhE) term+ KEhE_elidible / tag_term / !tag sumti / brigahi / gek_term) {return _node("term_2", expr);}
 
 // //////// _cipra: jmina la briga'i i va'o lo nu zo ka'e joi lo simsa cu cmavo ma'oi NA kei zabna fa lo nu ma'oi NA ji'a claxu ma'oi KU_20160608UTC
@@ -249,10 +249,10 @@ sumti_1 = expr:(sumti_2 (joik_ek sumti_2)*) {return _node("sumti_1", expr);}
 
 sumti_2 = expr:(sumti_3 (joik_ek? tag? BO_clause sumti_3)*) {return _node("sumti_2", expr);}
 
-// sumti_3 //////// _jmina zoi zoi relative_clauses? zoi te zu'e lo nu ma'oi VUhO na jai sarcu tu'a lo ra'abri noi se li'erla'i lo li'erla'i jonma'o sumti_20170203UTC_
+// sumti_3 //////// _jmina zoi zoi relative_clauses? zoi te zu'e lo nu ma'oi VUhO na jai sarcu tu'a lo ra'abri noi se li'erla'i lo li'erla'i jonma'o sumti_20170203UTC
 sumti_3 = expr:((KE_clause sumti KEhE_elidible / sumti_4 / gek sumti (gik sumti)+ GIhI_elidible) relative_clauses?) {return _node("sumti_3", expr);}
 
-// sumti_4 //////// _vimcu zoizoi relative_clauses? zoi imu'ibo lo sumti_3 co'a se pagbu lo se go'i_20170203UTC_
+// sumti_4 //////// _vimcu zoizoi relative_clauses? zoi imu'ibo lo sumti_3 co'a se pagbu lo se go'i_20170203UTC
 sumti_4 = expr:(quantifier? sumti_5 / quantifier selbri KU_elidible) {return _node("sumti_4", expr);}
 
 // // // !(!joik_ek operator) : tu'a zoizoi !joik_ek zoi cu sarcu lo nu lu by joi (vei) pa (ve'o) by li'u cu sumti
@@ -304,7 +304,7 @@ tanru_unit = expr:(tanru_unit_1 linkargs?) {return _node("tanru_unit", expr); }
 // tanru_unit_2 //////// _la'o zoi tanru_unit_2 zoi binxo la'o zoi tanru_unit_1 zoi_20150810UTC
 // tanru_unit_1 //////// _jmina zoizoi MUhOI_clause zoi_20150819UTC
 // tanru_unit_1 //////// _jmina zoizoi  LUhEI_clause text LIhAU_elidible zoi_20150827UTC
-// tanru_unit_1 //////// _vimcu lo cfila i galfi zoizoi !term zoi zoizoi !(gik? (term / CU)) zoi tezuhelonu genturfahi lu ge broda gi brode gi brodi ... gi cu brodo li'u_20170103UTC_
+// tanru_unit_1 //////// _vimcu lo cfila i galfi zoizoi !term zoi zoizoi !(gik? (term / CU)) zoi tezuhelonu genturfahi lu ge broda gi brode gi brodi ... gi cu brodo li'u_20170103UTC
 tanru_unit_1 = expr:(CMEVLA_clause / BRIVLA_clause / GOhA_clause / KE_clause selbri_2 KEhE_elidible / NAhE_clause? gek selbri_2 (gik selbri_2)+ !(gik? (term / CU)) GIhI_elidible / MUhOI_clause / GOhOI_clause / LUhEI_clause text LIhAU_elidible / ME_clause (sumti / operator+ / mex / tag) MEhU_elidible MOI_clause? / mex MOI_clause / (FA_clause (joik FA_clause)* / SE_clause) tanru_unit_1 / JAI_clause tag? tanru_unit_1 / NAhE_clause tanru_unit_1 / NU_clause (joik NU_clause)* statement KEI_elidible) {return _node("tanru_unit_1", expr); }
 
 linkargs = expr:(BE_clause term links? BEhO_elidible)  {return _node("linkargs", expr);}
@@ -1417,7 +1417,7 @@ I = &cmavo expr:( i ) &post_word {return ["I", _join(expr)];}
 
 IAU = &cmavo expr:( i h a u / i a u ) &post_word {return ["IAU", _join(expr)];}
 
-// JAI //////// _+jo'ai_20161116UTC_
+// JAI //////// _+jo'ai_20161116UTC
 JAI = &cmavo expr:( j o h a i / j a h e i / j a i ) &post_word {return ["JAI", _join(expr)];}
 
 // JOI //////// _+ji'o'e +y'i_20150820UTC
