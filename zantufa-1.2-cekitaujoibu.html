@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="jbo" lang="jbo" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />   
+    <meta name="description" content="lojban parser for experimental grammar">
+    <meta name="keywords" content="lojban parser,zasni gerna,zantufa,zantufa lojban">
+    <meta name="author" content="guskant">
+<title>zantufa-1.2-cekitaujoibu</title>
+<link rel="apple-touch-icon" sizes="57x57" href="./icon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="./icon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="./icon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="./icon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="./icon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="./icon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="./icon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="./icon/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="./icon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="./icon/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="./icon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="./icon/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="./icon/manifest.json">
+<link rel="shortcut icon" href="./icon/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-TileImage" content="./icon/mstile-144x144.png">
+<meta name="msapplication-config" content="./icon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<style>
+	.liste {
+	font: 0.8em arial, sans-serif;
+	}
+	.ciksi {
+	font: 0.9em arial, sans-serif;
+	}
+	.urli {
+	padding-left: 32px;
+	text-align: right;
+	font: 0.9em monospace;
+	}
+</style>
+</head><body>
+<div>
+<span class="ciksi" style="font-weight: bold;">jo'au zantufa_1.2</span> <span  class="ciksi">.i ciska .ijo genturfa'i .i:</span>
+</div>
+<div>
+<form id="form1" name="form1" method="post" action="" style="width:100%">
+  <textarea id="input_textarea" style="width:100%" rows="8" autofocus></textarea><br/>
+<span  class="ciksi">.i ko cuxna .i: </span>
+  <select id="optlist" onchange="run_camxes()">
+    <option>na'e se stika</option>
+    <option>denmi</option>
+    <option id="default" selected="">gau melbi</option>
+    <option>gau melbi + selma'o</option>
+    <option>gau melbi + selma'o + bripau</option>
+    <option>gau melbi -- famyma'o</option>
+    <option>gau melbi -- famyma'o + selma'o</option>
+    <option>gau melbi -- famyma'o + selma'o + bripau</option>
+  </select>
+<span  class="ciksi">.i</span>
+<select onChange="top.location.href=value">
+<option value="zantufa-1.2.html">na'e cekitaus</option>
+<option value="zantufa-1.2-cekitaujoibu.html" selected="1">cekitaujoibus</option>
+<option value="zantufa-1.2-cekitaujoizai.html">cekitaujoizais</option>
+<option value="zantufa-1.2-cekitaujaubu.html">cekitaujaubus</option>
+<option value="zantufa-1.2-cekitaujauzai.html">cekitaujauzais</option>
+<option value="zantufa-1.2-cekitaujeibu.html">cekitaujeibus</option>
+<option value="zantufa-1.2-cekitaujeizai.html">cekitaujeizais</option>
+</select>
+  <span class="urli">
+    <a href="https://raw.githubusercontent.com/guskant/gerna_cipra/master/zantufa-1.2.peg" target="_blank">[ lo gerna datnyvei ]</a>
+  </span>
+  <span class="urli">
+    <a href="https://raw.githubusercontent.com/guskant/gerna_cipra/master/farvi.txt" target="_blank">[ farvi tcila ]</a>
+  </span>
+</form><span class="liste">.i basti simxu : (ce'u ce) (ke'a ki) (tu'a tau) (du'u du) (su'o su) (bu'u bu) (ko'oi koi) (si'au si'u) (zu'ai se'e) (moi'oi gei) (lau'u lau) (poi'i voi) (xu'u po) (ku'au po'e) (ne'e tei)</span>
+</div>
+<div style="display:block; overflow: scroll; max-height:24em; border: solid 1px; padding: 2px 10px 2px 10px; background-color: #fdefda;" height="24em">
+  <pre style="white-space: pre-wrap;"><code id="parse_result" width="100%" height="100%"> </code></pre>
+</div>
+
+<script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="./js/zantufa-1.2-cekitaujoibu.js"></script>
+<script type="text/javascript" src="./js/camxes_preproc.js"></script>
+<script type="text/javascript" src="./js/camxes_postproc.js"></script>
+
+<script>
+document.getElementById("default").defaultSelected = true;
+
+/*
+ *  Binding the function run_camxes() to keyup event on demo_textarea by using jQuery
+ */
+$('#input_textarea').bind( "keyup",
+  function(e) {
+    run_camxes();
+  } );
+
+function run_camxes() {
+	try {
+	  var input = $('#input_textarea').val();
+	  input = camxes_preprocessing(input);
+      var result = camxes.parse(input);
+    } catch (e) {
+      $('#parse_result').text( e.toString() );
+      return;
+    }
+    var result_str = JSON.stringify(result, undefined, 2);
+	/* We get the output mode selected in the combobox */
+	var mode = document.getElementById("optlist").selectedIndex;
+	/* Postprocessing — if mode == 0, the below function won't modify camxes' output */
+	result_str = camxes_postprocessing(result_str, mode);  // @camxes_postproc.js
+	/* Retrieve the result */
+    $('#parse_result').text( result_str );
+}
+</script>
+<div  class="ciksi" style="padding:50px 0px;">
+	<div>
+	.i di'e liste lo ve farvi be fo la zantufa .i tu'e
+	</div>
+	<div>
+	<iframe src="./liste.html" title="zantufa ve farvi" width="100%" height="200px"></iframe>
+	</div>
+	<div>
+	tu'u
+	</div>
+</div>
+</body></html>
+
