@@ -1071,4 +1071,6 @@ zantufa-1.2.js.peg:307:// tanru_unit_1 //////// _vimcu lo cfila i galfi zoizoi !
 zantufa-1.2.js.peg:1420:// JAI //////// _+jo'ai_20161116UTC_
 ------------------ mulno fa la zantufa_1.2 ------------------
 ------------------ mulno fa la maltufa_1.2 ------------------
-maftufa-1.9999.js.peg:190:// tag_term //////// _maltufa_oz: vimcu lo cfila i ei me zoizoi ([CU {jai bu'u broda} VAU] IAU) zoi i jmina zoizoi tag? zoi_20160629UTC_
+maftufa-1.2.js.peg:190:// tag_term //////// _maltufa_oz: vimcu lo cfila i ei me zoizoi ([CU {jai bu'u broda} VAU] IAU) zoi i jmina zoizoi tag? zoi_20160629UTC_
+------------------ mulno fa la maftufa_1.2 ------------------
+zantufa-1.9999.js.peg:363:// tcita_selci //////// _jmina zoizoi ? zoi zoizoi mex ROI_clause zoi tezu'e lo nu lo'u jai re'u broda le'u gendra_20170706UTC_

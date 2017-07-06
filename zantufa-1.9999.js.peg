@@ -360,7 +360,8 @@ gik = expr:(GI_clause) {return _node("gik", expr); }
 
 tag = expr:(tcita_selci+ (joik tcita_selci+)*) {return _node("tag", expr); }
 
-tcita_selci = expr:((NAhE_clause / SE_clause) tcita_selci / BAI_clause / mex ROI_clause / FIhO_clause selbri FEhU_elidible) {return _node("tcita_selci", expr); }
+// tcita_selci //////// _jmina zoizoi ? zoi zoizoi mex ROI_clause zoi tezu'e lo nu lo'u jai re'u broda le'u gendra_20170706UTC_
+tcita_selci = expr:((NAhE_clause / SE_clause) tcita_selci / BAI_clause / mex? ROI_clause / FIhO_clause selbri FEhU_elidible) {return _node("tcita_selci", expr); }
 
 // free //////// _galfi zoizoi selbri relative_clauses? zoi zoizoi selbri zoi ki'u lo nu zoizoi relative_clauses? zoi co'a pagbu la'o zoi selbri_1 zoi_20150810UTC
 // // // _au zo sei cmavo ma'oi COI ije ma'oi SEI co'a se cmene zo SOI i ku'i va'o la'e di'u lo sumti na'e ka'e jbini zo sei ce lo selbrisni ja'e lo nu lo so'i pu jufra cu co'u gendra i no'e jdice_20160426
