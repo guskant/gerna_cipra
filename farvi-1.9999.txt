@@ -1074,3 +1074,5 @@ zantufa-1.2.js.peg:1420:// JAI //////// _+jo'ai_20161116UTC_
 maftufa-1.2.js.peg:190:// tag_term //////// _maltufa_oz: vimcu lo cfila i ei me zoizoi ([CU {jai bu'u broda} VAU] IAU) zoi i jmina zoizoi tag? zoi_20160629UTC_
 ------------------ mulno fa la maftufa_1.2 ------------------
 zantufa-1.9999.js.peg:363:// tcita_selci //////// _jmina zoizoi ? zoi zoizoi mex ROI_clause zoi tezu'e lo nu lo'u jai re'u broda le'u gendra_20170706UTC_
+zantufa-1.9999.js.peg:1520:// PA //////// _-ce'i -fi'u -ma'u -ni'u -pi -ra'e (to muvdu ma'oi VUhU i zo ki'o jo'u zo me'i jo'u zo za'u na muvdu i ki'u bo xai ka'e kansa no drata nacle'u toi)_20170709UTC_
+zantufa-1.9999.js.peg:1574:// VUhU //////// _+ce'i +fi'u +ma'u +ni'u +pi +ra'e (to muvdu fi ma'oi PA i zo ki'o jo'u zo me'i jo'u zo za'u na muvdu i ki'u bo xai ka'e kansa no drata nacle'u toi)_20170709UTC_
