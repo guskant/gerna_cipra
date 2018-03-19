@@ -47,8 +47,8 @@ function camxes_postprocessing(text, mode) {
 	var with_nodes_labels = (mode == 4 || mode == 7);
 	var without_terminator = (mode >= 5);
 	text = text.replace(/\"/gm, ""); // Delete every quote marks
-	text = text.replace(/NIhO_clause,/g, "\n\n"); // linji bu re mei
-	text = text.replace(/statement,|fragment,/g, "\n"); // linji bu
+	text = text.replace(/(\[text,)?(\[paragraphs,)?(\[+)NIhO_clause,/g, "\n\n$1$2$3"); // linji bu re mei
+	text = text.replace(/(\[paragraphs_1,)?(\[paragraphs_2,)?(\[paragraph,)?(\[+)I_clause,/g, "\n$1$2$3$4"); // linji bu
 	/* Save selmaho and brivla types */
 	text = text.replace(/(gismu|lujvo|fuhivla|cmene|cmevla),([A-Za-z']+)/g, "$1:$2");
 	text = text.replace(/([A-Za-z_]+),([A-Za-z']+)/g, "$1:$2");
