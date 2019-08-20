@@ -42,7 +42,7 @@
 //   [ 'text_1',
 //     [ 'paragraphs', [Object] ] ] ]
 // // write to a file
-// > fs.writeFileSync("/path/to/camxes.js", camxes.toSource());
+// > fs.writeFileSync("/path/to/camxes.js", camxes.toSource(), (error) => { });
 
 // ___ GRAMMAR ___
 
@@ -325,12 +325,14 @@ mex_2 = expr:(operand / mex_rp / mex_forethought) {return _node("mex_2", expr); 
 
 mex_rp = FUhA_clause mex_2+ operator (mex_2* operator)* KUhE_elidible
 
+
 // This is just to make for clearer parse trees
 mex_forethought = !(lerfu_string BOI_elidible) operator mex_2+ mex_forethought? KUhE_elidible / PEhO_clause operator mex_2+ mex_forethought? KUhE_elidible 
 
 // Right recursive version.
 
-operator = expr:(SE_clause operator / NAhE_clause operator / MAhO_clause (mex / selbri / sumti) TEhU_elidible / VUhU_clause / joik_ek) {return _node("operator", expr); }
+// // // operator = expr:(SE_clause operator / NAhE_clause operator / MAhO_clause (mex / selbri / sumti) TEhU_elidible / VUhU_clause / joik_ek) {return _node("operator", expr); }_jmima zoi zoi !CU zoi te zu'e lo nu lo'u mlatu fa mi noi tugni xy je cu broda le'u gendra_20190820UTC
+operator = expr:(SE_clause operator / NAhE_clause operator / MAhO_clause (mex / selbri / sumti) TEhU_elidible / VUhU_clause / joik_ek !CU) {return _node("operator", expr); }
 
 // // // (na'e (pa da)) , (vei (na'e pa)) da
 // // // la'a na nitcu lo'u mo'e operand te'u le'u iki'ubo lu vu'u tu'o li'u mekso
@@ -360,7 +362,7 @@ gik = expr:(GI_clause) {return _node("gik", expr); }
 
 tag = expr:(tcita_selci+ (joik tcita_selci+)*) {return _node("tag", expr); }
 
-// tcita_selci //////// _jmina zoizoi ? zoi zoizoi mex ROI_clause zoi tezu'e lo nu lo'u jai re'u broda le'u gendra_20170706UTC_
+// tcita_selci //////// _jmina zoizoi ? zoi zoizoi mex ROI_clause zoi tezu'e lo nu lo'u jai re'u broda le'u gendra_20170706UTC
 tcita_selci = expr:((NAhE_clause / SE_clause) tcita_selci / BAI_clause / mex? ROI_clause / FIhO_clause selbri FEhU_elidible) {return _node("tcita_selci", expr); }
 
 // free //////// _galfi zoizoi selbri relative_clauses? zoi zoizoi selbri zoi ki'u lo nu zoizoi relative_clauses? zoi co'a pagbu la'o zoi selbri_1 zoi_20150810UTC
@@ -1517,9 +1519,9 @@ NU = &cmavo expr:( z u h o / z a h i / s u h u / s i h o / p u h u / p o i h i /
 // PA //////// _+xe'e_20150820UTC
 // PA //////// _+fai'e'ai +su'ai +su'au_20150820UTC
 // PA //////// _-soi'a (to muvdu ma'oi FIhO toi)_20160602UTC
-// PA //////// _-ce'i -fi'u -ma'u -ni'u -pi -ra'e (to muvdu ma'oi VUhU i zo ki'o jo'u zo me'i jo'u zo za'u na muvdu i ki'u bo xai ka'e kansa no drata nacle'u toi)_20170709UTC_
-// PA //////// _+pi +ra'e (to co'u cipra i au lu da xi papire li'u noi claxu zo vei cu gendra toi)_20171125UTC_
-// PA //////// _-me'i -za'u (to muvdu fi ma'oi PA i gau ku zo me'i jo'u zo za'u cu ei kansa lo drata nacle'u i au tarmi fa lu ([li {me'i <(¹[a bu] BOI¹) (¹pi'e [pa BOI] KUhE¹)> KUhE} LOhO] VAU) li'u toi)_20171125UTC_
+// PA //////// _-ce'i -fi'u -ma'u -ni'u -pi -ra'e (to muvdu ma'oi VUhU i zo ki'o jo'u zo me'i jo'u zo za'u na muvdu i ki'u bo xai ka'e kansa no drata nacle'u toi)_20170709UTC
+// PA //////// _+pi +ra'e (to co'u cipra i au lu da xi papire li'u noi claxu zo vei cu gendra toi)_20171125UTC
+// PA //////// _-me'i -za'u (to muvdu fi ma'oi PA i gau ku zo me'i jo'u zo za'u cu ei kansa lo drata nacle'u i au tarmi fa lu ([li {me'i <(¹[a bu] BOI¹) (¹pi'e [pa BOI] KUhE¹)> KUhE} LOhO] VAU) li'u toi)_20171125UTC
 PA = &cmavo expr:( z e / x o h e / x o / x i h i h e i / x e i / x e h e / x a / v o h e i h a / v o / v i h e i h e / v a u h a u h o / v a i / v a h e i h a / t u h o / t e h o / t a u h u / s u h o i / s u h o / s u h e / s u h a u / s u h a i / s o i h u / s o h u / s o h o / s o h i / s o h e / s o h a / s o / s e i h u h e / s e h i h i / r o h o i / r o / r e i / r e / r a u / r a h e / p u h e h u h o / p i / p e i h i h a / p a i / p a h a u h o / p a / n o h o / n o h e h u / n o h a i / n o / n i h e h o i / n i h e h e i / m u h i h a i / m u / m o h a / m a i h e h e / k o i h o / k i h o / k e i h o / k a u h o / k a i h o / k a h o h a i / k a h o / k a h e i h a / j i h i / j a u / g o h o h i h a / g a u h i h o / g a i / g a h a u / f u h a h a u / f u h a h a i / f e i / f a i h u h a / f a i h u / f a i h e h a u / f a i h e h a i / d u h e / d a u / d a h a / c i h i / c i / b i ) &post_word {return ["PA", _join(expr)];}
 
 PEhO = &cmavo expr:( k e i h a i / p e h o ) &post_word {return ["PEhO", _join(expr)];}
@@ -1573,9 +1575,9 @@ VEI = &cmavo expr:( v e i ) &post_word {return ["VEI", _join(expr)];}
 VEhO = &cmavo expr:( v e h o ) &post_word {return ["VEhO", _join(expr)];}
 
 // VUhU //////// _+boi'ai +de'au'u +fau'au +fe'au'u +ga'u'au +ja'oi +ka'o'ei +kei'au +kei'i +ni'a'au +si'oi'e +te'au +vi'oi'au_20150820UTC
-// VUhU //////// _+ce'i +fi'u +ma'u +ni'u +pi +ra'e (to muvdu fi ma'oi PA i zo ki'o jo'u zo me'i jo'u zo za'u na muvdu i ki'u bo xai ka'e kansa no drata nacle'u toi)_20170709UTC_
-// VUhU //////// _-pi -ra'e (to co'u cipra i au lu da xi papire li'u noi claxu zo vei cu gendra toi)_20171125UTC_
-// VUhU //////// _+me'i +za'u (to muvdu fi ma'oi PA i gau ku zo me'i jo'u zo za'u cu ei kansa lo drata nacle'u i au tarmi fa lu ([li {me'i <(¹[a bu] BOI¹) (¹pi'e [pa BOI] KUhE¹)> KUhE} LOhO] VAU) li'u toi)_20171125UTC_
+// VUhU //////// _+ce'i +fi'u +ma'u +ni'u +pi +ra'e (to muvdu fi ma'oi PA i zo ki'o jo'u zo me'i jo'u zo za'u na muvdu i ki'u bo xai ka'e kansa no drata nacle'u toi)_20170709UTC
+// VUhU //////// _-pi -ra'e (to co'u cipra i au lu da xi papire li'u noi claxu zo vei cu gendra toi)_20171125UTC
+// VUhU //////// _+me'i +za'u (to muvdu fi ma'oi PA i gau ku zo me'i jo'u zo za'u cu ei kansa lo drata nacle'u i au tarmi fa lu ([li {me'i <(¹[a bu] BOI¹) (¹pi'e [pa BOI] KUhE¹)> KUhE} LOhO] VAU) li'u toi)_20171125UTC
 VUhU = &cmavo expr:( z i h a h o / z a h u / z a h e i / x o h e i / v u h u / v o h a u h u / v i h o i h a u / v a h a / t o h e i h a u / t e h a u h u / t e h a u / t e h a / t a i h i h e / t a i h e h i / s u h i / s i h o i h e / s i h i / s e h i h a h o / s a h o / s a h i / r i h o / r e h a / p i h i / p i h e i h o i / p i h e i h a u / p i h e / p i h a / p a u h o i / p a u h e i / p a u h a h u / p a h i / n i h u / n i h a h a u / n e h o i / n e h o / m e h i / m e h e i h o / m a h u / m a h o h e / k u h a u h a / k e i h i / k e i h a u / k a h o h e i / k a h a u / j u h u / j o i h i / j o h i / j a u h a u / j a h o i / g u h a u h i / g u h a i / g e i / g e h a / g a h u h a u / f u h u / f i h u / f e h i / f e h a u h u / f e h a / f a u h a u / f a h i / f a h a u / f a h a i / d u h e i / d i h e i h o h a u / d e i h a u h o / d e h o / d e h a u h u / d a h a h a u / c u h a u h e i / c u h a i / c u h a / c i h a i h u / c e h i / b o i h a i / b e h e i h o i / b a i h i / b a i h e i ) &post_word {return ["VUhU", _join(expr)];}
 
 VUhO = &cmavo expr:( v u h o ) &post_word {return ["VUhO", _join(expr)];}

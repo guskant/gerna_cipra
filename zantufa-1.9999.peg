@@ -1,4 +1,4 @@
-; la'o zoi zantufa-1.9999.peg zoi peg zei gerna de'i li 20180319 tede'i UTC
+; la'o zoi zantufa-1.9999.peg zoi peg zei gerna de'i li 20190820 tede'i UTC
 ; i ku'i la'o peg zoi_open zoi_word zoi_close peg na'e ka'e se tamgau va'o la peg po'o fa'o
 
 text <- (intro_null free* paragraphs? si_clause? SI_clause* faho_clause EOF?)
@@ -58,7 +58,7 @@ mex_1 <- ((KE_clause mex_2+ KEhE_elidible / mex_2 (BO_clause mex_2)*) (BIhE_clau
 mex_2 <- (operand / mex_rp / mex_forethought)
 mex_rp <- FUhA_clause mex_2+ operator (mex_2* operator)* KUhE_elidible
 mex_forethought <- !(lerfu_string BOI_elidible) operator mex_2+ mex_forethought? KUhE_elidible / PEhO_clause operator mex_2+ mex_forethought? KUhE_elidible 
-operator <- (SE_clause operator / NAhE_clause operator / MAhO_clause (mex / selbri / sumti) TEhU_elidible / VUhU_clause / joik_ek)
+operator <- (SE_clause operator / NAhE_clause operator / MAhO_clause (mex / selbri / sumti) TEhU_elidible / VUhU_clause / joik_ek !CU)
 operand <- (number BOI_elidible / lerfu_string BOI_elidible / VEI_clause mex VEhO_elidible / MOhE_clause (selbri / sumti) TEhU_elidible / (LAhE_clause / NAhE_clause BO_clause) mex LUhU_elidible / NAhE_clause operand)
 number <- (PA_clause+)
 lerfu_string <- (lerfu_word+)

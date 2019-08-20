@@ -1073,3 +1073,12 @@ zantufa-1.2.js.peg:1420:// JAI //////// _+jo'ai_20161116UTC_
 ------------------ mulno fa la maltufa_1.2 ------------------
 maftufa-1.2.js.peg:190:// tag_term //////// _maltufa_oz: vimcu lo cfila i ei me zoizoi ([CU {jai bu'u broda} VAU] IAU) zoi i jmina zoizoi tag? zoi_20160629UTC_
 ------------------ mulno fa la maftufa_1.2 ------------------
+zantufa-1.3.js.peg:334:// // // operator = expr:(SE_clause operator / NAhE_clause operator / MAhO_clause (mex / selbri / sumti) TEhU_elidible / VUhU_clause / joik_ek) {return _node("operator", expr); }_jmima zoi zoi !CU zoi te zu'e lo nu lo'u mlatu fa mi noi tugni xy je cu broda le'u gendra_20190820UTC_
+zantufa-1.3.js.peg:365:// tcita_selci //////// _jmina zoizoi ? zoi zoizoi mex ROI_clause zoi tezu'e lo nu lo'u jai re'u broda le'u gendra_20170706UTC_
+zantufa-1.3.js.peg:1522:// PA //////// _-ce'i -fi'u -ma'u -ni'u -pi -ra'e (to muvdu ma'oi VUhU i zo ki'o jo'u zo me'i jo'u zo za'u na muvdu i ki'u bo xai ka'e kansa no drata nacle'u toi)_20170709UTC_
+zantufa-1.3.js.peg:1523:// PA //////// _+pi +ra'e (to co'u cipra i au lu da xi papire li'u noi claxu zo vei cu gendra toi)_20171125UTC_
+zantufa-1.3.js.peg:1524:// PA //////// _-me'i -za'u (to muvdu fi ma'oi PA i gau ku zo me'i jo'u zo za'u cu ei kansa lo drata nacle'u i au tarmi fa lu ([li {me'i <(¹[a bu] BOI¹) (¹pi'e [pa BOI] KUhE¹)> KUhE} LOhO] VAU) li'u toi)_20171125UTC_
+zantufa-1.3.js.peg:1578:// VUhU //////// _+ce'i +fi'u +ma'u +ni'u +pi +ra'e (to muvdu fi ma'oi PA i zo ki'o jo'u zo me'i jo'u zo za'u na muvdu i ki'u bo xai ka'e kansa no drata nacle'u toi)_20170709UTC_
+zantufa-1.3.js.peg:1579:// VUhU //////// _-pi -ra'e (to co'u cipra i au lu da xi papire li'u noi claxu zo vei cu gendra toi)_20171125UTC_
+zantufa-1.3.js.peg:1580:// VUhU //////// _+me'i +za'u (to muvdu fi ma'oi PA i gau ku zo me'i jo'u zo za'u cu ei kansa lo drata nacle'u i au tarmi fa lu ([li {me'i <(¹[a bu] BOI¹) (¹pi'e [pa BOI] KUhE¹)> KUhE} LOhO] VAU) li'u toi)_20171125UTC_
+------------------ mulno fa la zantufa_1.3 ------------------
